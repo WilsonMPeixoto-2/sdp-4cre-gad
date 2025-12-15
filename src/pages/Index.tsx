@@ -13,7 +13,6 @@ import { SectionContacts } from "@/components/pop/SectionContacts";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("introducao");
-  const [searchQuery, setSearchQuery] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleSectionClick = useCallback((sectionId: string) => {
@@ -57,21 +56,10 @@ const Index = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Filter content based on search query
-  const highlightSearch = useCallback((text: string) => {
-    if (!searchQuery) return text;
-    const regex = new RegExp(`(${searchQuery})`, "gi");
-    return text.replace(regex, '<mark class="bg-accent/50 px-0.5 rounded">$1</mark>');
-  }, [searchQuery]);
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
       {/* Header */}
-      <PopHeader
-        searchQuery={searchQuery}
-        onSearchChange={setSearchQuery}
-        onPrint={handlePrint}
-      />
+      <PopHeader onPrint={handlePrint} />
 
       <div className="flex">
         {/* Sidebar */}
