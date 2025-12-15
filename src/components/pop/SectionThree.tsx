@@ -1,4 +1,5 @@
-import { Table2, AlertCircle, FileSpreadsheet } from "lucide-react";
+import { Table2, AlertCircle, FileSpreadsheet, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const SectionThree = () => {
   return (
@@ -111,18 +112,34 @@ export const SectionThree = () => {
           </div>
         </div>
 
-        {/* Excel Note */}
-        <div className="section-card p-5 sm:p-6">
-          <div className="flex items-start gap-4">
+        {/* Excel Note with Download Button */}
+        <div className="section-card p-5 sm:p-6 border border-success/30 bg-gradient-to-br from-success/5 to-transparent">
+          <div className="flex flex-col sm:flex-row items-start gap-4">
             <div className="p-3 rounded-xl bg-success/10 shrink-0">
               <FileSpreadsheet className="w-5 h-5 sm:w-6 sm:h-6 text-success" />
             </div>
-            <div>
+            <div className="flex-1">
               <h3 className="font-semibold text-foreground mb-2">Planilha de Apoio</h3>
-              <p className="text-muted-foreground text-sm sm:text-base text-justified leading-relaxed">
+              <p className="text-muted-foreground text-sm sm:text-base text-justified leading-relaxed mb-4">
                 O documento original editável em formato Excel (MAPA DE DESPESAS - NATUREZAS 435-441-434.xlsx) 
                 segue como anexo a este POP para facilitar o preenchimento e adaptação às necessidades 
                 de cada unidade escolar.
+              </p>
+              
+              <a
+                href="https://rioeduca-my.sharepoint.com/:x:/g/personal/wilson_mpeixoto_rioeduca_net/IQAgPn37Ap6PR4fGjfFcFY_3AZ7erJVwGFF7TvO5QrjTxTU?e=bSMVpy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <Button className="bg-success hover:bg-success/90 text-success-foreground shadow-lg hover:shadow-xl transition-all duration-300 gap-2">
+                  <Download className="w-4 h-4" />
+                  Baixar Modelo Editável (Excel)
+                </Button>
+              </a>
+              
+              <p className="text-xs text-muted-foreground mt-3">
+                Clique para abrir o arquivo no SharePoint e baixar o modelo editável
               </p>
             </div>
           </div>
