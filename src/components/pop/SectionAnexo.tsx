@@ -1,4 +1,4 @@
-import { FileText, ExternalLink, Scale, Clock, Receipt, Users, AlertTriangle, CheckCircle2 } from "lucide-react";
+import { FileText, ExternalLink, Scale, Clock, Receipt, Users, AlertTriangle, CheckCircle2, BookOpen, Gavel } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -48,16 +48,16 @@ export const SectionAnexo = () => {
   return (
     <section id="anexo" className="scroll-mt-20">
       {/* Header */}
-      <div className="section-card p-6 sm:p-8 mb-6">
+      <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-l-primary">
         <div className="flex items-start gap-4">
-          <div className="section-number">
-            <Scale className="w-5 h-5" />
+          <div className="p-3 rounded-xl bg-primary/10 shrink-0">
+            <Scale className="w-6 h-6 text-primary" />
           </div>
           <div>
             <h2 className="text-2xl font-bold text-foreground mb-2">
-              Anexo - Legislação de Referência
+              Anexo – Legislação de Referência
             </h2>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground text-justified leading-relaxed">
               Consolidação das principais regras e documentos exigidos conforme Decreto Municipal e Resoluções da CGM/SMFP
             </p>
           </div>
@@ -67,18 +67,20 @@ export const SectionAnexo = () => {
       {/* Documentos Exigidos */}
       <div className="section-card p-6 sm:p-8 mb-6">
         <div className="flex items-center gap-3 mb-5">
-          <Receipt className="w-5 h-5 text-primary" />
+          <div className="p-2.5 rounded-lg bg-primary/10">
+            <Receipt className="w-5 h-5 text-primary" />
+          </div>
           <h3 className="text-lg font-semibold text-foreground">
             Documentos que Instruem a Prestação de Contas
           </h3>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto -mx-6 sm:mx-0 px-6 sm:px-0">
           <Table className="table-institutional">
             <TableHeader>
               <TableRow>
-                <TableHead className="bg-primary text-primary-foreground">Documento</TableHead>
-                <TableHead className="bg-primary text-primary-foreground w-32 text-center">Obrigatoriedade</TableHead>
+                <TableHead className="bg-primary text-primary-foreground rounded-tl-lg">Documento</TableHead>
+                <TableHead className="bg-primary text-primary-foreground w-32 text-center rounded-tr-lg">Obrigatoriedade</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -87,7 +89,7 @@ export const SectionAnexo = () => {
                   <TableCell className="font-medium">{item.documento}</TableCell>
                   <TableCell className="text-center">
                     {item.obrigatorio ? (
-                      <span className="inline-flex items-center gap-1 text-primary font-medium">
+                      <span className="inline-flex items-center gap-1.5 text-primary font-medium">
                         <CheckCircle2 className="w-4 h-4" />
                         Obrigatório
                       </span>
@@ -105,18 +107,20 @@ export const SectionAnexo = () => {
       {/* Prazos */}
       <div className="section-card p-6 sm:p-8 mb-6">
         <div className="flex items-center gap-3 mb-5">
-          <Clock className="w-5 h-5 text-primary" />
+          <div className="p-2.5 rounded-lg bg-primary/10">
+            <Clock className="w-5 h-5 text-primary" />
+          </div>
           <h3 className="text-lg font-semibold text-foreground">
             Prazos para Prestação de Contas (Art. 25)
           </h3>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto -mx-6 sm:mx-0 px-6 sm:px-0">
           <Table className="table-institutional">
             <TableHeader>
               <TableRow>
-                <TableHead className="bg-primary text-primary-foreground">Situação</TableHead>
-                <TableHead className="bg-primary text-primary-foreground">Prazo</TableHead>
+                <TableHead className="bg-primary text-primary-foreground rounded-tl-lg">Situação</TableHead>
+                <TableHead className="bg-primary text-primary-foreground rounded-tr-lg">Prazo</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -134,18 +138,20 @@ export const SectionAnexo = () => {
       {/* Documentos Comprobatórios */}
       <div className="section-card p-6 sm:p-8 mb-6">
         <div className="flex items-center gap-3 mb-5">
-          <FileText className="w-5 h-5 text-primary" />
+          <div className="p-2.5 rounded-lg bg-primary/10">
+            <FileText className="w-5 h-5 text-primary" />
+          </div>
           <h3 className="text-lg font-semibold text-foreground">
             Documentos Comprobatórios por Tipo de Despesa (Art. 22)
           </h3>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto -mx-6 sm:mx-0 px-6 sm:px-0">
           <Table className="table-institutional">
             <TableHeader>
               <TableRow>
-                <TableHead className="bg-primary text-primary-foreground">Tipo de Despesa</TableHead>
-                <TableHead className="bg-primary text-primary-foreground">Documentos Aceitos</TableHead>
+                <TableHead className="bg-primary text-primary-foreground rounded-tl-lg">Tipo de Despesa</TableHead>
+                <TableHead className="bg-primary text-primary-foreground rounded-tr-lg">Documentos Aceitos</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -163,18 +169,20 @@ export const SectionAnexo = () => {
       {/* Regras dos Comprovantes */}
       <div className="section-card p-6 sm:p-8 mb-6">
         <div className="flex items-center gap-3 mb-5">
-          <Users className="w-5 h-5 text-primary" />
+          <div className="p-2.5 rounded-lg bg-primary/10">
+            <Users className="w-5 h-5 text-primary" />
+          </div>
           <h3 className="text-lg font-semibold text-foreground">
             Regras para Comprovantes de Despesa
           </h3>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto -mx-6 sm:mx-0 px-6 sm:px-0">
           <Table className="table-institutional">
             <TableHeader>
               <TableRow>
-                <TableHead className="bg-primary text-primary-foreground">Regra</TableHead>
-                <TableHead className="bg-primary text-primary-foreground w-28 text-center">Referência</TableHead>
+                <TableHead className="bg-primary text-primary-foreground rounded-tl-lg">Regra</TableHead>
+                <TableHead className="bg-primary text-primary-foreground w-28 text-center rounded-tr-lg">Referência</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -182,7 +190,7 @@ export const SectionAnexo = () => {
                 <TableRow key={index}>
                   <TableCell>{item.regra}</TableCell>
                   <TableCell className="text-center">
-                    <span className="inline-block px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">
+                    <span className="inline-block px-2.5 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-lg">
                       {item.artigo}
                     </span>
                   </TableCell>
@@ -194,13 +202,15 @@ export const SectionAnexo = () => {
       </div>
 
       {/* Alerta Importante */}
-      <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-primary">
+      <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-primary bg-gradient-to-r from-primary/5 to-transparent">
         <div className="flex items-start gap-4">
-          <AlertTriangle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+          <div className="p-2.5 rounded-lg bg-primary/10 shrink-0">
+            <AlertTriangle className="w-5 h-5 text-primary" />
+          </div>
           <div>
             <h4 className="font-semibold text-foreground mb-2">Atenção</h4>
-            <p className="text-muted-foreground text-sm leading-relaxed">
-              Os comprovantes de despesa devem conter necessariamente: <strong>discriminação clara do serviço prestado ou material fornecido</strong> (não se admitindo generalização ou abreviaturas) e <strong>data da emissão</strong>. Pagamentos em espécie devem estar devidamente comprovados.
+            <p className="text-muted-foreground text-sm leading-relaxed text-justified">
+              Os comprovantes de despesa devem conter necessariamente: <strong className="text-foreground">discriminação clara do serviço prestado ou material fornecido</strong> (não se admitindo generalização ou abreviaturas) e <strong className="text-foreground">data da emissão</strong>. Pagamentos em espécie devem estar devidamente comprovados.
             </p>
           </div>
         </div>
@@ -209,7 +219,9 @@ export const SectionAnexo = () => {
       {/* Links para Consulta */}
       <div className="section-card p-6 sm:p-8">
         <div className="flex items-center gap-3 mb-5">
-          <ExternalLink className="w-5 h-5 text-primary" />
+          <div className="p-2.5 rounded-lg bg-primary/10">
+            <BookOpen className="w-5 h-5 text-primary" />
+          </div>
           <h3 className="text-lg font-semibold text-foreground">
             Consulte a Legislação na Íntegra
           </h3>
@@ -217,39 +229,39 @@ export const SectionAnexo = () => {
 
         <div className="grid sm:grid-cols-2 gap-4">
           <a
-            href="https://doweb.rio.rj.gov.br/"
+            href="https://smaonline.rio.rj.gov.br/legis_consulta/67890Dec%2057250_2024.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 p-4 rounded-xl bg-secondary/50 hover:bg-secondary transition-colors group"
+            className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
           >
-            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <FileText className="w-5 h-5 text-primary" />
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+              <Gavel className="w-6 h-6 text-primary" />
             </div>
-            <div>
-              <p className="font-medium text-foreground">Diário Oficial do Rio</p>
-              <p className="text-sm text-muted-foreground">Decretos e Resoluções</p>
+            <div className="min-w-0">
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Decreto nº 57.250/2024</p>
+              <p className="text-sm text-muted-foreground">Normas do SDP Municipal</p>
             </div>
-            <ExternalLink className="w-4 h-4 text-muted-foreground ml-auto" />
+            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
           <a
-            href="https://www.rio.rj.gov.br/web/cgm"
+            href="https://www.rio.rj.gov.br/web/cgm/exibeconteudo?id=14697233"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 p-4 rounded-xl bg-secondary/50 hover:bg-secondary transition-colors group"
+            className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
           >
-            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Scale className="w-5 h-5 text-primary" />
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+              <Scale className="w-6 h-6 text-primary" />
             </div>
-            <div>
-              <p className="font-medium text-foreground">Portal CGM-RJ</p>
+            <div className="min-w-0">
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Portal CGM-RJ</p>
               <p className="text-sm text-muted-foreground">Controladoria Geral do Município</p>
             </div>
-            <ExternalLink className="w-4 h-4 text-muted-foreground ml-auto" />
+            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
         </div>
 
-        <p className="mt-4 text-sm text-muted-foreground text-center">
+        <p className="mt-5 text-sm text-muted-foreground text-center italic">
           Este resumo é uma referência rápida. Consulte sempre a legislação atualizada para informações completas.
         </p>
       </div>

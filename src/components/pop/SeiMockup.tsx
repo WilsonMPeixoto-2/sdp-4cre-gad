@@ -33,7 +33,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
     return (
       <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg max-w-sm">
         {/* SEI Header */}
-        <div className="bg-[hsl(215,70%,25%)] text-primary-foreground px-4 py-3 flex items-center justify-between">
+        <div className="text-primary-foreground px-4 py-3 flex items-center justify-between" style={{ background: 'hsl(215, 75%, 28%)' }}>
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 bg-primary-foreground/20 rounded flex items-center justify-center">
               <span className="text-xs font-bold">SEI</span>
@@ -74,7 +74,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
     return (
       <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg">
         {/* Header */}
-        <div className="bg-[hsl(215,70%,25%)] text-primary-foreground px-4 py-2.5 text-sm font-medium">
+        <div className="text-primary-foreground px-4 py-2.5 text-sm font-medium" style={{ background: 'hsl(215, 75%, 28%)' }}>
           Árvore do Processo
         </div>
         
@@ -117,7 +117,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
     return (
       <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg">
         {/* Header */}
-        <div className="bg-[hsl(215,70%,25%)] text-primary-foreground px-4 py-2.5 text-sm font-medium">
+        <div className="text-primary-foreground px-4 py-2.5 text-sm font-medium" style={{ background: 'hsl(215, 75%, 28%)' }}>
           Escolha o Tipo de Processo
         </div>
         
@@ -152,7 +152,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
     return (
       <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg">
         {/* Header */}
-        <div className="bg-[hsl(215,70%,25%)] text-primary-foreground px-4 py-2.5 text-sm font-medium">
+        <div className="text-primary-foreground px-4 py-2.5 text-sm font-medium" style={{ background: 'hsl(215, 75%, 28%)' }}>
           Registrar Documento Externo
         </div>
         

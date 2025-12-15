@@ -61,8 +61,7 @@ export const SectionTwo = () => {
               <div>
                 <h4 className="font-semibold text-foreground mb-1">Incluir Documento</h4>
                 <p className="text-sm text-muted-foreground text-justified leading-relaxed">
-                  Com o processo aberto, clique no ícone <strong className="text-foreground">"INCLUIR DOCUMENTO"</strong> (representado por uma 
-                  folha de papel A4 branca com a borda na cor amarela)
+                  Com o processo aberto, clique no ícone <strong className="text-foreground">"INCLUIR DOCUMENTO"</strong> na barra de ferramentas do SEI.
                 </p>
               </div>
             </div>
