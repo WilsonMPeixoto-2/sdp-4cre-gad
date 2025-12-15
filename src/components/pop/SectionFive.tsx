@@ -1,4 +1,5 @@
 import { CheckCircle, Send, FileCheck, AlertCircle, FolderTree } from "lucide-react";
+import { SeiMockup } from "./SeiMockup";
 
 export const SectionFive = () => {
   return (
@@ -48,27 +49,7 @@ export const SectionFive = () => {
                   Confira o menu lateral esquerdo que mostra a lista de arquivos. Todos os documentos 
                   devem estar listados corretamente.
                 </p>
-                <div className="bg-card p-4 rounded-xl border border-border/50">
-                  <p className="text-xs text-muted-foreground mb-2 font-medium">Exemplo de estrutura:</p>
-                  <div className="space-y-2 text-sm font-mono">
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">📁</span>
-                      <span className="text-foreground">Processo 04.xx...</span>
-                    </div>
-                    <div className="flex items-center gap-2 pl-4">
-                      <span className="text-success">✓</span>
-                      <span className="text-muted-foreground">Despacho Inicial</span>
-                    </div>
-                    <div className="flex items-center gap-2 pl-4">
-                      <span className="text-success">✓</span>
-                      <span className="text-muted-foreground">Demonstrativo de Despesas</span>
-                    </div>
-                    <div className="flex items-center gap-2 pl-4">
-                      <span className="text-success">✓</span>
-                      <span className="text-muted-foreground">Nota Fiscal (Empresa X)</span>
-                    </div>
-                  </div>
-                </div>
+                <SeiMockup variant="process-tree" />
               </div>
             </div>
 
@@ -80,7 +61,7 @@ export const SectionFive = () => {
                 <h4 className="font-semibold text-foreground mb-1">5.2. Confira Assinaturas</h4>
                 <p className="text-sm text-muted-foreground text-justified leading-relaxed">
                   Verifique se todos os documentos estão autenticados/assinados. 
-                  Devem ter um <strong className="text-foreground">ícone amarelo</strong> ao lado 
+                  Devem ter um <strong className="text-foreground">ícone de check</strong> ao lado 
                   indicando a autenticação.
                 </p>
               </div>
@@ -115,7 +96,7 @@ export const SectionFive = () => {
                 <code className="text-sm font-mono text-primary block mb-2 break-all font-semibold">
                   10729 - Gerência de Administração (E/4a.CRE/GAD)
                 </code>
-                <p className="text-xs text-warning flex items-center gap-1">
+                <p className="text-xs text-primary flex items-center gap-1">
                   <AlertCircle className="w-3 h-3" />
                   Certifique-se de selecionar a GAD da 4ª CRE
                 </p>
@@ -158,7 +139,7 @@ export const SectionFive = () => {
         {/* Final Alert */}
         <div className="highlight-box">
           <div className="flex items-start gap-3">
-            <AlertCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+            <AlertCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
             <div>
               <p className="font-bold text-foreground mb-1">Antes de Enviar</p>
               <p className="text-sm text-muted-foreground text-justified leading-relaxed">

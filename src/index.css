@@ -28,17 +28,17 @@
     --muted: 210 20% 94%;
     --muted-foreground: 215 15% 45%;
 
-    /* Accent - Gold/Yellow (Government accent) */
-    --accent: 45 90% 50%;
-    --accent-foreground: 215 25% 15%;
+    /* Accent - Light Blue (Institutional accent) */
+    --accent: 210 80% 55%;
+    --accent-foreground: 0 0% 100%;
 
-    /* Success Green */
-    --success: 145 60% 40%;
+    /* Success - Teal Blue */
+    --success: 190 60% 40%;
     --success-foreground: 0 0% 100%;
 
-    /* Warning */
-    --warning: 35 90% 50%;
-    --warning-foreground: 215 25% 15%;
+    /* Warning - Deep Blue */
+    --warning: 215 60% 50%;
+    --warning-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
@@ -57,12 +57,12 @@
     --sidebar-accent: 215 70% 45%;
     --sidebar-accent-foreground: 0 0% 100%;
     --sidebar-border: 215 70% 45%;
-    --sidebar-ring: 45 90% 50%;
+    --sidebar-ring: 210 80% 55%;
 
     /* Custom tokens */
     --section-header: 215 70% 25%;
-    --section-number: 45 90% 50%;
-    --highlight-bg: 45 90% 95%;
+    --section-number: 210 80% 55%;
+    --highlight-bg: 210 60% 96%;
     --table-header: 215 70% 35%;
     --table-stripe: 210 20% 97%;
 
@@ -90,8 +90,8 @@
     --muted: 215 30% 20%;
     --muted-foreground: 215 15% 65%;
 
-    --accent: 45 90% 55%;
-    --accent-foreground: 215 25% 10%;
+    --accent: 210 80% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --success: 145 60% 50%;
     --success-foreground: 215 25% 10%;
@@ -113,11 +113,11 @@
     --sidebar-accent: 215 30% 20%;
     --sidebar-accent-foreground: 210 20% 95%;
     --sidebar-border: 215 30% 25%;
-    --sidebar-ring: 45 90% 55%;
+    --sidebar-ring: 210 80% 60%;
 
     --section-header: 215 70% 55%;
-    --section-number: 45 90% 55%;
-    --highlight-bg: 45 30% 15%;
+    --section-number: 210 80% 60%;
+    --highlight-bg: 210 30% 20%;
     --table-header: 215 70% 45%;
     --table-stripe: 215 30% 16%;
   }
@@ -144,11 +144,11 @@
   }
 
   .section-number {
-    @apply inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent/80 text-accent-foreground font-bold text-base shadow-md;
+    @apply inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary/80 text-primary-foreground font-bold text-base shadow-md;
   }
 
   .highlight-box {
-    @apply bg-gradient-to-r from-[hsl(var(--highlight-bg))] to-[hsl(var(--highlight-bg))]/50 border-l-4 border-accent p-4 sm:p-5 rounded-r-xl shadow-sm;
+    @apply bg-gradient-to-r from-[hsl(var(--highlight-bg))] to-[hsl(var(--highlight-bg))]/50 border-l-4 border-primary p-4 sm:p-5 rounded-r-xl shadow-sm;
   }
 
   .step-indicator {
@@ -160,7 +160,7 @@
   }
 
   .nav-link.active {
-    @apply bg-accent text-accent-foreground shadow-md;
+    @apply bg-primary-foreground text-primary shadow-md;
   }
 
   .table-institutional {

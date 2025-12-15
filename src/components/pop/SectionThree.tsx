@@ -99,9 +99,9 @@ export const SectionThree = () => {
               <p className="text-sm text-muted-foreground">Serviços de Terceiros</p>
             </div>
             
-            <div className="p-4 bg-gradient-to-br from-accent/10 to-accent/5 rounded-xl border-l-4 border-l-accent">
+            <div className="p-4 bg-gradient-to-br from-[hsl(210,60%,50%)]/10 to-[hsl(210,60%,50%)]/5 rounded-xl border-l-4 border-l-[hsl(210,60%,50%)]">
               <div className="flex items-center gap-3 mb-2">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-accent text-accent-foreground font-bold text-sm shadow-md">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[hsl(210,60%,50%)] text-primary-foreground font-bold text-sm shadow-md">
                   434
                 </span>
                 <span className="font-bold text-foreground">Natureza 434</span>
@@ -112,12 +112,12 @@ export const SectionThree = () => {
         </div>
 
         {/* Legal Foundation */}
-        <div className="section-card p-5 sm:p-6 border-l-4 border-l-warning">
+        <div className="section-card p-5 sm:p-6 border-l-4 border-l-primary">
           <h3 className="font-semibold text-foreground mb-4">Fundamentação Legal</h3>
           
           <div className="bg-gradient-to-r from-secondary to-secondary/50 rounded-xl p-4 mb-4">
             <p className="text-sm font-bold text-foreground mb-3">DECRETO RIO N° 57.250, DE 19 DE NOVEMBRO DE 2025</p>
-            <blockquote className="text-sm text-muted-foreground italic border-l-2 border-warning pl-4 text-justified leading-relaxed">
+            <blockquote className="text-sm text-muted-foreground italic border-l-2 border-primary pl-4 text-justified leading-relaxed">
               "Art. 26. Os documentos digitais produzidos no âmbito do SEI têm sua autoria, 
               autenticidade e integridade asseguradas mediante utilização de assinatura eletrônica..."
               <br /><br />
@@ -127,7 +127,7 @@ export const SectionThree = () => {
 
           <div className="highlight-box">
             <div className="flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-warning shrink-0 mt-0.5" />
+              <AlertCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-foreground mb-1">Conclusão Importante</p>
                 <p className="text-sm text-muted-foreground text-justified leading-relaxed">

@@ -1,4 +1,5 @@
 import { Upload, FileText, Calendar, Hash, FolderTree, Shield, AlertCircle, CheckCircle2 } from "lucide-react";
+import { SeiMockup } from "./SeiMockup";
 
 export const SectionFour = () => {
   return (
@@ -205,12 +206,17 @@ export const SectionFour = () => {
 
           <div className="highlight-box mt-5">
             <div className="flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+              <AlertCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
               <p className="text-sm text-muted-foreground text-justified leading-relaxed">
                 <strong className="text-foreground">Importante:</strong> O procedimento de autenticação 
                 é obrigatório para validar o documento.
               </p>
             </div>
+          </div>
+
+          <div className="mt-5">
+            <p className="text-sm font-medium text-foreground mb-3">Formulário de registro:</p>
+            <SeiMockup variant="document-form" />
           </div>
         </div>
       </div>

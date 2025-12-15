@@ -179,7 +179,7 @@ export const SectionTwo = () => {
 
           <div className="highlight-box mt-5">
             <div className="flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+              <AlertCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
               <p className="text-sm text-muted-foreground text-justified leading-relaxed">
                 Caso o documento não apareça como assinado ou não esteja visível na árvore, 
                 atualize a página e confira novamente. Persistindo a inconsistência, acione 

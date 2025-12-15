@@ -1,21 +1,9 @@
-import { ClipboardList, AlertCircle, CheckCircle2, Info, Plus } from "lucide-react";
+import { ClipboardList, AlertCircle, CheckCircle2, Info } from "lucide-react";
+import { SeiMockup } from "./SeiMockup";
 
 export const SectionOne = () => {
   return (
     <section id="secao-1" className="scroll-mt-20 animate-fade-in">
-      {/* Section Header */}
-      <div className="flex items-center gap-4 mb-6">
-        <div className="section-number">1</div>
-        <div>
-          <h2 className="text-xl sm:text-2xl font-heading font-bold text-foreground">
-            Abertura do Processo no SEI!
-          </h2>
-          <p className="text-sm sm:text-base text-muted-foreground mt-1">
-            Acesso ao SEI!RIO, criação do processo, numeração e identificação
-          </p>
-        </div>
-      </div>
-
       <div className="space-y-5">
         {/* Intro Card */}
         <div className="section-card p-5 sm:p-6 border-l-4 border-l-primary">
@@ -41,22 +29,9 @@ export const SectionOne = () => {
             <strong className="text-foreground"> "INICIAR PROCESSO"</strong>, conforme o menu de navegação do sistema.
           </p>
 
-          <div className="bg-gradient-to-r from-secondary to-secondary/50 rounded-xl p-4 mb-4">
-            <p className="text-sm font-medium text-foreground mb-3">Menu do Sistema:</p>
-            <div className="flex flex-wrap gap-2">
-              {["Pesquisar no Menu", "Estatísticas", "Favoritos", "Iniciar Processo"].map((item, i) => (
-                <span 
-                  key={i}
-                  className={`px-3 py-1.5 rounded-lg text-sm transition-all ${
-                    item === "Iniciar Processo" 
-                      ? "bg-primary text-primary-foreground font-semibold shadow-md" 
-                      : "bg-card text-muted-foreground border border-border/50"
-                  }`}
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
+          <div className="mt-4">
+            <p className="text-sm font-medium text-foreground mb-3">Visualização do menu:</p>
+            <SeiMockup variant="menu" highlight="iniciar" />
           </div>
         </div>
 
@@ -68,21 +43,19 @@ export const SectionOne = () => {
             Os tipos de processo disponíveis serão exibidos de acordo com os termos informados na busca.
           </p>
 
-          <div className="bg-gradient-to-r from-secondary to-secondary/50 rounded-xl p-4 mb-4">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Plus className="w-4 h-4 text-success" />
-              <span>Para visualizar a lista completa de tipos de processos disponíveis, clique no botão verde.</span>
-            </div>
-          </div>
-
-          <div className="highlight-box">
+          <div className="highlight-box mb-4">
             <div className="flex items-center gap-2 mb-2">
-              <Info className="w-5 h-5 text-accent" />
+              <Info className="w-5 h-5 text-primary" />
               <span className="font-bold text-foreground">Tipo de Processo Correto:</span>
             </div>
             <p className="text-foreground font-semibold text-sm sm:text-base">
               EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP
             </p>
+          </div>
+
+          <div className="mt-4">
+            <p className="text-sm font-medium text-foreground mb-3">Tela de seleção:</p>
+            <SeiMockup variant="type-selection" />
           </div>
         </div>
 
@@ -153,7 +126,7 @@ export const SectionOne = () => {
 
           <div className="highlight-box mt-5">
             <div className="flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+              <AlertCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-foreground mb-1">Princípio da Publicidade</p>
                 <p className="text-sm text-muted-foreground text-justified leading-relaxed">
