@@ -229,7 +229,7 @@ export const SectionAnexo = () => {
 
         <div className="grid sm:grid-cols-2 gap-4">
           <a
-            href="https://smaonline.rio.rj.gov.br/legis_consulta/67890Dec%2057250_2024.pdf"
+            href="https://doweb.rio.rj.gov.br/apifront/portal/edicoes/imprimir_materia/846971/5376"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -245,7 +245,7 @@ export const SectionAnexo = () => {
           </a>
 
           <a
-            href="https://www.rio.rj.gov.br/web/cgm/exibeconteudo?id=14697233"
+            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2025/06/Res-CGM-2067.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -254,8 +254,40 @@ export const SectionAnexo = () => {
               <Scale className="w-6 h-6 text-primary" />
             </div>
             <div className="min-w-0">
-              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Portal CGM-RJ</p>
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução CGM nº 2.067/2025</p>
               <p className="text-sm text-muted-foreground">Controladoria Geral do Município</p>
+            </div>
+            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
+          </a>
+
+          <a
+            href="https://doweb.rio.rj.gov.br/apifront/portal/edicoes/imprimir_materia/800504/5234"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
+          >
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+              <FileText className="w-6 h-6 text-primary" />
+            </div>
+            <div className="min-w-0">
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Decreto nº 54.685/2024</p>
+              <p className="text-sm text-muted-foreground">Regulamentação SDP</p>
+            </div>
+            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
+          </a>
+
+          <a
+            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2023/10/Guia-SDP_Versao-Publicacao_1a-ed.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
+          >
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+              <BookOpen className="w-6 h-6 text-primary" />
+            </div>
+            <div className="min-w-0">
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Guia SDP - CGM-RJ</p>
+              <p className="text-sm text-muted-foreground">Manual Completo do Sistema</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
