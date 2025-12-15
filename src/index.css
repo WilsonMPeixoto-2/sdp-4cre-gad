@@ -451,3 +451,117 @@
     border-radius: 3pt !important;
   }
 }
+
+/* Responsive View Mode Override */
+/* Force mobile layout regardless of screen size */
+.force-mobile {
+  --force-mobile: true;
+}
+
+.force-mobile .container {
+  max-width: 480px !important;
+  margin: 0 auto !important;
+}
+
+.force-mobile .sidebar-wrapper {
+  display: none !important;
+}
+
+.force-mobile .sm\:grid-cols-2,
+.force-mobile .sm\:grid-cols-3,
+.force-mobile .md\:grid-cols-2,
+.force-mobile .md\:grid-cols-3,
+.force-mobile .lg\:grid-cols-2,
+.force-mobile .lg\:grid-cols-3,
+.force-mobile .lg\:grid-cols-4 {
+  grid-template-columns: 1fr !important;
+}
+
+.force-mobile .hidden.sm\:block,
+.force-mobile .hidden.sm\:inline,
+.force-mobile .hidden.md\:block,
+.force-mobile .hidden.lg\:block {
+  display: none !important;
+}
+
+.force-mobile .sm\:hidden {
+  display: block !important;
+}
+
+.force-mobile .sm\:text-lg,
+.force-mobile .sm\:text-xl,
+.force-mobile .md\:text-2xl,
+.force-mobile .lg\:text-3xl {
+  font-size: inherit !important;
+}
+
+.force-mobile .sm\:px-4,
+.force-mobile .sm\:px-6,
+.force-mobile .md\:px-8,
+.force-mobile .lg\:px-12 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.force-mobile .sm\:py-4,
+.force-mobile .sm\:py-6,
+.force-mobile .md\:py-8 {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
+
+.force-mobile .sm\:gap-4,
+.force-mobile .sm\:gap-6,
+.force-mobile .md\:gap-8 {
+  gap: 0.75rem !important;
+}
+
+.force-mobile .sm\:w-12,
+.force-mobile .md\:w-16 {
+  width: 2.5rem !important;
+  height: 2.5rem !important;
+}
+
+.force-mobile .sm\:flex-row {
+  flex-direction: column !important;
+}
+
+/* Force desktop layout regardless of screen size */
+.force-desktop {
+  --force-desktop: true;
+}
+
+.force-desktop .container {
+  max-width: 1280px !important;
+}
+
+.force-desktop .sidebar-wrapper {
+  display: block !important;
+}
+
+.force-desktop .hidden.sm\:block,
+.force-desktop .hidden.sm\:inline {
+  display: block !important;
+}
+
+.force-desktop .hidden.sm\:inline {
+  display: inline !important;
+}
+
+.force-desktop .sm\:hidden,
+.force-desktop .md\:hidden,
+.force-desktop .lg\:hidden {
+  display: none !important;
+}
+
+.force-desktop .sm\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.force-desktop .lg\:grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.force-desktop .sm\:flex-row {
+  flex-direction: row !important;
+}
