@@ -1,31 +1,31 @@
-import { CheckCircle, Send, FileCheck, AlertCircle, TreeDeciduous } from "lucide-react";
+import { CheckCircle, Send, FileCheck, AlertCircle, FolderTree } from "lucide-react";
 
 export const SectionFive = () => {
   return (
     <section id="secao-5" className="scroll-mt-20 animate-fade-in">
       {/* Section Header */}
-      <div className="flex items-center gap-4 mb-6">
-        <div className="section-number text-lg">5</div>
+      <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+        <div className="section-number text-base sm:text-lg">5</div>
         <div>
-          <h2 className="text-2xl font-heading font-bold text-foreground">
+          <h2 className="text-xl sm:text-2xl font-heading font-bold text-foreground">
             Conferência Final e Envio
           </h2>
-          <p className="text-muted-foreground">
+          <p className="text-sm sm:text-base text-muted-foreground">
             Verificação dos documentos e envio para a GAD
           </p>
         </div>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         {/* Intro */}
-        <div className="section-card p-6 border-l-4 border-l-success">
-          <div className="flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-success/10">
-              <CheckCircle className="w-6 h-6 text-success" />
+        <div className="section-card p-4 sm:p-6 border-l-4 border-l-success">
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-success/10 shrink-0">
+              <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-success" />
             </div>
             <div>
-              <h3 className="font-semibold text-foreground mb-2">Verificação Essencial</h3>
-              <p className="text-muted-foreground">
+              <h3 className="font-semibold text-foreground mb-2 text-sm sm:text-base">Verificação Essencial</h3>
+              <p className="text-muted-foreground text-sm sm:text-base">
                 Após inserir todos os documentos, é fundamental fazer uma verificação final 
                 antes de enviar o processo para garantir que tudo está correto.
               </p>
@@ -34,23 +34,23 @@ export const SectionFive = () => {
         </div>
 
         {/* Verification Steps */}
-        <div className="section-card p-6">
-          <h3 className="font-semibold text-foreground mb-4">Checklist de Verificação</h3>
+        <div className="section-card p-4 sm:p-6">
+          <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">Checklist de Verificação</h3>
           
-          <div className="space-y-4">
-            <div className="flex items-start gap-4 p-4 bg-secondary rounded-lg">
-              <div className="step-indicator shrink-0 bg-success">
-                <TreeDeciduous className="w-5 h-5" />
+          <div className="space-y-3 sm:space-y-4">
+            <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-secondary rounded-lg">
+              <div className="step-indicator shrink-0 bg-success text-xs sm:text-sm">
+                <FolderTree className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <h4 className="font-medium text-foreground mb-1">5.1. Verifique a Árvore do Processo</h4>
-                <p className="text-sm text-muted-foreground mb-3">
+                <h4 className="font-medium text-foreground mb-1 text-sm sm:text-base">5.1. Verifique a Árvore do Processo</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground mb-3">
                   Confira o menu lateral esquerdo que mostra a lista de arquivos. Todos os documentos 
                   devem estar listados corretamente.
                 </p>
-                <div className="bg-card p-3 rounded border">
+                <div className="bg-card p-2 sm:p-3 rounded border">
                   <p className="text-xs text-muted-foreground mb-2">Exemplo de estrutura:</p>
-                  <div className="space-y-1 text-sm font-mono">
+                  <div className="space-y-1 text-xs sm:text-sm font-mono">
                     <div className="flex items-center gap-2">
                       <span className="text-primary">📁</span>
                       <span>Processo 04.xx...</span>
@@ -72,13 +72,13 @@ export const SectionFive = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-4 bg-secondary rounded-lg">
-              <div className="step-indicator shrink-0 bg-success">
-                <FileCheck className="w-5 h-5" />
+            <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-secondary rounded-lg">
+              <div className="step-indicator shrink-0 bg-success text-xs sm:text-sm">
+                <FileCheck className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
-                <h4 className="font-medium text-foreground mb-1">5.2. Confira Assinaturas</h4>
-                <p className="text-sm text-muted-foreground">
+                <h4 className="font-medium text-foreground mb-1 text-sm sm:text-base">5.2. Confira Assinaturas</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground">
                   Verifique se todos os documentos estão autenticados/assinados. 
                   Devem ter um <strong className="text-foreground">ícone amarelo</strong> ao lado 
                   indicando a autenticação.
@@ -89,30 +89,30 @@ export const SectionFive = () => {
         </div>
 
         {/* Send Process */}
-        <div className="section-card p-6">
-          <h3 className="font-semibold text-foreground mb-4">5.3. Envio para a GAD</h3>
+        <div className="section-card p-4 sm:p-6">
+          <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">5.3. Envio para a GAD</h3>
           
-          <div className="space-y-4">
-            <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-lg border border-primary/20">
-              <div className="p-3 rounded-xl bg-primary/10">
-                <Send className="w-6 h-6 text-primary" />
+          <div className="space-y-3 sm:space-y-4">
+            <div className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-primary/5 rounded-lg border border-primary/20">
+              <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-primary/10 shrink-0">
+                <Send className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               </div>
               <div>
-                <h4 className="font-medium text-foreground mb-2">Procedimento de Envio</h4>
-                <p className="text-sm text-muted-foreground">
+                <h4 className="font-medium text-foreground mb-2 text-sm sm:text-base">Procedimento de Envio</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground">
                   Após a conferência completa, clique no ícone de envio (representado por um envelope).
                 </p>
               </div>
             </div>
 
-            <div className="p-4 bg-secondary rounded-lg">
-              <h4 className="font-medium text-foreground mb-3">5.4. Campo "Destinatários"</h4>
-              <p className="text-sm text-muted-foreground mb-3">
+            <div className="p-3 sm:p-4 bg-secondary rounded-lg">
+              <h4 className="font-medium text-foreground mb-2 sm:mb-3 text-sm sm:text-base">5.4. Campo "Destinatários"</h4>
+              <p className="text-xs sm:text-sm text-muted-foreground mb-3">
                 Digite <strong className="text-foreground">"GAD"</strong> e selecione a unidade correspondente:
               </p>
               
-              <div className="bg-card p-3 rounded border">
-                <code className="text-sm font-mono text-primary block mb-2">
+              <div className="bg-card p-2 sm:p-3 rounded border">
+                <code className="text-xs sm:text-sm font-mono text-primary block mb-2 break-all">
                   10729 - Gerência de Administração (E/4a.CRE/GAD)
                 </code>
                 <p className="text-xs text-muted-foreground">
@@ -124,13 +124,13 @@ export const SectionFive = () => {
         </div>
 
         {/* Other GADs Reference */}
-        <div className="section-card p-6">
-          <h3 className="font-semibold text-foreground mb-4">Referência: Códigos das GADs</h3>
-          <p className="text-sm text-muted-foreground mb-4">
+        <div className="section-card p-4 sm:p-6">
+          <h3 className="font-semibold text-foreground mb-3 sm:mb-4 text-sm sm:text-base">Referência: Códigos das GADs</h3>
+          <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4">
             Para referência, seguem os códigos das Gerências de Administração das CREs:
           </p>
           
-          <div className="grid sm:grid-cols-2 gap-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {[
               { code: "10714", name: "E/1a.CRE/GAD" },
               { code: "10719", name: "E/2a.CRE/GAD" },
@@ -142,7 +142,7 @@ export const SectionFive = () => {
             ].map((gad, i) => (
               <div 
                 key={i} 
-                className={`px-4 py-2 rounded text-sm font-mono ${
+                className={`px-3 sm:px-4 py-2 rounded text-xs sm:text-sm font-mono ${
                   gad.highlight 
                     ? "bg-primary text-primary-foreground font-semibold" 
                     : "bg-secondary text-foreground"
@@ -156,11 +156,11 @@ export const SectionFive = () => {
 
         {/* Final Alert */}
         <div className="highlight-box">
-          <div className="flex items-start gap-3">
-            <AlertCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+          <div className="flex items-start gap-2 sm:gap-3">
+            <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-accent shrink-0 mt-0.5" />
             <div>
-              <p className="font-semibold text-foreground mb-1">Antes de Enviar</p>
-              <p className="text-sm text-muted-foreground">
+              <p className="font-semibold text-foreground mb-1 text-sm sm:text-base">Antes de Enviar</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">
                 Revise cuidadosamente todos os documentos e informações. Após o envio, 
                 alterações só poderão ser feitas mediante solicitação à GAD.
               </p>
