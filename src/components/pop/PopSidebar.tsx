@@ -1,4 +1,4 @@
-import { ChevronRight, FileText, ClipboardList, Table2, Upload, CheckCircle, Phone, X } from "lucide-react";
+import { ChevronRight, FileText, ClipboardList, Table2, Upload, CheckCircle, Phone, X, Scale } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -17,6 +17,7 @@ const sections: Section[] = [
   { id: "secao-4", number: "4", title: "Documentos Externos", icon: <Upload className="w-4 h-4" /> },
   { id: "secao-5", number: "5", title: "Conferência e Envio", icon: <CheckCircle className="w-4 h-4" /> },
   { id: "contatos", number: "6", title: "Contatos", icon: <Phone className="w-4 h-4" /> },
+  { id: "anexo", number: "A", title: "Anexo - Legislação", icon: <Scale className="w-4 h-4" /> },
 ];
 
 interface PopSidebarProps {

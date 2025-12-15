@@ -217,18 +217,164 @@
 }
 
 @media print {
-  body {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  html, body {
     background: white !important;
-    color: black !important;
+    color: hsl(215, 25%, 15%) !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
   }
 
   .section-card {
     break-inside: avoid;
+    page-break-inside: avoid;
     box-shadow: none !important;
-    border: 1px solid #ddd !important;
+    border: 1px solid hsl(215, 20%, 80%) !important;
+    margin-bottom: 16pt !important;
+    background: white !important;
   }
 
   .highlight-box {
-    background: #fffde7 !important;
+    background: hsl(210, 60%, 96%) !important;
+    border-left: 4px solid hsl(215, 70%, 35%) !important;
+    padding: 12pt !important;
+    margin: 8pt 0 !important;
+  }
+
+  /* Section headers and dividers */
+  .section-number, .step-indicator {
+    background: hsl(215, 70%, 35%) !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  /* Tables */
+  .table-institutional th,
+  table thead th {
+    background: hsl(215, 70%, 35%) !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    padding: 8pt 10pt !important;
+    font-weight: 600 !important;
+  }
+
+  .table-institutional td,
+  table tbody td {
+    padding: 6pt 10pt !important;
+    border-bottom: 1px solid hsl(215, 20%, 88%) !important;
+  }
+
+  .table-institutional tr:nth-child(even) td,
+  table tbody tr:nth-child(even) td {
+    background: hsl(210, 20%, 97%) !important;
+  }
+
+  /* Primary colored elements */
+  .bg-primary,
+  [class*="bg-primary"] {
+    background: hsl(215, 70%, 35%) !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  .text-primary {
+    color: hsl(215, 70%, 35%) !important;
+  }
+
+  .border-primary {
+    border-color: hsl(215, 70%, 35%) !important;
+  }
+
+  /* Badges and tags */
+  .bg-primary\/10 {
+    background: hsl(210, 60%, 92%) !important;
+  }
+
+  /* Hero Cover - print version */
+  #hero-cover {
+    background: linear-gradient(135deg, hsl(215, 70%, 35%) 0%, hsl(215, 70%, 25%) 100%) !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    page-break-after: always;
+    min-height: auto !important;
+    padding: 60pt 40pt !important;
+  }
+
+  /* Section Divider - print version */
+  .section-divider-print {
+    background: linear-gradient(135deg, hsl(215, 70%, 40%) 0%, hsl(215, 70%, 30%) 100%) !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    page-break-before: always;
+    page-break-after: avoid;
+    padding: 30pt 20pt !important;
+    margin: 20pt 0 !important;
+  }
+
+  /* SEI Mockup */
+  .sei-mockup {
+    border: 1px solid hsl(215, 20%, 80%) !important;
+    background: white !important;
+  }
+
+  .sei-mockup-header {
+    background: hsl(215, 70%, 35%) !important;
+    color: white !important;
+  }
+
+  /* Icons Bar */
+  .sei-icons-bar {
+    background: hsl(210, 20%, 96%) !important;
+    border: 1px solid hsl(215, 20%, 85%) !important;
+  }
+
+  /* Links */
+  a {
+    color: hsl(215, 70%, 35%) !important;
+    text-decoration: underline !important;
+  }
+
+  /* Alert boxes */
+  .border-l-4 {
+    border-left-width: 4px !important;
+    border-left-color: hsl(215, 70%, 35%) !important;
+  }
+
+  /* Hide non-printable elements */
+  .no-print,
+  button,
+  .fixed,
+  nav,
+  aside {
+    display: none !important;
+  }
+
+  /* Footer */
+  .print-only {
+    display: block !important;
+    margin-top: 20pt !important;
+    padding-top: 10pt !important;
+    border-top: 1px solid hsl(215, 20%, 80%) !important;
+    text-align: center !important;
+    font-size: 10pt !important;
+  }
+
+  /* Page margins and breaks */
+  @page {
+    margin: 1.5cm;
+    size: A4;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  table {
+    page-break-inside: avoid;
   }
 }
