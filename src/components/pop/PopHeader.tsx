@@ -1,11 +1,33 @@
-import { FileText, Printer, Download } from "lucide-react";
+import { FileText, Printer, Download, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 interface PopHeaderProps {
   onPrint: () => void;
 }
 
 export const PopHeader = ({ onPrint }: PopHeaderProps) => {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    setIsDark(!isDark);
+    if (!isDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 shadow-xl no-print glass-effect" style={{ background: 'linear-gradient(90deg, hsl(215, 75%, 32%) 0%, hsl(215, 75%, 28%) 50%, hsl(215, 75%, 32%) 100%)' }}>
       <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
@@ -26,7 +48,16 @@ export const PopHeader = ({ onPrint }: PopHeaderProps) => {
           </div>
 
           {/* Actions */}
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleDarkMode}
+              className="text-primary-foreground hover:bg-primary-foreground/10 h-9 w-9 sm:h-10 sm:w-10 transition-all duration-200"
+              title={isDark ? "Modo claro" : "Modo escuro"}
+            >
+              {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </Button>
             <Button
               variant="ghost"
               size="sm"

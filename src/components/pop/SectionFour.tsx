@@ -220,6 +220,35 @@ export const SectionFour = () => {
             <SeiMockup variant="document-form" />
           </div>
         </div>
+
+        {/* Legal Foundation - Moved from Section 3 */}
+        <div className="section-card p-5 sm:p-6 border-l-4 border-l-primary">
+          <h3 className="font-semibold text-foreground mb-4">4.3. Fundamentação Legal</h3>
+          
+          <div className="bg-gradient-to-r from-secondary to-secondary/50 rounded-xl p-4 mb-4">
+            <p className="text-sm font-bold text-foreground mb-3">DECRETO RIO N° 57.250, DE 19 DE NOVEMBRO DE 2025</p>
+            <blockquote className="text-sm text-muted-foreground italic border-l-2 border-primary pl-4 text-justified leading-relaxed">
+              "Art. 26. Os documentos digitais produzidos no âmbito do SEI têm sua autoria, 
+              autenticidade e integridade asseguradas mediante utilização de assinatura eletrônica..."
+              <br /><br />
+              "§ 2° Apenas os documentos produzidos no sistema poderão ser assinados eletronicamente no SEI.Rio."
+            </blockquote>
+          </div>
+
+          <div className="highlight-box">
+            <div className="flex items-start gap-3">
+              <AlertCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <div>
+                <p className="font-bold text-foreground mb-1">Conclusão Importante</p>
+                <p className="text-sm text-muted-foreground text-justified leading-relaxed">
+                  Os documentos de prestação de contas que exigem assinatura eletrônica devem ser 
+                  obrigatoriamente criados dentro do sistema SEI. <strong className="text-foreground">
+                  Não anexe arquivos PDF externos ou planilhas Excel para esta finalidade.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
