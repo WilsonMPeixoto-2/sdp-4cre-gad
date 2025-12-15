@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ExternalLink, Monitor, BookOpen } from "lucide-react";
 
 export const SectionContacts = () => {
   return (
@@ -75,6 +75,48 @@ export const SectionContacts = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* SEI RIO Links */}
+        <div className="section-card p-5 sm:p-6">
+          <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
+            <Monitor className="w-5 h-5 text-primary" />
+            Acesso ao SEI!RIO
+          </h3>
+          
+          <div className="grid sm:grid-cols-2 gap-4">
+            <a
+              href="https://sei.rio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
+            >
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+                <Monitor className="w-6 h-6 text-primary" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-foreground group-hover:text-primary transition-colors">SEI!RIO</p>
+                <p className="text-sm text-muted-foreground">Acesso ao sistema</p>
+              </div>
+              <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0 transition-colors" />
+            </a>
+
+            <a
+              href="https://sei.rio/servidor/guias-e-ambiente-de-teste/guia-do-usuario-interno/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
+            >
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+                <BookOpen className="w-6 h-6 text-primary" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Guia do Usuário Interno</p>
+                <p className="text-sm text-muted-foreground">Manual oficial SEI!RIO</p>
+              </div>
+              <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0 transition-colors" />
+            </a>
           </div>
         </div>
 
