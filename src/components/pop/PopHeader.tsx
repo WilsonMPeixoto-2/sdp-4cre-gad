@@ -1,4 +1,4 @@
-import { FileText, Printer, Download, Moon, Sun } from "lucide-react";
+import { FileText, Printer, Download, Moon, Sun, Monitor, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
@@ -6,14 +6,23 @@ interface PopHeaderProps {
   onPrint: () => void;
 }
 
+type ViewMode = 'auto' | 'desktop' | 'mobile';
+
 export const PopHeader = ({ onPrint }: PopHeaderProps) => {
   const [isDark, setIsDark] = useState(false);
+  const [viewMode, setViewMode] = useState<ViewMode>('auto');
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       setIsDark(true);
       document.documentElement.classList.add('dark');
+    }
+    
+    const savedViewMode = localStorage.getItem('viewMode') as ViewMode;
+    if (savedViewMode) {
+      setViewMode(savedViewMode);
+      applyViewMode(savedViewMode);
     }
   }, []);
 
@@ -25,6 +34,46 @@ export const PopHeader = ({ onPrint }: PopHeaderProps) => {
     } else {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
+    }
+  };
+
+  const applyViewMode = (mode: ViewMode) => {
+    document.documentElement.classList.remove('force-mobile', 'force-desktop');
+    if (mode === 'mobile') {
+      document.documentElement.classList.add('force-mobile');
+    } else if (mode === 'desktop') {
+      document.documentElement.classList.add('force-desktop');
+    }
+  };
+
+  const cycleViewMode = () => {
+    const modes: ViewMode[] = ['auto', 'desktop', 'mobile'];
+    const currentIndex = modes.indexOf(viewMode);
+    const nextMode = modes[(currentIndex + 1) % modes.length];
+    setViewMode(nextMode);
+    applyViewMode(nextMode);
+    localStorage.setItem('viewMode', nextMode);
+  };
+
+  const getViewModeIcon = () => {
+    switch (viewMode) {
+      case 'mobile':
+        return <Smartphone className="w-4 h-4" />;
+      case 'desktop':
+        return <Monitor className="w-4 h-4" />;
+      default:
+        return <Monitor className="w-4 h-4 opacity-50" />;
+    }
+  };
+
+  const getViewModeTitle = () => {
+    switch (viewMode) {
+      case 'mobile':
+        return 'Visualização mobile (clique para automático)';
+      case 'desktop':
+        return 'Visualização desktop (clique para mobile)';
+      default:
+        return 'Visualização automática (clique para desktop)';
     }
   };
 
@@ -49,6 +98,15 @@ export const PopHeader = ({ onPrint }: PopHeaderProps) => {
 
           {/* Actions */}
           <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={cycleViewMode}
+              className={`text-primary-foreground hover:bg-primary-foreground/10 h-9 w-9 sm:h-10 sm:w-10 transition-all duration-200 ${viewMode !== 'auto' ? 'bg-primary-foreground/20' : ''}`}
+              title={getViewModeTitle()}
+            >
+              {getViewModeIcon()}
+            </Button>
             <Button
               variant="ghost"
               size="sm"
