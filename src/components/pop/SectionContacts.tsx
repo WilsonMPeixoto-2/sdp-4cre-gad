@@ -95,7 +95,7 @@ export const SectionContacts = () => {
         </div>
 
         {/* Footer Note */}
-        <div className="p-6 bg-gradient-to-br from-primary/10 via-accent/10 to-primary/5 rounded-xl border border-border/50">
+        <div className="p-6 bg-gradient-to-br from-primary/10 via-primary/5 to-secondary rounded-xl border border-border/50">
           <p className="text-center text-muted-foreground">
             <strong className="text-foreground text-lg">4ª Coordenadoria Regional de Educação</strong><br />
             <span className="text-sm">Gerência de Administração (GAD)</span><br />
