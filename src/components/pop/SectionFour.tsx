@@ -195,10 +195,11 @@ export const SectionFour = () => {
             <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
               <CheckCircle2 className="w-5 h-5 text-success shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-foreground">Autenticar e Assinar</p>
+                <p className="font-semibold text-foreground">Autenticar Documento</p>
                 <p className="text-sm text-muted-foreground text-justified leading-relaxed">
                   Localize o ícone "Autenticar Documento" (selo preto com check branco). 
-                  Na janela pop-up, insira sua Senha de Rede e clique em Assinar.
+                  Na janela pop-up, insira sua Senha de Rede e clique em Autenticar. 
+                  Os documentos externos serão <strong className="text-foreground">autenticados</strong>.
                 </p>
               </div>
             </div>

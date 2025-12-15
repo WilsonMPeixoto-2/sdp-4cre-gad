@@ -1,9 +1,32 @@
-import { Menu, Plus, FileText, FolderOpen, Search, ChevronRight, ChevronDown, Check, User } from "lucide-react";
+import { Menu, Plus, FileText, FolderOpen, Search, ChevronDown, Check, User, Send, Eye, Pencil, Trash2, Printer, Download, Shield } from "lucide-react";
 
 interface SeiMockupProps {
-  variant: "menu" | "process-tree" | "document-form" | "type-selection";
+  variant: "menu" | "process-tree" | "document-form" | "type-selection" | "icons";
   highlight?: string;
 }
+
+// Custom SEI-style icons
+const SeiIconButton = ({ icon, label, active = false }: { icon: React.ReactNode; label?: string; active?: boolean }) => (
+  <div className={`flex flex-col items-center gap-1 p-1.5 rounded cursor-pointer transition-colors ${active ? 'bg-primary/20' : 'hover:bg-secondary'}`}>
+    <div className={`w-6 h-6 flex items-center justify-center ${active ? 'text-primary' : 'text-muted-foreground'}`}>
+      {icon}
+    </div>
+    {label && <span className="text-[10px] text-muted-foreground">{label}</span>}
+  </div>
+);
+
+// SEI Action Icons Bar
+export const SeiIconsBar = () => (
+  <div className="flex items-center gap-1 p-2 bg-card border border-border rounded-lg overflow-x-auto">
+    <SeiIconButton icon={<Plus className="w-4 h-4" />} label="Incluir" active />
+    <SeiIconButton icon={<Send className="w-4 h-4" />} label="Enviar" />
+    <SeiIconButton icon={<Eye className="w-4 h-4" />} label="Visualizar" />
+    <SeiIconButton icon={<Pencil className="w-4 h-4" />} label="Editar" />
+    <SeiIconButton icon={<Shield className="w-4 h-4" />} label="Autenticar" />
+    <SeiIconButton icon={<Printer className="w-4 h-4" />} label="Imprimir" />
+    <SeiIconButton icon={<Download className="w-4 h-4" />} label="Download" />
+  </div>
+);
 
 export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
   if (variant === "menu") {
@@ -160,6 +183,10 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
         </div>
       </div>
     );
+  }
+
+  if (variant === "icons") {
+    return <SeiIconsBar />;
   }
 
   return null;
