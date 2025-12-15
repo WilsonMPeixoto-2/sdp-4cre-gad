@@ -14,6 +14,8 @@ import { SectionFive } from "@/components/pop/SectionFive";
 import { SectionContacts } from "@/components/pop/SectionContacts";
 import { SectionAnexo } from "@/components/pop/SectionAnexo";
 import { BackToTop } from "@/components/pop/BackToTop";
+import { ReadingProgressBar } from "@/components/pop/ReadingProgressBar";
+import { AnimatedSection } from "@/components/pop/AnimatedSection";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("introducao");
@@ -51,6 +53,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Reading Progress Bar */}
+      <ReadingProgressBar />
+
       {/* Hero Cover */}
       <HeroCover />
 
@@ -75,28 +80,58 @@ const Index = () => {
 
           <div className="container mx-auto px-4 py-8 max-w-4xl">
             <div className="space-y-8">
-              <SectionIntro />
+              <AnimatedSection>
+                <SectionIntro />
+              </AnimatedSection>
 
-              <SectionDivider number="1" title="Abertura do Processo" subtitle="Acesso ao SEI!RIO, criação do processo, numeração e identificação" icon={ClipboardList} />
-              <SectionOne />
+              <AnimatedSection delay={100}>
+                <SectionDivider number="1" title="Abertura do Processo" subtitle="Acesso ao SEI!RIO, criação do processo, numeração e identificação" icon={ClipboardList} />
+              </AnimatedSection>
+              <AnimatedSection delay={150}>
+                <SectionOne />
+              </AnimatedSection>
 
-              <SectionDivider number="2" title="Despacho de Encaminhamento" subtitle="Elaboração do documento de formalização da prestação de contas" icon={FileText} />
-              <SectionTwo />
+              <AnimatedSection delay={100}>
+                <SectionDivider number="2" title="Despacho de Encaminhamento" subtitle="Elaboração do documento de formalização da prestação de contas" icon={FileText} />
+              </AnimatedSection>
+              <AnimatedSection delay={150}>
+                <SectionTwo />
+              </AnimatedSection>
 
-              <SectionDivider number="3" title="Demonstrativo de Despesas" subtitle="Como gerar no SEI!RIO, conferência de dados e naturezas de despesa" icon={Table2} />
-              <SectionThree />
+              <AnimatedSection delay={100}>
+                <SectionDivider number="3" title="Demonstrativo de Despesas" subtitle="Como gerar no SEI!RIO, conferência de dados e naturezas de despesa" icon={Table2} />
+              </AnimatedSection>
+              <AnimatedSection delay={150}>
+                <SectionThree />
+              </AnimatedSection>
 
-              <SectionDivider number="4" title="Documentos Externos" subtitle="Notas fiscais, recibos, comprovantes e demais documentos" icon={Upload} />
-              <SectionFour />
+              <AnimatedSection delay={100}>
+                <SectionDivider number="4" title="Documentos Externos" subtitle="Notas fiscais, recibos, comprovantes e demais documentos" icon={Upload} />
+              </AnimatedSection>
+              <AnimatedSection delay={150}>
+                <SectionFour />
+              </AnimatedSection>
 
-              <SectionDivider number="5" title="Conferência e Envio" subtitle="Verificação dos documentos e envio para a GAD" icon={CheckCircle} />
-              <SectionFive />
+              <AnimatedSection delay={100}>
+                <SectionDivider number="5" title="Conferência e Envio" subtitle="Verificação dos documentos e envio para a GAD" icon={CheckCircle} />
+              </AnimatedSection>
+              <AnimatedSection delay={150}>
+                <SectionFive />
+              </AnimatedSection>
 
-              <SectionDivider number="6" title="Contatos" subtitle="Canais de atendimento e suporte da GAD/4ª CRE" icon={Phone} />
-              <SectionContacts />
+              <AnimatedSection delay={100}>
+                <SectionDivider number="6" title="Contatos" subtitle="Canais de atendimento e suporte da GAD/4ª CRE" icon={Phone} />
+              </AnimatedSection>
+              <AnimatedSection delay={150}>
+                <SectionContacts />
+              </AnimatedSection>
 
-              <SectionDivider number="A" title="Anexo" subtitle="Legislação de referência e documentos exigidos" icon={Scale} />
-              <SectionAnexo />
+              <AnimatedSection delay={100}>
+                <SectionDivider number="A" title="Anexo" subtitle="Legislação de referência e documentos exigidos" icon={Scale} />
+              </AnimatedSection>
+              <AnimatedSection delay={150}>
+                <SectionAnexo />
+              </AnimatedSection>
             </div>
 
             <div className="print-only mt-8 pt-4 border-t text-center text-sm text-muted-foreground">
