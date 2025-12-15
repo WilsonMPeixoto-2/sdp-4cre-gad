@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { Menu, ClipboardList, FileText, Table2, Upload, CheckCircle, Phone } from "lucide-react";
+import { Menu, ClipboardList, FileText, Table2, Upload, CheckCircle, Phone, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PopHeader } from "@/components/pop/PopHeader";
 import { PopSidebar } from "@/components/pop/PopSidebar";
@@ -12,6 +12,7 @@ import { SectionThree } from "@/components/pop/SectionThree";
 import { SectionFour } from "@/components/pop/SectionFour";
 import { SectionFive } from "@/components/pop/SectionFive";
 import { SectionContacts } from "@/components/pop/SectionContacts";
+import { SectionAnexo } from "@/components/pop/SectionAnexo";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("introducao");
@@ -92,6 +93,9 @@ const Index = () => {
 
               <SectionDivider number="6" title="Contatos" subtitle="Canais de atendimento e suporte da GAD/4ª CRE" icon={Phone} />
               <SectionContacts />
+
+              <SectionDivider number="A" title="Anexo" subtitle="Legislação de referência e documentos exigidos" icon={Scale} />
+              <SectionAnexo />
             </div>
 
             <div className="print-only mt-8 pt-4 border-t text-center text-sm text-muted-foreground">
