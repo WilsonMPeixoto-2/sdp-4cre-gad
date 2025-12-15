@@ -1,4 +1,5 @@
-import { FileText, PenLine, AlertCircle, CheckCircle2 } from "lucide-react";
+import { FileText, PenLine, AlertCircle, CheckCircle2, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const SectionTwo = () => {
   return (
@@ -13,6 +14,39 @@ export const SectionTwo = () => {
           <p className="text-sm sm:text-base text-muted-foreground mt-1">
             Elaboração do documento de formalização da prestação de contas
           </p>
+        </div>
+      </div>
+
+      {/* Download Button - Despacho de Encaminhamento */}
+      <div className="mb-6 p-4 sm:p-5 rounded-xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="flex items-center gap-3 flex-1">
+            <div className="p-2.5 rounded-lg bg-primary/20">
+              <FileText className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-foreground text-sm sm:text-base">
+                Modelo do Despacho de Encaminhamento
+              </h4>
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                Documento editável (.docx) para formalização da prestação de contas
+              </p>
+            </div>
+          </div>
+          <Button
+            asChild
+            className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300"
+          >
+            <a
+              href="https://rioeduca-my.sharepoint.com/:w:/g/personal/wilson_mpeixoto_rioeduca_net/IQC9wPR-JwJySpEGFJeisX7SAU96gsNWnIZiVss7WC0KKjE?e=6sP1ua"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              <Download className="w-4 h-4" />
+              <span>Baixar Modelo Editável</span>
+            </a>
+          </Button>
         </div>
       </div>
 
