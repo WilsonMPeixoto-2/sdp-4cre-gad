@@ -42,9 +42,9 @@ export const HeroCover = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto mb-8">
           {[
             { icon: <Building2 className="w-5 h-5" />, label: "GAD", desc: "Gerência de Administração" },
-            { icon: <BookOpen className="w-5 h-5" />, label: "POP", desc: "Procedimento Padrão" },
+            { icon: <BookOpen className="w-5 h-5" />, label: "POP", desc: "Procedimento Operacional Padrão" },
             { icon: <FileText className="w-5 h-5" />, label: "SEI!RIO", desc: "Sistema Eletrônico" },
-            { icon: <Calendar className="w-5 h-5" />, label: "2025", desc: "Versão Atualizada" },
+            { icon: <Calendar className="w-5 h-5" />, label: "v1.0", desc: "Dezembro/2025" },
           ].map((item, i) => (
             <div key={i} className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl p-4 text-center">
               <div className="inline-flex items-center justify-center w-10 h-10 bg-primary-foreground/10 rounded-lg mb-2">

@@ -134,6 +134,9 @@ export const SectionOne = () => {
                   com nível de acesso <strong className="text-foreground">"Público"</strong>, por se 
                   referirem à aplicação de recursos públicos (Art. 37 CF e Lei nº 12.527/2011 - LAI).
                 </p>
+                <p className="text-sm text-foreground font-semibold mt-2">
+                  → Selecione a opção "Público" no campo Nível de Acesso.
+                </p>
               </div>
             </div>
           </div>
@@ -142,12 +145,20 @@ export const SectionOne = () => {
         {/* Interessados */}
         <div className="section-card p-5 sm:p-6">
           <h3 className="font-semibold text-foreground mb-4">1.12. Interessados</h3>
-          <p className="text-muted-foreground text-sm sm:text-base text-justified leading-relaxed">
-            Este campo é utilizado para registrar pessoas físicas, unidades administrativas ou demais 
-            entidades que possuam interesse direto ou indireto em determinado processo. O preenchimento 
-            deste campo é facultativo; contudo, é altamente recomendado, pois contribui para a adequada 
-            identificação dos interessados e para a transparência do trâmite processual.
+          <p className="text-muted-foreground text-sm sm:text-base text-justified leading-relaxed mb-4">
+            Este campo é utilizado para registrar unidades ou entidades que possuam interesse no processo.
           </p>
+          <div className="highlight-box">
+            <div className="flex items-start gap-3">
+              <CheckCircle2 className="w-5 h-5 text-success shrink-0 mt-0.5" />
+              <div>
+                <p className="font-bold text-foreground mb-1">Adicione a GAD como interessada:</p>
+                <code className="text-foreground font-mono text-sm bg-card/50 px-3 py-2 rounded-lg block">
+                  10729 - E/4a.CRE/GAD
+                </code>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Observações */}
