@@ -140,43 +140,51 @@
 
 @layer components {
   .section-card {
-    @apply bg-card rounded-lg border shadow-sm transition-all duration-200 hover:shadow-md;
+    @apply bg-card rounded-xl border border-border/50 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-border;
   }
 
   .section-number {
-    @apply inline-flex items-center justify-center w-8 h-8 rounded-full bg-accent text-accent-foreground font-bold text-sm;
+    @apply inline-flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-accent to-accent/80 text-accent-foreground font-bold text-base shadow-md;
   }
 
   .highlight-box {
-    @apply bg-[hsl(var(--highlight-bg))] border-l-4 border-accent p-4 rounded-r-lg;
+    @apply bg-gradient-to-r from-[hsl(var(--highlight-bg))] to-[hsl(var(--highlight-bg))]/50 border-l-4 border-accent p-4 sm:p-5 rounded-r-xl shadow-sm;
   }
 
   .step-indicator {
-    @apply flex items-center justify-center w-10 h-10 rounded-full bg-primary text-primary-foreground font-bold;
+    @apply flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-primary to-primary/80 text-primary-foreground font-bold shadow-md;
   }
 
   .nav-link {
-    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent transition-colors;
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent/50 transition-all duration-200;
   }
 
   .nav-link.active {
-    @apply bg-sidebar-accent text-sidebar-foreground;
+    @apply bg-accent text-accent-foreground shadow-md;
   }
 
   .table-institutional {
-    @apply w-full border-collapse;
+    @apply w-full border-collapse rounded-lg overflow-hidden;
   }
 
   .table-institutional th {
-    @apply bg-[hsl(var(--table-header))] text-primary-foreground px-4 py-3 text-left font-semibold;
+    @apply bg-gradient-to-r from-[hsl(var(--table-header))] to-[hsl(var(--table-header))]/90 text-primary-foreground px-4 py-3 text-left font-semibold text-sm;
   }
 
   .table-institutional td {
-    @apply px-4 py-3 border-b border-border;
+    @apply px-4 py-3 border-b border-border/50 text-sm;
   }
 
   .table-institutional tr:nth-child(even) td {
     @apply bg-[hsl(var(--table-stripe))];
+  }
+
+  .table-institutional tr:last-child td {
+    @apply border-b-0;
+  }
+
+  .text-justified {
+    @apply text-justify hyphens-auto;
   }
 
   .print-only {
