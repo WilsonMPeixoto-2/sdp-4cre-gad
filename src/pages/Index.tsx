@@ -13,6 +13,7 @@ import { SectionFour } from "@/components/pop/SectionFour";
 import { SectionFive } from "@/components/pop/SectionFive";
 import { SectionContacts } from "@/components/pop/SectionContacts";
 import { SectionAnexo } from "@/components/pop/SectionAnexo";
+import { BackToTop } from "@/components/pop/BackToTop";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("introducao");
@@ -105,6 +106,7 @@ const Index = () => {
           </div>
         </main>
       </div>
+      <BackToTop />
     </div>
   );
 };
