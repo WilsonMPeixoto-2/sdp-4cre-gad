@@ -2,7 +2,7 @@ import { Shield } from "lucide-react";
 
 export const BrandingBadge = () => {
   return (
-    <div className="fixed bottom-4 right-4 z-50 no-print">
+    <div className="fixed bottom-4 left-4 z-50 no-print">
       <div className="flex items-center gap-2 px-3 py-2 rounded-full glass-effect bg-card/80 border border-border/40 shadow-lg">
         <Shield className="w-4 h-4 text-primary" />
         <span className="text-xs font-medium text-muted-foreground">
