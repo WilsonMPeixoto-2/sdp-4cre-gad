@@ -1,4 +1,4 @@
-import { FileText, ExternalLink, Scale, Clock, Receipt, Users, AlertTriangle, CheckCircle2, BookOpen, Gavel, CreditCard } from "lucide-react";
+import { FileText, ExternalLink, Scale, Clock, Receipt, Users, AlertTriangle, CheckCircle2, BookOpen, Gavel, CreditCard, Calculator, CalendarClock } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -223,6 +223,44 @@ export const SectionAnexo = () => {
         </div>
       </div>
 
+      {/* Alerta Retenção de Tributos */}
+      <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-amber-500 bg-gradient-to-r from-amber-500/5 to-transparent">
+        <div className="flex items-start gap-4">
+          <div className="p-2.5 rounded-lg bg-amber-500/10 shrink-0">
+            <Calculator className="w-5 h-5 text-amber-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-foreground mb-2">Retenção de Tributos (Res. CGM nº 1.176/2015)</h4>
+            <p className="text-muted-foreground text-sm leading-relaxed text-justified mb-2">
+              Mesmo no SDP, a <strong className="text-foreground">regra de retenção na fonte se aplica</strong>. 
+              Se você pagar um prestador de serviço (PJ ou PF) pelo valor bruto sem reter o ISS, INSS ou IRRF quando devido, a prestação de contas será reprovada.
+            </p>
+            <ul className="text-muted-foreground text-sm space-y-1 list-disc list-inside">
+              <li><strong className="text-foreground">ISS:</strong> Serviços prestados no Rio de Janeiro</li>
+              <li><strong className="text-foreground">INSS:</strong> Prestadores autônomos (PF)</li>
+              <li><strong className="text-foreground">IRRF:</strong> Determinados serviços prestados por PJ</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Alerta Encerramento do Exercício */}
+      <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-red-500 bg-gradient-to-r from-red-500/5 to-transparent">
+        <div className="flex items-start gap-4">
+          <div className="p-2.5 rounded-lg bg-red-500/10 shrink-0">
+            <CalendarClock className="w-5 h-5 text-red-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-foreground mb-2">Encerramento do Exercício 2025</h4>
+            <p className="text-muted-foreground text-sm leading-relaxed text-justified">
+              <strong className="text-foreground">Atenção especial em dezembro:</strong> A regra geral de 120 dias para prestação de contas fica suspensa/alterada para o fechamento do ano. 
+              O prazo para devolver saldo não utilizado ou prestar contas é <strong className="text-foreground">encurtado drasticamente</strong> (geralmente primeira quinzena de dezembro/janeiro). 
+              Consulte a <strong className="text-foreground">Resolução de Encerramento do Exercício 2025</strong> publicada pela CGM/SMFP.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Alerta Importante */}
       <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-primary bg-gradient-to-r from-primary/5 to-transparent">
         <div className="flex items-start gap-4">
@@ -315,6 +353,23 @@ export const SectionAnexo = () => {
             <div className="min-w-0">
               <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução Conjunta nº 115/2023</p>
               <p className="text-sm text-muted-foreground">Altera a Res. 107/2022 (revoga Art. 27)</p>
+            </div>
+            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
+          </a>
+
+          {/* Resolução 1.176/2015 - Tributos */}
+          <a
+            href="https://controladoria.prefeitura.rio/guia-de-retencao/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
+          >
+            <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center group-hover:bg-amber-500/20 transition-colors shrink-0">
+              <Calculator className="w-6 h-6 text-amber-600" />
+            </div>
+            <div className="min-w-0">
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Guia de Retenção de Tributos</p>
+              <p className="text-sm text-muted-foreground">Res. CGM nº 1.176/2015 (ISS, INSS, IRRF)</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
