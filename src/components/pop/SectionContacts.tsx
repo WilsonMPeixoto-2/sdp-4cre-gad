@@ -1,4 +1,5 @@
-import { Phone, Mail, MapPin, Clock, ExternalLink, Monitor, BookOpen } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ExternalLink, Monitor, BookOpen, Printer, Calendar } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const SectionContacts = () => {
   return (
@@ -136,12 +137,37 @@ export const SectionContacts = () => {
           </div>
         </div>
 
+        {/* Print Button */}
+        <div className="section-card p-5 sm:p-6 no-print">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="p-2.5 rounded-lg bg-primary/10">
+                <Printer className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground">Versão para Impressão</h4>
+                <p className="text-sm text-muted-foreground">Imprima este guia para consulta offline</p>
+              </div>
+            </div>
+            <Button
+              onClick={() => window.print()}
+              className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              <Printer className="w-4 h-4 mr-2" />
+              Imprimir Documento
+            </Button>
+          </div>
+        </div>
+
         {/* Footer Note */}
         <div className="p-6 bg-gradient-to-br from-primary/10 via-primary/5 to-secondary rounded-xl border border-border/50">
           <p className="text-center text-muted-foreground">
             <strong className="text-foreground text-lg">4ª Coordenadoria Regional de Educação</strong><br />
             <span className="text-sm">Gerência de Administração (GAD)</span><br />
-            <span className="text-xs text-muted-foreground/70 mt-2 block">Versão 2025 | Dezembro 2025</span>
+            <span className="text-xs text-muted-foreground/70 mt-2 block flex items-center justify-center gap-2">
+              <Calendar className="w-3 h-3" />
+              Última atualização: 16 de dezembro de 2025
+            </span>
           </p>
         </div>
       </div>
