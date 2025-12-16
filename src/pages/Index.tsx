@@ -16,7 +16,7 @@ import { SectionAnexo } from "@/components/pop/SectionAnexo";
 import { BackToTop } from "@/components/pop/BackToTop";
 import { ReadingProgressBar } from "@/components/pop/ReadingProgressBar";
 import { AnimatedSection } from "@/components/pop/AnimatedSection";
-import { BrandingBadge } from "@/components/pop/BrandingBadge";
+
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("introducao");
@@ -143,7 +143,7 @@ const Index = () => {
         </main>
       </div>
       <BackToTop />
-      <BrandingBadge />
+      
     </div>
   );
 };
