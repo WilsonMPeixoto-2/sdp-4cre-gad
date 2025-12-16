@@ -59,16 +59,16 @@ export const SectionThree = () => {
                   <td className="text-muted-foreground">Cartão/Boleto</td>
                   <td className="text-muted-foreground">Nome</td>
                   <td className="text-muted-foreground">Art. 8, 9, 10</td>
-                  <td className="text-muted-foreground">435</td>
-                  <td className="text-right font-mono">R$ 0,00</td>
+                  <td className="data-code text-muted-foreground">435</td>
+                  <td className="text-right data-code">R$ 0,00</td>
                 </tr>
                 <tr className="bg-primary/5">
                   <td colSpan={5} className="text-right font-semibold">Valor total:</td>
-                  <td className="text-right font-mono font-semibold">R$ 0,00</td>
+                  <td className="text-right data-code font-semibold">R$ 0,00</td>
                 </tr>
                 <tr className="bg-success/5">
                   <td colSpan={5} className="text-right font-semibold">Saldo disponível:</td>
-                  <td className="text-right font-mono font-semibold text-success">R$ 0,00</td>
+                  <td className="text-right data-code font-semibold text-success">R$ 0,00</td>
                 </tr>
               </tbody>
             </table>
@@ -82,7 +82,7 @@ export const SectionThree = () => {
           <div className="grid sm:grid-cols-3 gap-4">
             <div className="p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border-l-4 border-l-primary">
               <div className="flex items-center gap-3 mb-2">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-md">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-md data-code">
                   441
                 </span>
                 <span className="font-bold text-foreground">Natureza 441</span>
@@ -92,7 +92,7 @@ export const SectionThree = () => {
             
             <div className="p-4 bg-gradient-to-br from-success/10 to-success/5 rounded-xl border-l-4 border-l-success">
               <div className="flex items-center gap-3 mb-2">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-success text-success-foreground font-bold text-sm shadow-md">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-success text-success-foreground font-bold text-sm shadow-md data-code">
                   435
                 </span>
                 <span className="font-bold text-foreground">Natureza 435</span>
@@ -102,7 +102,7 @@ export const SectionThree = () => {
             
             <div className="p-4 bg-gradient-to-br from-[hsl(210,60%,50%)]/10 to-[hsl(210,60%,50%)]/5 rounded-xl border-l-4 border-l-[hsl(210,60%,50%)]">
               <div className="flex items-center gap-3 mb-2">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[hsl(210,60%,50%)] text-primary-foreground font-bold text-sm shadow-md">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[hsl(210,60%,50%)] text-primary-foreground font-bold text-sm shadow-md data-code">
                   434
                 </span>
                 <span className="font-bold text-foreground">Natureza 434</span>

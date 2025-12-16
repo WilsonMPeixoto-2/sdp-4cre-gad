@@ -85,12 +85,12 @@ export const SectionTwo = () => {
           </div>
         </div>
 
-        {/* Procedure Steps */}
+        {/* Procedure Steps - Timeline */}
         <div className="section-card p-5 sm:p-6">
           <h3 className="font-semibold text-foreground mb-4">2.2. Procedimentos para Criar o Despacho</h3>
           
-          <div className="space-y-4">
-            <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
+          <div className="space-y-4 timeline-steps">
+            <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl timeline-step">
               <div className="step-indicator shrink-0 text-sm">1</div>
               <div>
                 <h4 className="font-semibold text-foreground mb-1">Incluir Documento</h4>
@@ -100,7 +100,7 @@ export const SectionTwo = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
+            <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl timeline-step">
               <div className="step-indicator shrink-0 text-sm">2</div>
               <div>
                 <h4 className="font-semibold text-foreground mb-1">Escolha do Tipo de Documento</h4>
@@ -110,7 +110,7 @@ export const SectionTwo = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
+            <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl timeline-step">
               <div className="step-indicator shrink-0 text-sm">3</div>
               <div>
                 <h4 className="font-semibold text-foreground mb-1">Preenchimento do Editor</h4>
@@ -132,7 +132,7 @@ export const SectionTwo = () => {
           
           <div className="highlight-box">
             <p className="font-bold text-foreground mb-2">Formato obrigatório:</p>
-            <code className="block bg-card px-4 py-3 rounded-lg border border-border/50 text-sm font-mono text-foreground break-all shadow-sm">
+            <code className="block bg-card px-4 py-3 rounded-lg border border-border/50 text-sm data-code text-foreground break-all shadow-sm">
               SDP – E/CRE (04.xx.xxx) NOME DA ESCOLA
             </code>
           </div>
@@ -153,31 +153,31 @@ export const SectionTwo = () => {
               <tbody>
                 <tr>
                   <td>Saldo total inicial em 00/00/202X</td>
-                  <td className="text-right font-mono">-</td>
+                  <td className="text-right data-code">-</td>
                 </tr>
                 <tr>
-                  <td className="pl-6 sm:pl-8">Saldo da natureza 441</td>
-                  <td className="text-right font-mono">-</td>
+                  <td className="pl-6 sm:pl-8">Saldo da natureza <span className="data-code">441</span></td>
+                  <td className="text-right data-code">-</td>
                 </tr>
                 <tr>
-                  <td className="pl-6 sm:pl-8">Saldo da natureza 435</td>
-                  <td className="text-right font-mono">-</td>
+                  <td className="pl-6 sm:pl-8">Saldo da natureza <span className="data-code">435</span></td>
+                  <td className="text-right data-code">-</td>
                 </tr>
                 <tr>
-                  <td className="pl-6 sm:pl-8">Saldo da natureza 434</td>
-                  <td className="text-right font-mono">-</td>
+                  <td className="pl-6 sm:pl-8">Saldo da natureza <span className="data-code">434</span></td>
+                  <td className="text-right data-code">-</td>
                 </tr>
                 <tr>
                   <td>Total dos Créditos (ressuprimentos)</td>
-                  <td className="text-right font-mono">-</td>
+                  <td className="text-right data-code">-</td>
                 </tr>
                 <tr>
                   <td>Pgtos em cartão (Boletos Bancários)</td>
-                  <td className="text-right font-mono">-</td>
+                  <td className="text-right data-code">-</td>
                 </tr>
                 <tr className="font-semibold bg-primary/10">
                   <td>Saldo total final em 00/00/202X</td>
-                  <td className="text-right font-mono">-</td>
+                  <td className="text-right data-code">-</td>
                 </tr>
               </tbody>
             </table>

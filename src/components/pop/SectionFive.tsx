@@ -105,7 +105,7 @@ export const SectionFive = () => {
               
               <div className="bg-card p-4 rounded-xl border border-border/50">
                 <div className="flex items-center justify-between gap-2">
-                  <code className="text-sm font-mono text-primary break-all font-semibold">
+                  <code className="text-sm data-code text-primary break-all font-semibold">
                     10729 - Gerência de Administração (E/4a.CRE/GAD)
                   </code>
                   <CopyButton text="10729 - Gerência de Administração (E/4a.CRE/GAD)" label="Código copiado!" />
@@ -130,7 +130,7 @@ export const SectionFive = () => {
             {gadCodes.map((gad, i) => (
               <div 
                 key={i} 
-                className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-mono transition-all ${
+                className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm data-code transition-all ${
                   gad.highlight 
                     ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-semibold shadow-md" 
                     : "bg-card text-foreground border border-border/50 hover:border-primary/30"
