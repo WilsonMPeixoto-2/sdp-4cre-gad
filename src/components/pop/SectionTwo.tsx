@@ -1,5 +1,8 @@
 import { FileText, PenLine, AlertCircle, CheckCircle2, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import incluirDocumentoIcon from "@/assets/sei-icons/incluir-documento.png";
+import gerarDocumentoIcon from "@/assets/sei-icons/gerar-documento.png";
+import assinarIcon from "@/assets/sei-icons/assinar.png";
 
 export const SectionTwo = () => {
   return (
@@ -93,10 +96,20 @@ export const SectionTwo = () => {
             <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
               <div className="step-indicator shrink-0 text-sm">1</div>
               <div>
-                <h4 className="font-semibold text-foreground mb-1">Incluir Documento</h4>
+                <h4 className="font-semibold text-foreground mb-1 flex items-center gap-2">
+                  Incluir Documento
+                  <img src={incluirDocumentoIcon} alt="Ícone Incluir Documento" className="h-6 w-6" />
+                </h4>
                 <p className="text-sm text-muted-foreground text-justified leading-relaxed">
                   Com o processo aberto, clique no ícone <strong className="text-foreground">"INCLUIR DOCUMENTO"</strong> na barra de ferramentas do SEI.
                 </p>
+                <div className="mt-3 p-3 bg-card/50 rounded-lg border border-border/50">
+                  <p className="text-xs text-muted-foreground mb-2">
+                    <strong className="text-foreground">Observação:</strong> A primeira opção sempre será "Externo". 
+                    O mesmo ícone é utilizado para gerar e incluir documentos internos e externos.
+                  </p>
+                  <img src={gerarDocumentoIcon} alt="Tela Gerar Documento" className="rounded-lg border border-border/30 max-w-full" />
+                </div>
               </div>
             </div>
 
@@ -105,7 +118,7 @@ export const SectionTwo = () => {
               <div>
                 <h4 className="font-semibold text-foreground mb-1">Escolha do Tipo de Documento</h4>
                 <p className="text-sm text-muted-foreground text-justified leading-relaxed">
-                  Selecione o tipo: <strong className="text-foreground">"Encaminhamento da Prestação de Contas dos Gestores SDP"</strong>
+                  Selecione o tipo: <strong className="text-foreground">"DESPACHO"</strong>
                 </p>
               </div>
             </div>
@@ -190,11 +203,11 @@ export const SectionTwo = () => {
           
           <div className="space-y-3">
             <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
-              <PenLine className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <img src={assinarIcon} alt="Ícone Assinar" className="h-6 w-6 shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-foreground">1. Assinar</p>
                 <p className="text-sm text-muted-foreground text-justified leading-relaxed">
-                  Clique no ícone Assinar Documento (representado por uma caneta preta na barra de ferramentas).
+                  Clique no ícone Assinar Documento <img src={assinarIcon} alt="Assinar" className="inline h-4 w-4 mx-1" /> (representado por uma caneta preta na barra de ferramentas) ou no botão "Assinar".
                 </p>
               </div>
             </div>
