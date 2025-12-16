@@ -1,4 +1,4 @@
-import { FileText, ExternalLink, Scale, Clock, Receipt, Users, AlertTriangle, CheckCircle2, BookOpen, Gavel } from "lucide-react";
+import { FileText, ExternalLink, Scale, Clock, Receipt, Users, AlertTriangle, CheckCircle2, BookOpen, Gavel, CreditCard } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -17,6 +17,7 @@ export const SectionAnexo = () => {
     { documento: "Cheques cancelados", obrigatorio: false },
     { documento: "Fatura do cartão do período", obrigatorio: true },
     { documento: "Extrato bancário do período", obrigatorio: true },
+    { documento: "Comprovante de transação do cartão (se pago via Cartão de Pagamento)", obrigatorio: true },
     { documento: "Documentações complementares", obrigatorio: false },
   ];
 
@@ -33,7 +34,7 @@ export const SectionAnexo = () => {
 
   const prazosPrestacao = [
     { situacao: "Prestação regular", prazo: "Até 120 dias após liberação de recursos" },
-    { situacao: "Solicitação de reposição de recursos", prazo: "Antes de 90 dias (conforme Art. 23 §4º)" },
+    { situacao: "Solicitação de reposição de recursos", prazo: "Antes de 90 dias (Art. 23 §4º da Res. 107/2022)" },
     { situacao: "Substituição de gestor", prazo: "Imediata" },
     { situacao: "Encerramento do SDP", prazo: "Imediata" },
   ];
@@ -58,7 +59,8 @@ export const SectionAnexo = () => {
               Anexo – Legislação de Referência
             </h2>
             <p className="text-muted-foreground text-justified leading-relaxed">
-              Consolidação das principais regras e documentos exigidos conforme Decreto Municipal e Resoluções da CGM/SMFP
+              Consolidação das principais regras e documentos exigidos conforme <strong>Resolução Conjunta CGM/SMFP nº 107/2022</strong>, 
+              atualizada pela <strong>Res. 115/2023</strong> e complementada pela <strong>Res. CGM nº 2067/2025</strong>.
             </p>
           </div>
         </div>
@@ -111,7 +113,8 @@ export const SectionAnexo = () => {
             <Clock className="w-5 h-5 text-primary" />
           </div>
           <h3 className="text-lg font-semibold text-foreground">
-            Prazos para Prestação de Contas (Art. 25)
+            Prazos para Prestação de Contas
+            <span className="ml-2 text-sm font-normal text-muted-foreground">(Art. 25 da Res. Conjunta CGM/SMFP nº 107/2022)</span>
           </h3>
         </div>
 
@@ -142,7 +145,8 @@ export const SectionAnexo = () => {
             <FileText className="w-5 h-5 text-primary" />
           </div>
           <h3 className="text-lg font-semibold text-foreground">
-            Documentos Comprobatórios por Tipo de Despesa (Art. 22)
+            Documentos Comprobatórios por Tipo de Despesa
+            <span className="ml-2 text-sm font-normal text-muted-foreground">(Art. 22 da Res. Conjunta CGM/SMFP nº 107/2022)</span>
           </h3>
         </div>
 
@@ -174,6 +178,7 @@ export const SectionAnexo = () => {
           </div>
           <h3 className="text-lg font-semibold text-foreground">
             Regras para Comprovantes de Despesa
+            <span className="ml-2 text-sm font-normal text-muted-foreground">(Res. Conjunta CGM/SMFP nº 107/2022)</span>
           </h3>
         </div>
 
@@ -201,6 +206,23 @@ export const SectionAnexo = () => {
         </div>
       </div>
 
+      {/* Alerta Cartão de Pagamento */}
+      <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-blue-500 bg-gradient-to-r from-blue-500/5 to-transparent">
+        <div className="flex items-start gap-4">
+          <div className="p-2.5 rounded-lg bg-blue-500/10 shrink-0">
+            <CreditCard className="w-5 h-5 text-blue-600" />
+          </div>
+          <div>
+            <h4 className="font-semibold text-foreground mb-2">Pagamentos via Cartão de Pagamento (Res. CGM nº 2067/2025)</h4>
+            <p className="text-muted-foreground text-sm leading-relaxed text-justified">
+              Se a unidade utilizar o <strong className="text-foreground">Cartão de Pagamento</strong>, além da Nota Fiscal (Art. 22), 
+              deve-se anexar obrigatoriamente o <strong className="text-foreground">comprovante da transação do cartão</strong> (filipeta ou extrato). 
+              A Nota Fiscal sozinha não comprova o pagamento via cartão.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Alerta Importante */}
       <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-primary bg-gradient-to-r from-primary/5 to-transparent">
         <div className="flex items-start gap-4">
@@ -210,7 +232,8 @@ export const SectionAnexo = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-2">Atenção</h4>
             <p className="text-muted-foreground text-sm leading-relaxed text-justified">
-              Os comprovantes de despesa devem conter necessariamente: <strong className="text-foreground">discriminação clara do serviço prestado ou material fornecido</strong> (não se admitindo generalização ou abreviaturas) e <strong className="text-foreground">data da emissão</strong>. Pagamentos em espécie devem estar devidamente comprovados.
+              Os comprovantes de despesa devem conter necessariamente: <strong className="text-foreground">discriminação clara do serviço prestado ou material fornecido</strong> (não se admitindo generalização ou abreviaturas) e <strong className="text-foreground">data da emissão</strong>. 
+              Despesas proibidas estão listadas taxativamente no Art. 8º do Decreto Rio nº 50.162/2022.
             </p>
           </div>
         </div>
@@ -228,24 +251,26 @@ export const SectionAnexo = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 gap-4">
+          {/* Resolução 107/2022 - Principal */}
           <a
-            href="https://doweb.rio.rj.gov.br/apifront/portal/edicoes/imprimir_materia/846971/5376"
+            href="https://doweb.rio.rj.gov.br/apifront/portal/edicoes/imprimir_materia/780251/5089"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
+            className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 hover:from-primary/15 hover:to-primary/10 border border-primary/30 hover:border-primary/50 transition-all duration-300 group sm:col-span-2"
           >
-            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors shrink-0">
               <Gavel className="w-6 h-6 text-primary" />
             </div>
             <div className="min-w-0">
-              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Decreto nº 57.250/2024</p>
-              <p className="text-sm text-muted-foreground">Normas do SDP Municipal</p>
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução Conjunta CGM/SMFP nº 107/2022</p>
+              <p className="text-sm text-muted-foreground">Norma operacional central do SDP (Arts. 22, 23 e 25)</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
+          {/* Decreto 50.162/2022 */}
           <a
-            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2025/06/Res-CGM-2067.pdf"
+            href="https://doweb.rio.rj.gov.br/apifront/portal/edicoes/imprimir_materia/768880/5024"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -254,14 +279,32 @@ export const SectionAnexo = () => {
               <Scale className="w-6 h-6 text-primary" />
             </div>
             <div className="min-w-0">
-              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução CGM nº 2.067/2025</p>
-              <p className="text-sm text-muted-foreground">Controladoria Geral do Município</p>
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Decreto Rio nº 50.162/2022</p>
+              <p className="text-sm text-muted-foreground">Institui o Sistema Descentralizado de Pagamento</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
+          {/* Resolução 2067/2025 */}
           <a
-            href="https://doweb.rio.rj.gov.br/apifront/portal/edicoes/imprimir_materia/800504/5234"
+            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2025/06/Res-CGM-2067.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
+          >
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+              <CreditCard className="w-6 h-6 text-primary" />
+            </div>
+            <div className="min-w-0">
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução CGM nº 2067/2025</p>
+              <p className="text-sm text-muted-foreground">Regulamenta o Cartão de Pagamento</p>
+            </div>
+            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
+          </a>
+
+          {/* Resolução 115/2023 */}
+          <a
+            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2023/04/Resolucao-Conjunta-CGM-SMFP-115-de-31-de-marco-de-2023.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -270,12 +313,13 @@ export const SectionAnexo = () => {
               <FileText className="w-6 h-6 text-primary" />
             </div>
             <div className="min-w-0">
-              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Decreto nº 54.685/2024</p>
-              <p className="text-sm text-muted-foreground">Regulamentação SDP</p>
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução Conjunta nº 115/2023</p>
+              <p className="text-sm text-muted-foreground">Altera a Res. 107/2022 (revoga Art. 27)</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
+          {/* Guia SDP */}
           <a
             href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2023/10/Guia-SDP_Versao-Publicacao_1a-ed.pdf"
             target="_blank"
@@ -294,7 +338,7 @@ export const SectionAnexo = () => {
         </div>
 
         <p className="mt-5 text-sm text-muted-foreground text-center italic">
-          Este resumo é uma referência rápida. Consulte sempre a legislação atualizada para informações completas.
+          Referência: Resolução Conjunta CGM/SMFP nº 107/2022, atualizada pela Res. 115/2023 e complementada pela Res. CGM nº 2067/2025.
         </p>
       </div>
     </section>
