@@ -52,7 +52,7 @@ export const HeroCover = () => {
             { icon: <Building2 className="w-5 h-5" />, label: "GAD", desc: "Gerência de Administração" },
             { icon: <BookOpen className="w-5 h-5" />, label: "POP", desc: "Procedimento Operacional Padrão" },
             { icon: <FileText className="w-5 h-5" />, label: "SEI!RIO", desc: "Sistema Eletrônico" },
-            { icon: <Calendar className="w-5 h-5" />, label: "v1.0", desc: "Dezembro/2025" },
+            { icon: <Calendar className="w-5 h-5" />, label: "V. 1.0", desc: "Dezembro/2025" },
           ].map((item, i) => (
             <div key={i} className="bg-primary-foreground/8 glass-effect border border-primary-foreground/15 rounded-2xl p-4 text-center transition-all duration-300 hover:bg-primary-foreground/12 hover:border-primary-foreground/25 group">
               <div className="inline-flex items-center justify-center w-11 h-11 bg-primary-foreground/10 rounded-xl mb-2.5 group-hover:bg-primary-foreground/15 transition-colors">
