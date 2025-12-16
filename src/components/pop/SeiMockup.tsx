@@ -1,4 +1,5 @@
-import { Menu, Plus, FileText, FolderOpen, Search, ChevronDown, Check, User, Send, Eye, Pencil, Trash2, Printer, Download, Shield } from "lucide-react";
+import { Menu, FileText, Search, ChevronDown, Check, User, Eye, Printer, Download } from "lucide-react";
+import { SeiIncluirIcon, SeiAssinarIcon, SeiEnviarIcon, SeiPastaIcon, SeiIniciarProcessoIcon, SeiInteressadosIcon } from "./SeiIcons";
 
 interface SeiMockupProps {
   variant: "menu" | "process-tree" | "document-form" | "type-selection" | "icons";
@@ -15,16 +16,16 @@ const SeiIconButton = ({ icon, label, active = false }: { icon: React.ReactNode;
   </div>
 );
 
-// SEI Action Icons Bar
+// SEI Action Icons Bar with custom SEI icons
 export const SeiIconsBar = () => (
   <div className="flex items-center gap-1 p-2 bg-card border border-border rounded-lg overflow-x-auto">
-    <SeiIconButton icon={<Plus className="w-4 h-4" />} label="Incluir" active />
-    <SeiIconButton icon={<Send className="w-4 h-4" />} label="Enviar" />
-    <SeiIconButton icon={<Eye className="w-4 h-4" />} label="Visualizar" />
-    <SeiIconButton icon={<Pencil className="w-4 h-4" />} label="Editar" />
-    <SeiIconButton icon={<Shield className="w-4 h-4" />} label="Autenticar" />
-    <SeiIconButton icon={<Printer className="w-4 h-4" />} label="Imprimir" />
-    <SeiIconButton icon={<Download className="w-4 h-4" />} label="Download" />
+    <SeiIconButton icon={<SeiIncluirIcon size={20} />} label="Incluir" active />
+    <SeiIconButton icon={<SeiEnviarIcon size={20} />} label="Enviar" />
+    <SeiIconButton icon={<Eye className="w-5 h-5" />} label="Visualizar" />
+    <SeiIconButton icon={<SeiAssinarIcon size={20} />} label="Assinar" />
+    <SeiIconButton icon={<SeiAssinarIcon size={20} />} label="Autenticar" />
+    <SeiIconButton icon={<Printer className="w-5 h-5" />} label="Imprimir" />
+    <SeiIconButton icon={<Download className="w-5 h-5" />} label="Download" />
   </div>
 );
 
@@ -54,7 +55,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
             <span>Estatísticas</span>
           </div>
           <div className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-muted-foreground hover:bg-secondary cursor-pointer">
-            <FolderOpen className="w-4 h-4" />
+            <SeiPastaIcon size={16} />
             <span>Favoritos</span>
           </div>
           <div className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-semibold cursor-pointer ${
@@ -62,7 +63,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
               ? "bg-primary text-primary-foreground shadow-md" 
               : "text-muted-foreground hover:bg-secondary"
           }`}>
-            <Plus className="w-4 h-4" />
+            <SeiIniciarProcessoIcon size={18} />
             <span>Iniciar Processo</span>
           </div>
         </div>
@@ -82,7 +83,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
           {/* Process Root */}
           <div className="flex items-center gap-2 px-2 py-1.5 font-medium text-foreground">
             <ChevronDown className="w-4 h-4 text-primary" />
-            <FolderOpen className="w-4 h-4 text-primary" />
+            <SeiPastaIcon size={18} />
             <span>Processo 04.xx.xxx/2025</span>
           </div>
           
