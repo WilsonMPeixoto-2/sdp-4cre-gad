@@ -149,42 +149,33 @@ export const SectionContacts = () => {
           </a>
         </div>
 
-        {/* Contatos SEI!RIO - E/SUBG/GAA */}
+        {/* Administradores Locais SEI!RIO */}
         <div className="section-card p-5 sm:p-6">
           <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
             <Users className="w-5 h-5 text-primary" />
-            Contatos SEI!RIO - E/SUBG/GAA
+            Administradores Locais SEI!RIO
           </h3>
           <p className="text-muted-foreground mb-4 text-sm sm:text-base text-justified leading-relaxed">
             Para dúvidas específicas sobre o uso do SEI!RIO na Secretaria Municipal de Educação, 
-            entre em contato através dos e-mails abaixo.
+            entre em contato com os administradores locais do sistema através dos e-mails abaixo.
           </p>
           
-          <div className="grid gap-3">
-            <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 shrink-0">
-                <Mail className="w-6 h-6 text-primary" />
-              </div>
-              <div className="min-w-0">
-                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Dúvidas SEI!RIO</p>
+          <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
+            <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 shrink-0">
+              <Mail className="w-6 h-6 text-primary" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide mb-1">E-mails de contato</p>
+              <div className="flex flex-wrap gap-x-4 gap-y-1">
                 <a 
                   href="mailto:sei.duvidas@rioeduca.net" 
-                  className="text-base sm:text-lg font-semibold text-primary hover:underline break-all"
+                  className="text-base font-semibold text-primary hover:underline break-all"
                 >
                   sei.duvidas@rioeduca.net
                 </a>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl border border-border/50">
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 shrink-0">
-                <Mail className="w-6 h-6 text-primary" />
-              </div>
-              <div className="min-w-0">
-                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">E/SUBG/GAA</p>
                 <a 
                   href="mailto:gaasme@rioeduca.net" 
-                  className="text-base sm:text-lg font-semibold text-primary hover:underline break-all"
+                  className="text-base font-semibold text-primary hover:underline break-all"
                 >
                   gaasme@rioeduca.net
                 </a>
