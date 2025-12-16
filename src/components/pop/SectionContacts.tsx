@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, ExternalLink, Monitor, BookOpen, Printer, Calendar } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, ExternalLink, Monitor, BookOpen, Printer, Calendar, Users, Headset } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const SectionContacts = () => {
@@ -123,17 +123,90 @@ export const SectionContacts = () => {
 
         {/* Support Info */}
         <div className="section-card p-5 sm:p-6">
-          <h3 className="font-semibold text-foreground mb-4">Suporte ao SEI!RIO</h3>
+          <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
+            <Headset className="w-5 h-5 text-primary" />
+            Suporte ao SEI!RIO
+          </h3>
           <p className="text-muted-foreground mb-4 text-sm sm:text-base text-justified leading-relaxed">
             Para questões técnicas relacionadas ao sistema SEI!RIO, entre em contato com 
             o suporte técnico da plataforma através dos canais oficiais da Prefeitura.
           </p>
+          
+          <a
+            href="https://sei.rio/servidor/atendimento/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group mb-4"
+          >
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+              <Headset className="w-6 h-6 text-primary" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Portal de Atendimento</p>
+              <p className="text-sm text-muted-foreground">Suporte técnico oficial SEI!RIO</p>
+            </div>
+            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0 transition-colors" />
+          </a>
           
           <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
             <Clock className="w-5 h-5 text-muted-foreground shrink-0" />
             <p className="text-sm text-muted-foreground">
               Atendimento de segunda a sexta, das 9h às 17h
             </p>
+          </div>
+        </div>
+
+        {/* Administradores Locais SEI!RIO SME */}
+        <div className="section-card p-5 sm:p-6">
+          <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
+            <Users className="w-5 h-5 text-primary" />
+            Administradores Locais SEI!RIO - SME/RJ
+          </h3>
+          <p className="text-muted-foreground mb-4 text-sm sm:text-base text-justified leading-relaxed">
+            Para dúvidas específicas sobre o uso do SEI!RIO na Secretaria Municipal de Educação, 
+            entre em contato com os administradores locais.
+          </p>
+          
+          <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20 mb-4">
+            <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 shrink-0">
+              <Mail className="w-6 h-6 text-primary" />
+            </div>
+            <div className="min-w-0">
+              <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">E-mail da GAASME</p>
+              <a 
+                href="mailto:gaasme@rioeduca.net" 
+                className="text-base sm:text-lg font-semibold text-primary hover:underline break-all"
+              >
+                gaasme@rioeduca.net
+              </a>
+            </div>
+          </div>
+
+          <div className="space-y-3">
+            <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Administradores</p>
+            <div className="grid gap-3">
+              <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-secondary to-secondary/50 rounded-lg">
+                <div className="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+                <div className="min-w-0 flex-1">
+                  <p className="font-medium text-foreground text-sm">Kelly Cristina Pinto Borges dos Santos</p>
+                  <a href="mailto:sei.duvidas@rioeduca.net" className="text-xs text-primary hover:underline">sei.duvidas@rioeduca.net</a>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-secondary to-secondary/50 rounded-lg">
+                <div className="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+                <div className="min-w-0 flex-1">
+                  <p className="font-medium text-foreground text-sm">Priscila Raquel Ribeiro da Silva</p>
+                  <a href="mailto:sei.duvidas@rioeduca.net" className="text-xs text-primary hover:underline">sei.duvidas@rioeduca.net</a>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-secondary to-secondary/50 rounded-lg">
+                <div className="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+                <div className="min-w-0 flex-1">
+                  <p className="font-medium text-foreground text-sm">Andrea Cristina F. Pinto</p>
+                  <a href="mailto:sei.duvidas@rioeduca.net" className="text-xs text-primary hover:underline">sei.duvidas@rioeduca.net</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
