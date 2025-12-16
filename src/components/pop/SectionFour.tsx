@@ -50,12 +50,12 @@ export const SectionFour = () => {
           </div>
         </div>
 
-        {/* Inclusion Procedure */}
+        {/* Inclusion Procedure - Timeline */}
         <div className="section-card p-5 sm:p-6">
           <h3 className="font-semibold text-foreground mb-4">4.2. Procedimento para Inclusão</h3>
           
-          <div className="space-y-4">
-            <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
+          <div className="space-y-4 timeline-steps">
+            <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl timeline-step">
               <div className="step-indicator shrink-0 text-sm">1</div>
               <div>
                 <h4 className="font-semibold text-foreground mb-1">Iniciando a Inclusão</h4>
@@ -66,7 +66,7 @@ export const SectionFour = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
+            <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl timeline-step">
               <div className="step-indicator shrink-0 text-sm">2</div>
               <div>
                 <h4 className="font-semibold text-foreground mb-1">Preenchimento dos Campos</h4>
