@@ -1,18 +1,27 @@
 import { ArrowUp } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 
 export const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const rafRef = useRef<number | null>(null);
+
+  const toggleVisibility = useCallback(() => {
+    if (rafRef.current) return;
+    
+    rafRef.current = requestAnimationFrame(() => {
+      setIsVisible(window.scrollY > 400);
+      rafRef.current = null;
+    });
+  }, []);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 400);
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
-
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
+  }, [toggleVisibility]);
 
   const scrollToTop = () => {
     window.scrollTo({
