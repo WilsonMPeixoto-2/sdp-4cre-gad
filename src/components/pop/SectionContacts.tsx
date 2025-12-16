@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Clock, ExternalLink, Monitor, BookOpen, Printer, Calendar, Users, Headset } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CopyButton } from "./CopyButton";
 
 export const SectionContacts = () => {
   return (
@@ -37,7 +38,7 @@ export const SectionContacts = () => {
               <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 shrink-0">
                 <Mail className="w-6 h-6 text-primary" />
               </div>
-              <div className="min-w-0">
+              <div className="min-w-0 flex-1">
                 <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">E-mail</p>
                 <a 
                   href="mailto:gad4cre@rioeduca.net" 
@@ -46,13 +47,14 @@ export const SectionContacts = () => {
                   gad4cre@rioeduca.net
                 </a>
               </div>
+              <CopyButton text="gad4cre@rioeduca.net" label="E-mail copiado!" />
             </div>
 
             <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
               <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 shrink-0">
                 <Phone className="w-6 h-6 text-primary" />
               </div>
-              <div>
+              <div className="flex-1">
                 <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Telefone</p>
                 <a 
                   href="tel:+552124759209" 
@@ -61,13 +63,14 @@ export const SectionContacts = () => {
                   (21) 2475-9209
                 </a>
               </div>
+              <CopyButton text="(21) 2475-9209" label="Telefone copiado!" />
             </div>
 
             <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
               <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 shrink-0">
                 <MapPin className="w-6 h-6 text-primary" />
               </div>
-              <div>
+              <div className="flex-1">
                 <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Endereço</p>
                 <p className="text-foreground font-medium">
                   Rua Professor Luís Rondelli, 150<br />
@@ -75,6 +78,7 @@ export const SectionContacts = () => {
                   CEP: 21021-630
                 </p>
               </div>
+              <CopyButton text="Rua Professor Luís Rondelli, 150, Olaria, Rio de Janeiro - RJ, CEP: 21021-630" label="Endereço copiado!" />
             </div>
           </div>
         </div>
@@ -166,19 +170,25 @@ export const SectionContacts = () => {
             </div>
             <div className="min-w-0 flex-1">
               <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide mb-1">E-mails de contato</p>
-              <div className="flex flex-wrap gap-x-4 gap-y-1">
-                <a 
-                  href="mailto:sei.duvidas@rioeduca.net" 
-                  className="text-base font-semibold text-primary hover:underline break-all"
-                >
-                  sei.duvidas@rioeduca.net
-                </a>
-                <a 
-                  href="mailto:gaasme@rioeduca.net" 
-                  className="text-base font-semibold text-primary hover:underline break-all"
-                >
-                  gaasme@rioeduca.net
-                </a>
+              <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-x-4 sm:gap-y-1">
+                <div className="flex items-center gap-1">
+                  <a 
+                    href="mailto:sei.duvidas@rioeduca.net" 
+                    className="text-base font-semibold text-primary hover:underline break-all"
+                  >
+                    sei.duvidas@rioeduca.net
+                  </a>
+                  <CopyButton text="sei.duvidas@rioeduca.net" label="E-mail copiado!" />
+                </div>
+                <div className="flex items-center gap-1">
+                  <a 
+                    href="mailto:gaasme@rioeduca.net" 
+                    className="text-base font-semibold text-primary hover:underline break-all"
+                  >
+                    gaasme@rioeduca.net
+                  </a>
+                  <CopyButton text="gaasme@rioeduca.net" label="E-mail copiado!" />
+                </div>
               </div>
             </div>
           </div>

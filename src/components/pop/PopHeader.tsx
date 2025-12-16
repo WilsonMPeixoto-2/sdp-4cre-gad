@@ -1,9 +1,10 @@
-import { FileText, Printer, Download, Moon, Sun, Monitor, Smartphone } from "lucide-react";
+import { FileText, Printer, Download, Moon, Sun, Monitor, Smartphone, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 interface PopHeaderProps {
   onPrint: () => void;
+  onSearch?: (query: string) => void;
 }
 
 type ViewMode = 'auto' | 'desktop' | 'mobile';

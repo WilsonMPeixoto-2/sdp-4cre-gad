@@ -1,7 +1,18 @@
 import { CheckCircle, Send, FileCheck, AlertCircle, FolderTree } from "lucide-react";
 import { SeiMockup } from "./SeiMockup";
+import { CopyButton } from "./CopyButton";
 
 export const SectionFive = () => {
+  const gadCodes = [
+    { code: "10714", name: "E/1a.CRE/GAD" },
+    { code: "10719", name: "E/2a.CRE/GAD" },
+    { code: "10724", name: "E/3a.CRE/GAD" },
+    { code: "10729", name: "E/4a.CRE/GAD", highlight: true },
+    { code: "10734", name: "E/5a.CRE/GAD" },
+    { code: "10739", name: "E/6a.CRE/GAD" },
+    { code: "10709", name: "E/10a.CRE/GAD" },
+  ];
+
   return (
     <section id="secao-5" className="scroll-mt-20 animate-fade-in">
       {/* Section Header */}
@@ -93,10 +104,13 @@ export const SectionFive = () => {
               </p>
               
               <div className="bg-card p-4 rounded-xl border border-border/50">
-                <code className="text-sm font-mono text-primary block mb-2 break-all font-semibold">
-                  10729 - Gerência de Administração (E/4a.CRE/GAD)
-                </code>
-                <p className="text-xs text-primary flex items-center gap-1">
+                <div className="flex items-center justify-between gap-2">
+                  <code className="text-sm font-mono text-primary break-all font-semibold">
+                    10729 - Gerência de Administração (E/4a.CRE/GAD)
+                  </code>
+                  <CopyButton text="10729 - Gerência de Administração (E/4a.CRE/GAD)" label="Código copiado!" />
+                </div>
+                <p className="text-xs text-primary flex items-center gap-1 mt-2">
                   <AlertCircle className="w-3 h-3" />
                   Certifique-se de selecionar a GAD da 4ª CRE
                 </p>
@@ -113,24 +127,21 @@ export const SectionFive = () => {
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {[
-              { code: "10714", name: "E/1a.CRE/GAD" },
-              { code: "10719", name: "E/2a.CRE/GAD" },
-              { code: "10724", name: "E/3a.CRE/GAD" },
-              { code: "10729", name: "E/4a.CRE/GAD", highlight: true },
-              { code: "10734", name: "E/5a.CRE/GAD" },
-              { code: "10739", name: "E/6a.CRE/GAD" },
-              { code: "10709", name: "E/10a.CRE/GAD" },
-            ].map((gad, i) => (
+            {gadCodes.map((gad, i) => (
               <div 
                 key={i} 
-                className={`px-4 py-3 rounded-xl text-sm font-mono transition-all ${
+                className={`flex items-center justify-between px-4 py-3 rounded-xl text-sm font-mono transition-all ${
                   gad.highlight 
                     ? "bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-semibold shadow-md" 
                     : "bg-card text-foreground border border-border/50 hover:border-primary/30"
                 }`}
               >
-                {gad.code} - {gad.name}
+                <span>{gad.code} - {gad.name}</span>
+                <CopyButton 
+                  text={`${gad.code} - ${gad.name}`} 
+                  label="Código copiado!" 
+                  className={gad.highlight ? "hover:bg-primary-foreground/20" : ""}
+                />
               </div>
             ))}
           </div>
