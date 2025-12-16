@@ -1,4 +1,4 @@
-import { FileText, ExternalLink, Scale, Clock, Receipt, Users, AlertTriangle, CheckCircle2, BookOpen, Gavel, CreditCard, Calculator, CalendarClock } from "lucide-react";
+import { FileText, ExternalLink, Scale, Clock, Receipt, Users, AlertTriangle, CheckCircle2, BookOpen, Gavel, CreditCard, Calculator, CalendarClock, Check } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -7,6 +7,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Progress } from "@/components/ui/progress";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useDocumentChecklist } from "@/hooks/useDocumentChecklist";
 
 export const SectionAnexo = () => {
   const documentosExigidos = [
@@ -20,6 +23,9 @@ export const SectionAnexo = () => {
     { documento: "Comprovante de transação do cartão (se pago via Cartão de Pagamento)", obrigatorio: true },
     { documento: "Documentações complementares", obrigatorio: false },
   ];
+
+  const documentNames = documentosExigidos.map(d => d.documento);
+  const { toggleItem, isChecked, progress, checkedCount, totalCount } = useDocumentChecklist(documentNames);
 
   const regrasComprovantes = [
     { regra: "Comprovantes devem ser atestados por 2 servidores identificados", artigo: "Art. 25 §1º" },
@@ -66,7 +72,7 @@ export const SectionAnexo = () => {
         </div>
       </div>
 
-      {/* Documentos Exigidos */}
+      {/* Documentos Exigidos - Checklist Interativo */}
       <div className="section-card p-6 sm:p-8 mb-6">
         <div className="flex items-center gap-3 mb-5">
           <div className="p-2.5 rounded-lg bg-primary/10">
@@ -77,32 +83,60 @@ export const SectionAnexo = () => {
           </h3>
         </div>
 
-        <div className="overflow-x-auto -mx-6 sm:mx-0 px-6 sm:px-0">
-          <Table className="table-institutional">
-            <TableHeader>
-              <TableRow>
-                <TableHead className="bg-primary text-primary-foreground rounded-tl-lg">Documento</TableHead>
-                <TableHead className="bg-primary text-primary-foreground w-32 text-center rounded-tr-lg">Obrigatoriedade</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {documentosExigidos.map((item, index) => (
-                <TableRow key={index}>
-                  <TableCell className="font-medium">{item.documento}</TableCell>
-                  <TableCell className="text-center">
-                    {item.obrigatorio ? (
-                      <span className="inline-flex items-center gap-1.5 text-primary font-medium">
-                        <CheckCircle2 className="w-4 h-4" />
-                        Obrigatório
-                      </span>
-                    ) : (
-                      <span className="text-muted-foreground text-sm">Se houver</span>
-                    )}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+        {/* Progress Bar */}
+        <div className="mb-5 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-foreground">
+              Progresso da documentação
+            </span>
+            <span className="text-sm font-semibold text-primary">
+              {checkedCount} de {totalCount} documentos reunidos
+            </span>
+          </div>
+          <Progress value={progress} className="h-2.5" />
+          {progress === 100 && (
+            <p className="text-sm text-success font-medium mt-2 flex items-center gap-1">
+              <Check className="w-4 h-4" />
+              Todos os documentos foram reunidos!
+            </p>
+          )}
+        </div>
+
+        <div className="space-y-2">
+          {documentosExigidos.map((item, index) => {
+            const checked = isChecked(item.documento);
+            return (
+              <div
+                key={index}
+                onClick={() => toggleItem(item.documento)}
+                className={`flex items-center gap-4 p-4 rounded-xl border cursor-pointer transition-all duration-200 ${
+                  checked 
+                    ? 'bg-success/5 border-success/30' 
+                    : 'bg-card border-border/50 hover:border-primary/30 hover:bg-secondary/30'
+                }`}
+              >
+                <Checkbox
+                  checked={checked}
+                  onCheckedChange={() => toggleItem(item.documento)}
+                  className="shrink-0"
+                />
+                <span className={`flex-1 text-sm sm:text-base transition-all duration-200 ${
+                  checked ? 'text-muted-foreground line-through opacity-60' : 'text-foreground'
+                }`}>
+                  {item.documento}
+                </span>
+                <span className={`text-xs font-medium px-2 py-1 rounded-lg shrink-0 ${
+                  item.obrigatorio 
+                    ? checked 
+                      ? 'bg-success/10 text-success' 
+                      : 'bg-primary/10 text-primary'
+                    : 'bg-secondary text-muted-foreground'
+                }`}>
+                  {item.obrigatorio ? (checked ? '✓ Reunido' : 'Obrigatório') : 'Se houver'}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -342,7 +376,7 @@ export const SectionAnexo = () => {
 
           {/* Resolução 115/2023 */}
           <a
-            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2023/04/RESCONJ-CGM-SMFP-1152023.pdf"
+            href="https://doweb.rio.rj.gov.br/apifront/portal/edicoes/imprimir_materia/880116/5694"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -352,31 +386,31 @@ export const SectionAnexo = () => {
             </div>
             <div className="min-w-0">
               <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução Conjunta nº 115/2023</p>
-              <p className="text-sm text-muted-foreground">Altera a Res. 107/2022 (revoga Art. 27)</p>
+              <p className="text-sm text-muted-foreground">Atualização da Resolução 107/2022</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
-          {/* Resolução 1.176/2015 - Tributos */}
+          {/* Guia de Retenção */}
           <a
-            href="https://www.rio.rj.gov.br/dlstatic/10112/2904248/4138524/GuiaparaRetencaoeRecolhimentodeImpostos_ResolucaoCGMn1176_2015_6atualizacao.pdf"
+            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2024/08/Guia-de-Retencao-de-Tributos-Res.-CGM-no-1.176_2015.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
           >
-            <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center group-hover:bg-amber-500/20 transition-colors shrink-0">
-              <Calculator className="w-6 h-6 text-amber-600" />
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+              <Calculator className="w-6 h-6 text-primary" />
             </div>
             <div className="min-w-0">
-              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Guia de Retenção de Tributos</p>
-              <p className="text-sm text-muted-foreground">Res. CGM nº 1.176/2015 (ISS, INSS, IRRF)</p>
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Guia de Retenção de Tributos (Res. CGM nº 1.176/2015)</p>
+              <p className="text-sm text-muted-foreground">Manual para retenções obrigatórias</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
           {/* Guia SDP */}
           <a
-            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2023/10/Guia-SDP_Versao-Publicacao_1a-ed.pdf"
+            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2024/10/1.3.4-CARTILHA-GUIA-RAPIDO-SDP-1.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -386,15 +420,11 @@ export const SectionAnexo = () => {
             </div>
             <div className="min-w-0">
               <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Guia SDP - CGM-RJ</p>
-              <p className="text-sm text-muted-foreground">Manual Completo do Sistema</p>
+              <p className="text-sm text-muted-foreground">Cartilha de referência rápida</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
         </div>
-
-        <p className="mt-5 text-sm text-muted-foreground text-center italic">
-          Referência: Resolução Conjunta CGM/SMFP nº 107/2022, atualizada pela Res. 115/2023 e complementada pela Res. CGM nº 2067/2025.
-        </p>
       </div>
     </section>
   );

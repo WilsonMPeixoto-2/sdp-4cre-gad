@@ -1,5 +1,6 @@
 import { ClipboardList, AlertCircle, CheckCircle2, Info } from "lucide-react";
 import { SeiMockup } from "./SeiMockup";
+import { CopyButton } from "./CopyButton";
 
 export const SectionOne = () => {
   return (
@@ -48,9 +49,12 @@ export const SectionOne = () => {
               <Info className="w-5 h-5 text-primary" />
               <span className="font-bold text-foreground">Tipo de Processo Correto:</span>
             </div>
-            <p className="text-foreground font-semibold text-sm sm:text-base">
-              EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP
-            </p>
+            <div className="flex items-center gap-2">
+              <p className="text-foreground font-semibold text-sm sm:text-base flex-1">
+                EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP
+              </p>
+              <CopyButton text="EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP" label="Copiado!" />
+            </div>
           </div>
 
           <div className="mt-4">
@@ -69,9 +73,12 @@ export const SectionOne = () => {
 
           <div className="bg-gradient-to-r from-secondary to-secondary/50 rounded-xl p-4">
             <p className="text-sm text-muted-foreground mb-2">Classificação automática:</p>
-            <code className="block bg-card px-4 py-3 rounded-lg border border-border/50 text-sm font-mono text-foreground break-all shadow-sm">
-              01.05.03.11 - SISTEMA DESCENTRALIZADO DE PAGAMENTO
-            </code>
+            <div className="flex items-center gap-2">
+              <code className="flex-1 bg-card px-4 py-3 rounded-lg border border-border/50 text-sm font-mono text-foreground break-all shadow-sm">
+                01.05.03.11 - SISTEMA DESCENTRALIZADO DE PAGAMENTO
+              </code>
+              <CopyButton text="01.05.03.11 - SISTEMA DESCENTRALIZADO DE PAGAMENTO" label="Copiado!" />
+            </div>
           </div>
         </div>
 
@@ -89,9 +96,12 @@ export const SectionOne = () => {
               <CheckCircle2 className="w-5 h-5 text-success" />
               <span className="font-bold text-foreground">Exemplo de Especificação:</span>
             </div>
-            <code className="text-foreground font-mono text-sm break-all bg-card/50 px-3 py-2 rounded-lg block">
-              Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina
-            </code>
+            <div className="flex items-center gap-2">
+              <code className="flex-1 text-foreground font-mono text-sm break-all bg-card/50 px-3 py-2 rounded-lg">
+                Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina
+              </code>
+              <CopyButton text="Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina" label="Copiado!" />
+            </div>
           </div>
         </div>
 
@@ -151,11 +161,14 @@ export const SectionOne = () => {
           <div className="highlight-box">
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-5 h-5 text-success shrink-0 mt-0.5" />
-              <div>
+              <div className="flex-1">
                 <p className="font-bold text-foreground mb-1">Adicione a GAD como interessada:</p>
-                <code className="text-foreground font-mono text-sm bg-card/50 px-3 py-2 rounded-lg block">
-                  10729 - E/4a.CRE/GAD
-                </code>
+                <div className="flex items-center gap-2">
+                  <code className="flex-1 text-foreground font-mono text-sm bg-card/50 px-3 py-2 rounded-lg">
+                    10729 - E/4a.CRE/GAD
+                  </code>
+                  <CopyButton text="10729 - E/4a.CRE/GAD" label="Código copiado!" />
+                </div>
               </div>
             </div>
           </div>
