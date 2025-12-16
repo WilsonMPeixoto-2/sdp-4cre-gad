@@ -342,7 +342,7 @@ export const SectionAnexo = () => {
 
           {/* Resolução 115/2023 */}
           <a
-            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2023/04/Resolucao-Conjunta-CGM-SMFP-115-de-31-de-marco-de-2023.pdf"
+            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2023/04/RESCONJ-CGM-SMFP-1152023.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -359,7 +359,7 @@ export const SectionAnexo = () => {
 
           {/* Resolução 1.176/2015 - Tributos */}
           <a
-            href="https://controladoria.prefeitura.rio/guia-de-retencao/"
+            href="https://www.rio.rj.gov.br/dlstatic/10112/2904248/4138524/GuiaparaRetencaoeRecolhimentodeImpostos_ResolucaoCGMn1176_2015_6atualizacao.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
