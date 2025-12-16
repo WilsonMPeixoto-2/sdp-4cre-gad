@@ -325,7 +325,7 @@ export const SectionAnexo = () => {
         <div className="grid sm:grid-cols-2 gap-4">
           {/* Resolução 107/2022 - Principal */}
           <a
-            href="https://doweb.rio.rj.gov.br/apifront/portal/edicoes/imprimir_materia/780251/5089"
+            href="https://doweb.rio.rj.gov.br/portal/edicoes/download/5089"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 hover:from-primary/15 hover:to-primary/10 border border-primary/30 hover:border-primary/50 transition-all duration-300 group sm:col-span-2"
@@ -335,14 +335,14 @@ export const SectionAnexo = () => {
             </div>
             <div className="min-w-0">
               <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução Conjunta CGM/SMFP nº 107/2022</p>
-              <p className="text-sm text-muted-foreground">Norma operacional central do SDP (Arts. 22, 23 e 25)</p>
+              <p className="text-sm text-muted-foreground">Norma operacional central do SDP (Arts. 22, 23 e 25) - D.O. de 19/08/2022</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
           {/* Decreto 50.162/2022 */}
           <a
-            href="https://doweb.rio.rj.gov.br/apifront/portal/edicoes/imprimir_materia/768880/5024"
+            href="https://doweb.rio.rj.gov.br/portal/edicoes/download/5024"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -352,14 +352,14 @@ export const SectionAnexo = () => {
             </div>
             <div className="min-w-0">
               <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Decreto Rio nº 50.162/2022</p>
-              <p className="text-sm text-muted-foreground">Institui o Sistema Descentralizado de Pagamento</p>
+              <p className="text-sm text-muted-foreground">Institui o SDP - D.O. de 02/02/2022</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
           {/* Resolução 2067/2025 */}
           <a
-            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2025/06/Res-CGM-2067.pdf"
+            href="https://doweb.rio.rj.gov.br/portal/edicoes/download/8557"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -369,14 +369,14 @@ export const SectionAnexo = () => {
             </div>
             <div className="min-w-0">
               <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução CGM nº 2067/2025</p>
-              <p className="text-sm text-muted-foreground">Regulamenta o Cartão de Pagamento</p>
+              <p className="text-sm text-muted-foreground">Regulamenta o Cartão de Pagamento - D.O. de 12/06/2025</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
           {/* Resolução 115/2023 */}
           <a
-            href="https://doweb.rio.rj.gov.br/apifront/portal/edicoes/imprimir_materia/880116/5694"
+            href="https://doweb.rio.rj.gov.br/portal/edicoes/download/5694"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -386,14 +386,14 @@ export const SectionAnexo = () => {
             </div>
             <div className="min-w-0">
               <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução Conjunta nº 115/2023</p>
-              <p className="text-sm text-muted-foreground">Atualização da Resolução 107/2022</p>
+              <p className="text-sm text-muted-foreground">Atualização da Res. 107/2022 - D.O. de 23/03/2023</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
           {/* Guia de Retenção */}
           <a
-            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2024/08/Guia-de-Retencao-de-Tributos-Res.-CGM-no-1.176_2015.pdf"
+            href="https://carioca.rio/servicos/iss-casos-de-responsabilidade-e-retencao/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -402,15 +402,15 @@ export const SectionAnexo = () => {
               <Calculator className="w-6 h-6 text-primary" />
             </div>
             <div className="min-w-0">
-              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Guia de Retenção de Tributos (Res. CGM nº 1.176/2015)</p>
-              <p className="text-sm text-muted-foreground">Manual para retenções obrigatórias</p>
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Guia de Retenção de Tributos - ISS</p>
+              <p className="text-sm text-muted-foreground">Casos de responsabilidade e retenção - Portal Carioca</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
-          {/* Guia SDP */}
+          {/* Portal CGM - Manuais */}
           <a
-            href="https://controladoria.prefeitura.rio/wp-content/uploads/sites/29/2024/10/1.3.4-CARTILHA-GUIA-RAPIDO-SDP-1.pdf"
+            href="https://controladoria.prefeitura.rio/normas-e-procedimentos-de-controle-caixas/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -419,8 +419,25 @@ export const SectionAnexo = () => {
               <BookOpen className="w-6 h-6 text-primary" />
             </div>
             <div className="min-w-0">
-              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Guia SDP - CGM-RJ</p>
-              <p className="text-sm text-muted-foreground">Cartilha de referência rápida</p>
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Manuais e Orientações - CGM-Rio</p>
+              <p className="text-sm text-muted-foreground">Normas e procedimentos de controle</p>
+            </div>
+            <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
+          </a>
+
+          {/* Diário Oficial - Busca */}
+          <a
+            href="https://doweb.rio.rj.gov.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group sm:col-span-2"
+          >
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+              <FileText className="w-6 h-6 text-primary" />
+            </div>
+            <div className="min-w-0">
+              <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Diário Oficial do Rio de Janeiro</p>
+              <p className="text-sm text-muted-foreground">Busque legislações por data ou palavra-chave</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
