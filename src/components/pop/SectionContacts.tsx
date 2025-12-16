@@ -147,64 +147,47 @@ export const SectionContacts = () => {
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary shrink-0 transition-colors" />
           </a>
-          
-          <div className="flex items-center gap-3 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
-            <Clock className="w-5 h-5 text-muted-foreground shrink-0" />
-            <p className="text-sm text-muted-foreground">
-              Atendimento de segunda a sexta, das 9h às 17h
-            </p>
-          </div>
         </div>
 
-        {/* Administradores Locais SEI!RIO SME */}
+        {/* Contatos SEI!RIO - E/SUBG/GAA */}
         <div className="section-card p-5 sm:p-6">
           <h3 className="font-semibold text-foreground mb-4 flex items-center gap-2">
             <Users className="w-5 h-5 text-primary" />
-            Administradores Locais SEI!RIO - SME/RJ
+            Contatos SEI!RIO - E/SUBG/GAA
           </h3>
           <p className="text-muted-foreground mb-4 text-sm sm:text-base text-justified leading-relaxed">
             Para dúvidas específicas sobre o uso do SEI!RIO na Secretaria Municipal de Educação, 
-            entre em contato com os administradores locais.
+            entre em contato através dos e-mails abaixo.
           </p>
           
-          <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20 mb-4">
-            <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 shrink-0">
-              <Mail className="w-6 h-6 text-primary" />
+          <div className="grid gap-3">
+            <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/20">
+              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 shrink-0">
+                <Mail className="w-6 h-6 text-primary" />
+              </div>
+              <div className="min-w-0">
+                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Dúvidas SEI!RIO</p>
+                <a 
+                  href="mailto:sei.duvidas@rioeduca.net" 
+                  className="text-base sm:text-lg font-semibold text-primary hover:underline break-all"
+                >
+                  sei.duvidas@rioeduca.net
+                </a>
+              </div>
             </div>
-            <div className="min-w-0">
-              <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">E-mail da GAASME</p>
-              <a 
-                href="mailto:gaasme@rioeduca.net" 
-                className="text-base sm:text-lg font-semibold text-primary hover:underline break-all"
-              >
-                gaasme@rioeduca.net
-              </a>
-            </div>
-          </div>
 
-          <div className="space-y-3">
-            <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">Administradores</p>
-            <div className="grid gap-3">
-              <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-secondary to-secondary/50 rounded-lg">
-                <div className="w-2 h-2 rounded-full bg-primary shrink-0"></div>
-                <div className="min-w-0 flex-1">
-                  <p className="font-medium text-foreground text-sm">Kelly Cristina Pinto Borges dos Santos</p>
-                  <a href="mailto:sei.duvidas@rioeduca.net" className="text-xs text-primary hover:underline">sei.duvidas@rioeduca.net</a>
-                </div>
+            <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl border border-border/50">
+              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 shrink-0">
+                <Mail className="w-6 h-6 text-primary" />
               </div>
-              <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-secondary to-secondary/50 rounded-lg">
-                <div className="w-2 h-2 rounded-full bg-primary shrink-0"></div>
-                <div className="min-w-0 flex-1">
-                  <p className="font-medium text-foreground text-sm">Priscila Raquel Ribeiro da Silva</p>
-                  <a href="mailto:sei.duvidas@rioeduca.net" className="text-xs text-primary hover:underline">sei.duvidas@rioeduca.net</a>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-secondary to-secondary/50 rounded-lg">
-                <div className="w-2 h-2 rounded-full bg-primary shrink-0"></div>
-                <div className="min-w-0 flex-1">
-                  <p className="font-medium text-foreground text-sm">Andrea Cristina F. Pinto</p>
-                  <a href="mailto:sei.duvidas@rioeduca.net" className="text-xs text-primary hover:underline">sei.duvidas@rioeduca.net</a>
-                </div>
+              <div className="min-w-0">
+                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">E/SUBG/GAA</p>
+                <a 
+                  href="mailto:gaasme@rioeduca.net" 
+                  className="text-base sm:text-lg font-semibold text-primary hover:underline break-all"
+                >
+                  gaasme@rioeduca.net
+                </a>
               </div>
             </div>
           </div>

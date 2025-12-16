@@ -27,7 +27,7 @@ export const SectionFour = () => {
             <div>
               <h3 className="font-semibold text-foreground mb-2">4.1. Considerações Gerais</h3>
               <p className="text-muted-foreground mb-4 text-sm sm:text-base text-justified leading-relaxed">
-                Os documentos externos compreendem todos os arquivos digitalizados que não são 
+                Os documentos externos compreendem todos os arquivos (digitalizados ou nato digitais) que não são 
                 produzidos diretamente no sistema SEI!RIO, mas que integram o processo administrativo 
                 como elementos comprobatórios essenciais.
               </p>
@@ -35,9 +35,14 @@ export const SectionFour = () => {
                 No contexto da prestação de contas do SDP, os documentos externos mais comuns incluem:
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Notas fiscais", "Recibos", "Comprovantes de pagamento", "Extratos bancários"].map((doc, i) => (
-                  <span key={i} className="px-3 py-1.5 bg-card text-sm text-foreground rounded-lg border border-border/50 shadow-sm">
-                    {doc}
+                {[
+                  { label: "Notas fiscais", color: "bg-blue-500/10 text-blue-600 border-blue-500/30" },
+                  { label: "Recibos", color: "bg-green-500/10 text-green-600 border-green-500/30" },
+                  { label: "Comprovantes de pagamento", color: "bg-amber-500/10 text-amber-600 border-amber-500/30" },
+                  { label: "Extratos bancários", color: "bg-purple-500/10 text-purple-600 border-purple-500/30" }
+                ].map((doc, i) => (
+                  <span key={i} className={`px-3 py-1.5 text-sm font-medium rounded-lg border shadow-sm ${doc.color}`}>
+                    {doc.label}
                   </span>
                 ))}
               </div>
