@@ -1,5 +1,6 @@
 import { Table2, AlertCircle, FileSpreadsheet, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { InfoDrawer, NaturezasDespesaContent } from "./InfoDrawer";
 
 export const SectionThree = () => {
   return (
@@ -77,7 +78,12 @@ export const SectionThree = () => {
 
         {/* Expense Natures */}
         <div className="section-card p-5 sm:p-6">
-          <h3 className="font-semibold text-foreground mb-4">Naturezas de Despesa</h3>
+          <div className="flex items-center gap-3 flex-wrap mb-4">
+            <h3 className="font-semibold text-foreground">Naturezas de Despesa</h3>
+            <InfoDrawer title="Naturezas de Despesa" triggerLabel="Saiba mais">
+              <NaturezasDespesaContent />
+            </InfoDrawer>
+          </div>
           
           <div className="grid sm:grid-cols-3 gap-4">
             <div className="p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border-l-4 border-l-primary">

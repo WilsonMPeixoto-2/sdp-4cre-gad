@@ -1,5 +1,6 @@
 import { FileText, PenLine, AlertCircle, CheckCircle2, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { InfoDrawer, AutenticacaoVsAssinaturaContent } from "./InfoDrawer";
 
 export const SectionTwo = () => {
   return (
@@ -186,7 +187,12 @@ export const SectionTwo = () => {
 
         {/* Signature */}
         <div className="section-card p-5 sm:p-6">
-          <h3 className="font-semibold text-foreground mb-4">2.7. Assinatura e Verificação</h3>
+          <div className="flex items-center gap-3 flex-wrap mb-4">
+            <h3 className="font-semibold text-foreground">2.7. Assinatura e Verificação</h3>
+            <InfoDrawer title="Assinatura vs Autenticação" triggerLabel="Entenda a diferença">
+              <AutenticacaoVsAssinaturaContent />
+            </InfoDrawer>
+          </div>
           
           <div className="space-y-3">
             <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">

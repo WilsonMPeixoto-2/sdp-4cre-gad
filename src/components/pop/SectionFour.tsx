@@ -1,5 +1,6 @@
 import { Upload, FileText, Calendar, Hash, FolderTree, Shield, AlertCircle, CheckCircle2 } from "lucide-react";
 import { SeiMockup } from "./SeiMockup";
+import { InfoDrawer, NatoDigitalVsDigitalizadoContent, AutenticacaoVsAssinaturaContent } from "./InfoDrawer";
 
 export const SectionFour = () => {
   return (
@@ -25,7 +26,12 @@ export const SectionFour = () => {
               <Upload className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </div>
             <div>
-              <h3 className="font-semibold text-foreground mb-2">4.1. Considerações Gerais</h3>
+              <div className="flex items-center gap-3 flex-wrap mb-2">
+                <h3 className="font-semibold text-foreground">4.1. Considerações Gerais</h3>
+                <InfoDrawer title="Nato-Digital vs Digitalizado" triggerLabel="Entenda a diferença">
+                  <NatoDigitalVsDigitalizadoContent />
+                </InfoDrawer>
+              </div>
               <p className="text-muted-foreground mb-4 text-sm sm:text-base text-justified leading-relaxed">
                 Os documentos externos compreendem todos os arquivos (digitalizados ou nato digitais) que não são 
                 produzidos diretamente no sistema SEI!RIO, mas que integram o processo administrativo 
@@ -200,7 +206,12 @@ export const SectionFour = () => {
             <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
               <CheckCircle2 className="w-5 h-5 text-success shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-foreground">Autenticar Documento</p>
+                <div className="flex items-center gap-3 flex-wrap mb-1">
+                  <p className="font-semibold text-foreground">Autenticar Documento</p>
+                  <InfoDrawer title="Autenticação vs Assinatura" triggerLabel="Qual a diferença?">
+                    <AutenticacaoVsAssinaturaContent />
+                  </InfoDrawer>
+                </div>
                 <p className="text-sm text-muted-foreground text-justified leading-relaxed">
                   Localize o ícone "Autenticar Documento" (selo preto com check branco). 
                   Na janela pop-up, insira sua Senha de Rede e clique em Autenticar. 
