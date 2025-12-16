@@ -1,7 +1,5 @@
 import { Upload, FileText, Calendar, Hash, FolderTree, Shield, AlertCircle, CheckCircle2 } from "lucide-react";
 import { SeiMockup } from "./SeiMockup";
-import incluirDocumentoIcon from "@/assets/sei-icons/incluir-documento.png";
-import autenticarIcon from "@/assets/sei-icons/autenticar.png";
 
 export const SectionFour = () => {
   return (
@@ -60,13 +58,10 @@ export const SectionFour = () => {
             <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
               <div className="step-indicator shrink-0 text-sm">1</div>
               <div>
-                <h4 className="font-semibold text-foreground mb-1 flex items-center gap-2">
-                  Iniciando a Inclusão
-                  <img src={incluirDocumentoIcon} alt="Ícone Incluir Documento" className="h-6 w-6" />
-                </h4>
+                <h4 className="font-semibold text-foreground mb-1">Iniciando a Inclusão</h4>
                 <p className="text-sm text-muted-foreground text-justified leading-relaxed">
-                  Localize e clique no ícone <strong className="text-foreground">"Incluir Documento"</strong> <img src={incluirDocumentoIcon} alt="Incluir Documento" className="inline h-4 w-4 mx-1" /> na 
-                  barra de ferramentas. No menu, selecione a opção <strong className="text-foreground">"EXTERNO"</strong> (primeira opção da lista).
+                  Localize e clique no ícone <strong className="text-foreground">"Incluir Documento"</strong> na 
+                  barra de ferramentas. No menu, selecione a opção <strong className="text-foreground">"EXTERNO"</strong>.
                 </p>
               </div>
             </div>
@@ -203,14 +198,11 @@ export const SectionFour = () => {
             </div>
 
             <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
-              <img src={autenticarIcon} alt="Ícone Autenticar" className="h-6 w-6 shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-success shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-foreground flex items-center gap-2">
-                  Autenticar Documento
-                  <img src={autenticarIcon} alt="Autenticar" className="h-5 w-5" />
-                </p>
+                <p className="font-semibold text-foreground">Autenticar Documento</p>
                 <p className="text-sm text-muted-foreground text-justified leading-relaxed">
-                  Localize o ícone "Autenticar Documento" <img src={autenticarIcon} alt="Autenticar" className="inline h-4 w-4 mx-1" /> (selo com check). 
+                  Localize o ícone "Autenticar Documento" (selo preto com check branco). 
                   Na janela pop-up, insira sua Senha de Rede e clique em Autenticar. 
                   Os documentos externos serão <strong className="text-foreground">autenticados</strong>.
                 </p>
