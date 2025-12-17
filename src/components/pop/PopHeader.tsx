@@ -79,7 +79,11 @@ export const PopHeader = ({ onPrint }: PopHeaderProps) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 shadow-xl no-print glass-effect" style={{ background: 'linear-gradient(90deg, hsl(215, 75%, 32%) 0%, hsl(215, 75%, 28%) 50%, hsl(215, 75%, 32%) 100%)' }}>
+    <header className="sticky top-0 z-50 no-print border-b border-white/20 shadow-lg" style={{ 
+      background: 'rgba(26, 54, 93, 0.85)', 
+      backdropFilter: 'blur(12px)',
+      WebkitBackdropFilter: 'blur(12px)'
+    }}>
       <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
         <div className="flex items-center justify-between gap-3">
           {/* Logo and Title */}

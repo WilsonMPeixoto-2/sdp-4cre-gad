@@ -44,7 +44,7 @@ export const PopSidebar = ({ activeSection, onSectionClick, isOpen, onClose }: P
           "fixed lg:sticky top-0 left-0 z-50 lg:z-30 h-screen w-72 transform transition-all duration-300 ease-out lg:transform-none no-print shadow-2xl lg:shadow-lg",
           isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}
-        style={{ background: 'linear-gradient(180deg, hsl(215, 75%, 32%) 0%, hsl(215, 75%, 26%) 100%)' }}
+        style={{ background: 'linear-gradient(180deg, hsl(215, 75%, 30%) 0%, hsl(215, 80%, 22%) 100%)' }}
       >
         <div className="flex flex-col h-full">
           {/* Sidebar Header */}
