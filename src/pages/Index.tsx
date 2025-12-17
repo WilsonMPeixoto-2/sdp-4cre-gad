@@ -36,7 +36,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["introducao", "secao-1", "secao-2", "secao-3", "secao-4", "secao-5", "contatos"];
+      const sections = ["introducao", "secao-1", "secao-2", "secao-3", "secao-4", "secao-5", "contatos", "anexo"];
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
         if (element) {
