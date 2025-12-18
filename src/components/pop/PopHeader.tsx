@@ -79,8 +79,8 @@ export const PopHeader = ({ onPrint }: PopHeaderProps) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 no-print border-b border-white/20 shadow-lg" style={{ 
-      background: 'rgba(26, 54, 93, 0.85)', 
+    <header className="sticky top-0 z-50 no-print border-b border-white/10 shadow-lg" style={{ 
+      background: 'rgba(15, 23, 42, 0.92)', 
       backdropFilter: 'blur(12px)',
       WebkitBackdropFilter: 'blur(12px)'
     }}>
