@@ -41,29 +41,30 @@ export const PopSidebar = ({ activeSection, onSectionClick, isOpen, onClose }: P
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed lg:sticky top-0 left-0 z-50 lg:z-30 h-screen w-72 transform transition-all duration-300 ease-out lg:transform-none no-print shadow-2xl lg:shadow-lg",
+          "fixed lg:sticky top-0 left-0 z-50 lg:z-30 h-screen w-72 transform transition-all duration-300 ease-out lg:transform-none no-print",
+          "bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-r border-slate-200/60 dark:border-slate-700/40",
+          "shadow-soft-xl",
           isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}
-        style={{ background: 'linear-gradient(180deg, hsl(222, 47%, 13%) 0%, hsl(222, 47%, 9%) 100%)' }}
       >
         <div className="flex flex-col h-full">
           {/* Sidebar Header */}
-          <div className="p-4 lg:p-5 border-b border-sidebar-border/50">
+          <div className="p-4 lg:p-5 border-b border-slate-200/60 dark:border-slate-700/40">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-lg">
-                  <FileText className="w-5 h-5 text-accent-foreground" />
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center shadow-soft">
+                  <FileText className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h2 className="font-heading font-bold text-sidebar-foreground text-lg">POP</h2>
-                  <p className="text-xs text-sidebar-foreground/60">Prestação de Contas SDP</p>
+                  <h2 className="font-heading font-bold text-slate-900 dark:text-slate-100 text-lg">POP</h2>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">Prestação de Contas SDP</p>
                 </div>
               </div>
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={onClose}
-                className="lg:hidden text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50 h-8 w-8"
+                className="lg:hidden text-slate-500 hover:text-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 h-8 w-8 rounded-lg"
               >
                 <X className="w-5 h-5" />
               </Button>
@@ -72,7 +73,7 @@ export const PopSidebar = ({ activeSection, onSectionClick, isOpen, onClose }: P
 
           {/* Navigation */}
           <nav className="flex-1 overflow-y-auto p-3 lg:p-4 scrollbar-thin">
-            <p className="text-[10px] font-bold text-sidebar-foreground/40 uppercase tracking-widest mb-3 px-2">
+            <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3 px-2">
               Sumário
             </p>
             <ul className="space-y-1">
@@ -84,24 +85,28 @@ export const PopSidebar = ({ activeSection, onSectionClick, isOpen, onClose }: P
                       onClose();
                     }}
                     className={cn(
-                      "w-full text-left flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200",
+                      "w-full text-left flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 relative",
                       activeSection === section.id
-                        ? "bg-accent text-accent-foreground shadow-lg"
-                        : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/30"
+                        ? "bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 font-semibold"
+                        : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-200"
                     )}
                   >
+                    {/* Active indicator */}
+                    {activeSection === section.id && (
+                      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-sky-600 dark:bg-sky-400 rounded-r-full" />
+                    )}
                     <span className={cn(
                       "flex items-center justify-center w-7 h-7 rounded-lg text-xs font-bold transition-all",
                       activeSection === section.id
-                        ? "bg-accent-foreground/20 text-accent-foreground"
-                        : "bg-sidebar-accent/50 text-sidebar-foreground/80"
+                        ? "bg-sky-600 text-white shadow-soft"
+                        : "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400"
                     )}>
                       {section.number}
                     </span>
-                    <span className="flex-1 text-sm font-medium leading-tight">{section.title}</span>
+                    <span className="flex-1 text-sm leading-tight">{section.title}</span>
                     <ChevronRight className={cn(
-                      "w-4 h-4 transition-transform duration-200",
-                      activeSection === section.id && "rotate-90"
+                      "w-4 h-4 transition-transform duration-200 text-slate-400",
+                      activeSection === section.id && "rotate-90 text-sky-600 dark:text-sky-400"
                     )} />
                   </button>
                 </li>
@@ -110,8 +115,8 @@ export const PopSidebar = ({ activeSection, onSectionClick, isOpen, onClose }: P
           </nav>
 
           {/* Footer */}
-          <div className="p-4 border-t border-sidebar-border/30">
-            <div className="text-[10px] text-sidebar-foreground/40 text-center space-y-0.5">
+          <div className="p-4 border-t border-slate-200/60 dark:border-slate-700/40">
+            <div className="text-[10px] text-slate-400 dark:text-slate-500 text-center space-y-0.5">
               <p className="font-semibold">4ª CRE - GAD</p>
               <p>Versão 2025</p>
             </div>
