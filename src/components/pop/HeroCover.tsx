@@ -4,72 +4,84 @@ export const HeroCover = () => {
   return (
     <div 
       id="hero-cover"
-      className="min-h-[90vh] sm:min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-[hsl(215,75%,32%)] via-[hsl(215,75%,28%)] to-[hsl(215,75%,20%)] relative overflow-hidden"
+      className="min-h-[90vh] sm:min-h-[85vh] flex items-center justify-center relative overflow-hidden"
+      style={{
+        background: `
+          radial-gradient(ellipse 80% 50% at 50% -20%, hsl(199, 89%, 48%, 0.3), transparent),
+          radial-gradient(ellipse 60% 40% at 80% 60%, hsl(215, 75%, 45%, 0.25), transparent),
+          radial-gradient(ellipse 50% 50% at 20% 80%, hsl(199, 89%, 48%, 0.2), transparent),
+          linear-gradient(180deg, hsl(222, 47%, 11%) 0%, hsl(215, 50%, 15%) 50%, hsl(222, 47%, 11%) 100%)
+        `
+      }}
     >
-      {/* Premium Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 opacity-[0.08]">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%221%22%3E%3Cpath%20d%3D%22M50%2050c0-5.523%204.477-10%2010-10s10%204.477%2010%2010-4.477%2010-10%2010c0%205.523-4.477%2010-10%2010s-10-4.477-10-10%204.477-10%2010-10zM10%2010c0-5.523%204.477-10%2010-10s10%204.477%2010%2010-4.477%2010-10%2010c0%205.523-4.477%2010-10%2010S0%2025.523%200%2020s4.477-10%2010-10z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]"></div>
-        </div>
+      {/* Mesh Gradient Orbs */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-[10%] left-[15%] w-[500px] h-[500px] bg-[hsl(199,89%,48%,0.15)] rounded-full blur-[100px] animate-pulse"></div>
+        <div className="absolute top-[50%] right-[10%] w-[400px] h-[400px] bg-[hsl(215,75%,50%,0.12)] rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-[10%] left-[40%] w-[600px] h-[300px] bg-[hsl(199,89%,48%,0.1)] rounded-full blur-[80px]"></div>
       </div>
+
+      {/* Subtle Grid Pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `linear-gradient(hsl(0,0%,100%) 1px, transparent 1px), linear-gradient(90deg, hsl(0,0%,100%) 1px, transparent 1px)`,
+        backgroundSize: '50px 50px'
+      }}></div>
       
-      {/* Premium Decorative Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[100px] translate-x-1/3 -translate-y-1/3"></div>
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary-foreground/5 rounded-full blur-[120px] -translate-x-1/4 translate-y-1/4"></div>
-      <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-accent/5 rounded-full blur-[80px] -translate-x-1/2 -translate-y-1/2"></div>
-      
-      <div className="relative z-10 text-center px-6 py-12 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-6 py-16 max-w-5xl mx-auto">
         {/* Institution Badge */}
-        <div className="inline-flex items-center gap-3 bg-primary-foreground/10 glass-effect border border-primary-foreground/20 px-6 py-3 rounded-full mb-10 shadow-lg">
-          <Building2 className="w-5 h-5 text-primary-foreground" />
-          <span className="text-primary-foreground font-medium text-sm sm:text-base tracking-wide">
+        <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-xl border border-white/20 px-6 py-3 rounded-full mb-12 shadow-xl">
+          <Building2 className="w-5 h-5 text-white" />
+          <span className="text-white font-medium text-sm sm:text-base tracking-wide">
             4ª Coordenadoria Regional de Educação
           </span>
         </div>
         
-        {/* Main Title */}
-        <div className="mb-10">
-          <div className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-5 py-2.5 rounded-xl text-sm font-bold mb-7 shadow-xl tracking-wide">
+        {/* Main Title - Larger and Centered */}
+        <div className="mb-12">
+          <div className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-xl text-sm font-bold mb-8 shadow-xl tracking-wider uppercase">
             <FileText className="w-4 h-4" />
-            PROCEDIMENTO OPERACIONAL PADRÃO
+            Procedimento Operacional Padrão
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold text-primary-foreground leading-[1.1] mb-7 tracking-tight">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-extrabold text-white leading-[1.05] mb-8 tracking-tight">
             Prestação de Contas
             <br />
-            <span className="bg-gradient-to-r from-accent via-[hsl(210,85%,60%)] to-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[hsl(199,89%,48%)] via-[hsl(199,89%,60%)] to-[hsl(199,89%,48%)] bg-clip-text text-transparent">
               SDP no SEI!RIO
             </span>
           </h1>
-          <p className="text-lg sm:text-xl text-primary-foreground/85 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-xl sm:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-light">
             Guia operacional para diretores(as) e gestores(as) escolares na instrução 
             da Prestação de Contas do SDP diretamente no SEI!RIO.
           </p>
         </div>
         
-        {/* Info Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto mb-10">
+        {/* Glass Cards with Hover Lift */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5 max-w-4xl mx-auto mb-12">
           {[
-            { icon: <Building2 className="w-5 h-5" />, label: "GAD", desc: "Gerência de Administração" },
-            { icon: <BookOpen className="w-5 h-5" />, label: "POP", desc: "Procedimento Operacional Padrão" },
-            { icon: <FileText className="w-5 h-5" />, label: "SEI!RIO", desc: "Sistema Eletrônico" },
-            { icon: <Calendar className="w-5 h-5" />, label: "V. 1.0", desc: "Dezembro/2025" },
+            { icon: <Building2 className="w-6 h-6" />, label: "GAD", desc: "Gerência de Administração" },
+            { icon: <BookOpen className="w-6 h-6" />, label: "POP", desc: "Procedimento Operacional Padrão" },
+            { icon: <FileText className="w-6 h-6" />, label: "SEI!RIO", desc: "Sistema Eletrônico" },
+            { icon: <Calendar className="w-6 h-6" />, label: "V. 1.0", desc: "Dezembro/2025" },
           ].map((item, i) => (
-            <div key={i} className="bg-primary-foreground/8 glass-effect border border-primary-foreground/15 rounded-2xl p-4 text-center transition-all duration-300 hover:bg-primary-foreground/12 hover:border-primary-foreground/25 group">
-              <div className="inline-flex items-center justify-center w-11 h-11 bg-primary-foreground/10 rounded-xl mb-2.5 group-hover:bg-primary-foreground/15 transition-colors">
-                <span className="text-primary-foreground">{item.icon}</span>
+            <div 
+              key={i} 
+              className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-white/15 hover:border-white/30 hover:shadow-xl group cursor-pointer"
+            >
+              <div className="inline-flex items-center justify-center w-12 h-12 bg-white/10 rounded-xl mb-3 group-hover:bg-white/20 transition-all group-hover:scale-110">
+                <span className="text-white">{item.icon}</span>
               </div>
-              <p className="text-primary-foreground font-bold text-sm tracking-wide">{item.label}</p>
-              <p className="text-primary-foreground/65 text-xs mt-0.5">{item.desc}</p>
+              <p className="text-white font-bold text-base tracking-wide">{item.label}</p>
+              <p className="text-white/60 text-xs mt-1">{item.desc}</p>
             </div>
           ))}
         </div>
         
         {/* Scroll Indicator */}
-        <div className="animate-bounce mt-10">
-          <div className="w-7 h-11 border-2 border-primary-foreground/40 rounded-full mx-auto flex items-start justify-center p-2">
-            <div className="w-1.5 h-3 bg-primary-foreground/60 rounded-full animate-pulse"></div>
+        <div className="animate-bounce mt-12">
+          <div className="w-8 h-12 border-2 border-white/30 rounded-full mx-auto flex items-start justify-center p-2">
+            <div className="w-1.5 h-3 bg-white/50 rounded-full animate-pulse"></div>
           </div>
-          <p className="text-primary-foreground/50 text-sm mt-3 tracking-wide">Role para continuar</p>
+          <p className="text-white/40 text-sm mt-4 tracking-wide">Role para continuar</p>
         </div>
       </div>
     </div>
