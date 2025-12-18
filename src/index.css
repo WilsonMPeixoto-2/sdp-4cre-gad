@@ -345,6 +345,28 @@
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     color-adjust: exact !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* CRITICAL: Print engines may not trigger scroll animations for off-screen content.
+     Force all scroll-reveal sections to be visible so the PDF contains the full document. */
+  .opacity-0,
+  [class*="opacity-0"] {
+    opacity: 1 !important;
+  }
+
+  .translate-y-8,
+  .-translate-y-8,
+  .translate-y-4,
+  .-translate-y-4,
+  .translate-y-2,
+  .-translate-y-2 {
+    transform: none !important;
+  }
+
+  [style*="transition-delay"] {
+    transition-delay: 0ms !important;
   }
 
   /* CRITICAL: Fix content cut-off issue */
@@ -453,7 +475,8 @@
     overflow: visible !important;
   }
   
-  /* Hide animated orbs and patterns on print */
+  /* Hide decorative layers on print (avoid artifacts in the cover) */
+  #hero-cover > div.absolute,
   #hero-cover > div:first-child,
   #hero-cover .animate-pulse,
   #hero-cover .animate-bounce {
