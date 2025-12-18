@@ -1,4 +1,4 @@
-import { HelpCircle, X, FileDigit, ScanLine, PenLine, ShieldCheck, FileCheck } from "lucide-react";
+import { HelpCircle, FileDigit, ScanLine, PenLine, ShieldCheck, FileCheck, LucideIcon } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -53,7 +53,7 @@ export const InfoBlock = ({
   description, 
   variant = "default" 
 }: { 
-  icon: typeof HelpCircle; 
+  icon: LucideIcon;
   title: string; 
   description: string;
   variant?: "default" | "success" | "warning" | "primary";
@@ -91,12 +91,12 @@ export const InfoVisualCompare = ({
   item1,
   item2,
 }: {
-  item1: { icon: typeof HelpCircle; label: string; description: string; color: string };
-  item2: { icon: typeof HelpCircle; label: string; description: string; color: string };
+  item1: { icon: LucideIcon; label: string; description: string; color: string };
+  item2: { icon: LucideIcon; label: string; description: string; color: string };
 }) => {
   const Icon1 = item1.icon;
   const Icon2 = item2.icon;
-  
+
   return (
     <div className="grid grid-cols-2 gap-3">
       <div className={`p-4 rounded-xl text-center ${item1.color}`}>
