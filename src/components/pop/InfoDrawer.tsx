@@ -93,24 +93,29 @@ export const InfoVisualCompare = ({
 }: {
   item1: { icon: typeof HelpCircle; label: string; description: string; color: string };
   item2: { icon: typeof HelpCircle; label: string; description: string; color: string };
-}) => (
-  <div className="grid grid-cols-2 gap-3">
-    <div className={`p-4 rounded-xl text-center ${item1.color}`}>
-      <div className="flex justify-center mb-3">
-        <item1.icon className="w-10 h-10" />
+}) => {
+  const Icon1 = item1.icon;
+  const Icon2 = item2.icon;
+  
+  return (
+    <div className="grid grid-cols-2 gap-3">
+      <div className={`p-4 rounded-xl text-center ${item1.color}`}>
+        <div className="flex justify-center mb-3">
+          <Icon1 className="w-10 h-10" />
+        </div>
+        <p className="font-bold text-sm mb-1">{item1.label}</p>
+        <p className="text-xs text-muted-foreground">{item1.description}</p>
       </div>
-      <p className="font-bold text-sm mb-1">{item1.label}</p>
-      <p className="text-xs text-muted-foreground">{item1.description}</p>
-    </div>
-    <div className={`p-4 rounded-xl text-center ${item2.color}`}>
-      <div className="flex justify-center mb-3">
-        <item2.icon className="w-10 h-10" />
+      <div className={`p-4 rounded-xl text-center ${item2.color}`}>
+        <div className="flex justify-center mb-3">
+          <Icon2 className="w-10 h-10" />
+        </div>
+        <p className="font-bold text-sm mb-1">{item2.label}</p>
+        <p className="text-xs text-muted-foreground">{item2.description}</p>
       </div>
-      <p className="font-bold text-sm mb-1">{item2.label}</p>
-      <p className="text-xs text-muted-foreground">{item2.description}</p>
     </div>
-  </div>
-);
+  );
+};
 
 export const InfoQuote = ({ text, source }: { text: string; source?: string }) => (
   <blockquote className="border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-xl">
