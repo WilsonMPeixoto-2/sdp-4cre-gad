@@ -94,7 +94,7 @@ export const PopSidebar = ({ activeSection, onSectionClick, isOpen, onClose }: P
                       "flex items-center justify-center w-7 h-7 rounded-lg text-xs font-bold transition-all",
                       activeSection === section.id
                         ? "bg-accent-foreground/20 text-accent-foreground"
-                        : "bg-sidebar-accent/50 text-white"
+                        : "bg-sidebar-accent/50 text-sidebar-foreground"
                     )}>
                       {section.number}
                     </span>
