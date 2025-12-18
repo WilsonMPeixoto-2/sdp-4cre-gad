@@ -2,7 +2,11 @@ import { Phone, Mail, MapPin, Clock, ExternalLink, Monitor, BookOpen, Printer, C
 import { Button } from "@/components/ui/button";
 import { CopyButton } from "./CopyButton";
 
-export const SectionContacts = () => {
+type SectionContactsProps = {
+  onPrint?: () => void;
+};
+
+export const SectionContacts = ({ onPrint }: SectionContactsProps) => {
   return (
     <section id="contatos" className="scroll-mt-20 animate-fade-in">
       {/* Section Header */}
@@ -207,7 +211,7 @@ export const SectionContacts = () => {
               </div>
             </div>
             <Button
-              onClick={() => window.print()}
+              onClick={onPrint ?? (() => window.print())}
               className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground"
             >
               <Printer className="w-4 h-4 mr-2" />

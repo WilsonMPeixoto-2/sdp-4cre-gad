@@ -32,16 +32,23 @@ const Index = () => {
   }, []);
 
   const handlePrint = useCallback(() => {
-    // Set professional PDF filename
     const originalTitle = document.title;
-    document.title = "SDP_PRESTACAO_DE_CONTAS_GAD_4_CRE";
-    
-    window.print();
-    
-    // Restore original title after print dialog
-    setTimeout(() => {
+    const printTitle = "SDP_PRESTACAO_DE_CONTAS_GAD_4_CRE";
+
+    const restoreTitle = () => {
       document.title = originalTitle;
-    }, 1000);
+    };
+
+    // Keep the professional name while the print dialog is open.
+    window.addEventListener("afterprint", restoreTitle, { once: true });
+
+    // Set professional PDF filename.
+    document.title = printTitle;
+
+    // Let the browser apply the title change before opening the print dialog.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => window.print());
+    });
   }, []);
 
   useEffect(() => {
@@ -134,7 +141,7 @@ const Index = () => {
                 <SectionDivider number="6" title="Contatos" subtitle="Canais de atendimento e suporte da GAD/4ª CRE" icon={Phone} />
               </AnimatedSection>
               <AnimatedSection delay={150}>
-                <SectionContacts />
+                <SectionContacts onPrint={handlePrint} />
               </AnimatedSection>
 
               <AnimatedSection delay={100}>
