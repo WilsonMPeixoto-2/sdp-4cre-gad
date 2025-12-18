@@ -45,7 +45,7 @@ export const HeroCover = () => {
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-extrabold text-white leading-[1.05] mb-8 tracking-tight">
             Prestação de Contas
             <br />
-            <span className="bg-gradient-to-r from-[hsl(199,89%,48%)] via-[hsl(199,89%,60%)] to-[hsl(199,89%,48%)] bg-clip-text text-transparent">
+            <span className="hero-title-accent bg-gradient-to-r from-[hsl(199,89%,48%)] via-[hsl(199,89%,60%)] to-[hsl(199,89%,48%)] bg-clip-text text-transparent">
               SDP no SEI!RIO
             </span>
           </h1>

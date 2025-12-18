@@ -474,6 +474,16 @@
     padding: 60pt 36pt !important;
     overflow: visible !important;
   }
+
+  /* Fix: gradient text (bg-clip-text + text-transparent) can render as a blank block in PDF */
+  #hero-cover .hero-title-accent {
+    background: none !important;
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+    color: hsl(var(--primary-foreground)) !important;
+    -webkit-text-fill-color: currentColor !important;
+    text-shadow: none !important;
+  }
   
   /* Hide decorative layers on print (avoid artifacts in the cover) */
   #hero-cover > div.absolute,
