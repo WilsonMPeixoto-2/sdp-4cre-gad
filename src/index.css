@@ -7,120 +7,121 @@
 
 @layer base {
   :root {
-    /* Institutional Blue Color Palette - Premium Edition */
-    --background: 210 25% 98%;
-    --foreground: 215 30% 12%;
+    /* Modern Government Design System */
+    /* Background - Subtle slate-50 gradient base */
+    --background: 210 40% 98%;
+    --foreground: 215 25% 27%; /* slate-700 for body text */
 
     --card: 0 0% 100%;
-    --card-foreground: 215 30% 12%;
+    --card-foreground: 222 47% 11%; /* slate-900 */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 30% 12%;
+    --popover-foreground: 222 47% 11%;
 
-    /* Primary - Deep Institutional Blue */
-    --primary: 215 75% 32%;
+    /* Primary - Deep Navy (#0F172A) */
+    --primary: 222 47% 11%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Soft Blue Gray */
-    --secondary: 210 35% 94%;
-    --secondary-foreground: 215 75% 32%;
+    /* Secondary - Soft Slate */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
 
-    /* Muted - Refined Gray */
-    --muted: 210 25% 93%;
-    --muted-foreground: 215 20% 42%;
+    /* Muted - Refined Slate Gray */
+    --muted: 210 40% 93%;
+    --muted-foreground: 215 16% 47%; /* slate-500 */
 
-    /* Accent - Vibrant Blue */
-    --accent: 210 85% 52%;
+    /* Accent - Sky Blue (#0EA5E9) */
+    --accent: 199 89% 48%;
     --accent-foreground: 0 0% 100%;
 
-    /* Success - Professional Teal */
-    --success: 175 65% 38%;
+    /* Success - Professional Emerald */
+    --success: 160 84% 39%;
     --success-foreground: 0 0% 100%;
 
-    /* Warning - Soft Blue (aligned with theme) */
-    --warning: 215 55% 48%;
+    /* Warning - Amber */
+    --warning: 38 92% 50%;
     --warning-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 25% 86%;
-    --input: 215 25% 86%;
-    --ring: 215 75% 32%;
+    --border: 214 32% 91%; /* slate-200 */
+    --input: 214 32% 91%;
+    --ring: 199 89% 48%; /* Sky blue accent */
 
     --radius: 0.625rem;
 
-    /* Sidebar - Premium Gradient Base */
-    --sidebar-background: 215 75% 32%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 0 0% 100%;
-    --sidebar-primary-foreground: 215 75% 32%;
-    --sidebar-accent: 215 70% 42%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 215 70% 42%;
-    --sidebar-ring: 210 85% 52%;
+    /* Sidebar - Deep Navy Gradient */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 17%; /* slate-800 */
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 199 89% 48%;
 
-    /* Custom tokens - Enhanced */
-    --section-header: 215 75% 22%;
-    --section-number: 210 85% 52%;
-    --highlight-bg: 210 65% 96%;
-    --table-header: 215 75% 32%;
-    --table-stripe: 210 25% 97%;
+    /* Custom tokens - Modern Government */
+    --section-header: 222 47% 11%; /* Navy */
+    --section-number: 199 89% 48%; /* Sky Blue */
+    --highlight-bg: 199 95% 95%; /* Sky-50 */
+    --table-header: 222 47% 11%;
+    --table-stripe: 210 40% 98%;
 
     /* Typography */
-    --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
   }
 
   .dark {
-    --background: 215 35% 8%;
-    --foreground: 210 25% 96%;
+    --background: 222 47% 8%; /* slate-950 */
+    --foreground: 210 40% 96%; /* slate-100 */
 
-    --card: 215 35% 12%;
-    --card-foreground: 210 25% 96%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 96%;
 
-    --popover: 215 35% 12%;
-    --popover-foreground: 210 25% 96%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 96%;
 
-    --primary: 215 70% 58%;
-    --primary-foreground: 215 30% 8%;
+    --primary: 199 89% 48%; /* Sky blue as primary in dark */
+    --primary-foreground: 222 47% 8%;
 
-    --secondary: 215 35% 18%;
-    --secondary-foreground: 210 25% 96%;
+    --secondary: 217 33% 17%; /* slate-800 */
+    --secondary-foreground: 210 40% 96%;
 
-    --muted: 215 35% 18%;
-    --muted-foreground: 215 20% 62%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%; /* slate-400 */
 
-    --accent: 210 80% 62%;
+    --accent: 199 89% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --success: 175 60% 45%;
-    --success-foreground: 215 30% 8%;
+    --success: 160 84% 45%;
+    --success-foreground: 222 47% 8%;
 
-    --warning: 215 55% 55%;
-    --warning-foreground: 215 30% 8%;
+    --warning: 38 92% 55%;
+    --warning-foreground: 222 47% 8%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 35% 22%;
-    --input: 215 35% 22%;
-    --ring: 215 70% 58%;
+    --border: 217 33% 22%; /* slate-700 */
+    --input: 217 33% 22%;
+    --ring: 199 89% 48%;
 
-    --sidebar-background: 215 35% 10%;
-    --sidebar-foreground: 210 25% 96%;
-    --sidebar-primary: 215 70% 58%;
-    --sidebar-primary-foreground: 215 30% 8%;
-    --sidebar-accent: 215 35% 18%;
-    --sidebar-accent-foreground: 210 25% 96%;
-    --sidebar-border: 215 35% 22%;
-    --sidebar-ring: 210 80% 62%;
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 222 47% 8%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 217 33% 22%;
+    --sidebar-ring: 199 89% 55%;
 
-    --section-header: 215 70% 58%;
-    --section-number: 210 80% 62%;
-    --highlight-bg: 210 35% 18%;
-    --table-header: 215 70% 42%;
-    --table-stripe: 215 35% 14%;
+    --section-header: 199 89% 55%;
+    --section-number: 199 89% 48%;
+    --highlight-bg: 217 33% 17%;
+    --table-header: 222 47% 15%;
+    --table-stripe: 222 47% 11%;
   }
 }
 
@@ -135,7 +136,7 @@
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
-  /* Subtle background pattern - Elegant branding */
+  /* Subtle slate-50 gradient background - reduces eye strain */
   body::before {
     content: '';
     position: fixed;
@@ -145,16 +146,15 @@
     bottom: 0;
     pointer-events: none;
     z-index: -1;
-    background-image: 
-      radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.015) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, hsl(var(--primary) / 0.012) 0%, transparent 50%),
-      repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 80px,
-        hsl(var(--primary) / 0.008) 80px,
-        hsl(var(--primary) / 0.008) 81px
-      );
+    background: 
+      linear-gradient(180deg, hsl(210 40% 96%) 0%, hsl(0 0% 100%) 50%, hsl(210 40% 98%) 100%),
+      radial-gradient(ellipse at 20% 0%, hsl(199 89% 48% / 0.03) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 100%, hsl(199 89% 48% / 0.02) 0%, transparent 50%);
+  }
+
+  .dark body::before {
+    background: 
+      linear-gradient(180deg, hsl(222 47% 8%) 0%, hsl(222 47% 10%) 50%, hsl(222 47% 8%) 100%);
   }
 
   .dark body::before {
