@@ -25,7 +25,7 @@ export const SectionDivider = forwardRef<HTMLDivElement, SectionDividerProps>(
         
         <div className="relative z-10 flex flex-col sm:flex-row items-center gap-5 sm:gap-7 px-4 sm:px-8 max-w-4xl mx-auto">
           {/* Premium Number Badge */}
-          <div className="flex items-center justify-center w-18 h-18 sm:w-22 sm:h-22 bg-primary-foreground text-primary rounded-2xl font-heading font-extrabold text-2xl sm:text-3xl shrink-0 shadow-2xl section-number" style={{ width: '4.5rem', height: '4.5rem' }}>
+          <div className="flex items-center justify-center w-18 h-18 sm:w-22 sm:h-22 rounded-2xl font-heading font-extrabold text-2xl sm:text-3xl shrink-0 shadow-2xl section-number" style={{ width: '4.5rem', height: '4.5rem' }}>
             {number}
           </div>
           
