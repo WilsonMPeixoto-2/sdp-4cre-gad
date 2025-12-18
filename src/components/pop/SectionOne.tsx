@@ -1,6 +1,7 @@
-import { ClipboardList, AlertCircle, CheckCircle2, Info } from "lucide-react";
+import { ClipboardList } from "lucide-react";
 import { SeiMockup } from "./SeiMockup";
 import { CopyButton } from "./CopyButton";
+import { Callout } from "./Callout";
 
 export const SectionOne = () => {
   return (
@@ -47,18 +48,14 @@ export const SectionOne = () => {
               Os tipos de processo disponíveis serão exibidos de acordo com os termos informados na busca.
             </p>
 
-            <div className="highlight-box">
-              <div className="flex items-center gap-2 mb-2">
-                <Info className="w-5 h-5 text-accent" />
-                <span className="font-bold text-slate-900">Tipo de Processo Correto:</span>
-              </div>
-              <div className="flex items-center gap-2">
+            <Callout variant="info" title="Tipo de Processo Correto:">
+              <div className="flex items-center gap-2 mt-2">
                 <p className="text-slate-900 font-semibold text-sm sm:text-base flex-1">
                   EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP
                 </p>
                 <CopyButton text="EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP" label="Copiado!" />
               </div>
-            </div>
+            </Callout>
 
             <div className="mt-6">
               <p className="text-sm font-medium text-slate-900 mb-3">Tela de seleção:</p>
@@ -98,18 +95,14 @@ export const SectionOne = () => {
               ESCOLAR seguida da NOMENCLATURA DA UNIDADE.
             </p>
 
-            <div className="highlight-box">
-              <div className="flex items-center gap-2 mb-2">
-                <CheckCircle2 className="w-5 h-5 text-success" />
-                <span className="font-bold text-slate-900">Exemplo de Especificação:</span>
-              </div>
-              <div className="flex items-center gap-2">
+            <Callout variant="success" title="Exemplo de Especificação:">
+              <div className="flex items-center gap-2 mt-2">
                 <code className="flex-1 text-slate-900 data-code text-sm break-all bg-white/50 px-3 py-2 rounded-lg">
                   Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina
                 </code>
                 <CopyButton text="Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina" label="Copiado!" />
               </div>
-            </div>
+            </Callout>
           </div>
         </div>
 
@@ -142,46 +135,33 @@ export const SectionOne = () => {
               </table>
             </div>
 
-            <div className="highlight-box mt-6">
-              <div className="flex items-start gap-3">
-                <AlertCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-                <div>
-                  <p className="font-bold text-slate-900 mb-1">Princípio da Publicidade</p>
-                  <p className="text-sm text-slate-700 leading-relaxed">
-                    Os processos de prestação de contas do SDP devem, como regra, ser classificados 
-                    com nível de acesso <strong className="text-slate-900">"Público"</strong>, por se 
-                    referirem à aplicação de recursos públicos (Art. 37 CF e Lei nº 12.527/2011 - LAI).
-                  </p>
-                  <p className="text-sm text-slate-900 font-semibold mt-3">
-                    → Selecione a opção "Público" no campo Nível de Acesso.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Callout variant="info" title="Princípio da Publicidade" className="mt-6">
+              <p className="text-sm text-slate-700 leading-relaxed">
+                Os processos de prestação de contas do SDP devem, como regra, ser classificados 
+                com nível de acesso <strong className="text-slate-900">"Público"</strong>, por se 
+                referirem à aplicação de recursos públicos (Art. 37 CF e Lei nº 12.527/2011 - LAI).
+              </p>
+              <p className="text-sm text-slate-900 font-semibold mt-3">
+                → Selecione a opção "Público" no campo Nível de Acesso.
+              </p>
+            </Callout>
           </div>
         </div>
 
-        {/* Interessados */}
         <div className="section-card">
           <h3 className="section-heading">1.12. Interessados</h3>
           <div className="content-spacing">
             <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
               Este campo é utilizado para registrar unidades ou entidades que possuam interesse no processo.
             </p>
-            <div className="highlight-box">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-success shrink-0 mt-0.5" />
-                <div className="flex-1">
-                  <p className="font-bold text-slate-900 mb-2">Adicione a GAD como interessada:</p>
-                  <div className="flex items-center gap-2">
-                    <code className="flex-1 text-slate-900 data-code text-sm bg-white/50 px-3 py-2 rounded-lg">
-                      10729 - E/4a.CRE/GAD
-                    </code>
-                    <CopyButton text="10729 - E/4a.CRE/GAD" label="Código copiado!" />
-                  </div>
-                </div>
+            <Callout variant="success" title="Adicione a GAD como interessada:">
+              <div className="flex items-center gap-2 mt-2">
+                <code className="flex-1 text-slate-900 data-code text-sm bg-white/50 px-3 py-2 rounded-lg">
+                  10729 - E/4a.CRE/GAD
+                </code>
+                <CopyButton text="10729 - E/4a.CRE/GAD" label="Código copiado!" />
               </div>
-            </div>
+            </Callout>
           </div>
         </div>
 
