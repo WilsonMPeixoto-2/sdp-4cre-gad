@@ -188,13 +188,33 @@
 
 @layer components {
   .section-card {
-    @apply bg-card rounded-xl border border-border transition-all duration-300;
+    @apply bg-card rounded-xl border border-slate-200 p-6 sm:p-8 transition-all duration-300;
     box-shadow: 0 4px 20px -4px hsl(215 25% 15% / 0.08), 0 2px 8px -2px hsl(215 25% 15% / 0.04);
   }
 
   .section-card:hover {
     box-shadow: 0 10px 40px -10px hsl(215 25% 15% / 0.12), 0 4px 16px -4px hsl(215 25% 15% / 0.06);
-    @apply border-border;
+  }
+
+  .section-heading {
+    @apply font-heading font-semibold text-slate-900 text-lg sm:text-xl pb-3 mb-4 border-b border-slate-200 flex items-center gap-2;
+  }
+
+  .section-heading::before {
+    content: '';
+    @apply w-1 h-5 bg-accent rounded-full;
+  }
+
+  .content-spacing {
+    @apply space-y-6 leading-relaxed;
+  }
+
+  .content-spacing p {
+    @apply text-slate-700 leading-relaxed;
+  }
+
+  .content-spacing h3, .content-spacing h4 {
+    @apply font-heading font-semibold text-slate-900;
   }
 
   .section-number {
@@ -204,8 +224,7 @@
   }
 
   .highlight-box {
-    @apply border-l-4 border-primary p-4 sm:p-5 rounded-r-xl;
-    background: linear-gradient(90deg, hsl(var(--highlight-bg)) 0%, hsl(var(--highlight-bg) / 0.3) 100%);
+    @apply border-l-4 border-accent p-5 sm:p-6 rounded-r-xl bg-slate-50;
   }
 
   .step-indicator {
