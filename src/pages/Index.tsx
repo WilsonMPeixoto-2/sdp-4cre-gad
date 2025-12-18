@@ -16,6 +16,7 @@ import { SectionAnexo } from "@/components/pop/SectionAnexo";
 import { BackToTop } from "@/components/pop/BackToTop";
 import { ReadingProgressBar } from "@/components/pop/ReadingProgressBar";
 import { AnimatedSection } from "@/components/pop/AnimatedSection";
+import { DocumentFooter } from "@/components/pop/DocumentFooter";
 
 
 const Index = () => {
@@ -31,7 +32,16 @@ const Index = () => {
   }, []);
 
   const handlePrint = useCallback(() => {
+    // Set professional PDF filename
+    const originalTitle = document.title;
+    document.title = "SDP_PRESTACAO_DE_CONTAS_GAD_4_CRE";
+    
     window.print();
+    
+    // Restore original title after print dialog
+    setTimeout(() => {
+      document.title = originalTitle;
+    }, 1000);
   }, []);
 
   useEffect(() => {
@@ -133,6 +143,9 @@ const Index = () => {
               <AnimatedSection delay={150}>
                 <SectionAnexo />
               </AnimatedSection>
+
+              {/* Document Footer */}
+              <DocumentFooter />
             </div>
 
             <div className="print-only mt-8 pt-4 border-t text-center text-sm text-muted-foreground">

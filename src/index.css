@@ -347,11 +347,30 @@
     color-adjust: exact !important;
   }
 
+  /* CRITICAL: Fix content cut-off issue */
   html, body {
     background: white !important;
     color: hsl(215, 30%, 12%) !important;
     font-size: 11pt !important;
     line-height: 1.5 !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Remove all height constraints and overflow hidden */
+  div, main, section, article {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Ensure flex containers don't constrain height */
+  .flex, .flex-1, .min-h-screen {
+    min-height: auto !important;
+    height: auto !important;
   }
 
   .section-card {
@@ -429,7 +448,16 @@
     -webkit-print-color-adjust: exact !important;
     page-break-after: always;
     min-height: auto !important;
-    padding: 50pt 36pt !important;
+    height: auto !important;
+    padding: 60pt 36pt !important;
+    overflow: visible !important;
+  }
+  
+  /* Hide animated orbs and patterns on print */
+  #hero-cover > div:first-child,
+  #hero-cover .animate-pulse,
+  #hero-cover .animate-bounce {
+    display: none !important;
   }
 
   /* Section Divider - print version */
