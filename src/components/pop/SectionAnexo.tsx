@@ -325,7 +325,7 @@ export const SectionAnexo = () => {
         <div className="grid sm:grid-cols-2 gap-4">
           {/* Resolução 107/2022 - Principal */}
           <a
-            href="https://doweb.rio.rj.gov.br/portal/edicoes/download/5089"
+            href="https://doweb.rio.rj.gov.br/portal/edicoes/download/5089#page=16"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 hover:from-primary/15 hover:to-primary/10 border border-primary/30 hover:border-primary/50 transition-all duration-300 group sm:col-span-2"
@@ -335,14 +335,14 @@ export const SectionAnexo = () => {
             </div>
             <div className="min-w-0">
               <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução Conjunta CGM/SMFP nº 107/2022</p>
-              <p className="text-sm text-muted-foreground">Norma operacional central do SDP (Arts. 22, 23 e 25) - D.O. de 19/08/2022</p>
+              <p className="text-sm text-muted-foreground">D.O. de 19/08/2022 (abre na pág. 16)</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
           {/* Decreto 50.162/2022 */}
           <a
-            href="https://doweb.rio.rj.gov.br/portal/edicoes/download/5024"
+            href="https://doweb.rio.rj.gov.br/portal/edicoes/download/5024#page=3"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -352,14 +352,14 @@ export const SectionAnexo = () => {
             </div>
             <div className="min-w-0">
               <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Decreto Rio nº 50.162/2022</p>
-              <p className="text-sm text-muted-foreground">Institui o SDP - D.O. de 02/02/2022</p>
+              <p className="text-sm text-muted-foreground">D.O. de 02/02/2022 (abre na pág. 3)</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
           {/* Resolução 2067/2025 */}
           <a
-            href="https://doweb.rio.rj.gov.br/portal/edicoes/download/8557"
+            href="https://doweb.rio.rj.gov.br/portal/edicoes/download/8557#page=40"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -369,14 +369,14 @@ export const SectionAnexo = () => {
             </div>
             <div className="min-w-0">
               <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução CGM nº 2067/2025</p>
-              <p className="text-sm text-muted-foreground">Regulamenta o Cartão de Pagamento - D.O. de 12/06/2025</p>
+              <p className="text-sm text-muted-foreground">D.O. de 12/06/2025 (abre na pág. 40)</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
 
           {/* Resolução 115/2023 */}
           <a
-            href="https://doweb.rio.rj.gov.br/portal/edicoes/download/5694"
+            href="https://doweb.rio.rj.gov.br/portal/edicoes/download/5694#page=11"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-4 p-5 rounded-xl bg-gradient-to-r from-secondary to-secondary/50 hover:from-primary/10 hover:to-primary/5 border border-border/50 hover:border-primary/30 transition-all duration-300 group"
@@ -386,7 +386,7 @@ export const SectionAnexo = () => {
             </div>
             <div className="min-w-0">
               <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Resolução Conjunta nº 115/2023</p>
-              <p className="text-sm text-muted-foreground">Atualização da Res. 107/2022 - D.O. de 23/03/2023</p>
+              <p className="text-sm text-muted-foreground">D.O. de 23/03/2023 (abre na pág. 11)</p>
             </div>
             <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary ml-auto shrink-0 transition-colors" />
           </a>
