@@ -450,6 +450,19 @@
     -webkit-print-color-adjust: exact !important;
   }
 
+  /* Ensure text inside primary backgrounds is white */
+  .text-primary-foreground,
+  [class*="text-primary-foreground"],
+  .bg-primary h3,
+  .bg-primary p,
+  [class*="bg-primary"] h3,
+  [class*="bg-primary"] p,
+  [class*="from-primary"] h3,
+  [class*="from-primary"] p {
+    color: white !important;
+    opacity: 1 !important;
+  }
+
   .text-primary {
     color: hsl(215, 75%, 32%) !important;
   }
