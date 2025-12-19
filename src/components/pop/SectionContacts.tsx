@@ -45,13 +45,13 @@ export const SectionContacts = ({ onPrint }: SectionContactsProps) => {
               <div className="min-w-0 flex-1">
                 <p className="text-xs text-muted-foreground font-medium uppercase tracking-wide">E-mail</p>
                 <a 
-                  href="mailto:gad4cre@rioeduca.net" 
+                  href="mailto:gadcre04@rioeduca.net" 
                   className="text-base sm:text-lg font-semibold text-primary hover:underline break-all"
                 >
-                  gad4cre@rioeduca.net
+                  gadcre04@rioeduca.net
                 </a>
               </div>
-              <CopyButton text="gad4cre@rioeduca.net" label="E-mail copiado!" />
+              <CopyButton text="gadcre04@rioeduca.net" label="E-mail copiado!" />
             </div>
 
             <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
