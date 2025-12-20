@@ -144,12 +144,11 @@ const Index = () => {
                 <SectionContacts onPrint={handlePrint} />
               </AnimatedSection>
 
-              <AnimatedSection delay={100}>
+              {/* Anexo section without animation to ensure visibility */}
+              <div id="anexo-divider">
                 <SectionDivider number="A" title="Anexo" subtitle="Legislação de referência e documentos exigidos" icon={Scale} />
-              </AnimatedSection>
-              <AnimatedSection delay={150}>
-                <SectionAnexo />
-              </AnimatedSection>
+              </div>
+              <SectionAnexo />
 
               {/* Document Footer */}
               <DocumentFooter />
