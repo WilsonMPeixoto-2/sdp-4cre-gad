@@ -13,21 +13,21 @@ interface CalloutProps {
 
 const variantStyles: Record<CalloutVariant, { bg: string; border: string; icon: string; iconComponent: LucideIcon }> = {
   info: {
-    bg: "bg-blue-50",
-    border: "border-l-blue-500",
-    icon: "text-blue-600",
+    bg: "bg-accent/10 dark:bg-accent/20",
+    border: "border-l-accent",
+    icon: "text-accent",
     iconComponent: Info,
   },
   warning: {
-    bg: "bg-amber-50",
-    border: "border-l-amber-500",
-    icon: "text-amber-600",
+    bg: "bg-warning/10 dark:bg-warning/20",
+    border: "border-l-warning",
+    icon: "text-warning",
     iconComponent: AlertTriangle,
   },
   success: {
-    bg: "bg-emerald-50",
-    border: "border-l-emerald-500",
-    icon: "text-emerald-600",
+    bg: "bg-success/10 dark:bg-success/20",
+    border: "border-l-success",
+    icon: "text-success",
     iconComponent: CheckCircle,
   },
 };
@@ -55,9 +55,9 @@ export const Callout = ({
         <IconComponent className={cn("w-5 h-5 shrink-0 mt-0.5", styles.icon)} />
         <div className="flex-1 min-w-0">
           {title && (
-            <p className="font-bold text-slate-900 mb-1">{title}</p>
+            <p className="font-bold text-foreground mb-1">{title}</p>
           )}
-          <div className="text-sm text-slate-700 leading-relaxed">
+          <div className="text-sm text-muted-foreground leading-relaxed">
             {children}
           </div>
         </div>

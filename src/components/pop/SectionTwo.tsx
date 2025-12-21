@@ -7,24 +7,24 @@ export const SectionTwo = () => {
   return (
     <section id="secao-2" className="scroll-mt-20 animate-fade-in">
       {/* Download Button - Despacho de Encaminhamento */}
-      <div className="mb-8 p-5 sm:p-6 rounded-xl bg-gradient-to-r from-blue-50 to-blue-50/50 border border-blue-200">
+      <div className="mb-8 p-5 sm:p-6 rounded-xl bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/30 dark:from-accent/20 dark:to-accent/10">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <div className="flex items-center gap-3 flex-1">
-            <div className="p-2.5 rounded-lg bg-blue-100">
-              <FileText className="w-5 h-5 text-blue-600" />
+            <div className="p-2.5 rounded-lg bg-accent/20">
+              <FileText className="w-5 h-5 text-accent" />
             </div>
             <div>
-              <h4 className="font-semibold text-slate-900 text-sm sm:text-base">
+              <h4 className="font-semibold text-foreground text-sm sm:text-base">
                 Modelo do Despacho de Encaminhamento
               </h4>
-              <p className="text-xs sm:text-sm text-slate-600">
+              <p className="text-xs sm:text-sm text-muted-foreground">
                 Documento editável (.docx) para formalização da prestação de contas
               </p>
             </div>
           </div>
           <Button
             asChild
-            className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+            className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg hover:shadow-xl transition-all duration-300"
           >
             <a
               href="https://rioeduca-my.sharepoint.com/:w:/g/personal/wilson_mpeixoto_rioeduca_net/IQC9wPR-JwJySpEGFJeisX7SAU96gsNWnIZiVss7WC0KKjE?e=6sP1ua"
@@ -48,7 +48,7 @@ export const SectionTwo = () => {
             </div>
             <div className="content-spacing">
               <h3 className="section-heading">2.1. O Despacho de Encaminhamento</h3>
-              <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                 O Despacho de Encaminhamento é o documento que formaliza a prestação de contas 
                 para a Gerência de Administração (GAD).
               </p>
@@ -78,31 +78,31 @@ export const SectionTwo = () => {
           <h3 className="section-heading">2.2. Procedimentos para Criar o Despacho</h3>
           
           <div className="space-y-4 timeline-steps">
-            <div className="flex items-start gap-4 p-5 bg-slate-50 rounded-xl timeline-step">
+            <div className="flex items-start gap-4 p-5 bg-secondary rounded-xl timeline-step">
               <div className="step-indicator shrink-0 text-sm">1</div>
               <div>
-                <h4 className="font-semibold text-slate-900 mb-1">Incluir Documento</h4>
-                <p className="text-sm text-slate-700 leading-relaxed">
-                  Com o processo aberto, clique no ícone <strong className="text-slate-900">"INCLUIR DOCUMENTO"</strong> na barra de ferramentas do SEI.
+                <h4 className="font-semibold text-foreground mb-1">Incluir Documento</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Com o processo aberto, clique no ícone <strong className="text-foreground">"INCLUIR DOCUMENTO"</strong> na barra de ferramentas do SEI.
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-5 bg-slate-50 rounded-xl timeline-step">
+            <div className="flex items-start gap-4 p-5 bg-secondary rounded-xl timeline-step">
               <div className="step-indicator shrink-0 text-sm">2</div>
               <div>
-                <h4 className="font-semibold text-slate-900 mb-1">Escolha do Tipo de Documento</h4>
-                <p className="text-sm text-slate-700 leading-relaxed">
-                  Selecione o tipo: <strong className="text-slate-900">"Encaminhamento da Prestação de Contas dos Gestores SDP"</strong>
+                <h4 className="font-semibold text-foreground mb-1">Escolha do Tipo de Documento</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Selecione o tipo: <strong className="text-foreground">"Encaminhamento da Prestação de Contas dos Gestores SDP"</strong>
                 </p>
               </div>
             </div>
 
-            <div className="flex items-start gap-4 p-5 bg-slate-50 rounded-xl timeline-step">
+            <div className="flex items-start gap-4 p-5 bg-secondary rounded-xl timeline-step">
               <div className="step-indicator shrink-0 text-sm">3</div>
               <div>
-                <h4 className="font-semibold text-slate-900 mb-1">Preenchimento do Editor</h4>
-                <p className="text-sm text-slate-700 leading-relaxed">
+                <h4 className="font-semibold text-foreground mb-1">Preenchimento do Editor</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   No corpo do documento, digite o conteúdo do despacho ou cole o texto padronizado 
                   utilizado pela sua unidade.
                 </p>
@@ -115,12 +115,12 @@ export const SectionTwo = () => {
         <div className="section-card">
           <h3 className="section-heading">2.5. Especificação do Documento</h3>
           <div className="content-spacing">
-            <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
               O campo deve ser preenchido seguindo o formato exato indicado:
             </p>
             
             <Callout variant="info" title="Formato obrigatório:">
-              <code className="block bg-white px-4 py-3 rounded-lg border border-slate-200 text-sm data-code text-slate-900 break-all shadow-sm mt-2">
+              <code className="block bg-card px-4 py-3 rounded-lg border border-border text-sm data-code text-foreground break-all shadow-sm mt-2">
                 SDP – E/CRE (04.xx.xxx) NOME DA ESCOLA
               </code>
             </Callout>
@@ -141,31 +141,31 @@ export const SectionTwo = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td className="text-slate-700">Saldo total inicial em 00/00/202X</td>
+                  <td className="text-muted-foreground">Saldo total inicial em 00/00/202X</td>
                   <td className="text-right data-code">-</td>
                 </tr>
                 <tr>
-                  <td className="pl-6 sm:pl-8 text-slate-700">Saldo da natureza <span className="data-code">441</span></td>
+                  <td className="pl-6 sm:pl-8 text-muted-foreground">Saldo da natureza <span className="data-code">441</span></td>
                   <td className="text-right data-code">-</td>
                 </tr>
                 <tr>
-                  <td className="pl-6 sm:pl-8 text-slate-700">Saldo da natureza <span className="data-code">435</span></td>
+                  <td className="pl-6 sm:pl-8 text-muted-foreground">Saldo da natureza <span className="data-code">435</span></td>
                   <td className="text-right data-code">-</td>
                 </tr>
                 <tr>
-                  <td className="pl-6 sm:pl-8 text-slate-700">Saldo da natureza <span className="data-code">434</span></td>
+                  <td className="pl-6 sm:pl-8 text-muted-foreground">Saldo da natureza <span className="data-code">434</span></td>
                   <td className="text-right data-code">-</td>
                 </tr>
                 <tr>
-                  <td className="text-slate-700">Total dos Créditos (ressuprimentos)</td>
+                  <td className="text-muted-foreground">Total dos Créditos (ressuprimentos)</td>
                   <td className="text-right data-code">-</td>
                 </tr>
                 <tr>
-                  <td className="text-slate-700">Pgtos em cartão (Boletos Bancários)</td>
+                  <td className="text-muted-foreground">Pgtos em cartão (Boletos Bancários)</td>
                   <td className="text-right data-code">-</td>
                 </tr>
                 <tr className="font-semibold bg-accent/10">
-                  <td className="text-slate-900">Saldo total final em 00/00/202X</td>
+                  <td className="text-foreground">Saldo total final em 00/00/202X</td>
                   <td className="text-right data-code">-</td>
                 </tr>
               </tbody>
@@ -183,11 +183,11 @@ export const SectionTwo = () => {
           </div>
           
           <div className="space-y-4">
-            <div className="flex items-start gap-3 p-5 bg-slate-50 rounded-xl">
+            <div className="flex items-start gap-3 p-5 bg-secondary rounded-xl">
               <PenLine className="w-5 h-5 text-accent shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-slate-900">1. Assinar</p>
-                <p className="text-sm text-slate-700 leading-relaxed">
+                <p className="font-semibold text-foreground">1. Assinar</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Clique no ícone Assinar Documento (representado por uma caneta preta na barra de ferramentas).
                 </p>
               </div>
