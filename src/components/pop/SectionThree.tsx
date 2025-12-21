@@ -1,4 +1,4 @@
-import { Table2, AlertCircle, FileSpreadsheet, Download } from "lucide-react";
+import { Table2, FileSpreadsheet, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { InfoDrawer, NaturezasDespesaContent } from "./InfoDrawer";
 
@@ -106,9 +106,9 @@ export const SectionThree = () => {
               <p className="text-sm text-muted-foreground">Serviços de Terceiros</p>
             </div>
             
-            <div className="p-4 bg-gradient-to-br from-[hsl(210,60%,50%)]/10 to-[hsl(210,60%,50%)]/5 rounded-xl border-l-4 border-l-[hsl(210,60%,50%)]">
+            <div className="p-4 bg-gradient-to-br from-accent/10 to-accent/5 rounded-xl border-l-4 border-l-accent">
               <div className="flex items-center gap-3 mb-2">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-[hsl(210,60%,50%)] text-primary-foreground font-bold text-sm shadow-md data-code">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-accent text-accent-foreground font-bold text-sm shadow-md data-code">
                   434
                 </span>
                 <span className="font-bold text-foreground">Natureza 434</span>

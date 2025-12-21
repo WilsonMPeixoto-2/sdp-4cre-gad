@@ -42,10 +42,10 @@ export const SectionFour = () => {
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
-                  { label: "Notas fiscais", color: "bg-blue-500/10 text-blue-600 border-blue-500/30" },
-                  { label: "Recibos", color: "bg-green-500/10 text-green-600 border-green-500/30" },
-                  { label: "Comprovantes de pagamento", color: "bg-amber-500/10 text-amber-600 border-amber-500/30" },
-                  { label: "Extratos bancários", color: "bg-purple-500/10 text-purple-600 border-purple-500/30" }
+                  { label: "Notas fiscais", color: "bg-accent/10 text-accent border-accent/30" },
+                  { label: "Recibos", color: "bg-success/10 text-success border-success/30" },
+                  { label: "Comprovantes de pagamento", color: "bg-warning/10 text-warning border-warning/30" },
+                  { label: "Extratos bancários", color: "bg-primary/10 text-primary border-primary/30" }
                 ].map((doc, i) => (
                   <span key={i} className={`px-3 py-1.5 text-sm font-medium rounded-lg border shadow-sm ${doc.color}`}>
                     {doc.label}
