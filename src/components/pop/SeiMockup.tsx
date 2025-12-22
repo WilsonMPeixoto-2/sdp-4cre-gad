@@ -185,18 +185,18 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
           {/* Campos preenchidos automaticamente */}
           <div className="bg-muted/50 rounded-lg p-3 space-y-2 border border-border/50">
             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
-              <span className="text-muted-foreground/70 w-40 shrink-0 text-xs sm:text-sm">
+              <span className="text-muted-foreground w-40 shrink-0 text-xs sm:text-sm">
                 Tipo de Processo:
               </span>
-              <span className="text-xs sm:text-sm text-muted-foreground/80 italic">
+              <span className="text-xs sm:text-sm text-foreground/70 italic">
                 EXECUÇÃO FINANCEIRA: SDP <span className="text-[10px]">(preenchimento automático)</span>
               </span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
-              <span className="text-muted-foreground/70 w-40 shrink-0 text-xs sm:text-sm">
+              <span className="text-muted-foreground w-40 shrink-0 text-xs sm:text-sm">
                 Classificação:
               </span>
-              <span className="text-xs sm:text-sm text-muted-foreground/80 italic">
+              <span className="text-xs sm:text-sm text-foreground/70 italic">
                 01.05.03.11 - SDP <span className="text-[10px]">(preenchimento automático)</span>
               </span>
             </div>
