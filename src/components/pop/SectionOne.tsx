@@ -104,7 +104,7 @@ export const SectionOne = () => {
             <Callout variant="success" title="Exemplo de Especificação:">
               <div className="flex items-center gap-2 mt-2">
                 <code className="flex-1 text-foreground data-code text-sm break-all bg-card/50 px-3 py-2 rounded-lg">
-                  Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina <span className="text-muted-foreground">(exemplo de preenchimento)</span>
+                  Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina
                 </code>
                 <CopyButton text="Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina" label="Copiado!" />
               </div>

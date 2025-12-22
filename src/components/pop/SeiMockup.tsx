@@ -203,11 +203,14 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
             <p className="text-xs text-muted-foreground mb-2">Campos a preencher:</p>
           </div>
           
-          <SeiFormField 
-            label="Especificação" 
-            value="Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina" 
-            required 
-          />
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+            <span className="text-muted-foreground w-40 shrink-0 text-xs sm:text-sm">
+              Especificação<span className="text-destructive">*</span>:
+            </span>
+            <span className="font-medium text-xs sm:text-sm text-foreground">
+              Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina <span className="text-muted-foreground font-normal">(exemplo de preenchimento)</span>
+            </span>
+          </div>
           <SeiFormField 
             label="Interessados" 
             value="10729 - E/4a.CRE/GAD" 
