@@ -15,7 +15,7 @@ export const SectionOne = () => {
             </div>
             <div className="content-spacing">
               <h3 className="section-heading">1.1. Objetivo desta Etapa</h3>
-              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
                 A etapa inicial destina-se à abertura do processo administrativo eletrônico e à inserção do acervo documental comprobatório relativo à prestação de contas.
               </p>
             </div>
@@ -26,7 +26,7 @@ export const SectionOne = () => {
         <div className="section-card">
           <h3 className="section-heading">1.2. Iniciando o Processo</h3>
           <div className="content-spacing">
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
               Para abrir um novo processo no SEI!RIO, o usuário deve selecionar a opção 
               <strong className="text-foreground"> "INICIAR PROCESSO"</strong>, conforme o menu de navegação do sistema.
             </p>
@@ -42,7 +42,7 @@ export const SectionOne = () => {
         <div className="section-card">
           <h3 className="section-heading">1.3. Seleção do Tipo de Processo</h3>
           <div className="content-spacing">
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
               Ao selecionar essa opção, o usuário deverá indicar o TIPO DE PROCESSO a ser instaurado. 
               Os tipos de processo disponíveis serão exibidos de acordo com os termos informados na busca.
               <span className="inline-flex align-middle ml-2">
@@ -71,10 +71,10 @@ export const SectionOne = () => {
         <div className="section-card">
           <h3 className="section-heading">1.4. Tela Iniciar Processo</h3>
           <div className="content-spacing">
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
               Após selecionar o tipo de processo, o sistema abrirá a tela <strong className="text-foreground">"INICIAR PROCESSO"</strong>.
             </p>
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mt-2">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mt-2 text-justify">
               Nesta tela, você deverá preencher os campos: <strong className="text-foreground">Especificação</strong>, <strong className="text-foreground">Interessados</strong>, e selecionar o <strong className="text-foreground">Nível de Acesso</strong> adequado.
             </p>
             
@@ -116,7 +116,7 @@ export const SectionOne = () => {
         <div className="section-card">
           <h3 className="section-heading">1.6. Classificação por Assuntos</h3>
           <div className="content-spacing">
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
               Este campo será preenchido automaticamente pelo sistema, em conformidade com o Tipo de 
               Processo selecionado pelo usuário na etapa anterior.
             </p>
@@ -174,7 +174,7 @@ export const SectionOne = () => {
         <div className="section-card">
           <h3 className="section-heading">1.8. Interessados</h3>
           <div className="content-spacing">
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
               Este campo é utilizado para registrar unidades ou entidades que possuam interesse no processo.
             </p>
             <Callout variant="success" title="Adicione a GAD como interessada:">
@@ -202,7 +202,7 @@ export const SectionOne = () => {
         <div className="section-card">
           <h3 className="section-heading">1.10. Salvando o Processo</h3>
           <div className="content-spacing">
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
               Após preencher todos os campos obrigatórios, clique no botão 
               <strong className="text-foreground"> SALVAR</strong> para concluir a abertura do processo.
             </p>
@@ -217,7 +217,7 @@ export const SectionOne = () => {
         <div className="section-card border-l-4 border-l-success">
           <h3 className="section-heading">1.11. Resultado: O Número do Processo (NUP)</h3>
           <div className="content-spacing">
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
               Após salvar, o sistema gerará automaticamente o <strong className="text-foreground">Número Único de Protocolo (NUP)</strong>, 
               que identificará o processo em todas as etapas subsequentes.
             </p>
