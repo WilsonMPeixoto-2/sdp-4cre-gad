@@ -79,11 +79,7 @@ export const PopHeader = ({ onPrint }: PopHeaderProps) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 no-print border-b border-white/10 shadow-lg" style={{ 
-      background: 'rgba(15, 23, 42, 0.92)', 
-      backdropFilter: 'blur(12px)',
-      WebkitBackdropFilter: 'blur(12px)'
-    }}>
+    <header className="sticky top-0 z-50 no-print border-b border-border/30 shadow-lg bg-background/95 dark:bg-background/90 backdrop-blur-xl">
       <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
         <div className="flex items-center justify-between gap-3">
           {/* Logo and Title */}
@@ -92,10 +88,10 @@ export const PopHeader = ({ onPrint }: PopHeaderProps) => {
               <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-accent-foreground" />
             </div>
             <div className="min-w-0">
-              <h1 className="text-sm sm:text-lg lg:text-xl font-heading font-bold text-primary-foreground truncate tracking-tight">
+              <h1 className="text-sm sm:text-lg lg:text-xl font-heading font-bold text-foreground truncate tracking-tight">
                 Procedimento Operacional Padrão
               </h1>
-              <p className="text-xs sm:text-sm text-primary-foreground/70 hidden sm:block">
+              <p className="text-xs sm:text-sm text-muted-foreground hidden sm:block">
                 4ª Coordenadoria Regional de Educação | GAD
               </p>
             </div>
@@ -107,7 +103,7 @@ export const PopHeader = ({ onPrint }: PopHeaderProps) => {
               variant="ghost"
               size="sm"
               onClick={cycleViewMode}
-              className={`text-primary-foreground hover:bg-primary-foreground/10 h-9 w-9 sm:h-10 sm:w-10 transition-all duration-200 ${viewMode !== 'auto' ? 'bg-primary-foreground/20' : ''}`}
+              className={`text-foreground hover:bg-muted h-9 w-9 sm:h-10 sm:w-10 transition-all duration-200 ${viewMode !== 'auto' ? 'bg-muted' : ''}`}
               title={getViewModeTitle()}
             >
               {getViewModeIcon()}
@@ -116,7 +112,7 @@ export const PopHeader = ({ onPrint }: PopHeaderProps) => {
               variant="ghost"
               size="sm"
               onClick={toggleDarkMode}
-              className="text-primary-foreground hover:bg-primary-foreground/10 h-9 w-9 sm:h-10 sm:w-10 transition-all duration-200"
+              className="text-foreground hover:bg-muted h-9 w-9 sm:h-10 sm:w-10 transition-all duration-200"
               title={isDark ? "Modo claro" : "Modo escuro"}
             >
               {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
@@ -125,7 +121,7 @@ export const PopHeader = ({ onPrint }: PopHeaderProps) => {
               variant="ghost"
               size="sm"
               onClick={onPrint}
-              className="text-primary-foreground hover:bg-primary-foreground/10 h-9 w-9 sm:h-10 sm:w-auto sm:px-4 transition-all duration-200"
+              className="text-foreground hover:bg-muted h-9 w-9 sm:h-10 sm:w-auto sm:px-4 transition-all duration-200"
             >
               <Printer className="w-4 h-4 sm:mr-2" />
               <span className="hidden sm:inline">Imprimir</span>

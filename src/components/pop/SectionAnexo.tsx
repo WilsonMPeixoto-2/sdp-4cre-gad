@@ -241,10 +241,10 @@ export const SectionAnexo = () => {
       </div>
 
       {/* Alerta Cartão de Pagamento */}
-      <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-blue-500 bg-gradient-to-r from-blue-500/5 to-transparent">
+      <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-blue-500 bg-gradient-to-r from-blue-500/10 to-transparent dark:from-blue-500/5">
         <div className="flex items-start gap-4">
           <div className="p-2.5 rounded-lg bg-blue-500/10 shrink-0">
-            <CreditCard className="w-5 h-5 text-blue-600" />
+            <CreditCard className="w-5 h-5 text-blue-500 dark:text-blue-400" />
           </div>
           <div>
             <h4 className="font-semibold text-foreground mb-2">Pagamentos via Cartão de Pagamento (Res. CGM nº 2067/2025)</h4>
@@ -258,10 +258,10 @@ export const SectionAnexo = () => {
       </div>
 
       {/* Alerta Retenção de Tributos */}
-      <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-amber-500 bg-gradient-to-r from-amber-500/5 to-transparent">
+      <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-amber-500 bg-gradient-to-r from-amber-500/10 to-transparent dark:from-amber-500/5">
         <div className="flex items-start gap-4">
           <div className="p-2.5 rounded-lg bg-amber-500/10 shrink-0">
-            <Calculator className="w-5 h-5 text-amber-600" />
+            <Calculator className="w-5 h-5 text-amber-500 dark:text-amber-400" />
           </div>
           <div>
             <h4 className="font-semibold text-foreground mb-2">Retenção de Tributos (Res. CGM nº 1.176/2015)</h4>
@@ -279,10 +279,10 @@ export const SectionAnexo = () => {
       </div>
 
       {/* Alerta Encerramento do Exercício */}
-      <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-red-500 bg-gradient-to-r from-red-500/5 to-transparent">
+      <div className="section-card p-6 sm:p-8 mb-6 border-l-4 border-red-500 bg-gradient-to-r from-red-500/10 to-transparent dark:from-red-500/5">
         <div className="flex items-start gap-4">
           <div className="p-2.5 rounded-lg bg-red-500/10 shrink-0">
-            <CalendarClock className="w-5 h-5 text-red-600" />
+            <CalendarClock className="w-5 h-5 text-red-500 dark:text-red-400" />
           </div>
           <div>
             <h4 className="font-semibold text-foreground mb-2">Encerramento do Exercício 2025</h4>
