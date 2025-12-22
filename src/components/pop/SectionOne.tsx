@@ -190,7 +190,7 @@ export const SectionOne = () => {
 
         {/* Observações */}
         <div className="section-card">
-          <h3 className="section-heading">1.9. Observações da Unidade</h3>
+          <h3 className="section-heading">1.9. Observações desta Unidade</h3>
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
             O campo <strong className="text-[hsl(215,75%,28%)]">"Observações desta unidade"</strong> permite a inserção de anotações de <strong className="text-[hsl(215,75%,28%)]">controle interno</strong>. 
             O texto digitado aqui não será visível para outras unidades por onde o processo tramitar, 
