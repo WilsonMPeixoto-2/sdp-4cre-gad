@@ -52,14 +52,10 @@ export const SectionOne = () => {
                   Os tipos de processo disponíveis serão exibidos de acordo com os termos informados na busca.
                 </p>
 
-                <Callout variant="info" title="Tipo de Processo Correto:">
-                  <div className="flex items-center gap-2 mt-2">
-                    <p className="text-foreground font-semibold text-sm sm:text-base flex-1">
-                      EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP
-                    </p>
-                    <CopyButton text="EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP" label="Copiado!" />
-                  </div>
-                </Callout>
+                <div className="mt-6">
+                  <p className="text-sm font-medium text-foreground mb-3">Tela de seleção:</p>
+                  <SeiMockup variant="type-selection" />
+                </div>
               </div>
             </div>
           </div>
