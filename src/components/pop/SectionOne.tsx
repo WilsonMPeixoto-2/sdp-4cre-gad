@@ -1,4 +1,4 @@
-import { ClipboardList } from "lucide-react";
+import { ClipboardList, Save } from "lucide-react";
 import { SeiMockup } from "./SeiMockup";
 import { CopyButton } from "./CopyButton";
 import { Callout } from "./Callout";
@@ -64,30 +64,26 @@ export const SectionOne = () => {
           </div>
         </div>
 
-        {/* Classification */}
+        {/* Tela Iniciar Processo */}
         <div className="section-card">
-          <h3 className="section-heading">1.5. Classificação por Assuntos</h3>
+          <h3 className="section-heading">1.4. Tela Iniciar Processo</h3>
           <div className="content-spacing">
             <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-              Este campo será preenchido automaticamente pelo sistema, em conformidade com o Tipo de 
-              Processo selecionado pelo usuário na etapa anterior.
+              Após selecionar o tipo de processo, o sistema abrirá a <strong className="text-foreground">aba de cadastro principal</strong>. 
+              Nesta tela, você deverá preencher os campos obrigatórios: Especificação, Interessados, 
+              e selecionar o Nível de Acesso adequado.
             </p>
-
-            <div className="bg-gradient-to-r from-secondary to-secondary/50 rounded-xl p-5">
-              <p className="text-sm text-muted-foreground mb-3">Classificação automática:</p>
-              <div className="flex items-center gap-2">
-                <code className="flex-1 bg-card px-4 py-3 rounded-lg border border-border text-sm data-code text-foreground break-all shadow-sm">
-                  01.05.03.11 - SISTEMA DESCENTRALIZADO DE PAGAMENTO
-                </code>
-                <CopyButton text="01.05.03.11 - SISTEMA DESCENTRALIZADO DE PAGAMENTO" label="Copiado!" />
-              </div>
+            
+            <div className="mt-6">
+              <p className="text-sm font-medium text-foreground mb-3">Formulário de cadastro:</p>
+              <SeiMockup variant="iniciar-processo-form" />
             </div>
           </div>
         </div>
 
         {/* Specification */}
         <div className="section-card">
-          <h3 className="section-heading">1.8. Especificação</h3>
+          <h3 className="section-heading">1.5. Especificação</h3>
           <div className="content-spacing">
             <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
               O cadastrante deverá obrigatoriamente digitar os metadados estabelecidos pela GAD, 
@@ -106,9 +102,30 @@ export const SectionOne = () => {
           </div>
         </div>
 
+        {/* Classification */}
+        <div className="section-card">
+          <h3 className="section-heading">1.6. Classificação por Assuntos</h3>
+          <div className="content-spacing">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              Este campo será preenchido automaticamente pelo sistema, em conformidade com o Tipo de 
+              Processo selecionado pelo usuário na etapa anterior.
+            </p>
+
+            <div className="bg-gradient-to-r from-secondary to-secondary/50 rounded-xl p-5">
+              <p className="text-sm text-muted-foreground mb-3">Classificação automática:</p>
+              <div className="flex items-center gap-2">
+                <code className="flex-1 bg-card px-4 py-3 rounded-lg border border-border text-sm data-code text-foreground break-all shadow-sm">
+                  01.05.03.11 - SISTEMA DESCENTRALIZADO DE PAGAMENTO
+                </code>
+                <CopyButton text="01.05.03.11 - SISTEMA DESCENTRALIZADO DE PAGAMENTO" label="Copiado!" />
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Access Level */}
         <div className="section-card">
-          <h3 className="section-heading">1.11. Nível de Acesso</h3>
+          <h3 className="section-heading">1.7. Nível de Acesso</h3>
           <div className="content-spacing">
             <div className="overflow-x-auto -mx-6 sm:-mx-8 px-6 sm:px-8">
               <table className="table-institutional text-sm w-full">
@@ -135,21 +152,19 @@ export const SectionOne = () => {
               </table>
             </div>
 
-            <Callout variant="info" title="Princípio da Publicidade" className="mt-6">
+            <Callout variant="warning" title="⚠️ Atenção: Seleção Obrigatória" className="mt-6">
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Os processos de prestação de contas do SDP devem, como regra, ser classificados 
-                com nível de acesso <strong className="text-foreground">"Público"</strong>, por se 
-                referirem à aplicação de recursos públicos (Art. 37 CF e Lei nº 12.527/2011 - LAI).
-              </p>
-              <p className="text-sm text-foreground font-semibold mt-3">
-                → Selecione a opção "Público" no campo Nível de Acesso.
+                Selecione <strong className="text-foreground">SEMPRE</strong> a opção 
+                <strong className="text-warning font-bold"> PÚBLICO</strong> para atender 
+                ao Princípio da Publicidade (Art. 37 CF e LAI) e evitar travamento do processo.
               </p>
             </Callout>
           </div>
         </div>
 
+        {/* Interessados */}
         <div className="section-card">
-          <h3 className="section-heading">1.12. Interessados</h3>
+          <h3 className="section-heading">1.8. Interessados</h3>
           <div className="content-spacing">
             <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
               Este campo é utilizado para registrar unidades ou entidades que possuam interesse no processo.
@@ -167,12 +182,49 @@ export const SectionOne = () => {
 
         {/* Observações */}
         <div className="section-card">
-          <h3 className="section-heading">1.13. Observações da Unidade</h3>
+          <h3 className="section-heading">1.9. Observações da Unidade</h3>
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
             O campo "Observações desta unidade" poderá ser preenchido por cada unidade em que o processo 
             tramitar. As observações inseridas por outras unidades aparecerão, na tela Alterar Processo, 
             separadamente, na Lista de observações de outras unidades.
           </p>
+        </div>
+
+        {/* Salvando o Processo */}
+        <div className="section-card">
+          <h3 className="section-heading">1.10. Salvando o Processo</h3>
+          <div className="content-spacing">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              Após preencher todos os campos obrigatórios, clique no botão 
+              <strong className="text-foreground"> SALVAR</strong> para concluir a abertura do processo.
+            </p>
+            
+            <div className="mt-6">
+              <SeiMockup variant="salvar-btn" />
+            </div>
+          </div>
+        </div>
+
+        {/* Resultado: NUP */}
+        <div className="section-card border-l-4 border-l-success">
+          <h3 className="section-heading">1.11. Resultado: O Número do Processo (NUP)</h3>
+          <div className="content-spacing">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              Após salvar, o sistema gerará automaticamente o <strong className="text-foreground">Número Único de Protocolo (NUP)</strong>, 
+              que identificará o processo em todas as etapas subsequentes.
+            </p>
+            
+            <div className="mt-6">
+              <SeiMockup variant="nup-gerado" />
+            </div>
+            
+            <Callout variant="info" className="mt-4">
+              <p className="text-sm">
+                <strong>Nota:</strong> O SEI não gera capa de processo. O NUP acima é o 
+                único identificador gerado automaticamente pelo sistema.
+              </p>
+            </Callout>
+          </div>
         </div>
       </div>
     </section>

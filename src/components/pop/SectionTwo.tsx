@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { InfoDrawer, AutenticacaoVsAssinaturaContent } from "./InfoDrawer";
 import { Callout } from "./Callout";
 import { SeiAssinarIcon } from "./SeiIcons";
+import { SeiMockup } from "./SeiMockup";
 
 export const SectionTwo = () => {
   return (
@@ -81,21 +82,23 @@ export const SectionTwo = () => {
           <div className="space-y-4 timeline-steps">
             <div className="flex items-start gap-4 p-5 bg-secondary rounded-xl timeline-step">
               <div className="step-indicator shrink-0 text-sm">1</div>
-              <div>
+              <div className="flex-1">
                 <h4 className="font-semibold text-foreground mb-1">Incluir Documento</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Com o processo aberto, clique no ícone <strong className="text-foreground">"INCLUIR DOCUMENTO"</strong> na barra de ferramentas do SEI.
                 </p>
+                <SeiMockup variant="incluir-documento" />
               </div>
             </div>
 
             <div className="flex items-start gap-4 p-5 bg-secondary rounded-xl timeline-step">
               <div className="step-indicator shrink-0 text-sm">2</div>
-              <div>
+              <div className="flex-1">
                 <h4 className="font-semibold text-foreground mb-1">Escolha do Tipo de Documento</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Selecione a opção: <strong className="text-foreground">DESPACHO</strong>
                 </p>
+                <SeiMockup variant="despacho-selection" />
               </div>
             </div>
 
@@ -127,6 +130,8 @@ export const SectionTwo = () => {
               Preencha os campos obrigatórios que identificam o documento no sistema:
             </p>
             
+            <SeiMockup variant="metadados-form" />
+            
             {/* Campo Descrição */}
             <div className="p-4 bg-secondary rounded-xl border-l-4 border-l-accent">
               <h4 className="font-semibold text-foreground text-sm mb-2">Campo: Descrição</h4>
@@ -147,7 +152,7 @@ export const SectionTwo = () => {
 
         {/* Execution Summary Template */}
         <div className="section-card">
-          <h3 className="section-heading">Modelo de Execução Resumida</h3>
+          <h3 className="section-heading">2.4. Modelo de Execução Resumida</h3>
           
           <div className="overflow-x-auto -mx-6 sm:-mx-8 px-6 sm:px-8">
             <table className="table-institutional text-sm w-full">
@@ -203,12 +208,13 @@ export const SectionTwo = () => {
           <div className="space-y-4">
             <div className="flex items-start gap-3 p-5 bg-secondary rounded-xl">
               <SeiAssinarIcon size={24} className="shrink-0 mt-0.5" />
-              <div>
+              <div className="flex-1">
                 <p className="font-semibold text-foreground">1. Assinar</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   Clique no ícone <strong className="text-foreground">Assinar Documento</strong> 
                   (representado pela caneta tinteiro preta na barra de ferramentas).
                 </p>
+                <SeiMockup variant="toolbar-assinar" />
               </div>
             </div>
             <Callout variant="success" title="2. Verificar">
@@ -223,11 +229,11 @@ export const SectionTwo = () => {
               <div className="p-2 rounded-lg bg-primary/20 shrink-0">
                 <Link2 className="w-5 h-5 text-primary" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h4 className="font-semibold text-foreground flex items-center gap-2 mb-2">
                   💡 Dica Pro: Assinatura Externa
                 </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                   É possível enviar o documento para outra chefia assinar sem precisar tramitar o processo! 
                   Clique no ícone do documento na <strong className="text-foreground">árvore lateral</strong>, 
                   selecione <strong className="text-foreground">"Link para Acesso Direto"</strong> 
@@ -235,6 +241,7 @@ export const SectionTwo = () => {
                   <strong className="text-foreground"> WhatsApp</strong> ou 
                   <strong className="text-foreground"> E-mail</strong>.
                 </p>
+                <SeiMockup variant="link-externo" />
               </div>
             </div>
           </div>
