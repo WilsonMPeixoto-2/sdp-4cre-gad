@@ -95,16 +95,16 @@ export const SectionOne = () => {
         <div className="section-card">
           <h3 className="section-heading">1.5. Especificação <span className="text-sm font-normal text-muted-foreground">(preenchimento obrigatório)</span></h3>
           <div className="content-spacing">
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
               O cadastrante deverá obrigatoriamente digitar os metadados estabelecidos pela GAD, 
-              composto pelo Objetivo do processo (PRESTAÇÃO DE CONTAS DE SDP) + DESIGNAÇÃO DA UNIDADE 
-              ESCOLAR seguida da NOMENCLATURA DA UNIDADE.
+              composto pelo Objetivo do processo (<strong className="text-[hsl(215,75%,28%)]">PRESTAÇÃO DE CONTAS DE SDP</strong>) + <strong className="text-[hsl(215,75%,28%)]">DESIGNAÇÃO DA UNIDADE 
+              ESCOLAR</strong> seguida da <strong className="text-[hsl(215,75%,28%)]">NOMENCLATURA DA UNIDADE</strong>.
             </p>
 
             <Callout variant="success" title="Exemplo de Especificação:">
               <div className="flex items-center gap-2 mt-2">
                 <code className="flex-1 text-foreground data-code text-sm break-all bg-card/50 px-3 py-2 rounded-lg">
-                  Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina
+                  Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina <span className="text-muted-foreground">(exemplo de preenchimento)</span>
                 </code>
                 <CopyButton text="Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina" label="Copiado!" />
               </div>
