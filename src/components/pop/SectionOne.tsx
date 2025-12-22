@@ -41,25 +41,32 @@ export const SectionOne = () => {
 
         {/* Type Selection */}
         <div className="section-card">
-          <h3 className="section-heading">1.3. Seleção do Tipo de Processo</h3>
-          <div className="content-spacing">
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-              Ao selecionar essa opção, o usuário deverá indicar o TIPO DE PROCESSO a ser instaurado. 
-              Os tipos de processo disponíveis serão exibidos de acordo com os termos informados na busca.
-            </p>
-
-            <Callout variant="info" title="Tipo de Processo Correto:">
-              <div className="flex items-center gap-2 mt-2">
-                <p className="text-foreground font-semibold text-sm sm:text-base flex-1">
-                  EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP
+          <div className="flex items-start gap-4">
+            <div className="shrink-0 hidden sm:block">
+              <SeiMockup variant="type-selection-icon" />
+            </div>
+            <div className="flex-1">
+              <h3 className="section-heading">1.3. Seleção do Tipo de Processo</h3>
+              <div className="content-spacing">
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  Ao selecionar essa opção, o usuário deverá indicar o TIPO DE PROCESSO a ser instaurado. 
+                  Os tipos de processo disponíveis serão exibidos de acordo com os termos informados na busca.
                 </p>
-                <CopyButton text="EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP" label="Copiado!" />
-              </div>
-            </Callout>
 
-            <div className="mt-6">
-              <p className="text-sm font-medium text-foreground mb-3">Tela de seleção:</p>
-              <SeiMockup variant="type-selection" />
+                <Callout variant="info" title="Tipo de Processo Correto:">
+                  <div className="flex items-center gap-2 mt-2">
+                    <p className="text-foreground font-semibold text-sm sm:text-base flex-1">
+                      EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP
+                    </p>
+                    <CopyButton text="EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP" label="Copiado!" />
+                  </div>
+                </Callout>
+
+                <div className="mt-6">
+                  <p className="text-sm font-medium text-foreground mb-3">Tela de seleção:</p>
+                  <SeiMockup variant="type-selection" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -69,10 +76,17 @@ export const SectionOne = () => {
           <h3 className="section-heading">1.4. Tela Iniciar Processo</h3>
           <div className="content-spacing">
             <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-              Após selecionar o tipo de processo, o sistema abrirá a <strong className="text-foreground">aba de cadastro principal</strong>. 
-              Nesta tela, você deverá preencher os campos obrigatórios: Especificação, Interessados, 
-              e selecionar o Nível de Acesso adequado.
+              Após selecionar o tipo de processo, o sistema abrirá a tela <strong className="text-foreground">"INICIAR PROCESSO"</strong>.
             </p>
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mt-2">
+              Nesta tela, você deverá preencher os campos: <strong className="text-foreground">Especificação</strong>, <strong className="text-foreground">Interessados</strong>, e selecionar o <strong className="text-foreground">Nível de Acesso</strong> adequado.
+            </p>
+            
+            <Callout variant="info" title="Campos Preenchidos Automaticamente" className="mt-4">
+              <p className="text-sm text-muted-foreground">
+                Os campos <strong className="text-foreground">Tipo de Processo</strong> (EXECUÇÃO FINANCEIRA: SDP) e <strong className="text-foreground">Classificação</strong> (01.05.03.11 - SDP) já serão preenchidos automaticamente pelo sistema.
+              </p>
+            </Callout>
             
             <div className="mt-6">
               <p className="text-sm font-medium text-foreground mb-3">Formulário de cadastro:</p>
@@ -83,7 +97,7 @@ export const SectionOne = () => {
 
         {/* Specification */}
         <div className="section-card">
-          <h3 className="section-heading">1.5. Especificação</h3>
+          <h3 className="section-heading">1.5. Especificação <span className="text-sm font-normal text-muted-foreground">(preenchimento obrigatório)</span></h3>
           <div className="content-spacing">
             <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
               O cadastrante deverá obrigatoriamente digitar os metadados estabelecidos pela GAD, 
@@ -152,11 +166,9 @@ export const SectionOne = () => {
               </table>
             </div>
 
-            <Callout variant="warning" title="⚠️ Atenção: Seleção Obrigatória" className="mt-6">
+            <Callout variant="info" title="Orientação" className="mt-6">
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Selecione <strong className="text-foreground">SEMPRE</strong> a opção 
-                <strong className="text-warning font-bold"> PÚBLICO</strong> para atender 
-                ao Princípio da Publicidade (Art. 37 CF e LAI) e evitar travamento do processo.
+                Selecione a opção <strong className="text-primary font-bold">PÚBLICO</strong> para atender ao Princípio da Publicidade (Art. 37 CF e LAI), salvo justificativa anexa ao processo para a não publicidade.
               </p>
             </Callout>
           </div>
