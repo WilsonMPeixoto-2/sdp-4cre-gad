@@ -130,15 +130,12 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
     );
   }
 
-  // Ícone de seleção de tipo (círculo verde com +)
+  // Ícone de seleção de tipo (círculo verde com +) - versão pequena inline
   if (variant === "type-selection-icon") {
     return (
-      <div className="flex flex-col items-center gap-2 p-3 bg-card border border-border rounded-xl shadow-sm">
-        <div className="w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center shadow-md">
-          <span className="text-white text-2xl font-bold">+</span>
-        </div>
-        <span className="text-[10px] text-muted-foreground text-center">Escolher<br/>Tipo</span>
-      </div>
+      <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-emerald-500 shadow-sm">
+        <span className="text-white text-sm font-bold leading-none">+</span>
+      </span>
     );
   }
 
