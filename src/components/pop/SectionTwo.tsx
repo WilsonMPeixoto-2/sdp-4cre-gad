@@ -1,7 +1,8 @@
-import { FileText, PenLine, Download } from "lucide-react";
+import { FileText, Download, Link2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { InfoDrawer, AutenticacaoVsAssinaturaContent } from "./InfoDrawer";
 import { Callout } from "./Callout";
+import { SeiAssinarIcon } from "./SeiIcons";
 
 export const SectionTwo = () => {
   return (
@@ -93,7 +94,7 @@ export const SectionTwo = () => {
               <div>
                 <h4 className="font-semibold text-foreground mb-1">Escolha do Tipo de Documento</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Selecione o tipo: <strong className="text-foreground">"Encaminhamento da Prestação de Contas dos Gestores SDP"</strong>
+                  Selecione a opção: <strong className="text-foreground">DESPACHO</strong>
                 </p>
               </div>
             </div>
@@ -108,22 +109,39 @@ export const SectionTwo = () => {
                 </p>
               </div>
             </div>
+            
+            <Callout variant="info" title="💡 Dica:" className="mt-4">
+              <p className="text-sm">
+                Baixe o <strong>Modelo Editável</strong> disponível no início desta página 
+                para copiar e colar o texto padrão do despacho.
+              </p>
+            </Callout>
           </div>
         </div>
 
-        {/* Specification Format */}
+        {/* Preenchimento de Metadados */}
         <div className="section-card">
-          <h3 className="section-heading">2.5. Especificação do Documento</h3>
-          <div className="content-spacing">
+          <h3 className="section-heading">2.3. Preenchimento de Metadados</h3>
+          <div className="content-spacing space-y-4">
             <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-              O campo deve ser preenchido seguindo o formato exato indicado:
+              Preencha os campos obrigatórios que identificam o documento no sistema:
             </p>
             
-            <Callout variant="info" title="Formato obrigatório:">
-              <code className="block bg-card px-4 py-3 rounded-lg border border-border text-sm data-code text-foreground break-all shadow-sm mt-2">
+            {/* Campo Descrição */}
+            <div className="p-4 bg-secondary rounded-xl border-l-4 border-l-accent">
+              <h4 className="font-semibold text-foreground text-sm mb-2">Campo: Descrição</h4>
+              <code className="block bg-card px-4 py-3 rounded-lg border border-border text-sm data-code text-foreground break-all shadow-sm">
                 SDP – E/CRE (04.xx.xxx) NOME DA ESCOLA
               </code>
-            </Callout>
+            </div>
+            
+            {/* Campo Nome na Árvore */}
+            <div className="p-4 bg-secondary rounded-xl border-l-4 border-l-primary">
+              <h4 className="font-semibold text-foreground text-sm mb-2">Campo: Nome na Árvore</h4>
+              <code className="block bg-card px-4 py-3 rounded-lg border border-border text-sm data-code text-foreground break-all shadow-sm">
+                DESPACHO DE ENCAMINHAMENTO
+              </code>
+            </div>
           </div>
         </div>
 
@@ -176,7 +194,7 @@ export const SectionTwo = () => {
         {/* Signature */}
         <div className="section-card">
           <div className="flex items-center gap-3 flex-wrap mb-6">
-            <h3 className="section-heading mb-0 pb-0 border-b-0">2.7. Assinatura e Verificação</h3>
+            <h3 className="section-heading mb-0 pb-0 border-b-0">2.5. Assinatura e Verificação</h3>
             <InfoDrawer title="Assinatura vs Autenticação" triggerLabel="Entenda a diferença">
               <AutenticacaoVsAssinaturaContent />
             </InfoDrawer>
@@ -184,11 +202,12 @@ export const SectionTwo = () => {
           
           <div className="space-y-4">
             <div className="flex items-start gap-3 p-5 bg-secondary rounded-xl">
-              <PenLine className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+              <SeiAssinarIcon size={24} className="shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-foreground">1. Assinar</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Clique no ícone Assinar Documento (representado por uma caneta preta na barra de ferramentas).
+                  Clique no ícone <strong className="text-foreground">Assinar Documento</strong> 
+                  (representado pela caneta tinteiro preta na barra de ferramentas).
                 </p>
               </div>
             </div>
@@ -196,6 +215,28 @@ export const SectionTwo = () => {
               Certifique-se de que o despacho assinado apareceu corretamente na árvore do processo 
               (menu lateral esquerdo), indicando que o documento foi gerado e assinado com sucesso.
             </Callout>
+          </div>
+
+          {/* Dica Pro - Assinatura Externa */}
+          <div className="mt-6 p-5 rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/30">
+            <div className="flex items-start gap-3">
+              <div className="p-2 rounded-lg bg-primary/20 shrink-0">
+                <Link2 className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-foreground flex items-center gap-2 mb-2">
+                  💡 Dica Pro: Assinatura Externa
+                </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  É possível enviar o documento para outra chefia assinar sem precisar tramitar o processo! 
+                  Clique no ícone do documento na <strong className="text-foreground">árvore lateral</strong>, 
+                  selecione <strong className="text-foreground">"Link para Acesso Direto"</strong> 
+                  (ícone de corrente/link) e copie o link gerado para enviar via 
+                  <strong className="text-foreground"> WhatsApp</strong> ou 
+                  <strong className="text-foreground"> E-mail</strong>.
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="mt-6">
