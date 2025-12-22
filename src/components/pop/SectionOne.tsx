@@ -40,23 +40,29 @@ export const SectionOne = () => {
 
         {/* Type Selection */}
         <div className="section-card">
-          <div className="flex items-start gap-4">
-            <div className="shrink-0 hidden sm:block">
-              <SeiMockup variant="type-selection-icon" />
-            </div>
-            <div className="flex-1">
-              <h3 className="section-heading">1.3. Seleção do Tipo de Processo</h3>
-              <div className="content-spacing">
-                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                  Ao selecionar essa opção, o usuário deverá indicar o TIPO DE PROCESSO a ser instaurado. 
-                  Os tipos de processo disponíveis serão exibidos de acordo com os termos informados na busca.
-                </p>
+          <h3 className="section-heading">1.3. Seleção do Tipo de Processo</h3>
+          <div className="content-spacing">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              Ao selecionar essa opção, o usuário deverá indicar o TIPO DE PROCESSO a ser instaurado. 
+              Os tipos de processo disponíveis serão exibidos de acordo com os termos informados na busca.
+              <span className="inline-flex align-middle ml-2">
+                <SeiMockup variant="type-selection-icon" />
+              </span>
+            </p>
 
-                <div className="mt-6">
-                  <p className="text-sm font-medium text-foreground mb-3">Tela de seleção:</p>
-                  <SeiMockup variant="type-selection" />
-                </div>
+            <div className="bg-gradient-to-r from-secondary to-secondary/50 rounded-xl p-5 mt-4">
+              <p className="text-sm text-muted-foreground mb-3">Tipo de Processo Correto:</p>
+              <div className="flex items-center gap-2">
+                <code className="flex-1 bg-card px-4 py-3 rounded-lg border border-border text-sm data-code text-foreground break-all shadow-sm">
+                  EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP
+                </code>
+                <CopyButton text="EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP" label="Copiado!" />
               </div>
+            </div>
+
+            <div className="mt-6">
+              <p className="text-sm font-medium text-foreground mb-3">Tela de seleção:</p>
+              <SeiMockup variant="type-selection" />
             </div>
           </div>
         </div>
