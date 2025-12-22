@@ -427,9 +427,6 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
           <Save className="w-5 h-5" />
           SALVAR
         </div>
-        <p className="text-xs text-muted-foreground text-center">
-          (Ilustração do botão - clique no botão real no SEI)
-        </p>
       </div>
     );
   }
