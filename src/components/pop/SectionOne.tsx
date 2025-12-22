@@ -225,13 +225,6 @@ export const SectionOne = () => {
             <div className="mt-6">
               <SeiMockup variant="nup-gerado" />
             </div>
-            
-            <Callout variant="info" className="mt-4">
-              <p className="text-sm">
-                <strong>Nota:</strong> O SEI não gera capa de processo. O NUP acima é o 
-                único identificador gerado automaticamente pelo sistema.
-              </p>
-            </Callout>
           </div>
         </div>
       </div>
