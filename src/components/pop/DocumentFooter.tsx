@@ -16,7 +16,7 @@ export const DocumentFooter = () => {
       </div>
 
       {/* Footer Card */}
-      <div className="section-card text-center py-10 px-8 bg-gradient-to-br from-slate-50 to-white">
+      <div className="section-card text-center py-10 px-8 bg-gradient-to-br from-secondary to-card">
         <div className="max-w-2xl mx-auto space-y-6">
           {/* Institution Info */}
           <div className="space-y-3">

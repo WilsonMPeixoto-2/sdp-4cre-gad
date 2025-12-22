@@ -39,28 +39,28 @@ export const GlobalSearch = ({ onSearch }: GlobalSearchProps) => {
     <div className={`relative transition-all duration-300 ${isOpen ? 'w-48 sm:w-64' : 'w-9 sm:w-10'}`}>
       {isOpen ? (
         <div className="relative">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-primary-foreground/60" />
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
           <input
             type="text"
             value={query}
             onChange={(e) => handleSearch(e.target.value)}
             placeholder="Buscar... (Ctrl+K)"
             autoFocus
-            className="w-full h-9 sm:h-10 pl-9 pr-8 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 text-sm focus:outline-none focus:ring-2 focus:ring-primary-foreground/30 transition-all"
+            className="w-full h-9 sm:h-10 pl-9 pr-8 rounded-lg bg-muted border border-border text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 transition-all"
           />
           {query && (
             <button
               onClick={clearSearch}
-              className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded hover:bg-primary-foreground/10"
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded hover:bg-muted"
             >
-              <X className="w-3 h-3 text-primary-foreground/60" />
+              <X className="w-3 h-3 text-muted-foreground" />
             </button>
           )}
         </div>
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg hover:bg-primary-foreground/10 transition-colors text-primary-foreground"
+          className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg hover:bg-muted transition-colors text-foreground"
           title="Buscar (Ctrl+K)"
         >
           <Search className="w-4 h-4" />
