@@ -186,7 +186,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
                 Tipo de Processo:
               </span>
               <span className="text-xs sm:text-sm text-foreground/70 italic">
-                EXECUÇÃO FINANCEIRA: SDP <span className="text-[10px]">(preenchimento automático)</span>
+                EXECUÇÃO FINANCEIRA: SDP <span className="text-[10px] font-bold">(preenchimento automático)</span>
               </span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
@@ -194,7 +194,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
                 Classificação:
               </span>
               <span className="text-xs sm:text-sm text-foreground/70 italic">
-                01.05.03.11 - SDP <span className="text-[10px]">(preenchimento automático)</span>
+                01.05.03.11 - SDP <span className="text-[10px] font-bold">(preenchimento automático)</span>
               </span>
             </div>
           </div>
