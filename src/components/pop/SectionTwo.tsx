@@ -50,7 +50,7 @@ export const SectionTwo = () => {
             </div>
             <div className="content-spacing">
               <h3 className="section-heading">2.1. O Despacho de Encaminhamento</h3>
-              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
                 O Despacho de Encaminhamento é o documento que formaliza a prestação de contas 
                 para a Gerência de Administração (GAD).
               </p>
@@ -84,7 +84,7 @@ export const SectionTwo = () => {
               <div className="step-indicator shrink-0 text-sm">1</div>
               <div className="flex-1">
                 <h4 className="font-semibold text-foreground mb-1">Incluir Documento</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 text-justify">
                   Com o processo aberto, clique no ícone <strong className="text-foreground">"INCLUIR DOCUMENTO"</strong> na barra de ferramentas do SEI.
                 </p>
                 <SeiMockup variant="incluir-documento" />
@@ -95,7 +95,7 @@ export const SectionTwo = () => {
               <div className="step-indicator shrink-0 text-sm">2</div>
               <div className="flex-1">
                 <h4 className="font-semibold text-foreground mb-1">Escolha do Tipo de Documento</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 text-justify">
                   Selecione a opção: <strong className="text-foreground">DESPACHO</strong>
                 </p>
                 <SeiMockup variant="despacho-selection" />
@@ -106,7 +106,7 @@ export const SectionTwo = () => {
               <div className="step-indicator shrink-0 text-sm">3</div>
               <div>
                 <h4 className="font-semibold text-foreground mb-1">Preenchimento do Editor</h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground leading-relaxed text-justify">
                   No corpo do documento, digite o conteúdo do despacho ou cole o texto padronizado 
                   utilizado pela sua unidade.
                 </p>
@@ -126,7 +126,7 @@ export const SectionTwo = () => {
         <div className="section-card">
           <h3 className="section-heading">2.3. Preenchimento de Metadados</h3>
           <div className="content-spacing space-y-4">
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
               Preencha os campos obrigatórios que identificam o documento no sistema:
             </p>
             
@@ -210,7 +210,7 @@ export const SectionTwo = () => {
               <SeiAssinarIcon size={24} className="shrink-0 mt-0.5" />
               <div className="flex-1">
                 <p className="font-semibold text-foreground">1. Assinar</p>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 text-justify">
                   Clique no ícone <strong className="text-foreground">Assinar Documento</strong> 
                   (representado pela caneta tinteiro preta na barra de ferramentas).
                 </p>
@@ -233,7 +233,7 @@ export const SectionTwo = () => {
                 <h4 className="font-semibold text-foreground flex items-center gap-2 mb-2">
                   💡 Dica Pro: Assinatura Externa
                 </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4 text-justify">
                   É possível enviar o documento para outra chefia assinar sem precisar tramitar o processo! 
                   Clique no ícone do documento na <strong className="text-foreground">árvore lateral</strong>, 
                   selecione <strong className="text-foreground">"Link para Acesso Direto"</strong> 
