@@ -2,7 +2,7 @@ import { Menu, FileText, Search, ChevronDown, Check, User, Eye, Printer, Downloa
 import { SeiIncluirIcon, SeiAssinarIcon, SeiEnviarIcon, SeiPastaIcon, SeiIniciarProcessoIcon, SeiInteressadosIcon } from "./SeiIcons";
 
 interface SeiMockupProps {
-  variant: "menu" | "process-tree" | "document-form" | "type-selection" | "icons" | "iniciar-processo-form" | "incluir-documento" | "despacho-selection" | "metadados-form" | "toolbar-assinar" | "link-externo" | "nup-gerado" | "salvar-btn";
+  variant: "menu" | "process-tree" | "document-form" | "type-selection" | "type-selection-icon" | "icons" | "iniciar-processo-form" | "incluir-documento" | "despacho-selection" | "metadados-form" | "toolbar-assinar" | "link-externo" | "nup-gerado" | "salvar-btn";
   highlight?: string;
 }
 
@@ -130,6 +130,18 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
     );
   }
 
+  // Ícone de seleção de tipo (círculo verde com +)
+  if (variant === "type-selection-icon") {
+    return (
+      <div className="flex flex-col items-center gap-2 p-3 bg-card border border-border rounded-xl shadow-sm">
+        <div className="w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center shadow-md">
+          <span className="text-white text-2xl font-bold">+</span>
+        </div>
+        <span className="text-[10px] text-muted-foreground text-center">Escolher<br/>Tipo</span>
+      </div>
+    );
+  }
+
   if (variant === "type-selection") {
     return (
       <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg">
@@ -170,19 +182,32 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
         <SeiHeader title="Iniciar Processo" />
         
         <div className="p-4 space-y-3 text-sm">
-          <SeiFormField 
-            label="Tipo de Processo" 
-            value="EXECUÇÃO FINANCEIRA: SDP" 
-            required 
-          />
+          {/* Campos preenchidos automaticamente */}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 opacity-70">
+            <span className="text-muted-foreground w-40 shrink-0 text-xs sm:text-sm">
+              Tipo de Processo:
+            </span>
+            <span className="font-medium text-xs sm:text-sm text-muted-foreground italic">
+              EXECUÇÃO FINANCEIRA: SDP <span className="text-[10px]">(automático)</span>
+            </span>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 opacity-70">
+            <span className="text-muted-foreground w-40 shrink-0 text-xs sm:text-sm">
+              Classificação:
+            </span>
+            <span className="font-medium text-xs sm:text-sm text-muted-foreground italic">
+              01.05.03.11 - SDP <span className="text-[10px]">(automático)</span>
+            </span>
+          </div>
+          
+          <div className="border-t border-border pt-3">
+            <p className="text-xs text-muted-foreground mb-2">Campos a preencher:</p>
+          </div>
+          
           <SeiFormField 
             label="Especificação" 
             value="Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina" 
             required 
-          />
-          <SeiFormField 
-            label="Classificação" 
-            value="01.05.03.11 - SDP" 
           />
           <SeiFormField 
             label="Interessados" 
