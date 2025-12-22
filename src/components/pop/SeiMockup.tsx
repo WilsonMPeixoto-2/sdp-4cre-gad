@@ -183,21 +183,23 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
         
         <div className="p-4 space-y-3 text-sm">
           {/* Campos preenchidos automaticamente */}
-          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 opacity-70">
-            <span className="text-muted-foreground w-40 shrink-0 text-xs sm:text-sm">
-              Tipo de Processo:
-            </span>
-            <span className="font-medium text-xs sm:text-sm text-muted-foreground italic">
-              EXECUÇÃO FINANCEIRA: SDP <span className="text-[10px]">(automático)</span>
-            </span>
-          </div>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4 opacity-70">
-            <span className="text-muted-foreground w-40 shrink-0 text-xs sm:text-sm">
-              Classificação:
-            </span>
-            <span className="font-medium text-xs sm:text-sm text-muted-foreground italic">
-              01.05.03.11 - SDP <span className="text-[10px]">(automático)</span>
-            </span>
+          <div className="bg-muted/50 rounded-lg p-3 space-y-2 border border-border/50">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+              <span className="text-muted-foreground/70 w-40 shrink-0 text-xs sm:text-sm">
+                Tipo de Processo:
+              </span>
+              <span className="text-xs sm:text-sm text-muted-foreground/80 italic">
+                EXECUÇÃO FINANCEIRA: SDP <span className="text-[10px]">(preenchimento automático)</span>
+              </span>
+            </div>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
+              <span className="text-muted-foreground/70 w-40 shrink-0 text-xs sm:text-sm">
+                Classificação:
+              </span>
+              <span className="text-xs sm:text-sm text-muted-foreground/80 italic">
+                01.05.03.11 - SDP <span className="text-[10px]">(preenchimento automático)</span>
+              </span>
+            </div>
           </div>
           
           <div className="border-t border-border pt-3">
