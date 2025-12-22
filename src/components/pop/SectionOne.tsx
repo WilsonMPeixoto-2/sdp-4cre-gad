@@ -14,10 +14,9 @@ export const SectionOne = () => {
               <ClipboardList className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
             </div>
             <div className="content-spacing">
-              <h3 className="section-heading">1.1. Sobre esta etapa</h3>
+              <h3 className="section-heading">1.1. Objetivo desta Etapa</h3>
               <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                A etapa inicial compreende a autuação do processo administrativo eletrônico, 
-                no qual serão inseridos todos os documentos comprobatórios da prestação de contas.
+                A etapa inicial destina-se à abertura do processo administrativo eletrônico e à inserção do acervo documental comprobatório relativo à prestação de contas.
               </p>
             </div>
           </div>
