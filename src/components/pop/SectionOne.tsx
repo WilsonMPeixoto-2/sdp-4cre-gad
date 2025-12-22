@@ -51,7 +51,7 @@ export const SectionOne = () => {
             </p>
 
             <div className="bg-gradient-to-r from-secondary to-secondary/50 rounded-xl p-5 mt-4">
-              <p className="text-sm text-muted-foreground mb-3">Tipo de Processo Correto:</p>
+              <p className="text-sm text-muted-foreground mb-3"><strong className="text-foreground">Tipo de Processo Correto:</strong></p>
               <div className="flex items-center gap-2">
                 <code className="flex-1 bg-card px-4 py-3 rounded-lg border border-border text-sm data-code text-foreground break-all shadow-sm">
                   EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP
