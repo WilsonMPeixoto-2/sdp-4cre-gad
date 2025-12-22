@@ -192,9 +192,9 @@ export const SectionOne = () => {
         <div className="section-card">
           <h3 className="section-heading">1.9. Observações da Unidade</h3>
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
-            O campo "Observações desta unidade" permite a inserção de anotações de controle interno. 
+            O campo <strong className="text-[hsl(215,75%,28%)]">"Observações desta unidade"</strong> permite a inserção de anotações de <strong className="text-[hsl(215,75%,28%)]">controle interno</strong>. 
             O texto digitado aqui não será visível para outras unidades por onde o processo tramitar, 
-            servindo apenas como lembrete para a equipe do seu próprio setor.
+            servindo apenas como <strong className="text-[hsl(215,75%,28%)]">lembrete para a equipe do seu próprio setor</strong>.
           </p>
         </div>
 
