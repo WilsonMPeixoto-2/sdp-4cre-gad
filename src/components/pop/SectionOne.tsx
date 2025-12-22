@@ -192,9 +192,9 @@ export const SectionOne = () => {
         <div className="section-card">
           <h3 className="section-heading">1.9. Observações da Unidade</h3>
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
-            O campo "Observações desta unidade" poderá ser preenchido por cada unidade em que o processo 
-            tramitar. As observações inseridas por outras unidades aparecerão, na tela Alterar Processo, 
-            separadamente, na Lista de observações de outras unidades.
+            O campo "Observações desta unidade" permite a inserção de anotações de controle interno. 
+            O texto digitado aqui não será visível para outras unidades por onde o processo tramitar, 
+            servindo apenas como lembrete para a equipe do seu próprio setor.
           </p>
         </div>
 
