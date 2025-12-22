@@ -409,7 +409,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
             Número Único de Protocolo (NUP)
           </p>
           <p className="text-2xl sm:text-3xl font-bold text-success font-mono tracking-wide">
-            000704.000601/2025-51
+            000704.000601/2025-51 <span className="text-sm font-normal text-muted-foreground italic">(Exemplo ilustrativo)</span>
           </p>
           <p className="text-xs text-muted-foreground mt-4">
             O SEI não gera capa de processo. O NUP acima é o único identificador gerado automaticamente.

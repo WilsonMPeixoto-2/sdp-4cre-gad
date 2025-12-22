@@ -223,7 +223,6 @@ export const SectionOne = () => {
             </p>
             
             <div className="mt-6">
-              <p className="text-xs text-muted-foreground mb-2 italic">(Exemplo ilustrativo)</p>
               <SeiMockup variant="nup-gerado" />
             </div>
             
