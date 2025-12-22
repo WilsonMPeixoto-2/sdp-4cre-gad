@@ -61,11 +61,6 @@ export const SectionOne = () => {
                     <CopyButton text="EXECUÇÃO FINANCEIRA: SISTEMA DESCENTRALIZADO DE PAGAMENTO - SDP" label="Copiado!" />
                   </div>
                 </Callout>
-
-                <div className="mt-6">
-                  <p className="text-sm font-medium text-foreground mb-3">Tela de seleção:</p>
-                  <SeiMockup variant="type-selection" />
-                </div>
               </div>
             </div>
           </div>
