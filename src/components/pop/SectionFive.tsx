@@ -89,11 +89,12 @@ export const SectionFive = () => {
               <div className="p-3 rounded-xl bg-primary/10 shrink-0">
                 <Send className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h4 className="font-semibold text-foreground mb-2">Procedimento de Envio</h4>
-                <p className="text-sm text-muted-foreground text-justified leading-relaxed">
+                <p className="text-sm text-muted-foreground text-justified leading-relaxed mb-3">
                   Após a conferência completa, clique no ícone de envio (representado por um envelope).
                 </p>
+                <SeiMockup variant="enviar-processo" />
               </div>
             </div>
 
@@ -102,6 +103,10 @@ export const SectionFive = () => {
               <p className="text-sm text-muted-foreground mb-3 text-justified leading-relaxed">
                 Digite <strong className="text-foreground">"GAD"</strong> e selecione a unidade correspondente:
               </p>
+              
+              <div className="mb-4">
+                <SeiMockup variant="destinatarios-form" />
+              </div>
               
               <div className="bg-card p-4 rounded-xl border border-border/50">
                 <div className="flex items-center justify-between gap-2">

@@ -63,12 +63,13 @@ export const SectionFour = () => {
           <div className="space-y-4 timeline-steps">
             <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl timeline-step">
               <div className="step-indicator shrink-0 text-sm">1</div>
-              <div>
+              <div className="flex-1">
                 <h4 className="font-semibold text-foreground mb-1">Iniciando a Inclusão</h4>
-                <p className="text-sm text-muted-foreground text-justified leading-relaxed">
+                <p className="text-sm text-muted-foreground text-justified leading-relaxed mb-3">
                   Localize e clique no ícone <strong className="text-foreground">"Incluir Documento"</strong> na 
                   barra de ferramentas. No menu, selecione a opção <strong className="text-foreground">"EXTERNO"</strong>.
                 </p>
+                <SeiMockup variant="incluir-documento" />
               </div>
             </div>
 
@@ -205,18 +206,19 @@ export const SectionFour = () => {
 
             <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
               <CheckCircle2 className="w-5 h-5 text-success shrink-0 mt-0.5" />
-              <div>
+              <div className="flex-1">
                 <div className="flex items-center gap-3 flex-wrap mb-1">
                   <p className="font-semibold text-foreground">Autenticar Documento</p>
                   <InfoDrawer title="Autenticação vs Assinatura" triggerLabel="Qual a diferença?">
                     <AutenticacaoVsAssinaturaContent />
                   </InfoDrawer>
                 </div>
-                <p className="text-sm text-muted-foreground text-justified leading-relaxed">
+                <p className="text-sm text-muted-foreground text-justified leading-relaxed mb-3">
                   Localize o ícone "Autenticar Documento" (selo preto com check branco). 
                   Na janela pop-up, insira sua Senha de Rede e clique em Autenticar. 
                   Os documentos externos serão <strong className="text-foreground">autenticados</strong>.
                 </p>
+                <SeiMockup variant="toolbar-autenticar" />
               </div>
             </div>
           </div>
