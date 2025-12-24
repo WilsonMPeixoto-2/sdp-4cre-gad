@@ -2,7 +2,7 @@ import { Menu, FileText, Search, ChevronDown, Check, User, Eye, Printer, Downloa
 import { SeiIncluirIcon, SeiAssinarIcon, SeiEnviarIcon, SeiPastaIcon, SeiIniciarProcessoIcon, SeiInteressadosIcon } from "./SeiIcons";
 
 interface SeiMockupProps {
-  variant: "menu" | "process-tree" | "document-form" | "type-selection" | "type-selection-icon" | "icons" | "iniciar-processo-form" | "incluir-documento" | "despacho-selection" | "metadados-form" | "toolbar-assinar" | "link-externo" | "nup-gerado" | "salvar-btn";
+  variant: "menu" | "process-tree" | "document-form" | "type-selection" | "type-selection-icon" | "icons" | "iniciar-processo-form" | "incluir-documento" | "despacho-selection" | "metadados-form" | "toolbar-assinar" | "link-externo" | "nup-gerado" | "salvar-btn" | "demonstrativo-despesas" | "toolbar-autenticar" | "enviar-processo" | "destinatarios-form";
   highlight?: string;
 }
 
@@ -467,6 +467,169 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
 
   if (variant === "icons") {
     return <SeiIconsBar />;
+  }
+
+  // Demonstrativo de Despesas - Seção 3
+  if (variant === "demonstrativo-despesas") {
+    return (
+      <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg">
+        <SeiHeader title="Demonstrativo de Despesas - SEI!RIO" />
+        
+        <div className="p-4">
+          <div className="bg-secondary/30 rounded-lg p-3 mb-4">
+            <p className="text-xs text-muted-foreground mb-2">Documento interno em edição:</p>
+            <p className="text-sm font-semibold text-foreground">DEMONSTRATIVO DE DESPESAS - ND 435</p>
+          </div>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs border-collapse">
+              <thead>
+                <tr className="bg-primary/10">
+                  <th className="border border-border/50 px-2 py-1.5 text-left font-semibold text-foreground">Data</th>
+                  <th className="border border-border/50 px-2 py-1.5 text-left font-semibold text-foreground">Favorecido</th>
+                  <th className="border border-border/50 px-2 py-1.5 text-left font-semibold text-foreground">N.D</th>
+                  <th className="border border-border/50 px-2 py-1.5 text-right font-semibold text-foreground">Valor</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="hover:bg-secondary/50">
+                  <td className="border border-border/50 px-2 py-1.5 text-muted-foreground">05/12/2025</td>
+                  <td className="border border-border/50 px-2 py-1.5 text-foreground">Alpha Materiais LTDA</td>
+                  <td className="border border-border/50 px-2 py-1.5 text-center font-mono text-primary">435</td>
+                  <td className="border border-border/50 px-2 py-1.5 text-right font-mono">R$ 350,00</td>
+                </tr>
+                <tr className="hover:bg-secondary/50">
+                  <td className="border border-border/50 px-2 py-1.5 text-muted-foreground">10/12/2025</td>
+                  <td className="border border-border/50 px-2 py-1.5 text-foreground">Beta Serviços ME</td>
+                  <td className="border border-border/50 px-2 py-1.5 text-center font-mono text-primary">435</td>
+                  <td className="border border-border/50 px-2 py-1.5 text-right font-mono">R$ 480,00</td>
+                </tr>
+                <tr className="bg-primary/5">
+                  <td colSpan={3} className="border border-border/50 px-2 py-1.5 text-right font-semibold text-foreground">Total ND 435:</td>
+                  <td className="border border-border/50 px-2 py-1.5 text-right font-mono font-semibold text-primary">R$ 830,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div className="mt-4 flex items-center gap-2 justify-end">
+            <div className="px-3 py-1.5 bg-primary text-primary-foreground rounded text-xs font-medium flex items-center gap-1.5">
+              <Save className="w-3.5 h-3.5" />
+              Salvar
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Toolbar Autenticar - Seção 4
+  if (variant === "toolbar-autenticar") {
+    return (
+      <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg max-w-md">
+        <SeiHeader title="Ferramentas do Documento Externo" />
+        
+        <div className="p-4">
+          <div className="flex items-center gap-2 flex-wrap">
+            <SeiIconButton icon={<Eye className="w-5 h-5" />} label="Visualizar" />
+            <SeiIconButton icon={<Printer className="w-5 h-5" />} label="Imprimir" />
+            <div className="flex flex-col items-center gap-1 p-2 rounded-lg bg-success/20 border-2 border-success cursor-pointer">
+              <div className="w-6 h-6 flex items-center justify-center">
+                <div className="w-5 h-5 rounded-full bg-foreground flex items-center justify-center">
+                  <Check className="w-3 h-3 text-background" />
+                </div>
+              </div>
+              <span className="text-[10px] font-semibold text-success">Autenticar</span>
+            </div>
+            <SeiIconButton icon={<Download className="w-5 h-5" />} label="Download" />
+          </div>
+          <p className="text-xs text-muted-foreground mt-3 text-center">
+            Clique em <span className="font-semibold text-success">Autenticar</span> para validar o documento externo
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Enviar Processo - Seção 5
+  if (variant === "enviar-processo") {
+    return (
+      <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg max-w-md">
+        <SeiHeader title="Barra de Ações do Processo" />
+        
+        <div className="p-4">
+          <div className="flex items-center gap-2 flex-wrap">
+            <SeiIconButton icon={<SeiIncluirIcon size={20} />} label="Incluir" />
+            <div className="flex flex-col items-center gap-1 p-2 rounded-lg bg-accent/20 border-2 border-accent cursor-pointer">
+              <SeiEnviarIcon size={24} className="text-accent" />
+              <span className="text-[10px] font-semibold text-accent">Enviar</span>
+            </div>
+            <SeiIconButton icon={<Eye className="w-5 h-5" />} label="Visualizar" />
+            <SeiIconButton icon={<SeiAssinarIcon size={20} />} label="Assinar" />
+            <SeiIconButton icon={<Printer className="w-5 h-5" />} label="Imprimir" />
+          </div>
+          <p className="text-xs text-muted-foreground mt-3 text-center">
+            Clique em <span className="font-semibold text-accent">Enviar Processo</span> para encaminhar à GAD
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  // Formulário de Destinatários - Seção 5
+  if (variant === "destinatarios-form") {
+    return (
+      <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg">
+        <SeiHeader title="Enviar Processo" />
+        
+        <div className="p-4 space-y-4 text-sm">
+          <div className="space-y-2">
+            <label className="text-muted-foreground text-xs sm:text-sm flex items-center gap-1">
+              Unidades<span className="text-destructive">*</span>:
+            </label>
+            <div className="flex items-center gap-2">
+              <Search className="w-4 h-4 text-muted-foreground" />
+              <input 
+                type="text" 
+                placeholder="GAD" 
+                className="bg-secondary/50 border border-border rounded px-3 py-1.5 text-foreground w-full text-xs sm:text-sm"
+                defaultValue="GAD"
+                readOnly
+              />
+            </div>
+          </div>
+          
+          <div className="bg-primary/10 border border-primary/30 rounded-lg p-3">
+            <div className="flex items-center gap-2">
+              <Check className="w-4 h-4 text-primary" />
+              <span className="text-xs sm:text-sm font-semibold text-foreground">
+                10729 - Gerência de Administração (E/4a.CRE/GAD)
+              </span>
+            </div>
+          </div>
+          
+          <div className="space-y-2">
+            <label className="text-muted-foreground text-xs sm:text-sm">
+              Manter aberto na unidade atual:
+            </label>
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded border border-border bg-card"></div>
+              <span className="text-xs text-muted-foreground">Não (recomendado)</span>
+            </div>
+          </div>
+          
+          <div className="pt-3 flex items-center gap-2">
+            <div className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-xs font-medium cursor-pointer hover:bg-primary/90 flex items-center gap-2">
+              <SeiEnviarIcon size={16} />
+              Enviar
+            </div>
+            <div className="px-4 py-2 bg-secondary text-foreground rounded-lg text-xs font-medium cursor-pointer hover:bg-secondary/80">
+              Cancelar
+            </div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return null;

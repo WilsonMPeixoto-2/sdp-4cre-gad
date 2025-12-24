@@ -1,7 +1,7 @@
 import { Table2, FileSpreadsheet, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { InfoDrawer, NaturezasDespesaContent } from "./InfoDrawer";
-
+import { SeiMockup } from "./SeiMockup";
 export const SectionThree = () => {
   return (
     <section id="secao-3" className="scroll-mt-20 animate-fade-in">
@@ -32,6 +32,10 @@ export const SectionThree = () => {
                 no sistema SEI!RIO. Este modelo contempla as naturezas de despesa 435, 441 e 434, 
                 conforme orientações da CGM-RJ.
               </p>
+              
+              <div className="mt-4">
+                <SeiMockup variant="demonstrativo-despesas" />
+              </div>
             </div>
           </div>
         </div>
