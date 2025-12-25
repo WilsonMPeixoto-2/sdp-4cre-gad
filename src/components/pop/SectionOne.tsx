@@ -2,6 +2,7 @@ import { ClipboardList, Save } from "lucide-react";
 import { SeiMockup } from "./SeiMockup";
 import { CopyButton } from "./CopyButton";
 import { Callout } from "./Callout";
+import { SideNote } from "./SideNote";
 
 export const SectionOne = () => {
   return (
@@ -31,8 +32,8 @@ export const SectionOne = () => {
               <strong className="text-foreground"> "INICIAR PROCESSO"</strong>, conforme o menu de navegação do sistema.
             </p>
 
-            <div className="mt-6">
-              <p className="text-sm font-medium text-foreground mb-3">Visualização do menu:</p>
+            <div className="mt-6 flex justify-center">
+              <p className="text-sm font-medium text-foreground mb-3 sr-only">Visualização do menu:</p>
               <SeiMockup variant="menu" highlight="iniciar" />
             </div>
           </div>
@@ -60,8 +61,7 @@ export const SectionOne = () => {
               </div>
             </div>
 
-            <div className="mt-6">
-              <p className="text-sm font-medium text-foreground mb-3">Tela de seleção:</p>
+            <div className="mt-6 flex justify-center">
               <SeiMockup variant="type-selection" />
             </div>
           </div>
@@ -84,8 +84,7 @@ export const SectionOne = () => {
               </p>
             </Callout>
             
-            <div className="mt-6">
-              <p className="text-sm font-medium text-foreground mb-3">Formulário de cadastro:</p>
+            <div className="mt-6 flex justify-center">
               <SeiMockup variant="iniciar-processo-form" />
             </div>
           </div>
@@ -97,8 +96,8 @@ export const SectionOne = () => {
           <div className="content-spacing">
             <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
               O cadastrante deverá obrigatoriamente digitar os metadados estabelecidos pela GAD, 
-              composto pelo Objetivo do processo (<strong className="text-[hsl(215,75%,28%)]">PRESTAÇÃO DE CONTAS DE SDP</strong>) + <strong className="text-[hsl(215,75%,28%)]">DESIGNAÇÃO DA UNIDADE 
-              ESCOLAR</strong> seguida da <strong className="text-[hsl(215,75%,28%)]">NOMENCLATURA DA UNIDADE</strong>.
+              composto pelo Objetivo do processo (<strong className="text-primary">PRESTAÇÃO DE CONTAS DE SDP</strong>) + <strong className="text-primary">DESIGNAÇÃO DA UNIDADE 
+              ESCOLAR</strong> seguida da <strong className="text-primary">NOMENCLATURA DA UNIDADE</strong>.
             </p>
 
             <Callout variant="success" title="Exemplo de Especificação:">
@@ -192,9 +191,9 @@ export const SectionOne = () => {
         <div className="section-card">
           <h3 className="section-heading">1.9. Observações desta Unidade</h3>
           <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
-            O campo <strong className="text-[hsl(215,75%,28%)]">"Observações desta unidade"</strong> permite a inserção de anotações de <strong className="text-[hsl(215,75%,28%)]">controle interno</strong>. 
+            O campo <strong className="text-primary">"Observações desta unidade"</strong> permite a inserção de anotações de <strong className="text-primary">controle interno</strong>. 
             O texto digitado aqui não será visível para outras unidades por onde o processo tramitar, 
-            servindo apenas como <strong className="text-[hsl(215,75%,28%)]">lembrete para a equipe do seu próprio setor</strong>.
+            servindo apenas como <strong className="text-primary">lembrete para a equipe do seu próprio setor</strong>.
           </p>
         </div>
 
@@ -207,7 +206,7 @@ export const SectionOne = () => {
               <strong className="text-foreground"> SALVAR</strong> para concluir a abertura do processo.
             </p>
             
-            <div className="mt-6">
+            <div className="mt-6 flex justify-center">
               <SeiMockup variant="salvar-btn" />
             </div>
           </div>
@@ -215,15 +214,28 @@ export const SectionOne = () => {
 
         {/* Resultado: NUP */}
         <div className="section-card border-l-4 border-l-success">
-          <h3 className="section-heading">1.11. Resultado: O Número do Processo (NUP)</h3>
-          <div className="content-spacing">
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
-              Após salvar, o sistema gerará automaticamente o <strong className="text-foreground">Número Único de Protocolo (NUP)</strong>, 
-              que identificará o processo em todas as etapas subsequentes.
-            </p>
+          <div className="lg:grid lg:grid-cols-[1fr,280px] lg:gap-6">
+            <div>
+              <h3 className="section-heading">1.11. Resultado: O Número do Processo (NUP)</h3>
+              <div className="content-spacing">
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
+                  Após salvar, o sistema gerará automaticamente o <strong className="text-foreground">Número Único de Protocolo (NUP)</strong>, 
+                  que identificará o processo em todas as etapas subsequentes.
+                </p>
+                
+                <div className="mt-6 flex justify-center lg:justify-start">
+                  <SeiMockup variant="nup-gerado" />
+                </div>
+              </div>
+            </div>
             
-            <div className="mt-6">
-              <SeiMockup variant="nup-gerado" />
+            {/* Side Note */}
+            <div className="mt-6 lg:mt-0">
+              <SideNote variant="note" title="OBSERVAÇÃO">
+                <p className="text-sm">
+                  O SEI não gera capa de processo. O NUP acima é o único identificador gerado automaticamente pelo sistema.
+                </p>
+              </SideNote>
             </div>
           </div>
         </div>

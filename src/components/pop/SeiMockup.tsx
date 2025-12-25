@@ -40,7 +40,7 @@ const SeiHeader = ({ title }: { title: string }) => (
 const SeiFormField = ({ label, value, highlight = false, required = false }: { label: string; value: string; highlight?: boolean; required?: boolean }) => (
   <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
     <span className="text-muted-foreground w-40 shrink-0 text-xs sm:text-sm">
-      {label}{required && <span className="text-destructive">*</span>}:
+      {label}{required && <span className="text-primary font-bold">*</span>}:
     </span>
     <span className={`font-medium text-xs sm:text-sm ${highlight ? "text-primary" : "text-foreground"}`}>
       {value}
@@ -205,7 +205,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
           
           <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
             <span className="text-muted-foreground w-40 shrink-0 text-xs sm:text-sm">
-              Especificação<span className="text-destructive">*</span>:
+              Especificação<span className="text-primary font-bold">*</span>:
             </span>
             <span className="font-medium text-xs sm:text-sm text-foreground">
               Prestação de contas de SDP - E/CRE(04.30.502) Ciep Elis Regina <span className="text-muted-foreground font-normal">(exemplo de preenchimento)</span>
@@ -310,7 +310,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
         <div className="p-4 space-y-4 text-sm">
           <div className="space-y-2">
             <label className="text-muted-foreground text-xs sm:text-sm flex items-center gap-1">
-              Descrição<span className="text-destructive">*</span>:
+              Descrição<span className="text-primary font-bold">*</span>:
             </label>
             <div className="bg-secondary/50 border border-border rounded px-3 py-2 text-foreground font-mono text-xs sm:text-sm">
               SDP – E/CRE (04.30.502) CIEP ELIS REGINA
@@ -319,7 +319,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
           
           <div className="space-y-2">
             <label className="text-muted-foreground text-xs sm:text-sm flex items-center gap-1">
-              Nome na Árvore<span className="text-destructive">*</span>:
+              Nome na Árvore<span className="text-primary font-bold">*</span>:
             </label>
             <div className="bg-secondary/50 border border-border rounded px-3 py-2 text-foreground font-mono text-xs sm:text-sm">
               DESPACHO DE ENCAMINHAMENTO
@@ -585,7 +585,7 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
         <div className="p-4 space-y-4 text-sm">
           <div className="space-y-2">
             <label className="text-muted-foreground text-xs sm:text-sm flex items-center gap-1">
-              Unidades<span className="text-destructive">*</span>:
+              Unidades<span className="text-primary font-bold">*</span>:
             </label>
             <div className="flex items-center gap-2">
               <Search className="w-4 h-4 text-muted-foreground" />
