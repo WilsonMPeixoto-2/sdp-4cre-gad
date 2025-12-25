@@ -2,6 +2,7 @@ import { FileText, Download, Link2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { InfoDrawer, AutenticacaoVsAssinaturaContent } from "./InfoDrawer";
 import { Callout } from "./Callout";
+import { SideNote } from "./SideNote";
 import { SeiAssinarIcon } from "./SeiIcons";
 import { SeiMockup } from "./SeiMockup";
 
@@ -58,7 +59,7 @@ export const SectionTwo = () => {
           </div>
         </div>
 
-        {/* Functions */}
+        {/* Functions - Changed from green to primary/accent colors */}
         <div className="section-card">
           <h3 className="section-heading">Funções Principais</h3>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -68,9 +69,12 @@ export const SectionTwo = () => {
               "Documenta o percentual de recursos consumidos",
               "Estabelece a base documental para análise e aprovação pela GAD",
             ].map((func, i) => (
-              <Callout key={i} variant="success" className="p-4">
-                {func}
-              </Callout>
+              <div 
+                key={i} 
+                className="p-4 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border-l-4 border-l-primary"
+              >
+                <p className="text-sm text-foreground leading-relaxed">{func}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -87,7 +91,9 @@ export const SectionTwo = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4 text-justify">
                   Com o processo aberto, clique no ícone <strong className="text-foreground">"INCLUIR DOCUMENTO"</strong> na barra de ferramentas do SEI.
                 </p>
-                <SeiMockup variant="incluir-documento" />
+                <div className="flex justify-center">
+                  <SeiMockup variant="incluir-documento" />
+                </div>
               </div>
             </div>
 
@@ -98,7 +104,9 @@ export const SectionTwo = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4 text-justify">
                   Selecione a opção: <strong className="text-foreground">DESPACHO</strong>
                 </p>
-                <SeiMockup variant="despacho-selection" />
+                <div className="flex justify-center">
+                  <SeiMockup variant="despacho-selection" />
+                </div>
               </div>
             </div>
 
@@ -113,7 +121,7 @@ export const SectionTwo = () => {
               </div>
             </div>
             
-            <Callout variant="info" title="💡 Dica:" className="mt-4">
+            <Callout variant="info" title="Dica:" className="mt-4">
               <p className="text-sm">
                 Baixe o <strong>Modelo Editável</strong> disponível no início desta página 
                 para copiar e colar o texto padrão do despacho.
@@ -130,7 +138,9 @@ export const SectionTwo = () => {
               Preencha os campos obrigatórios que identificam o documento no sistema:
             </p>
             
-            <SeiMockup variant="metadados-form" />
+            <div className="flex justify-center">
+              <SeiMockup variant="metadados-form" />
+            </div>
             
             {/* Campo Descrição */}
             <div className="p-4 bg-secondary rounded-xl border-l-4 border-l-accent">
@@ -214,13 +224,20 @@ export const SectionTwo = () => {
                   Clique no ícone <strong className="text-foreground">Assinar Documento</strong> 
                   (representado pela caneta tinteiro preta na barra de ferramentas).
                 </p>
-                <SeiMockup variant="toolbar-assinar" />
+                <div className="flex justify-center">
+                  <SeiMockup variant="toolbar-assinar" />
+                </div>
               </div>
             </div>
-            <Callout variant="success" title="2. Verificar">
-              Certifique-se de que o despacho assinado apareceu corretamente na árvore do processo 
-              (menu lateral esquerdo), indicando que o documento foi gerado e assinado com sucesso.
-            </Callout>
+            
+            {/* Changed from green Callout to blue themed box */}
+            <div className="p-5 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border-l-4 border-l-primary">
+              <p className="font-semibold text-foreground mb-2">2. Verificar</p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Certifique-se de que o despacho assinado apareceu corretamente na árvore do processo 
+                (menu lateral esquerdo), indicando que o documento foi gerado e assinado com sucesso.
+              </p>
+            </div>
           </div>
 
           {/* Dica Pro - Assinatura Externa */}
@@ -231,7 +248,7 @@ export const SectionTwo = () => {
               </div>
               <div className="flex-1">
                 <h4 className="font-semibold text-foreground flex items-center gap-2 mb-2">
-                  💡 Dica Pro: Assinatura Externa
+                  Dica Pro: Assinatura Externa
                 </h4>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4 text-justify">
                   É possível enviar o documento para outra chefia assinar sem precisar tramitar o processo! 
@@ -241,17 +258,28 @@ export const SectionTwo = () => {
                   <strong className="text-foreground"> WhatsApp</strong> ou 
                   <strong className="text-foreground"> E-mail</strong>.
                 </p>
-                <SeiMockup variant="link-externo" />
+                <div className="flex justify-center">
+                  <SeiMockup variant="link-externo" />
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="mt-6">
-            <Callout variant="warning">
+          <div className="mt-6 lg:grid lg:grid-cols-[1fr,280px] lg:gap-6">
+            <Callout variant="info" title="Atenção">
               Caso o documento não apareça como assinado ou não esteja visível na árvore, 
               atualize a página e confira novamente. Persistindo a inconsistência, acione 
               o suporte responsável pelo SEI!RIO antes de dar prosseguimento.
             </Callout>
+            
+            {/* Side Note */}
+            <div className="mt-4 lg:mt-0">
+              <SideNote variant="attention" title="PONTO DE ATENÇÃO">
+                <p className="text-sm">
+                  Documentos <strong>assinados</strong> não podem ser editados. Certifique-se de que o conteúdo está correto antes de assinar.
+                </p>
+              </SideNote>
+            </div>
           </div>
         </div>
       </div>
