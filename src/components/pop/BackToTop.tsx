@@ -35,7 +35,7 @@ export const BackToTop = () => {
   return (
     <Button
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 z-50 h-12 w-12 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 no-print bg-primary hover:bg-primary/90"
+      className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 z-40 h-11 w-11 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 no-print bg-primary hover:bg-primary/90"
       size="icon"
       title="Voltar ao topo"
     >

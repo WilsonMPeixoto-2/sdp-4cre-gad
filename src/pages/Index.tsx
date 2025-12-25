@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { Menu, ClipboardList, FileText, Table2, Upload, CheckCircle, Phone, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { PopHeader } from "@/components/pop/PopHeader";
 import { PopSidebar } from "@/components/pop/PopSidebar";
 import { HeroCover } from "@/components/pop/HeroCover";
 import { SectionDivider } from "@/components/pop/SectionDivider";
@@ -17,6 +16,8 @@ import { BackToTop } from "@/components/pop/BackToTop";
 import { ReadingProgressBar } from "@/components/pop/ReadingProgressBar";
 import { AnimatedSection } from "@/components/pop/AnimatedSection";
 import { DocumentFooter } from "@/components/pop/DocumentFooter";
+import { BottomToolbar } from "@/components/pop/BottomToolbar";
+import { DownloadSection } from "@/components/pop/DownloadSection";
 
 
 const Index = () => {
@@ -77,9 +78,6 @@ const Index = () => {
       {/* Hero Cover */}
       <HeroCover />
 
-      {/* Header */}
-      <PopHeader onPrint={handlePrint} />
-
       <div className="flex">
         <PopSidebar
           activeSection={activeSection}
@@ -89,8 +87,9 @@ const Index = () => {
         />
 
         <main className="flex-1 lg:ml-0">
-          <div className="lg:hidden fixed bottom-4 left-4 z-40 no-print">
-            <Button size="lg" className="rounded-full shadow-lg" onClick={() => setSidebarOpen(true)}>
+          {/* Mobile menu button - adjusted position for bottom toolbar */}
+          <div className="lg:hidden fixed bottom-20 left-4 z-40 no-print">
+            <Button size="lg" className="rounded-full shadow-xl" onClick={() => setSidebarOpen(true)}>
               <Menu className="w-5 h-5 mr-2" />
               Menu
             </Button>
@@ -144,6 +143,11 @@ const Index = () => {
                 <SectionContacts onPrint={handlePrint} />
               </AnimatedSection>
 
+              {/* Download Section */}
+              <AnimatedSection delay={100}>
+                <DownloadSection />
+              </AnimatedSection>
+
               {/* Anexo section without animation to ensure visibility */}
               <div id="anexo-divider">
                 <SectionDivider number="A" title="Anexo" subtitle="Legislação de referência e documentos exigidos" icon={Scale} />
@@ -158,10 +162,14 @@ const Index = () => {
               <p>Procedimento Operacional Padrão - Prestação de Contas SDP</p>
               <p>4ª Coordenadoria Regional de Educação | GAD</p>
             </div>
+
+            {/* Bottom padding for toolbar */}
+            <div className="h-20 no-print" />
           </div>
         </main>
       </div>
       <BackToTop />
+      <BottomToolbar onPrint={handlePrint} />
       
     </div>
   );
