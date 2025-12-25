@@ -187,9 +187,29 @@
 }
 
 @layer components {
+  /* ===== DESIGN SYSTEM: SPACING TOKENS ===== */
+  /* Use these consistently across all components */
+  /* --space-xs: 0.25rem (4px) */
+  /* --space-sm: 0.5rem (8px) */
+  /* --space-md: 1rem (16px) */
+  /* --space-lg: 1.5rem (24px) */
+  /* --space-xl: 2rem (32px) */
+  /* --space-2xl: 3rem (48px) */
+
+  /* ===== TYPOGRAPHY SYSTEM ===== */
+  /* Headings: font-heading (Outfit) with consistent sizes */
+  /* Body: font-body (Inter) with 1.6-1.75 line-height */
+  
   .section-card {
-    @apply bg-card rounded-xl border border-border p-6 sm:p-8 transition-all duration-300;
+    @apply bg-card rounded-xl border border-border transition-all duration-300;
+    padding: 1.5rem; /* 24px consistent padding */
     box-shadow: 0 4px 20px -4px hsl(215 25% 15% / 0.08), 0 2px 8px -2px hsl(215 25% 15% / 0.04);
+  }
+
+  @media (min-width: 640px) {
+    .section-card {
+      padding: 2rem; /* 32px on larger screens */
+    }
   }
 
   .dark .section-card {
@@ -204,45 +224,92 @@
     box-shadow: 0 10px 40px -10px hsl(0 0% 0% / 0.4), 0 4px 16px -4px hsl(0 0% 0% / 0.3);
   }
 
+  /* Section heading - consistent typography */
   .section-heading {
-    @apply font-heading font-semibold text-foreground text-lg sm:text-xl pb-3 mb-4 border-b border-border flex items-center gap-2;
+    @apply font-heading font-semibold text-foreground pb-3 mb-4 border-b border-border flex items-center gap-2;
+    font-size: 1.125rem; /* 18px base */
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+  }
+
+  @media (min-width: 640px) {
+    .section-heading {
+      font-size: 1.25rem; /* 20px on larger screens */
+    }
   }
 
   .section-heading::before {
     content: '';
-    @apply w-1 h-5 bg-accent rounded-full;
+    @apply w-1 h-5 bg-accent rounded-full flex-shrink-0;
   }
 
+  /* Content spacing - consistent paragraph and element gaps */
   .content-spacing {
-    @apply space-y-6 leading-relaxed;
+    @apply leading-relaxed;
+  }
+
+  .content-spacing > * + * {
+    margin-top: 1rem; /* 16px consistent gap between elements */
   }
 
   .content-spacing p {
-    @apply text-muted-foreground leading-relaxed;
+    @apply text-muted-foreground;
+    font-size: 0.9375rem; /* 15px */
+    line-height: 1.7;
+  }
+
+  @media (min-width: 640px) {
+    .content-spacing p {
+      font-size: 1rem; /* 16px on larger screens */
+    }
   }
 
   .content-spacing h3, .content-spacing h4 {
     @apply font-heading font-semibold text-foreground;
   }
 
+  /* Section number badge */
   .section-number {
-    @apply inline-flex items-center justify-center w-11 h-11 rounded-xl text-primary-foreground font-bold text-base;
+    @apply inline-flex items-center justify-center rounded-xl text-primary-foreground font-bold;
+    width: 2.75rem; /* 44px */
+    height: 2.75rem;
+    font-size: 1rem;
     background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(215 75% 28%) 100%);
     box-shadow: 0 4px 14px -3px hsl(var(--primary) / 0.4);
+    flex-shrink: 0;
   }
 
   .dark .section-number {
     background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(199 89% 40%) 100%);
   }
 
+  /* Highlight box - consistent padding */
   .highlight-box {
-    @apply border-l-4 border-accent p-5 sm:p-6 rounded-r-xl bg-secondary;
+    @apply border-l-4 border-accent rounded-r-xl bg-secondary;
+    padding: 1.25rem; /* 20px */
   }
 
+  @media (min-width: 640px) {
+    .highlight-box {
+      padding: 1.5rem; /* 24px on larger screens */
+    }
+  }
+
+  /* Step indicator - consistent sizing */
   .step-indicator {
-    @apply flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-xl text-primary-foreground font-bold relative z-10;
+    @apply flex items-center justify-center rounded-xl text-primary-foreground font-bold relative z-10;
+    width: 2.5rem; /* 40px */
+    height: 2.5rem;
+    flex-shrink: 0;
     background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(215 75% 28%) 100%);
     box-shadow: 0 4px 14px -3px hsl(var(--primary) / 0.35);
+  }
+
+  @media (min-width: 640px) {
+    .step-indicator {
+      width: 2.75rem; /* 44px */
+      height: 2.75rem;
+    }
   }
 
   /* Timeline connector for step sequences */
@@ -252,8 +319,15 @@
 
   .timeline-steps::before {
     content: '';
-    @apply absolute left-5 sm:left-[1.375rem] top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/30 via-primary/20 to-primary/10;
+    @apply absolute top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/30 via-primary/20 to-primary/10;
+    left: 1.25rem; /* align with step indicator center */
     z-index: 0;
+  }
+
+  @media (min-width: 640px) {
+    .timeline-steps::before {
+      left: 1.375rem;
+    }
   }
 
   .timeline-step {
@@ -266,8 +340,10 @@
     @apply tracking-tight;
     font-variant-numeric: tabular-nums;
     letter-spacing: 0.02em;
+    font-size: 0.875rem; /* 14px consistent */
   }
 
+  /* Navigation link */
   .nav-link {
     @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent/50 transition-all duration-200;
   }
@@ -276,18 +352,25 @@
     @apply bg-primary-foreground text-primary shadow-md;
   }
 
+  /* Table styling - consistent */
   .table-institutional {
     @apply w-full border-collapse overflow-hidden;
     border-radius: 0.75rem;
   }
 
   .table-institutional th {
-    @apply text-primary-foreground px-4 py-3.5 text-left font-semibold text-sm tracking-wide;
+    @apply text-primary-foreground px-4 text-left font-semibold tracking-wide;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    font-size: 0.875rem; /* 14px */
     background: linear-gradient(135deg, hsl(var(--table-header)) 0%, hsl(215 75% 28%) 100%);
   }
 
   .table-institutional td {
-    @apply px-4 py-3.5 border-b border-border/40 text-sm;
+    @apply px-4 border-b border-border/40;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    font-size: 0.875rem; /* 14px */
   }
 
   .table-institutional tr:nth-child(even) td {
@@ -306,12 +389,14 @@
     @apply bg-primary/5;
   }
 
+  /* Text justified - for body content */
   .text-justified {
     @apply text-justify;
     hyphens: auto;
     -webkit-hyphens: auto;
   }
 
+  /* Print utilities */
   .print-only {
     @apply hidden print:block;
   }
@@ -329,6 +414,35 @@
   .glass-effect {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+  }
+
+  /* ===== CONSISTENT ICON SIZING ===== */
+  .icon-sm {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .icon-md {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .icon-lg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  /* ===== CONSISTENT BADGE/TAG STYLING ===== */
+  .tag-primary {
+    @apply px-3 py-1.5 text-sm font-medium rounded-lg bg-primary/10 text-primary border border-primary/20;
+  }
+
+  .tag-accent {
+    @apply px-3 py-1.5 text-sm font-medium rounded-lg bg-accent/10 text-accent border border-accent/20;
+  }
+
+  .tag-muted {
+    @apply px-3 py-1.5 text-sm font-medium rounded-lg bg-secondary text-muted-foreground;
   }
 }
 

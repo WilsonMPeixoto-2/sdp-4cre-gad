@@ -45,14 +45,14 @@ export const Callout = ({
   return (
     <div
       className={cn(
-        "border-l-4 rounded-r-xl p-5 sm:p-6",
+        "border-l-4 rounded-r-xl p-5",
         styles.bg,
         styles.border,
         className
       )}
     >
       <div className="flex items-start gap-3">
-        <IconComponent className={cn("w-5 h-5 shrink-0 mt-0.5", styles.icon)} />
+        <IconComponent className={cn("w-5 h-5 flex-shrink-0 mt-0.5", styles.icon)} />
         <div className="flex-1 min-w-0">
           {title && (
             <p className="font-bold text-foreground mb-1">{title}</p>
