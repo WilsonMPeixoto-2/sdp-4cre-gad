@@ -45,10 +45,10 @@ export const LegalQuote = ({ text, source, article, link, className }: LegalQuot
               href={link} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors group"
+              className="inline-flex items-center gap-1.5 text-xs font-medium transition-colors group content-link"
             >
-              <span className="font-medium">{source}</span>
-              <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <span>{source}</span>
+              <ExternalLink className="w-3 h-3 opacity-60 group-hover:opacity-100 transition-opacity" />
             </a>
           ) : (
             <span className="text-xs text-muted-foreground font-medium">{source}</span>

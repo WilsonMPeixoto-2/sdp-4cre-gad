@@ -3,16 +3,17 @@ import { SeiMockup } from "./SeiMockup";
 import { InfoDrawer, NatoDigitalVsDigitalizadoContent, AutenticacaoVsAssinaturaContent } from "./InfoDrawer";
 import { SideNote } from "./SideNote";
 import { Callout } from "./Callout";
+import { ContentBlock, ContentBlockGrid } from "./ContentBlock";
 
 export const SectionFour = () => {
   return (
     <section id="secao-4" className="scroll-mt-20 animate-fade-in">
-      {/* Section Header */}
+      {/* Section Header - padronizado com divider */}
       <div className="flex items-center gap-4 mb-6">
         <div className="section-number">4</div>
         <div>
           <h2 className="text-xl sm:text-2xl font-heading font-bold text-foreground">
-            Inserção de Documentos Externos
+            Documentos Externos
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground mt-1">
             Notas fiscais, recibos, comprovantes e demais documentos
@@ -21,6 +22,34 @@ export const SectionFour = () => {
       </div>
 
       <div className="space-y-6">
+        {/* Quick Scan Blocks - Mobile-friendly overview */}
+        <ContentBlockGrid>
+          <ContentBlock variant="what" title="O que são">
+            <p>
+              Documentos externos são arquivos (digitalizados ou nato digitais) que não são 
+              produzidos no SEI!RIO, mas integram o processo como elementos comprobatórios.
+            </p>
+          </ContentBlock>
+          <ContentBlock variant="why" title="Por que importa">
+            <p>
+              Notas fiscais, recibos e comprovantes validam os gastos realizados e são 
+              obrigatórios para aprovação da prestação de contas.
+            </p>
+          </ContentBlock>
+          <ContentBlock variant="action" title="O que fazer">
+            <p>
+              Digitalizar documentos em PDF, incluir no SEI via "Documento Externo" e 
+              <strong> autenticar</strong> (não assinar) cada um.
+            </p>
+          </ContentBlock>
+          <ContentBlock variant="errors" title="Erros comuns">
+            <p>
+              Anexar planilha Excel (use SEI), esquecer autenticação, ou usar "Assinar" 
+              em vez de "Autenticar".
+            </p>
+          </ContentBlock>
+        </ContentBlockGrid>
+
         {/* General Considerations with Side Note */}
         <div className="lg:grid lg:grid-cols-[1fr,260px] lg:gap-6">
           <div className="section-card p-5 sm:p-6 border-l-4 border-l-primary">
@@ -36,11 +65,6 @@ export const SectionFour = () => {
                   </InfoDrawer>
                 </div>
                 <p className="text-muted-foreground mb-4 text-sm sm:text-base text-justify leading-relaxed">
-                  Os documentos externos compreendem todos os arquivos (digitalizados ou nato digitais) que não são 
-                  produzidos diretamente no sistema SEI!RIO, mas que integram o processo administrativo 
-                  como elementos comprobatórios essenciais.
-                </p>
-                <p className="text-muted-foreground text-sm sm:text-base text-justify leading-relaxed mb-3">
                   No contexto da prestação de contas do SDP, os documentos externos mais comuns incluem:
                 </p>
                 <div className="flex flex-wrap gap-2">
