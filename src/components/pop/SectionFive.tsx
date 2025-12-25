@@ -3,6 +3,7 @@ import { SeiMockup } from "./SeiMockup";
 import { CopyButton } from "./CopyButton";
 import { SideNote } from "./SideNote";
 import { Callout } from "./Callout";
+import { ContentBlock, ContentBlockGrid } from "./ContentBlock";
 
 export const SectionFive = () => {
   const gadCodes = [
@@ -17,12 +18,12 @@ export const SectionFive = () => {
 
   return (
     <section id="secao-5" className="scroll-mt-20 animate-fade-in">
-      {/* Section Header */}
+      {/* Section Header - padronizado com divider */}
       <div className="flex items-center gap-4 mb-6">
         <div className="section-number">5</div>
         <div>
           <h2 className="text-xl sm:text-2xl font-heading font-bold text-foreground">
-            Conferência Final e Envio
+            Conferência e Envio
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground mt-1">
             Verificação dos documentos e envio para a GAD
@@ -31,6 +32,20 @@ export const SectionFive = () => {
       </div>
 
       <div className="space-y-6">
+        {/* Quick Scan Blocks - Mobile-friendly overview */}
+        <ContentBlockGrid>
+          <ContentBlock variant="what" title="O que é">
+            <p>
+              Etapa final de verificação da documentação antes do envio à GAD para análise.
+            </p>
+          </ContentBlock>
+          <ContentBlock variant="action" title="O que fazer">
+            <p>
+              Conferir árvore do processo, verificar assinaturas/autenticações e enviar para a GAD da 4ª CRE.
+            </p>
+          </ContentBlock>
+        </ContentBlockGrid>
+
         {/* Intro */}
         <div className="section-card p-5 sm:p-6 border-l-4 border-l-accent">
           <div className="flex items-start gap-4">
