@@ -14,19 +14,19 @@ const downloads: DownloadItem[] = [
     title: "Modelo de Despacho",
     description: "Despacho padrão para encaminhamento da prestação de contas",
     icon: <FileText className="w-5 h-5" />,
-    disabled: true,
+    url: "https://rioeduca-my.sharepoint.com/:w:/g/personal/wilson_mpeixoto_rioeduca_net/IQC9wPR-JwJySpEGFJeisX7SAU96gsNWnIZiVss7WC0KKjE?e=6sP1ua",
   },
   {
     title: "Demonstrativo de Despesas",
     description: "Modelo do demonstrativo por meio de pagamento",
     icon: <Table2 className="w-5 h-5" />,
-    disabled: true,
+    url: "https://rioeduca-my.sharepoint.com/:x:/g/personal/wilson_mpeixoto_rioeduca_net/IQAgPn37Ap6PR4fGjfFcFY_3AZ7erJVwGFF7TvO5QrjTxTU?e=bSMVpy",
   },
   {
     title: "Checklist de Documentos",
     description: "Lista de verificação para conferência da prestação",
     icon: <FileCheck className="w-5 h-5" />,
-    disabled: true,
+    url: "#checklist-section",
   },
 ];
 
@@ -47,16 +47,10 @@ export const DownloadSection = () => {
         {downloads.map((item, index) => (
           <div
             key={index}
-            className={`flex flex-col p-5 rounded-xl border transition-all duration-200 ${
-              item.disabled
-                ? 'bg-secondary/50 border-border/50 opacity-60'
-                : 'bg-card border-border/50 hover:border-primary/30 hover:shadow-md cursor-pointer group'
-            }`}
+            className="flex flex-col p-5 rounded-xl border transition-all duration-200 bg-card border-border/50 hover:border-primary/30 hover:shadow-md cursor-pointer group"
           >
-            <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-              item.disabled ? 'bg-muted' : 'bg-primary/10 group-hover:bg-primary/20 transition-colors'
-            }`}>
-              <span className={item.disabled ? 'text-muted-foreground' : 'text-primary'}>
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-primary/10 group-hover:bg-primary/20 transition-colors">
+              <span className="text-primary">
                 {item.icon}
               </span>
             </div>
@@ -64,14 +58,16 @@ export const DownloadSection = () => {
             <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
             <p className="text-sm text-muted-foreground mb-4 flex-1">{item.description}</p>
             
-            {item.disabled ? (
-              <span className="text-xs text-muted-foreground italic">Em breve</span>
-            ) : (
+            <a
+              href={item.url}
+              target={item.url?.startsWith('#') ? undefined : "_blank"}
+              rel={item.url?.startsWith('#') ? undefined : "noopener noreferrer"}
+            >
               <Button variant="outline" size="sm" className="w-full group-hover:border-primary group-hover:text-primary">
                 <Download className="w-4 h-4 mr-2" />
-                Baixar
+                {item.url?.startsWith('#') ? 'Ver' : 'Baixar'}
               </Button>
-            )}
+            </a>
           </div>
         ))}
       </div>
