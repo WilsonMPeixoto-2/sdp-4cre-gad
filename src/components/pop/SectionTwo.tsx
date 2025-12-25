@@ -10,17 +10,17 @@ export const SectionTwo = () => {
   return (
     <section id="secao-2" className="scroll-mt-20 animate-fade-in">
       {/* Download Button - Despacho de Encaminhamento */}
-      <div className="mb-8 p-5 sm:p-6 rounded-xl bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/30 dark:from-accent/20 dark:to-accent/10">
+      <div className="mb-6 p-5 rounded-xl bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/30 dark:from-accent/20 dark:to-accent/10">
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <div className="flex items-center gap-3 flex-1">
-            <div className="p-2.5 rounded-lg bg-accent/20">
+            <div className="p-2.5 rounded-lg bg-accent/20 flex-shrink-0">
               <FileText className="w-5 h-5 text-accent" />
             </div>
             <div>
-              <h4 className="font-semibold text-foreground text-sm sm:text-base">
+              <h4 className="font-semibold text-foreground">
                 Modelo do Despacho de Encaminhamento
               </h4>
-              <p className="text-xs sm:text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground">
                 Documento editável (.docx) para formalização da prestação de contas
               </p>
             </div>
@@ -42,16 +42,16 @@ export const SectionTwo = () => {
         </div>
       </div>
 
-      <div className="space-y-8">
+      <div className="space-y-6">
         {/* Definition Card */}
         <div className="section-card border-l-4 border-l-accent">
           <div className="flex items-start gap-4">
-            <div className="p-3 rounded-xl bg-accent/10 shrink-0">
-              <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
+            <div className="p-3 rounded-xl bg-accent/10 flex-shrink-0">
+              <FileText className="w-5 h-5 text-accent" />
             </div>
             <div className="content-spacing">
               <h3 className="section-heading">2.1. O Despacho de Encaminhamento</h3>
-              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
+              <p className="text-justify">
                 O Despacho de Encaminhamento é o documento que formaliza a prestação de contas 
                 para a Gerência de Administração (GAD).
               </p>
@@ -59,7 +59,7 @@ export const SectionTwo = () => {
           </div>
         </div>
 
-        {/* Functions - Changed from green to primary/accent colors */}
+        {/* Functions */}
         <div className="section-card">
           <h3 className="section-heading">Funções Principais</h3>
           <div className="grid sm:grid-cols-2 gap-4">
@@ -85,9 +85,9 @@ export const SectionTwo = () => {
           
           <div className="space-y-4 timeline-steps">
             <div className="flex items-start gap-4 p-5 bg-secondary rounded-xl timeline-step">
-              <div className="step-indicator shrink-0 text-sm">1</div>
+              <div className="step-indicator text-sm">1</div>
               <div className="flex-1">
-                <h4 className="font-semibold text-foreground mb-1">Incluir Documento</h4>
+                <h4 className="font-semibold text-foreground mb-2">Incluir Documento</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4 text-justify">
                   Com o processo aberto, clique no ícone <strong className="text-foreground">"INCLUIR DOCUMENTO"</strong> na barra de ferramentas do SEI.
                 </p>
@@ -98,9 +98,9 @@ export const SectionTwo = () => {
             </div>
 
             <div className="flex items-start gap-4 p-5 bg-secondary rounded-xl timeline-step">
-              <div className="step-indicator shrink-0 text-sm">2</div>
+              <div className="step-indicator text-sm">2</div>
               <div className="flex-1">
-                <h4 className="font-semibold text-foreground mb-1">Escolha do Tipo de Documento</h4>
+                <h4 className="font-semibold text-foreground mb-2">Escolha do Tipo de Documento</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4 text-justify">
                   Selecione a opção: <strong className="text-foreground">DESPACHO</strong>
                 </p>
@@ -111,9 +111,9 @@ export const SectionTwo = () => {
             </div>
 
             <div className="flex items-start gap-4 p-5 bg-secondary rounded-xl timeline-step">
-              <div className="step-indicator shrink-0 text-sm">3</div>
+              <div className="step-indicator text-sm">3</div>
               <div>
-                <h4 className="font-semibold text-foreground mb-1">Preenchimento do Editor</h4>
+                <h4 className="font-semibold text-foreground mb-2">Preenchimento do Editor</h4>
                 <p className="text-sm text-muted-foreground leading-relaxed text-justify">
                   No corpo do documento, digite o conteúdo do despacho ou cole o texto padronizado 
                   utilizado pela sua unidade.
@@ -121,11 +121,9 @@ export const SectionTwo = () => {
               </div>
             </div>
             
-            <Callout variant="info" title="Dica:" className="mt-4">
-              <p className="text-sm">
-                Baixe o <strong>Modelo Editável</strong> disponível no início desta página 
-                para copiar e colar o texto padrão do despacho.
-              </p>
+            <Callout variant="info" title="Dica:">
+              Baixe o <strong>Modelo Editável</strong> disponível no início desta página 
+              para copiar e colar o texto padrão do despacho.
             </Callout>
           </div>
         </div>
@@ -133,8 +131,8 @@ export const SectionTwo = () => {
         {/* Preenchimento de Metadados */}
         <div className="section-card">
           <h3 className="section-heading">2.3. Preenchimento de Metadados</h3>
-          <div className="content-spacing space-y-4">
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed text-justify">
+          <div className="content-spacing">
+            <p className="text-justify">
               Preencha os campos obrigatórios que identificam o documento no sistema:
             </p>
             
@@ -144,16 +142,16 @@ export const SectionTwo = () => {
             
             {/* Campo Descrição */}
             <div className="p-4 bg-secondary rounded-xl border-l-4 border-l-accent">
-              <h4 className="font-semibold text-foreground text-sm mb-2">Campo: Descrição</h4>
-              <code className="block bg-card px-4 py-3 rounded-lg border border-border text-sm data-code text-foreground break-all shadow-sm">
+              <h4 className="font-semibold text-foreground mb-2">Campo: Descrição</h4>
+              <code className="block bg-card px-4 py-3 rounded-lg border border-border data-code text-foreground break-all shadow-sm">
                 SDP – E/CRE (04.xx.xxx) NOME DA ESCOLA
               </code>
             </div>
             
             {/* Campo Nome na Árvore */}
             <div className="p-4 bg-secondary rounded-xl border-l-4 border-l-primary">
-              <h4 className="font-semibold text-foreground text-sm mb-2">Campo: Nome na Árvore</h4>
-              <code className="block bg-card px-4 py-3 rounded-lg border border-border text-sm data-code text-foreground break-all shadow-sm">
+              <h4 className="font-semibold text-foreground mb-2">Campo: Nome na Árvore</h4>
+              <code className="block bg-card px-4 py-3 rounded-lg border border-border data-code text-foreground break-all shadow-sm">
                 DESPACHO DE ENCAMINHAMENTO
               </code>
             </div>
@@ -165,7 +163,7 @@ export const SectionTwo = () => {
           <h3 className="section-heading">2.4. Modelo de Execução Resumida</h3>
           
           <div className="overflow-x-auto -mx-6 sm:-mx-8 px-6 sm:px-8">
-            <table className="table-institutional text-sm w-full">
+            <table className="table-institutional w-full">
               <thead>
                 <tr>
                   <th className="rounded-tl-lg">Saldos e Movimentações</th>
@@ -208,7 +206,7 @@ export const SectionTwo = () => {
 
         {/* Signature */}
         <div className="section-card">
-          <div className="flex items-center gap-3 flex-wrap mb-6">
+          <div className="flex items-center gap-3 flex-wrap mb-4">
             <h3 className="section-heading mb-0 pb-0 border-b-0">2.5. Assinatura e Verificação</h3>
             <InfoDrawer title="Assinatura vs Autenticação" triggerLabel="Entenda a diferença">
               <AutenticacaoVsAssinaturaContent />
@@ -217,9 +215,9 @@ export const SectionTwo = () => {
           
           <div className="space-y-4">
             <div className="flex items-start gap-3 p-5 bg-secondary rounded-xl">
-              <SeiAssinarIcon size={24} className="shrink-0 mt-0.5" />
+              <SeiAssinarIcon size={24} className="flex-shrink-0 mt-0.5" />
               <div className="flex-1">
-                <p className="font-semibold text-foreground">1. Assinar</p>
+                <p className="font-semibold text-foreground mb-2">1. Assinar</p>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4 text-justify">
                   Clique no ícone <strong className="text-foreground">Assinar Documento</strong> 
                   (representado pela caneta tinteiro preta na barra de ferramentas).
@@ -230,7 +228,6 @@ export const SectionTwo = () => {
               </div>
             </div>
             
-            {/* Changed from green Callout to blue themed box */}
             <div className="p-5 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border-l-4 border-l-primary">
               <p className="font-semibold text-foreground mb-2">2. Verificar</p>
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -243,7 +240,7 @@ export const SectionTwo = () => {
           {/* Dica Pro - Assinatura Externa */}
           <div className="mt-6 p-5 rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/30">
             <div className="flex items-start gap-3">
-              <div className="p-2 rounded-lg bg-primary/20 shrink-0">
+              <div className="p-2 rounded-lg bg-primary/20 flex-shrink-0">
                 <Link2 className="w-5 h-5 text-primary" />
               </div>
               <div className="flex-1">
@@ -275,9 +272,7 @@ export const SectionTwo = () => {
             {/* Side Note */}
             <div className="mt-4 lg:mt-0">
               <SideNote variant="attention" title="PONTO DE ATENÇÃO">
-                <p className="text-sm">
-                  Documentos <strong>assinados</strong> não podem ser editados. Certifique-se de que o conteúdo está correto antes de assinar.
-                </p>
+                Documentos <strong>assinados</strong> não podem ser editados. Certifique-se de que o conteúdo está correto antes de assinar.
               </SideNote>
             </div>
           </div>

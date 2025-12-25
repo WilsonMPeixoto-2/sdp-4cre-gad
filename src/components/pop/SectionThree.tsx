@@ -14,7 +14,7 @@ export const SectionThree = () => {
           <h2 className="text-xl sm:text-2xl font-heading font-bold text-foreground">
             Demonstrativo de Despesas
           </h2>
-          <p className="text-sm sm:text-base text-muted-foreground mt-1">
+          <p className="text-sm text-muted-foreground mt-1">
             Como gerar no SEI!RIO, conferência de dados e naturezas de despesa
           </p>
         </div>
@@ -23,14 +23,14 @@ export const SectionThree = () => {
       <div className="space-y-6">
         {/* Intro with Side Note */}
         <div className="lg:grid lg:grid-cols-[1fr,260px] lg:gap-6">
-          <div className="section-card p-5 sm:p-6 border-l-4 border-l-primary">
+          <div className="section-card border-l-4 border-l-primary">
             <div className="flex items-start gap-4">
-              <div className="p-3 rounded-xl bg-primary/10 shrink-0">
-                <Table2 className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+              <div className="p-3 rounded-xl bg-primary/10 flex-shrink-0">
+                <Table2 className="w-5 h-5 text-primary" />
               </div>
-              <div>
+              <div className="content-spacing">
                 <h3 className="font-semibold text-foreground mb-2">3.1. Demonstrativo de Despesas – Documento Interno</h3>
-                <p className="text-muted-foreground text-sm sm:text-base text-justify leading-relaxed">
+                <p className="text-justify leading-relaxed">
                   Utilize o modelo abaixo como referência para preencher o demonstrativo de despesas 
                   no sistema SEI!RIO. Este modelo contempla as naturezas de despesa 435, 441 e 434, 
                   conforme orientações da CGM-RJ.
@@ -46,7 +46,7 @@ export const SectionThree = () => {
           {/* Side Note */}
           <div className="mt-4 lg:mt-0">
             <SideNote variant="reading" title="LEITURA COMPLEMENTAR">
-              <p className="text-sm mb-2">
+              <p className="mb-2">
                 Para informações detalhadas sobre naturezas de despesa, consulte:
               </p>
               <p className="text-xs text-muted-foreground">
@@ -57,13 +57,13 @@ export const SectionThree = () => {
         </div>
 
         {/* Payment Table Template */}
-        <div className="section-card p-5 sm:p-6">
+        <div className="section-card">
           <h3 className="font-semibold text-foreground mb-4">
             Demonstrativo de Pagamentos via Cartão/Boleto Bancário
           </h3>
           
-          <div className="overflow-x-auto -mx-5 sm:mx-0 px-5 sm:px-0">
-            <table className="table-institutional text-sm">
+          <div className="overflow-x-auto -mx-6 sm:-mx-8 px-6 sm:px-8">
+            <table className="table-institutional">
               <thead>
                 <tr>
                   <th className="rounded-tl-lg">Data da Nota</th>
@@ -97,7 +97,7 @@ export const SectionThree = () => {
         </div>
 
         {/* Expense Natures */}
-        <div className="section-card p-5 sm:p-6">
+        <div className="section-card">
           <div className="flex items-center gap-3 flex-wrap mb-4">
             <h3 className="font-semibold text-foreground">Naturezas de Despesa</h3>
             <InfoDrawer title="Naturezas de Despesa" triggerLabel="Saiba mais">
@@ -108,7 +108,7 @@ export const SectionThree = () => {
           <div className="grid sm:grid-cols-3 gap-4">
             <div className="p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border-l-4 border-l-primary">
               <div className="flex items-center gap-3 mb-2">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-primary-foreground font-bold text-sm shadow-md data-code">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-primary-foreground font-bold data-code shadow-md">
                   441
                 </span>
                 <span className="font-bold text-foreground">Natureza 441</span>
@@ -118,7 +118,7 @@ export const SectionThree = () => {
             
             <div className="p-4 bg-gradient-to-br from-accent/10 to-accent/5 rounded-xl border-l-4 border-l-accent">
               <div className="flex items-center gap-3 mb-2">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-accent text-accent-foreground font-bold text-sm shadow-md data-code">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-accent text-accent-foreground font-bold data-code shadow-md">
                   435
                 </span>
                 <span className="font-bold text-foreground">Natureza 435</span>
@@ -128,7 +128,7 @@ export const SectionThree = () => {
             
             <div className="p-4 bg-gradient-to-br from-secondary to-secondary/50 rounded-xl border-l-4 border-l-muted-foreground">
               <div className="flex items-center gap-3 mb-2">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-muted-foreground text-background font-bold text-sm shadow-md data-code">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-muted-foreground text-background font-bold data-code shadow-md">
                   434
                 </span>
                 <span className="font-bold text-foreground">Natureza 434</span>
@@ -139,14 +139,14 @@ export const SectionThree = () => {
         </div>
 
         {/* Excel Note with Download Button */}
-        <div className="section-card p-5 sm:p-6 border border-accent/30 bg-gradient-to-br from-accent/5 to-transparent">
+        <div className="section-card border border-accent/30 bg-gradient-to-br from-accent/5 to-transparent">
           <div className="flex flex-col sm:flex-row items-start gap-4">
-            <div className="p-3 rounded-xl bg-accent/10 shrink-0">
-              <FileSpreadsheet className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
+            <div className="p-3 rounded-xl bg-accent/10 flex-shrink-0">
+              <FileSpreadsheet className="w-5 h-5 text-accent" />
             </div>
             <div className="flex-1">
               <h3 className="font-semibold text-foreground mb-2">Planilha de Apoio</h3>
-              <p className="text-muted-foreground text-sm sm:text-base text-justify leading-relaxed mb-4">
+              <p className="text-muted-foreground leading-relaxed text-justify mb-4">
                 O documento original editável em formato Excel (MAPA DE DESPESAS - NATUREZAS 435-441-434.xlsx) 
                 segue como anexo a este POP para facilitar o preenchimento e adaptação às necessidades 
                 de cada unidade escolar.
