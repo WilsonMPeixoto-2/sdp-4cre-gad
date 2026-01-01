@@ -100,13 +100,24 @@
     }
     </script>
 
-    <!-- Fonts - Non-render-blocking -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Roboto+Mono:wght@400;500;600&display=swap"></noscript>
+    <!-- Critical inline styles for FCP -->
+    <style>
+      /* Minimal critical CSS for above-the-fold content */
+      *,*::before,*::after{box-sizing:border-box}
+      body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+      #root{min-height:100vh}
+      .hero-skeleton{min-height:100vh;background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 100%);display:flex;align-items:center;justify-content:center}
+      .hero-skeleton::after{content:"";width:48px;height:48px;border:3px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:spin 1s linear infinite}
+      @keyframes spin{to{transform:rotate(360deg)}}
+    </style>
+
+    <!-- Fonts - Non-render-blocking with reduced weights -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@600;700&display=swap"></noscript>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root"><div class="hero-skeleton"></div></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
