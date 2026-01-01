@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef, lazy, Suspense } from "react";
 import { Menu, ClipboardList, FileText, Table2, Upload, CheckCircle, Phone, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PopSidebar } from "@/components/pop/PopSidebar";
@@ -6,18 +6,27 @@ import { HeroCover } from "@/components/pop/HeroCover";
 import { SectionDivider } from "@/components/pop/SectionDivider";
 import { SectionIntro } from "@/components/pop/SectionIntro";
 import { SectionOne } from "@/components/pop/SectionOne";
-import { SectionTwo } from "@/components/pop/SectionTwo";
-import { SectionThree } from "@/components/pop/SectionThree";
-import { SectionFour } from "@/components/pop/SectionFour";
-import { SectionFive } from "@/components/pop/SectionFive";
-import { SectionContacts } from "@/components/pop/SectionContacts";
-import { SectionAnexo } from "@/components/pop/SectionAnexo";
-import { BackToTop } from "@/components/pop/BackToTop";
 import { ReadingProgressBar } from "@/components/pop/ReadingProgressBar";
 import { AnimatedSection } from "@/components/pop/AnimatedSection";
-import { DocumentFooter } from "@/components/pop/DocumentFooter";
 import { BottomToolbar } from "@/components/pop/BottomToolbar";
-import { DownloadSection } from "@/components/pop/DownloadSection";
+
+// Lazy load sections below the fold to reduce initial bundle
+const SectionTwo = lazy(() => import("@/components/pop/SectionTwo").then(m => ({ default: m.SectionTwo })));
+const SectionThree = lazy(() => import("@/components/pop/SectionThree").then(m => ({ default: m.SectionThree })));
+const SectionFour = lazy(() => import("@/components/pop/SectionFour").then(m => ({ default: m.SectionFour })));
+const SectionFive = lazy(() => import("@/components/pop/SectionFive").then(m => ({ default: m.SectionFive })));
+const SectionContacts = lazy(() => import("@/components/pop/SectionContacts").then(m => ({ default: m.SectionContacts })));
+const SectionAnexo = lazy(() => import("@/components/pop/SectionAnexo").then(m => ({ default: m.SectionAnexo })));
+const BackToTop = lazy(() => import("@/components/pop/BackToTop").then(m => ({ default: m.BackToTop })));
+const DocumentFooter = lazy(() => import("@/components/pop/DocumentFooter").then(m => ({ default: m.DocumentFooter })));
+const DownloadSection = lazy(() => import("@/components/pop/DownloadSection").then(m => ({ default: m.DownloadSection })));
+
+// Loading placeholder for lazy components
+const SectionLoader = () => (
+  <div className="py-8 flex justify-center">
+    <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+  </div>
+);
 
 
 const Index = () => {
@@ -123,54 +132,56 @@ const Index = () => {
                 <SectionOne />
               </AnimatedSection>
 
-              <AnimatedSection delay={100}>
-                <SectionDivider number="2" title="Despacho de Encaminhamento" subtitle="Elaboração do documento de formalização da prestação de contas" icon={FileText} />
-              </AnimatedSection>
-              <AnimatedSection delay={150}>
-                <SectionTwo />
-              </AnimatedSection>
+              <Suspense fallback={<SectionLoader />}>
+                <AnimatedSection delay={100}>
+                  <SectionDivider number="2" title="Despacho de Encaminhamento" subtitle="Elaboração do documento de formalização da prestação de contas" icon={FileText} />
+                </AnimatedSection>
+                <AnimatedSection delay={150}>
+                  <SectionTwo />
+                </AnimatedSection>
 
-              <AnimatedSection delay={100}>
-                <SectionDivider number="3" title="Demonstrativo de Despesas" subtitle="Como gerar no SEI!RIO, conferência de dados e naturezas de despesa" icon={Table2} />
-              </AnimatedSection>
-              <AnimatedSection delay={150}>
-                <SectionThree />
-              </AnimatedSection>
+                <AnimatedSection delay={100}>
+                  <SectionDivider number="3" title="Demonstrativo de Despesas" subtitle="Como gerar no SEI!RIO, conferência de dados e naturezas de despesa" icon={Table2} />
+                </AnimatedSection>
+                <AnimatedSection delay={150}>
+                  <SectionThree />
+                </AnimatedSection>
 
-              <AnimatedSection delay={100}>
-                <SectionDivider number="4" title="Documentos Externos" subtitle="Notas fiscais, recibos, comprovantes e demais documentos" icon={Upload} />
-              </AnimatedSection>
-              <AnimatedSection delay={150}>
-                <SectionFour />
-              </AnimatedSection>
+                <AnimatedSection delay={100}>
+                  <SectionDivider number="4" title="Documentos Externos" subtitle="Notas fiscais, recibos, comprovantes e demais documentos" icon={Upload} />
+                </AnimatedSection>
+                <AnimatedSection delay={150}>
+                  <SectionFour />
+                </AnimatedSection>
 
-              <AnimatedSection delay={100}>
-                <SectionDivider number="5" title="Conferência e Envio" subtitle="Verificação dos documentos e envio para a GAD" icon={CheckCircle} />
-              </AnimatedSection>
-              <AnimatedSection delay={150}>
-                <SectionFive />
-              </AnimatedSection>
+                <AnimatedSection delay={100}>
+                  <SectionDivider number="5" title="Conferência e Envio" subtitle="Verificação dos documentos e envio para a GAD" icon={CheckCircle} />
+                </AnimatedSection>
+                <AnimatedSection delay={150}>
+                  <SectionFive />
+                </AnimatedSection>
 
-              <AnimatedSection delay={100}>
-                <SectionDivider number="6" title="Contatos" subtitle="Canais de atendimento e suporte da GAD/4ª CRE" icon={Phone} />
-              </AnimatedSection>
-              <AnimatedSection delay={150}>
-                <SectionContacts onPrint={handlePrint} />
-              </AnimatedSection>
+                <AnimatedSection delay={100}>
+                  <SectionDivider number="6" title="Contatos" subtitle="Canais de atendimento e suporte da GAD/4ª CRE" icon={Phone} />
+                </AnimatedSection>
+                <AnimatedSection delay={150}>
+                  <SectionContacts onPrint={handlePrint} />
+                </AnimatedSection>
 
-              {/* Download Section */}
-              <AnimatedSection delay={100}>
-                <DownloadSection />
-              </AnimatedSection>
+                {/* Download Section */}
+                <AnimatedSection delay={100}>
+                  <DownloadSection />
+                </AnimatedSection>
 
-              {/* Anexo section without animation to ensure visibility */}
-              <div id="anexo-divider">
-                <SectionDivider number="A" title="Anexo" subtitle="Legislação de referência e documentos exigidos" icon={Scale} />
-              </div>
-              <SectionAnexo />
+                {/* Anexo section without animation to ensure visibility */}
+                <div id="anexo-divider">
+                  <SectionDivider number="A" title="Anexo" subtitle="Legislação de referência e documentos exigidos" icon={Scale} />
+                </div>
+                <SectionAnexo />
 
-              {/* Document Footer */}
-              <DocumentFooter />
+                {/* Document Footer */}
+                <DocumentFooter />
+              </Suspense>
             </div>
 
             <div className="print-only mt-8 pt-4 border-t text-center text-sm text-muted-foreground">
@@ -183,7 +194,9 @@ const Index = () => {
           </div>
         </main>
       </div>
-      <BackToTop />
+      <Suspense fallback={null}>
+        <BackToTop />
+      </Suspense>
       <BottomToolbar onPrint={handlePrint} />
       
     </div>
