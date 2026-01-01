@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Menu, ClipboardList, FileText, Table2, Upload, CheckCircle, Phone, Scale } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PopSidebar } from "@/components/pop/PopSidebar";
@@ -52,22 +52,37 @@ const Index = () => {
     });
   }, []);
 
+  // Track visible sections via IntersectionObserver to avoid forced reflows
+  const visibleSectionsRef = useRef<Set<string>>(new Set());
+
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ["introducao", "secao-1", "secao-2", "secao-3", "secao-4", "secao-5", "contatos", "anexo"];
-      for (const sectionId of sections) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
-            setActiveSection(sectionId);
+    const sectionIds = ["introducao", "secao-1", "secao-2", "secao-3", "secao-4", "secao-5", "contatos", "anexo"];
+    const elements = sectionIds.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+          if (entry.isIntersecting) {
+            visibleSectionsRef.current.add(id);
+          } else {
+            visibleSectionsRef.current.delete(id);
+          }
+        });
+
+        // Set active section to the first visible one in document order
+        for (const id of sectionIds) {
+          if (visibleSectionsRef.current.has(id)) {
+            setActiveSection(id);
             break;
           }
         }
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+      },
+      { rootMargin: "-100px 0px -50% 0px", threshold: 0 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
   return (
