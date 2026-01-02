@@ -29,7 +29,7 @@ export const SectionThree = () => {
                 <Table2 className="w-5 h-5 text-primary" />
               </div>
               <div className="content-spacing">
-                <h3 className="font-semibold text-foreground mb-2">3.1. Demonstrativo de Despesas – Documento Interno</h3>
+                <h3 className="section-heading">3.1. Demonstrativo de Despesas – Documento Interno</h3>
                 <p className="text-justify leading-relaxed">
                   Utilize o modelo abaixo como referência para preencher o demonstrativo de despesas 
                   no sistema SEI!RIO. Este modelo contempla as naturezas de despesa 435, 441 e 434, 
@@ -58,8 +58,8 @@ export const SectionThree = () => {
 
         {/* Payment Table Template */}
         <div className="section-card">
-          <h3 className="font-semibold text-foreground mb-4">
-            Demonstrativo de Pagamentos via Cartão/Boleto Bancário
+          <h3 className="section-heading">
+            3.2. Demonstrativo de Pagamentos via Cartão/Boleto Bancário
           </h3>
           
           <div className="overflow-x-auto -mx-6 sm:-mx-8 px-6 sm:px-8">
@@ -98,8 +98,11 @@ export const SectionThree = () => {
 
         {/* Expense Natures */}
         <div className="section-card">
-          <div className="flex items-center gap-3 flex-wrap mb-4">
-            <h3 className="font-semibold text-foreground">Naturezas de Despesa</h3>
+          <div className="flex items-center gap-3 flex-wrap pb-3 mb-4 border-b border-border">
+            <h3 className="font-heading font-semibold text-foreground flex items-center gap-2">
+              <span className="w-1 h-5 bg-accent rounded-full flex-shrink-0"></span>
+              3.3. Naturezas de Despesa
+            </h3>
             <InfoDrawer title="Naturezas de Despesa" triggerLabel="Saiba mais">
               <NaturezasDespesaContent />
             </InfoDrawer>
@@ -145,7 +148,7 @@ export const SectionThree = () => {
               <FileSpreadsheet className="w-5 h-5 text-accent" />
             </div>
             <div className="flex-1">
-              <h3 className="font-semibold text-foreground mb-2">Planilha de Apoio</h3>
+              <h3 className="section-heading">3.4. Planilha de Apoio</h3>
               <p className="text-muted-foreground leading-relaxed text-justify mb-4">
                 O documento original editável em formato Excel (MAPA DE DESPESAS - NATUREZAS 435-441-434.xlsx) 
                 segue como anexo a este POP para facilitar o preenchimento e adaptação às necessidades 

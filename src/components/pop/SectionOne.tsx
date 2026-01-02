@@ -92,8 +92,7 @@ export const SectionOne = () => {
         {/* Specification */}
         <div className="section-card">
           <h3 className="section-heading">
-            1.5. Especificação 
-            <span className="text-sm font-normal text-muted-foreground ml-2">(obrigatório)</span>
+            1.5. Especificação
           </h3>
           <div className="content-spacing">
             <p className="text-justify">

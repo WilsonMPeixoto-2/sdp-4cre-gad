@@ -58,8 +58,11 @@ export const SectionFour = () => {
                 <Upload className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               </div>
               <div>
-                <div className="flex items-center gap-3 flex-wrap mb-2">
-                  <h3 className="font-semibold text-foreground">4.1. Considerações Gerais</h3>
+                <div className="flex items-center gap-3 flex-wrap pb-3 mb-4 border-b border-border">
+                  <h3 className="font-heading font-semibold text-foreground flex items-center gap-2">
+                    <span className="w-1 h-5 bg-accent rounded-full flex-shrink-0"></span>
+                    4.1. Considerações Gerais
+                  </h3>
                   <InfoDrawer title="Nato-Digital vs Digitalizado" triggerLabel="Entenda a diferença">
                     <NatoDigitalVsDigitalizadoContent />
                   </InfoDrawer>
@@ -96,7 +99,7 @@ export const SectionFour = () => {
 
         {/* Inclusion Procedure - Timeline */}
         <div className="section-card p-5 sm:p-6">
-          <h3 className="font-semibold text-foreground mb-4">4.2. Procedimento para Inclusão</h3>
+          <h3 className="section-heading">4.2. Procedimento para Inclusão</h3>
           
           <div className="space-y-4 timeline-steps">
             <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl timeline-step">
@@ -128,7 +131,7 @@ export const SectionFour = () => {
 
         {/* Fields Description */}
         <div className="section-card p-5 sm:p-6">
-          <h3 className="font-semibold text-foreground mb-4">Campos do Registro</h3>
+          <h3 className="section-heading">Campos do Registro</h3>
           
           <div className="grid gap-3">
             <div className="flex items-start gap-4 p-4 border border-border/50 rounded-xl hover:border-primary/30 transition-colors">
@@ -185,7 +188,7 @@ export const SectionFour = () => {
 
         {/* Quick Reference Table */}
         <div className="section-card p-5 sm:p-6">
-          <h3 className="font-semibold text-foreground mb-4">Resumo do Preenchimento</h3>
+          <h3 className="section-heading">Resumo do Preenchimento</h3>
           
           <div className="overflow-x-auto -mx-5 sm:mx-0 px-5 sm:px-0">
             <table className="table-institutional text-sm">
@@ -231,7 +234,7 @@ export const SectionFour = () => {
 
         {/* Upload and Authentication */}
         <div className="section-card p-5 sm:p-6">
-          <h3 className="font-semibold text-foreground mb-4">Anexar e Autenticar</h3>
+          <h3 className="section-heading">Anexar e Autenticar</h3>
           
           <div className="space-y-4">
             <div className="flex items-start gap-3 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
@@ -279,7 +282,7 @@ export const SectionFour = () => {
         {/* Legal Foundation - Moved from Section 3 */}
         <div className="lg:grid lg:grid-cols-[1fr,260px] lg:gap-6">
           <div className="section-card p-5 sm:p-6 border-l-4 border-l-primary">
-            <h3 className="font-semibold text-foreground mb-4">4.3. Fundamentação Legal</h3>
+            <h3 className="section-heading">4.3. Fundamentação Legal</h3>
             
             <div className="bg-gradient-to-r from-secondary to-secondary/50 rounded-xl p-4 mb-4">
               <p className="text-sm font-bold text-foreground mb-3">DECRETO RIO N° 57.250, DE 19 DE NOVEMBRO DE 2025</p>
