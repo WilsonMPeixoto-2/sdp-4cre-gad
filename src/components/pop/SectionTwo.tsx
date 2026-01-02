@@ -206,8 +206,11 @@ export const SectionTwo = () => {
 
         {/* Signature */}
         <div className="section-card">
-          <div className="flex items-center gap-3 flex-wrap mb-4">
-            <h3 className="section-heading mb-0 pb-0 border-b-0">2.5. Assinatura e Verificação</h3>
+          <div className="flex items-center gap-3 flex-wrap pb-3 mb-4 border-b border-border">
+            <h3 className="font-heading font-semibold text-foreground flex items-center gap-2">
+              <span className="w-1 h-5 bg-accent rounded-full flex-shrink-0"></span>
+              2.5. Assinatura e Verificação
+            </h3>
             <InfoDrawer title="Assinatura vs Autenticação" triggerLabel="Entenda a diferença">
               <AutenticacaoVsAssinaturaContent />
             </InfoDrawer>

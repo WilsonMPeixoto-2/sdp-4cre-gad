@@ -64,7 +64,7 @@ export const SectionFive = () => {
 
         {/* Verification Steps */}
         <div className="section-card p-5 sm:p-6">
-          <h3 className="font-semibold text-foreground mb-4">Checklist de Verificação</h3>
+          <h3 className="section-heading">Checklist de Verificação</h3>
           
           <div className="space-y-4">
             <div className="flex items-start gap-4 p-4 bg-gradient-to-r from-secondary to-secondary/50 rounded-xl">
@@ -102,7 +102,7 @@ export const SectionFive = () => {
         {/* Send Process */}
         <div className="lg:grid lg:grid-cols-[1fr,260px] lg:gap-6">
           <div className="section-card p-5 sm:p-6">
-            <h3 className="font-semibold text-foreground mb-4">5.3. Envio para a GAD</h3>
+            <h3 className="section-heading">5.3. Envio para a GAD</h3>
             
             <div className="space-y-4">
               <div className="flex items-start gap-4 p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20">
@@ -161,7 +161,7 @@ export const SectionFive = () => {
 
         {/* Other GADs Reference */}
         <div className="section-card p-5 sm:p-6">
-          <h3 className="font-semibold text-foreground mb-4">Referência: Códigos das GADs</h3>
+          <h3 className="section-heading">Referência: Códigos das GADs</h3>
           <p className="text-sm text-muted-foreground mb-4 text-justify leading-relaxed">
             Para referência, seguem os códigos das Gerências de Administração das CREs:
           </p>
