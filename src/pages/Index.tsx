@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef, lazy, Suspense } from "react";
-import { Menu, ClipboardList, FileText, Table2, Upload, CheckCircle, Phone, Scale } from "lucide-react";
+import { Menu, ClipboardList, FileText, Table2, Upload, CheckCircle, Phone, Scale, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PopSidebar } from "@/components/pop/PopSidebar";
 import { HeroCover } from "@/components/pop/HeroCover";
@@ -9,6 +9,7 @@ import { SectionOne } from "@/components/pop/SectionOne";
 import { ReadingProgressBar } from "@/components/pop/ReadingProgressBar";
 import { AnimatedSection } from "@/components/pop/AnimatedSection";
 import { BottomToolbar } from "@/components/pop/BottomToolbar";
+import { CommandPalette } from "@/components/pop/CommandPalette";
 
 // Lazy load sections below the fold to reduce initial bundle
 const SectionTwo = lazy(() => import("@/components/pop/SectionTwo").then(m => ({ default: m.SectionTwo })));
@@ -21,17 +22,34 @@ const BackToTop = lazy(() => import("@/components/pop/BackToTop").then(m => ({ d
 const DocumentFooter = lazy(() => import("@/components/pop/DocumentFooter").then(m => ({ default: m.DocumentFooter })));
 const DownloadSection = lazy(() => import("@/components/pop/DownloadSection").then(m => ({ default: m.DownloadSection })));
 
-// Loading placeholder for lazy components
+// Loading placeholder for lazy components - Premium Shimmer
 const SectionLoader = () => (
-  <div className="py-8 flex justify-center">
-    <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+  <div className="py-8 space-y-4">
+    <div className="skeleton-shimmer h-12 w-3/4 mx-auto" />
+    <div className="skeleton-shimmer h-40 w-full rounded-xl" />
+    <div className="skeleton-shimmer h-24 w-full rounded-xl" />
   </div>
 );
+
 
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("introducao");
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  // Global keyboard shortcut for search (Cmd/Ctrl + K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setSearchOpen(prev => !prev);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const handleSectionClick = useCallback((sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -111,11 +129,14 @@ const Index = () => {
         />
 
         <main className="flex-1 lg:ml-0">
-          {/* Mobile menu button - adjusted position for bottom toolbar */}
-          <div className="lg:hidden fixed bottom-20 left-4 z-40 no-print">
-            <Button size="lg" className="rounded-full shadow-xl" onClick={() => setSidebarOpen(true)}>
+          {/* Mobile buttons - adjusted position for bottom toolbar */}
+          <div className="lg:hidden fixed bottom-20 left-4 z-40 no-print flex gap-2">
+            <Button size="lg" className="rounded-full shadow-xl" onClick={() => setSidebarOpen(true)} aria-label="Abrir menu de navegação">
               <Menu className="w-5 h-5 mr-2" />
               Menu
+            </Button>
+            <Button size="lg" variant="outline" className="rounded-full shadow-xl bg-background" onClick={() => setSearchOpen(true)} aria-label="Abrir busca">
+              <Search className="w-5 h-5" />
             </Button>
           </div>
 
@@ -198,7 +219,14 @@ const Index = () => {
         <BackToTop />
       </Suspense>
       <BottomToolbar onPrint={handlePrint} />
-      
+
+      {/* Global Search Command Palette */}
+      <CommandPalette
+        isOpen={searchOpen}
+        onClose={() => setSearchOpen(false)}
+        onNavigate={handleSectionClick}
+      />
+
     </div>
   );
 };

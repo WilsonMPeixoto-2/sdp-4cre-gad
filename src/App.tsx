@@ -16,6 +16,10 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          {/* Accessibility: Skip to main content link */}
+          <a href="#introducao" className="skip-link">
+            Pular para conteúdo principal
+          </a>
           <Routes>
             <Route path="/" element={<Index />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

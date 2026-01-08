@@ -18,7 +18,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
     if (savedTheme === 'dark') {
       setIsDark(true);
     }
-    
+
     const savedViewMode = localStorage.getItem('viewMode') as ViewMode;
     if (savedViewMode) {
       setViewMode(savedViewMode);
@@ -86,7 +86,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
       <div className="fixed bottom-0 left-0 right-0 z-50 no-print">
         {/* Gradient fade effect */}
         <div className="h-6 bg-gradient-to-t from-background/80 to-transparent pointer-events-none" />
-        
+
         {/* Main toolbar */}
         <div className="bg-background/95 backdrop-blur-xl border-t border-border/50 shadow-lg">
           <div className="container mx-auto px-4 py-2 sm:py-3">
@@ -184,7 +184,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       variant="default"
                       size="sm"
                       onClick={onPrint}
-                      className="h-9 px-3 sm:px-4 shadow-md"
+                      className="h-9 px-3 sm:px-4 shadow-md btn-premium hover-glow"
                     >
                       <Download className="w-4 h-4 sm:mr-2" />
                       <span className="hidden sm:inline text-sm">Download PDF</span>

@@ -61,59 +61,59 @@ export const PopSidebar = ({
   onClose
 }: PopSidebarProps) => {
   return <>
-      {/* Mobile Overlay */}
-      {isOpen && <div className="fixed inset-0 bg-foreground/60 backdrop-blur-sm z-40 lg:hidden" onClick={onClose} />}
+    {/* Mobile Overlay */}
+    {isOpen && <div className="fixed inset-0 bg-foreground/60 backdrop-blur-sm z-40 lg:hidden" onClick={onClose} />}
 
-      {/* Sidebar */}
-      <aside className={cn("fixed lg:sticky top-0 left-0 z-50 lg:z-30 h-screen w-72 transform transition-all duration-300 ease-out lg:transform-none no-print shadow-2xl lg:shadow-lg", isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0")} style={{
+    {/* Sidebar */}
+    <aside className={cn("fixed lg:sticky top-0 left-0 z-50 lg:z-30 h-screen w-72 transform transition-all duration-300 ease-out lg:transform-none no-print shadow-2xl lg:shadow-lg", isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0")} style={{
       background: 'linear-gradient(180deg, hsl(222, 47%, 13%) 0%, hsl(222, 47%, 9%) 100%)'
     }}>
-        <div className="flex flex-col h-full">
-          {/* Sidebar Header */}
-          <div className="p-4 lg:p-5 border-b border-sidebar-border/50">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-lg">
-                  <FileText className="w-5 h-5 text-accent-foreground" />
-                </div>
-                <div>
-                  <h2 className="font-heading font-bold text-sidebar-foreground text-lg">POP</h2>
-                  <p className="text-xs text-sidebar-foreground/60">Prestação de Contas SDP</p>
-                </div>
+      <div className="flex flex-col h-full">
+        {/* Sidebar Header */}
+        <div className="p-4 lg:p-5 border-b border-sidebar-border/50">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center shadow-lg">
+                <FileText className="w-5 h-5 text-accent-foreground" />
               </div>
-              <Button variant="ghost" size="icon" onClick={onClose} className="lg:hidden text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50 h-8 w-8">
-                <X className="w-5 h-5" />
-              </Button>
+              <div>
+                <h2 className="font-heading font-bold text-sidebar-foreground text-lg">POP</h2>
+                <p className="text-xs text-sidebar-foreground/60">Prestação de Contas SDP</p>
+              </div>
             </div>
-          </div>
-
-          {/* Navigation */}
-          <nav className="flex-1 overflow-y-auto p-3 lg:p-4 scrollbar-thin">
-            <p className="text-[10px] font-bold text-sidebar-foreground/40 uppercase tracking-widest mb-3 px-2">
-              Sumário
-            </p>
-            <ul className="space-y-1">
-              {sections.map(section => <li key={section.id}>
-                  <button onClick={() => {
-                onSectionClick(section.id);
-                onClose();
-              }} className={cn("w-full text-left flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200", activeSection === section.id ? "bg-accent text-accent-foreground shadow-lg" : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/30")}>
-                    
-                    <span className="flex-1 text-sm font-medium leading-tight">{section.title}</span>
-                    <ChevronRight className={cn("w-4 h-4 transition-transform duration-200", activeSection === section.id && "rotate-90")} />
-                  </button>
-                </li>)}
-            </ul>
-          </nav>
-
-          {/* Footer */}
-          <div className="p-4 border-t border-sidebar-border/30">
-            <div className="text-[10px] text-sidebar-foreground/40 text-center space-y-0.5">
-              <p className="font-semibold">4ª CRE - GAD</p>
-              <p>Versão 2025</p>
-            </div>
+            <Button variant="ghost" size="icon" onClick={onClose} className="lg:hidden text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50 h-8 w-8">
+              <X className="w-5 h-5" />
+            </Button>
           </div>
         </div>
-      </aside>
-    </>;
+
+        {/* Navigation */}
+        <nav className="flex-1 overflow-y-auto p-3 lg:p-4 scrollbar-thin">
+          <p className="text-[10px] font-bold text-sidebar-foreground/40 uppercase tracking-widest mb-3 px-2">
+            Sumário
+          </p>
+          <ul className="space-y-1">
+            {sections.map(section => <li key={section.id}>
+              <button onClick={() => {
+                onSectionClick(section.id);
+                onClose();
+              }} className={cn("w-full text-left flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 icon-bounce", activeSection === section.id ? "bg-accent text-accent-foreground shadow-lg" : "text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/30")}>
+
+                <span className="flex-1 text-sm font-medium leading-tight">{section.title}</span>
+                <ChevronRight className={cn("w-4 h-4 transition-transform duration-200", activeSection === section.id && "rotate-90")} />
+              </button>
+            </li>)}
+          </ul>
+        </nav>
+
+        {/* Footer */}
+        <div className="p-4 border-t border-sidebar-border/30">
+          <div className="text-[10px] text-sidebar-foreground/40 text-center space-y-0.5">
+            <p className="font-semibold">4ª CRE - GAD</p>
+            <p>Versão 2025</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </>;
 };

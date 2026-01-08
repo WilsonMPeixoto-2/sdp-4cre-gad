@@ -1,0 +1,33 @@
+{
+    "name": "POP Prestação de Contas SDP",
+    "short_name": "POP SDP",
+    "description": "Procedimento Operacional Padrão para Prestação de Contas do Sistema Descentralizado de Pagamento no SEI!RIO - 4ª CRE/GAD",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#1e3a8a",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "pt-BR",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "education",
+        "productivity",
+        "utilities"
+    ],
+    "screenshots": [],
+    "prefer_related_applications": false
+}
