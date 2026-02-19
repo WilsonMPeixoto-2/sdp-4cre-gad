@@ -9,8 +9,8 @@
   :root {
     /* Modern Government Design System */
     /* Background - Subtle slate-50 gradient base */
-    --background: 210 40% 98%;
-    --foreground: 215 25% 27%;
+    --background: 210 34% 97%;
+    --foreground: 218 34% 18%;
     /* slate-700 for body text */
 
     --card: 0 0% 100%;
@@ -21,122 +21,122 @@
     --popover-foreground: 222 47% 11%;
 
     /* Primary - Deep Navy (#0F172A) */
-    --primary: 222 47% 11%;
+    --primary: 214 58% 20%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary - Soft Slate */
-    --secondary: 210 40% 96%;
+    --secondary: 208 30% 93%;
     --secondary-foreground: 222 47% 11%;
 
     /* Muted - Refined Slate Gray */
-    --muted: 210 40% 93%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 208 24% 89%;
+    --muted-foreground: 216 18% 38%;
     /* slate-500 */
 
     /* Accent - Sky Blue (#0EA5E9) */
-    --accent: 199 89% 48%;
+    --accent: 185 72% 33%;
     --accent-foreground: 0 0% 100%;
 
     /* Success - Professional Emerald */
-    --success: 160 84% 39%;
+    --success: 162 71% 32%;
     --success-foreground: 0 0% 100%;
 
     /* Warning - Amber */
-    --warning: 38 92% 50%;
+    --warning: 32 90% 42%;
     --warning-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
+    --border: 212 24% 84%;
     /* slate-200 */
     --input: 214 32% 91%;
-    --ring: 199 89% 48%;
+    --ring: 185 72% 33%;
     /* Sky blue accent */
 
-    --radius: 0.625rem;
+    --radius: 0.875rem;
 
     /* Sidebar - Deep Navy Gradient */
-    --sidebar-background: 222 47% 11%;
+    --sidebar-background: 214 58% 14%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary: 185 72% 40%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent: 214 33% 20%;
     /* slate-800 */
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 217 33% 17%;
     --sidebar-ring: 199 89% 48%;
 
     /* Custom tokens - Modern Government */
-    --section-header: 222 47% 11%;
+    --section-header: 214 58% 20%;
     /* Navy */
-    --section-number: 199 89% 48%;
+    --section-number: 185 72% 36%;
     /* Sky Blue */
-    --highlight-bg: 199 95% 95%;
+    --highlight-bg: 185 50% 92%;
     /* Sky-50 */
-    --table-header: 222 47% 11%;
-    --table-stripe: 210 40% 98%;
+    --table-header: 214 58% 20%;
+    --table-stripe: 210 26% 96%;
 
     /* Typography */
-    --font-heading: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
-    --font-body: 'Inter', system-ui, sans-serif;
+    --font-heading: 'Sora', 'Manrope', system-ui, sans-serif;
+    --font-body: 'Manrope', system-ui, sans-serif;
   }
 
   .dark {
-    --background: 222 47% 8%;
+    --background: 217 38% 10%;
     /* slate-950 */
-    --foreground: 210 40% 96%;
+    --foreground: 210 36% 95%;
     /* slate-100 */
 
-    --card: 222 47% 11%;
+    --card: 217 34% 13%;
     --card-foreground: 210 40% 96%;
 
-    --popover: 222 47% 11%;
+    --popover: 217 34% 13%;
     --popover-foreground: 210 40% 96%;
 
-    --primary: 199 89% 48%;
+    --primary: 191 72% 45%;
     /* Sky blue as primary in dark */
     --primary-foreground: 222 47% 8%;
 
-    --secondary: 217 33% 17%;
+    --secondary: 216 26% 18%;
     /* slate-800 */
     --secondary-foreground: 210 40% 96%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 216 24% 20%;
+    --muted-foreground: 214 17% 73%;
     /* slate-400 */
 
-    --accent: 199 89% 55%;
+    --accent: 189 72% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --success: 160 84% 45%;
+    --success: 162 67% 46%;
     --success-foreground: 222 47% 8%;
 
-    --warning: 38 92% 55%;
+    --warning: 33 90% 54%;
     --warning-foreground: 222 47% 8%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 217 33% 22%;
+    --border: 216 22% 28%;
     /* slate-700 */
     --input: 217 33% 22%;
-    --ring: 199 89% 48%;
+    --ring: 189 72% 50%;
 
-    --sidebar-background: 222 47% 8%;
+    --sidebar-background: 217 38% 10%;
     --sidebar-foreground: 210 40% 96%;
-    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary: 189 72% 50%;
     --sidebar-primary-foreground: 222 47% 8%;
-    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent: 216 26% 18%;
     --sidebar-accent-foreground: 210 40% 96%;
-    --sidebar-border: 217 33% 22%;
-    --sidebar-ring: 199 89% 55%;
+    --sidebar-border: 216 22% 28%;
+    --sidebar-ring: 189 72% 50%;
 
-    --section-header: 199 89% 55%;
-    --section-number: 199 89% 48%;
-    --highlight-bg: 217 33% 17%;
-    --table-header: 222 47% 15%;
-    --table-stripe: 222 47% 11%;
+    --section-header: 189 72% 50%;
+    --section-number: 189 72% 50%;
+    --highlight-bg: 216 26% 18%;
+    --table-header: 214 45% 22%;
+    --table-stripe: 217 28% 14%;
   }
 }
 
@@ -162,9 +162,9 @@
     pointer-events: none;
     z-index: -1;
     background:
-      linear-gradient(180deg, hsl(210 40% 96%) 0%, hsl(0 0% 100%) 50%, hsl(210 40% 98%) 100%),
-      radial-gradient(ellipse at 20% 0%, hsl(199 89% 48% / 0.03) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 100%, hsl(199 89% 48% / 0.02) 0%, transparent 50%);
+      linear-gradient(180deg, hsl(210 30% 95%) 0%, hsl(0 0% 100%) 45%, hsl(210 32% 97%) 100%),
+      radial-gradient(ellipse at 10% 0%, hsl(185 72% 33% / 0.05) 0%, transparent 52%),
+      radial-gradient(ellipse at 90% 100%, hsl(214 58% 20% / 0.035) 0%, transparent 58%);
   }
 
   .dark body::before {
@@ -225,7 +225,8 @@
     @apply bg-card rounded-xl border border-border transition-all duration-300;
     padding: 1.5rem;
     /* 24px consistent padding */
-    box-shadow: 0 4px 20px -4px hsl(215 25% 15% / 0.08), 0 2px 8px -2px hsl(215 25% 15% / 0.04);
+    box-shadow: 0 6px 24px -10px hsl(215 30% 14% / 0.14), 0 2px 8px -3px hsl(215 30% 14% / 0.08);
+    background-image: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(210 28% 99%) 100%);
   }
 
   @media (min-width: 640px) {
@@ -237,10 +238,11 @@
 
   .dark .section-card {
     box-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.3), 0 2px 8px -2px hsl(0 0% 0% / 0.2);
+    background-image: linear-gradient(180deg, hsl(var(--card)) 0%, hsl(216 30% 14%) 100%);
   }
 
   .section-card:hover {
-    box-shadow: 0 10px 40px -10px hsl(215 25% 15% / 0.12), 0 4px 16px -4px hsl(215 25% 15% / 0.06);
+    box-shadow: 0 14px 44px -14px hsl(215 30% 14% / 0.18), 0 8px 20px -8px hsl(215 30% 14% / 0.1);
   }
 
   .dark .section-card:hover {
@@ -334,7 +336,7 @@
     /* 40px */
     height: 2.5rem;
     flex-shrink: 0;
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(215 75% 28%) 100%);
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(214 62% 28%) 100%);
     box-shadow: 0 4px 14px -3px hsl(var(--primary) / 0.35);
   }
 
@@ -400,7 +402,7 @@
     padding-bottom: 0.875rem;
     font-size: 0.875rem;
     /* 14px */
-    background: linear-gradient(135deg, hsl(var(--table-header)) 0%, hsl(215 75% 28%) 100%);
+    background: linear-gradient(135deg, hsl(var(--table-header)) 0%, hsl(214 62% 26%) 100%);
   }
 
   .table-institutional td {
@@ -977,15 +979,15 @@
 /* Premium Color Tokens */
 @layer base {
   :root {
-    --accent-soft: 199 89% 95%;
-    --accent-medium: 199 89% 65%;
-    --accent-intense: 199 89% 40%;
+    --accent-soft: 185 52% 92%;
+    --accent-medium: 185 62% 48%;
+    --accent-intense: 185 72% 33%;
   }
 
   .dark {
-    --accent-soft: 199 50% 20%;
-    --accent-medium: 199 89% 55%;
-    --accent-intense: 199 89% 70%;
+    --accent-soft: 189 36% 22%;
+    --accent-medium: 189 58% 52%;
+    --accent-intense: 189 76% 68%;
   }
 }
 

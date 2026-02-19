@@ -13,19 +13,19 @@ interface CalloutProps {
 
 const variantStyles: Record<CalloutVariant, { bg: string; border: string; icon: string; iconComponent: LucideIcon }> = {
   info: {
-    bg: "bg-accent/10 dark:bg-accent/20",
+    bg: "bg-accent/12 dark:bg-accent/24",
     border: "border-l-accent",
     icon: "text-accent",
     iconComponent: Info,
   },
   warning: {
-    bg: "bg-warning/10 dark:bg-warning/20",
+    bg: "bg-warning/12 dark:bg-warning/22",
     border: "border-l-warning",
     icon: "text-warning",
     iconComponent: AlertTriangle,
   },
   success: {
-    bg: "bg-success/10 dark:bg-success/20",
+    bg: "bg-success/12 dark:bg-success/22",
     border: "border-l-success",
     icon: "text-success",
     iconComponent: CheckCircle,
@@ -45,7 +45,7 @@ export const Callout = ({
   return (
     <div
       className={cn(
-        "border-l-4 rounded-r-xl p-5",
+        "border-l-4 rounded-r-xl p-5 shadow-sm",
         styles.bg,
         styles.border,
         className
@@ -57,7 +57,7 @@ export const Callout = ({
           {title && (
             <p className="font-bold text-foreground mb-1">{title}</p>
           )}
-          <div className="text-sm text-muted-foreground leading-relaxed">
+          <div className="text-sm text-foreground/80 leading-relaxed">
             {children}
           </div>
         </div>

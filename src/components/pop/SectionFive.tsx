@@ -72,7 +72,7 @@ export const SectionFive = () => {
                 <FolderTree className="w-5 h-5" />
               </div>
               <div className="flex-1">
-                <h4 className="font-semibold text-foreground mb-1">5.1. Verifique a Árvore do Processo</h4>
+                <p className="font-semibold text-foreground mb-1">5.1. Verifique a Árvore do Processo</p>
                 <p className="text-sm text-muted-foreground mb-3 text-justify leading-relaxed">
                   Confira o menu lateral esquerdo que mostra a lista de arquivos. Todos os documentos 
                   devem estar listados corretamente.
@@ -88,7 +88,7 @@ export const SectionFive = () => {
                 <FileCheck className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-1">5.2. Confira Assinaturas</h4>
+                <p className="font-semibold text-foreground mb-1">5.2. Confira Assinaturas</p>
                 <p className="text-sm text-muted-foreground text-justify leading-relaxed">
                   Verifique se todos os documentos estão autenticados/assinados. 
                   Devem ter um <strong className="text-foreground">ícone de check</strong> ao lado 

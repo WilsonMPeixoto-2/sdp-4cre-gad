@@ -20,28 +20,28 @@ const variantConfig: Record<SideNoteVariant, {
   attention: {
     headerBg: "bg-primary",
     headerText: "text-primary-foreground",
-    bodyBg: "bg-primary/5 border-primary/20",
+    bodyBg: "bg-primary/8 border-primary/25",
     icon: AlertTriangle,
     defaultTitle: "PONTO DE ATENÇÃO",
   },
   reading: {
     headerBg: "bg-primary",
     headerText: "text-primary-foreground",
-    bodyBg: "bg-primary/5 border-primary/20",
+    bodyBg: "bg-primary/8 border-primary/25",
     icon: BookOpen,
     defaultTitle: "LEITURA COMPLEMENTAR",
   },
   tip: {
     headerBg: "bg-accent",
     headerText: "text-accent-foreground",
-    bodyBg: "bg-accent/5 border-accent/20",
+    bodyBg: "bg-accent/8 border-accent/25",
     icon: Lightbulb,
     defaultTitle: "DICA",
   },
   note: {
     headerBg: "bg-muted",
     headerText: "text-foreground",
-    bodyBg: "bg-muted/50 border-border",
+    bodyBg: "bg-muted/60 border-border",
     icon: Info,
     defaultTitle: "OBSERVAÇÃO",
   },
@@ -59,8 +59,8 @@ export const SideNote = ({
 
   return (
     <aside
-      className={cn(
-        "rounded-lg overflow-hidden border shadow-sm",
+        className={cn(
+        "rounded-xl overflow-hidden border shadow-sm",
         config.bodyBg,
         className
       )}
@@ -79,7 +79,7 @@ export const SideNote = ({
       
       {/* Body */}
       <div className="p-4">
-        <div className="text-sm text-muted-foreground leading-relaxed">
+        <div className="text-sm text-foreground/85 leading-relaxed">
           {children}
         </div>
       </div>

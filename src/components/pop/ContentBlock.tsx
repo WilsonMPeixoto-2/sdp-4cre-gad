@@ -60,7 +60,7 @@ export const ContentBlock = ({
   return (
     <div
       className={cn(
-        "rounded-xl border-l-4 bg-card p-4 sm:p-5 shadow-sm",
+        "rounded-xl border-l-4 bg-card p-4 sm:p-5 shadow-sm border border-border/60",
         config.borderColor,
         className
       )}
@@ -70,10 +70,10 @@ export const ContentBlock = ({
           <IconComponent className={cn("w-4 h-4", config.iconColor)} />
         </div>
         <div className="flex-1 min-w-0">
-          <h4 className="font-semibold text-foreground text-sm sm:text-base mb-2">
+          <h3 className="font-semibold text-foreground text-sm sm:text-base mb-2">
             {displayTitle}
-          </h4>
-          <div className="text-sm text-muted-foreground leading-relaxed space-y-2">
+          </h3>
+          <div className="text-sm text-foreground/80 leading-relaxed space-y-2">
             {children}
           </div>
         </div>

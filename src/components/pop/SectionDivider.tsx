@@ -13,13 +13,13 @@ export const SectionDivider = forwardRef<HTMLDivElement, SectionDividerProps>(
     return (
       <div ref={ref} className="relative py-14 sm:py-18 my-8 sm:my-12 -mx-4 sm:-mx-0 section-divider-print">
         {/* Premium Gradient Background with Noise Texture */}
-        <div className="absolute inset-0 overflow-hidden print-hide-effects noise-texture" style={{ background: 'linear-gradient(135deg, hsl(215, 75%, 32%) 0%, hsl(215, 75%, 26%) 50%, hsl(215, 75%, 22%) 100%)' }}>
+        <div className="absolute inset-0 overflow-hidden print-hide-effects noise-texture" style={{ background: 'linear-gradient(135deg, hsl(214, 58%, 26%) 0%, hsl(214, 54%, 22%) 50%, hsl(214, 58%, 18%) 100%)' }}>
           {/* Subtle Pattern */}
           <div className="absolute inset-0 opacity-[0.06]">
             <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%221%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]"></div>
           </div>
           {/* Premium Glow Effects */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/15 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/4"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/18 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/4"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-foreground/8 rounded-full blur-[60px] translate-y-1/2 -translate-x-1/4"></div>
         </div>
 

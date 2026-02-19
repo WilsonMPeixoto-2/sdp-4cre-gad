@@ -206,7 +206,7 @@ export const SectionContacts = ({ onPrint }: SectionContactsProps) => {
                 <Printer className="w-5 h-5 text-primary" />
               </div>
               <div>
-                <h4 className="font-semibold text-foreground">Versão para Impressão</h4>
+                <h3 className="font-semibold text-foreground">Versão para Impressão</h3>
                 <p className="text-sm text-muted-foreground">Imprima este guia para consulta offline</p>
               </div>
             </div>
@@ -227,7 +227,7 @@ export const SectionContacts = ({ onPrint }: SectionContactsProps) => {
             <span className="text-sm">Gerência de Administração (GAD)</span><br />
             <span className="text-xs text-muted-foreground/70 mt-2 block flex items-center justify-center gap-2">
               <Calendar className="w-3 h-3" />
-              Última atualização: 16 de dezembro de 2025
+              Última atualização: 19 de fevereiro de 2026
             </span>
           </p>
         </div>

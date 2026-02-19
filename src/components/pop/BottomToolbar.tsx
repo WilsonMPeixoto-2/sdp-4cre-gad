@@ -85,10 +85,10 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
     <TooltipProvider>
       <div className="fixed bottom-0 left-0 right-0 z-50 no-print">
         {/* Gradient fade effect */}
-        <div className="h-6 bg-gradient-to-t from-background/80 to-transparent pointer-events-none" />
+        <div className="h-8 bg-gradient-to-t from-background/90 to-transparent pointer-events-none" />
 
         {/* Main toolbar */}
-        <div className="bg-background/95 backdrop-blur-xl border-t border-border/50 shadow-lg">
+        <div className="bg-background/90 backdrop-blur-xl border-t border-border/60 shadow-[0_-10px_35px_-18px_hsl(214_40%_20%/_0.45)]">
           <div className="container mx-auto px-4 py-2 sm:py-3">
             <div className="flex items-center justify-between gap-2 sm:gap-4">
               {/* Document info */}
@@ -118,7 +118,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       size="sm"
                       onClick={cycleViewMode}
                       aria-label="Alternar visualização"
-                      className={`h-9 w-9 ${viewMode !== 'auto' ? 'bg-muted' : ''}`}
+                      className={`h-9 w-9 rounded-xl ${viewMode !== 'auto' ? 'bg-muted' : ''}`}
                     >
                       {getViewModeIcon()}
                     </Button>
@@ -135,7 +135,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       size="sm"
                       onClick={toggleDarkMode}
                       aria-label={isDark ? "Ativar modo claro" : "Ativar modo escuro"}
-                      className="h-9 w-9"
+                      className="h-9 w-9 rounded-xl"
                     >
                       {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
                     </Button>
@@ -152,7 +152,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       size="sm"
                       onClick={handleShare}
                       aria-label="Compartilhar página"
-                      className="h-9 w-9"
+                      className="h-9 w-9 rounded-xl"
                     >
                       <Share2 className="w-4 h-4" />
                     </Button>
@@ -171,7 +171,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       size="sm"
                       onClick={onPrint}
                       aria-label="Imprimir documento"
-                      className="h-9 w-9 sm:w-auto sm:px-3"
+                      className="h-9 w-9 sm:w-auto sm:px-3 rounded-xl"
                     >
                       <Printer className="w-4 h-4 sm:mr-2" />
                       <span className="hidden sm:inline text-sm">Imprimir</span>
@@ -189,7 +189,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       size="sm"
                       onClick={onPrint}
                       aria-label="Baixar PDF"
-                      className="h-9 px-3 sm:px-4 shadow-md btn-premium hover-glow"
+                      className="h-9 px-3 sm:px-4 rounded-xl shadow-md btn-premium hover-glow"
                     >
                       <Download className="w-4 h-4 sm:mr-2" />
                       <span className="hidden sm:inline text-sm">Download PDF</span>

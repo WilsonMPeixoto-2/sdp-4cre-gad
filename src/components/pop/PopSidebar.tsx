@@ -66,7 +66,7 @@ export const PopSidebar = ({
 
     {/* Sidebar */}
     <aside className={cn("fixed lg:sticky top-0 left-0 z-50 lg:z-30 h-screen w-72 transform transition-all duration-300 ease-out lg:transform-none no-print shadow-2xl lg:shadow-lg", isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0")} style={{
-      background: 'linear-gradient(180deg, hsl(222, 47%, 13%) 0%, hsl(222, 47%, 9%) 100%)'
+      background: 'linear-gradient(180deg, hsl(214, 58%, 15%) 0%, hsl(214, 52%, 12%) 55%, hsl(214, 58%, 10%) 100%)'
     }}>
       <div className="flex flex-col h-full">
         {/* Sidebar Header */}

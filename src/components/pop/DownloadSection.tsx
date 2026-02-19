@@ -34,7 +34,7 @@ export const DownloadSection = () => {
   return (
     <div className="section-card p-6 sm:p-8 my-8">
       <div className="flex items-center gap-3 mb-6">
-        <div className="p-2.5 rounded-xl bg-primary/10">
+        <div className="p-2.5 rounded-xl bg-primary/12 ring-1 ring-primary/20">
           <Download className="w-5 h-5 text-primary" />
         </div>
         <div>
@@ -47,9 +47,9 @@ export const DownloadSection = () => {
         {downloads.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col p-5 rounded-xl border transition-all duration-200 bg-card border-border/50 hover:border-primary/30 hover:shadow-md cursor-pointer group"
+            className="flex flex-col p-5 rounded-xl border transition-all duration-300 bg-card border-border/60 hover:border-primary/35 hover:shadow-lg group"
           >
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-primary/10 group-hover:bg-primary/20 transition-colors">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-primary/12 ring-1 ring-primary/20 group-hover:bg-primary/20 transition-colors">
               <span className="text-primary">
                 {item.icon}
               </span>
