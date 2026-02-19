@@ -81,7 +81,7 @@ export const PopSidebar = ({
                 <p className="text-xs text-sidebar-foreground/60">Prestação de Contas SDP</p>
               </div>
             </div>
-            <Button variant="ghost" size="icon" onClick={onClose} className="lg:hidden text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50 h-8 w-8">
+            <Button variant="ghost" size="icon" onClick={onClose} aria-label="Fechar menu lateral" className="lg:hidden text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent/50 h-8 w-8">
               <X className="w-5 h-5" />
             </Button>
           </div>
@@ -110,7 +110,7 @@ export const PopSidebar = ({
         <div className="p-4 border-t border-sidebar-border/30">
           <div className="text-[10px] text-sidebar-foreground/40 text-center space-y-0.5">
             <p className="font-semibold">4ª CRE - GAD</p>
-            <p>Versão 2025</p>
+            <p>Versão 2026</p>
           </div>
         </div>
       </div>

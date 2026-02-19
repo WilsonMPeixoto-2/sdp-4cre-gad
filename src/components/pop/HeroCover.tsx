@@ -38,7 +38,7 @@ export const HeroCover = () => {
 
         {/* Main Title - Larger and Centered */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-6 py-3 rounded-xl text-sm font-bold mb-8 shadow-xl tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 bg-[hsl(199,89%,35%)] text-white px-6 py-3 rounded-xl text-sm font-bold mb-8 shadow-xl tracking-wider uppercase">
             <FileText className="w-4 h-4" />
             Procedimento Operacional Padrão
           </div>
@@ -61,7 +61,7 @@ export const HeroCover = () => {
             { icon: <Building2 className="w-6 h-6" />, label: "GAD", desc: "Gerência de Administração" },
             { icon: <BookOpen className="w-6 h-6" />, label: "POP", desc: "Procedimento Operacional Padrão" },
             { icon: <FileText className="w-6 h-6" />, label: "SEI!RIO", desc: "Sistema Eletrônico" },
-            { icon: <Calendar className="w-6 h-6" />, label: "V. 1.0", desc: "Dezembro/2025" },
+            { icon: <Calendar className="w-6 h-6" />, label: "V. 1.1", desc: "Fevereiro/2026" },
           ].map((item, i) => (
             <div
               key={i}

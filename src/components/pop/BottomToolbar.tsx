@@ -95,7 +95,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
               <div className="hidden sm:flex items-center gap-3 min-w-0">
                 <div className="flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-lg">
                   <FileText className="w-4 h-4 text-primary shrink-0" />
-                  <span className="text-xs font-medium text-primary truncate">POP SDP 2025</span>
+                  <span className="text-xs font-medium text-primary truncate">POP SDP 2026</span>
                 </div>
                 <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-lg">
                   <BookOpen className="w-4 h-4 text-muted-foreground shrink-0" />
@@ -117,6 +117,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       variant="ghost"
                       size="sm"
                       onClick={cycleViewMode}
+                      aria-label="Alternar visualização"
                       className={`h-9 w-9 ${viewMode !== 'auto' ? 'bg-muted' : ''}`}
                     >
                       {getViewModeIcon()}
@@ -133,6 +134,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       variant="ghost"
                       size="sm"
                       onClick={toggleDarkMode}
+                      aria-label={isDark ? "Ativar modo claro" : "Ativar modo escuro"}
                       className="h-9 w-9"
                     >
                       {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
@@ -149,6 +151,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       variant="ghost"
                       size="sm"
                       onClick={handleShare}
+                      aria-label="Compartilhar página"
                       className="h-9 w-9"
                     >
                       <Share2 className="w-4 h-4" />
@@ -167,6 +170,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       variant="ghost"
                       size="sm"
                       onClick={onPrint}
+                      aria-label="Imprimir documento"
                       className="h-9 w-9 sm:w-auto sm:px-3"
                     >
                       <Printer className="w-4 h-4 sm:mr-2" />
@@ -184,6 +188,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       variant="default"
                       size="sm"
                       onClick={onPrint}
+                      aria-label="Baixar PDF"
                       className="h-9 px-3 sm:px-4 shadow-md btn-premium hover-glow"
                     >
                       <Download className="w-4 h-4 sm:mr-2" />

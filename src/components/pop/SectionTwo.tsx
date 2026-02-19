@@ -17,9 +17,9 @@ export const SectionTwo = () => {
               <FileText className="w-5 h-5 text-accent" />
             </div>
             <div>
-              <h4 className="font-semibold text-foreground">
+              <h3 className="font-semibold text-foreground">
                 Modelo do Despacho de Encaminhamento
-              </h4>
+              </h3>
               <p className="text-sm text-muted-foreground">
                 Documento editável (.docx) para formalização da prestação de contas
               </p>

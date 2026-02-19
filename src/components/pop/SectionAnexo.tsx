@@ -93,7 +93,7 @@ export const SectionAnexo = () => {
               {checkedCount} de {totalCount} documentos reunidos
             </span>
           </div>
-          <Progress value={progress} className="h-2.5" />
+          <Progress value={progress} aria-label="Progresso da documentação reunida" className="h-2.5" />
           {progress === 100 && (
             <p className="text-sm text-success font-medium mt-2 flex items-center gap-1">
               <Check className="w-4 h-4" />
@@ -118,6 +118,7 @@ export const SectionAnexo = () => {
                 <Checkbox
                   checked={checked}
                   onCheckedChange={() => toggleItem(item.documento)}
+                  aria-label={`Marcar documento: ${item.documento}`}
                   className="shrink-0"
                 />
                 <span className={`flex-1 text-sm sm:text-base transition-all duration-200 ${
@@ -247,7 +248,7 @@ export const SectionAnexo = () => {
             <CreditCard className="w-5 h-5 text-blue-500 dark:text-blue-400" />
           </div>
           <div>
-            <h4 className="font-semibold text-foreground mb-2">Pagamentos via Cartão de Pagamento (Res. CGM nº 2067/2025)</h4>
+            <h3 className="font-semibold text-foreground mb-2">Pagamentos via Cartão de Pagamento (Res. CGM nº 2067/2025)</h3>
             <p className="text-muted-foreground text-sm leading-relaxed text-justified">
               Se a unidade utilizar o <strong className="text-foreground">Cartão de Pagamento</strong>, além da Nota Fiscal (Art. 22), 
               deve-se anexar obrigatoriamente o <strong className="text-foreground">comprovante da transação do cartão</strong> (filipeta ou extrato). 
@@ -264,7 +265,7 @@ export const SectionAnexo = () => {
             <Calculator className="w-5 h-5 text-amber-500 dark:text-amber-400" />
           </div>
           <div>
-            <h4 className="font-semibold text-foreground mb-2">Retenção de Tributos (Res. CGM nº 1.176/2015)</h4>
+            <h3 className="font-semibold text-foreground mb-2">Retenção de Tributos (Res. CGM nº 1.176/2015)</h3>
             <p className="text-muted-foreground text-sm leading-relaxed text-justified mb-2">
               Mesmo no SDP, a <strong className="text-foreground">regra de retenção na fonte se aplica</strong>. 
               Se você pagar um prestador de serviço (PJ ou PF) pelo valor bruto sem reter o ISS, INSS ou IRRF quando devido, a prestação de contas será reprovada.
@@ -285,7 +286,7 @@ export const SectionAnexo = () => {
             <CalendarClock className="w-5 h-5 text-red-500 dark:text-red-400" />
           </div>
           <div>
-            <h4 className="font-semibold text-foreground mb-2">Encerramento do Exercício 2025</h4>
+            <h3 className="font-semibold text-foreground mb-2">Encerramento do Exercício 2025</h3>
             <p className="text-muted-foreground text-sm leading-relaxed text-justified">
               <strong className="text-foreground">Atenção especial em dezembro:</strong> A regra geral de 120 dias para prestação de contas fica suspensa/alterada para o fechamento do ano. 
               O prazo para devolver saldo não utilizado ou prestar contas é <strong className="text-foreground">encurtado drasticamente</strong> (geralmente primeira quinzena de dezembro/janeiro). 
@@ -302,7 +303,7 @@ export const SectionAnexo = () => {
             <AlertTriangle className="w-5 h-5 text-primary" />
           </div>
           <div>
-            <h4 className="font-semibold text-foreground mb-2">Atenção</h4>
+            <h3 className="font-semibold text-foreground mb-2">Atenção</h3>
             <p className="text-muted-foreground text-sm leading-relaxed text-justified">
               Os comprovantes de despesa devem conter necessariamente: <strong className="text-foreground">discriminação clara do serviço prestado ou material fornecido</strong> (não se admitindo generalização ou abreviaturas) e <strong className="text-foreground">data da emissão</strong>. 
               Despesas proibidas estão listadas taxativamente no Art. 8º do Decreto Rio nº 50.162/2022.
