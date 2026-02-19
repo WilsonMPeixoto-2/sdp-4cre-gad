@@ -189,6 +189,20 @@
     letter-spacing: -0.02em;
   }
 
+  h2 {
+    font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.028em;
+  }
+
+  h3 {
+    font-size: clamp(1.2rem, 1.85vw, 1.55rem);
+    line-height: 1.35;
+    font-weight: 650;
+    letter-spacing: -0.018em;
+  }
+
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
@@ -627,8 +641,12 @@
   }
 
   .bg-dot-grid {
-    background-image: radial-gradient(hsl(var(--foreground) / 0.08) 1px, transparent 1px);
+    background-image: radial-gradient(hsl(var(--foreground) / 0.06) 1px, transparent 1px);
     background-size: 32px 32px;
+  }
+
+  .dark .bg-dot-grid {
+    background-image: radial-gradient(hsl(var(--foreground) / 0.08) 1px, transparent 1px);
   }
 
   /* ===== CONSISTENT ICON SIZING ===== */

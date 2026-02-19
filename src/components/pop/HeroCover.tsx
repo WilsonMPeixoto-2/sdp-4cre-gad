@@ -67,7 +67,7 @@ export const HeroCover = () => {
                 <span className="text-[hsl(var(--accent-solid))]">{item.icon}</span>
               </div>
               <p className="text-[hsl(var(--text-primary))] font-bold text-base tracking-wide">{item.label}</p>
-              <p className="text-[hsl(var(--text-secondary))] text-xs mt-1">{item.desc}</p>
+              <p className="text-[hsl(var(--text-secondary))] text-sm mt-1">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -77,7 +77,7 @@ export const HeroCover = () => {
           <div className="w-8 h-12 border-2 border-[hsl(var(--border-default))] rounded-full mx-auto flex items-start justify-center p-2">
             <div className="w-1.5 h-3 bg-[hsl(var(--text-secondary))] rounded-full animate-pulse" />
           </div>
-          <p className="text-[hsl(var(--text-tertiary))] text-sm mt-4 tracking-wide">Role para continuar</p>
+          <p className="text-[hsl(var(--text-tertiary))] text-base mt-4 tracking-wide">Role para continuar</p>
         </div>
       </div>
     </div>
