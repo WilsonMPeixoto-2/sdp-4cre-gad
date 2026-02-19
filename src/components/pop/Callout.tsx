@@ -1,7 +1,7 @@
-import { Info, AlertTriangle, CheckCircle, LucideIcon } from "lucide-react";
+﻿import { Info, AlertTriangle, CheckCircle, LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type CalloutVariant = "info" | "warning" | "success" | "danger";
+type CalloutVariant = "info" | "warning" | "success";
 
 interface CalloutProps {
   variant?: CalloutVariant;
@@ -11,26 +11,24 @@ interface CalloutProps {
   icon?: LucideIcon;
 }
 
-const variantStyles: Record<CalloutVariant, { className: string; icon: string; iconComponent: LucideIcon }> = {
+const variantStyles: Record<CalloutVariant, { bg: string; border: string; icon: string; iconComponent: LucideIcon }> = {
   info: {
-    className: "callout-info",
+    bg: "bg-accent/12 dark:bg-accent/24",
+    border: "border-l-accent",
     icon: "text-accent",
     iconComponent: Info,
   },
   warning: {
-    className: "callout-warning",
+    bg: "bg-warning/12 dark:bg-warning/22",
+    border: "border-l-warning",
     icon: "text-warning",
     iconComponent: AlertTriangle,
   },
   success: {
-    className: "callout-success",
+    bg: "bg-success/12 dark:bg-success/22",
+    border: "border-l-success",
     icon: "text-success",
     iconComponent: CheckCircle,
-  },
-  danger: {
-    className: "callout-danger",
-    icon: "text-destructive",
-    iconComponent: AlertTriangle,
   },
 };
 
@@ -47,18 +45,19 @@ export const Callout = ({
   return (
     <div
       className={cn(
-        "callout",
-        styles.className,
+        "border-l-4 rounded-r-xl p-5 shadow-sm",
+        styles.bg,
+        styles.border,
         className
       )}
     >
-      <div className="flex items-start gap-3 w-full">
-        <IconComponent className={cn("callout-icon", styles.icon)} />
+      <div className="flex items-start gap-3">
+        <IconComponent className={cn("w-5 h-5 flex-shrink-0 mt-0.5", styles.icon)} />
         <div className="flex-1 min-w-0">
           {title && (
-            <p className="callout-title text-[hsl(var(--text-primary))]">{title}</p>
+            <p className="font-bold text-foreground mb-1">{title}</p>
           )}
-          <div className="callout-text">
+          <div className="text-sm text-foreground/80 leading-relaxed">
             {children}
           </div>
         </div>

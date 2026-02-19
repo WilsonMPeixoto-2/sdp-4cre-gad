@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef, lazy, Suspense } from "react";
+﻿import { useState, useEffect, useCallback, useRef, lazy, Suspense } from "react";
 import { Menu, ClipboardList, FileText, Table2, Upload, CheckCircle, Phone, Scale, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PopSidebar } from "@/components/pop/PopSidebar";
@@ -36,7 +36,6 @@ const SectionLoader = () => (
 const Index = () => {
   const [activeSection, setActiveSection] = useState("introducao");
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [sidebarVisible, setSidebarVisible] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
   // Global keyboard shortcut for search (Cmd/Ctrl + K)
@@ -113,28 +112,8 @@ const Index = () => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const hero = document.getElementById("hero-cover");
-    if (!hero) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        setSidebarVisible(!entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-
-    observer.observe(hero);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <div className="min-h-screen bg-background">
-      <a href="#main-content" className="skip-link no-print">
-        Ir para o conteudo principal
-      </a>
-
       {/* Reading Progress Bar */}
       <ReadingProgressBar />
 
@@ -147,12 +126,11 @@ const Index = () => {
           onSectionClick={handleSectionClick}
           isOpen={sidebarOpen}
           onClose={() => setSidebarOpen(false)}
-          isVisible={sidebarVisible}
         />
 
-        <main id="main-content" className="flex-1">
+        <main className="flex-1 lg:ml-0">
           {/* Mobile buttons - adjusted position for bottom toolbar */}
-          <div className="xl:hidden fixed bottom-20 left-4 z-40 no-print flex gap-2">
+          <div className="lg:hidden fixed bottom-20 left-4 z-40 no-print flex gap-2">
             <Button size="lg" className="rounded-full shadow-xl" onClick={() => setSidebarOpen(true)} aria-label="Abrir menu de navegação">
               <Menu className="w-5 h-5 mr-2" />
               Menu
@@ -162,7 +140,7 @@ const Index = () => {
             </Button>
           </div>
 
-          <div className="mx-auto w-full max-w-[768px] px-5 md:px-12 xl:px-6 py-8 md:py-12">
+          <div className="container mx-auto px-4 py-8 max-w-4xl">
             <div className="space-y-8">
               <AnimatedSection>
                 <SectionIntro />
