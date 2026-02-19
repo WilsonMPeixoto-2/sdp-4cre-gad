@@ -30,6 +30,11 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
   }, []);
 
   const toggleDarkMode = () => {
+    document.documentElement.classList.add("transitioning");
+    window.setTimeout(() => {
+      document.documentElement.classList.remove("transitioning");
+    }, 320);
+
     setIsDark(!isDark);
     if (!isDark) {
       document.documentElement.classList.add('dark');

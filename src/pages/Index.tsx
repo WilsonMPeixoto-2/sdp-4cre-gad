@@ -140,7 +140,7 @@ const Index = () => {
             </Button>
           </div>
 
-          <div className="container mx-auto px-4 py-8 max-w-4xl">
+          <div className="container mx-auto px-4 py-20 md:py-28 max-w-4xl">
             <div className="space-y-8">
               <AnimatedSection>
                 <SectionIntro />
