@@ -7,14 +7,14 @@
 
 @layer base {
   :root {
-    --bg-deep: 210 50% 8%;
-    --bg-surface: 210 40% 12%;
-    --bg-elevated: 210 35% 16%;
-    --bg-glass: 210 40% 15% / 0.6;
+    --bg-deep: 210 45% 98%;
+    --bg-surface: 0 0% 100%;
+    --bg-elevated: 210 38% 96%;
+    --bg-glass: 0 0% 100% / 0.75;
 
-    --text-primary: 210 20% 95%;
-    --text-secondary: 210 15% 65%;
-    --text-tertiary: 210 10% 45%;
+    --text-primary: 215 28% 17%;
+    --text-secondary: 215 16% 38%;
+    --text-tertiary: 215 12% 54%;
 
     --accent-start: 199 89% 48%;
     --accent-end: 187 85% 53%;
@@ -29,8 +29,8 @@
     --callout-danger-bg: 0 84% 60% / 0.08;
     --callout-danger-border: 0 84% 60% / 0.3;
 
-    --border-subtle: 210 30% 20%;
-    --border-default: 210 25% 25%;
+    --border-subtle: 214 24% 90%;
+    --border-default: 214 18% 82%;
     --border-accent: 199 89% 48% / 0.4;
 
     --background: var(--bg-deep);
@@ -43,7 +43,7 @@
     --primary-foreground: 0 0% 100%;
     --secondary: var(--bg-elevated);
     --secondary-foreground: var(--text-primary);
-    --muted: 210 26% 18%;
+    --muted: 210 22% 95%;
     --muted-foreground: var(--text-secondary);
     --accent: var(--accent-solid);
     --accent-foreground: 0 0% 100%;
@@ -58,7 +58,7 @@
     --ring: var(--accent-solid);
     --radius: 0.75rem;
 
-    --sidebar-background: var(--bg-deep);
+    --sidebar-background: 0 0% 100%;
     --sidebar-foreground: var(--text-secondary);
     --sidebar-primary: var(--accent-solid);
     --sidebar-primary-foreground: 0 0% 100%;
@@ -69,9 +69,9 @@
 
     --section-header: var(--text-primary);
     --section-number: var(--accent-solid);
-    --highlight-bg: 210 40% 12%;
+    --highlight-bg: 210 38% 96%;
     --table-header: var(--bg-elevated);
-    --table-stripe: 210 40% 10% / 0.3;
+    --table-stripe: 210 30% 94% / 0.7;
 
     --font-heading: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
     --font-body: 'Inter', system-ui, sans-serif;
@@ -79,8 +79,38 @@
   }
 
   .dark {
+    --bg-deep: 210 50% 8%;
+    --bg-surface: 210 40% 12%;
+    --bg-elevated: 210 35% 16%;
+    --bg-glass: 210 40% 15% / 0.6;
+
+    --text-primary: 210 20% 95%;
+    --text-secondary: 210 15% 65%;
+    --text-tertiary: 210 10% 45%;
+
+    --border-subtle: 210 30% 20%;
+    --border-default: 210 25% 25%;
+
     --background: var(--bg-deep);
     --foreground: var(--text-primary);
+    --card: var(--bg-surface);
+    --card-foreground: var(--text-primary);
+    --popover: var(--bg-elevated);
+    --popover-foreground: var(--text-primary);
+    --secondary: var(--bg-elevated);
+    --secondary-foreground: var(--text-primary);
+    --muted: 210 26% 18%;
+    --muted-foreground: var(--text-secondary);
+    --border: var(--border-default);
+    --input: var(--bg-elevated);
+    --sidebar-background: var(--bg-deep);
+    --sidebar-foreground: var(--text-secondary);
+    --sidebar-accent: var(--bg-elevated);
+    --sidebar-accent-foreground: var(--text-primary);
+    --sidebar-border: var(--border-subtle);
+    --highlight-bg: 210 40% 12%;
+    --table-header: var(--bg-elevated);
+    --table-stripe: 210 40% 10% / 0.3;
   }
 }
 

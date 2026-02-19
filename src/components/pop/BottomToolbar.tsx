@@ -17,6 +17,10 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       setIsDark(true);
+      document.documentElement.classList.add('dark');
+    } else {
+      setIsDark(false);
+      document.documentElement.classList.remove('dark');
     }
 
     const savedViewMode = localStorage.getItem('viewMode') as ViewMode;
