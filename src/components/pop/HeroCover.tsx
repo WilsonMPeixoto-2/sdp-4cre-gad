@@ -7,7 +7,7 @@ export const HeroCover = () => {
       className="min-h-[84vh] sm:min-h-[80vh] flex items-center justify-center relative overflow-hidden"
       style={{
         background: `
-          radial-gradient(ellipse 60% 50% at 50% 40%, hsl(var(--accent-start) / 0.12), transparent),
+          radial-gradient(ellipse 60% 50% at 50% 40%, hsl(var(--accent-start) / 0.08), transparent),
           radial-gradient(circle, hsl(var(--text-primary) / 0.04) 1px, transparent 1px),
           linear-gradient(180deg, hsl(var(--bg-deep)) 0%, hsl(var(--bg-surface)) 55%, hsl(var(--bg-deep)) 100%)
         `
@@ -21,14 +21,11 @@ export const HeroCover = () => {
       </div>
 
       {/* Subtle Grid Pattern */}
-      <div className="absolute inset-0 opacity-[0.04]" style={{
-        backgroundImage: `linear-gradient(hsl(0,0%,100%) 1px, transparent 1px), linear-gradient(90deg, hsl(0,0%,100%) 1px, transparent 1px)`,
-        backgroundSize: '32px 32px'
-      }}></div>
+      <div className="absolute inset-0 opacity-100 bg-dot-grid"></div>
 
       <div className="relative z-10 text-center px-6 py-16 max-w-5xl mx-auto">
         {/* Institution Badge */}
-        <div className="inline-flex items-center gap-3 backdrop-blur-xl bg-[hsl(var(--bg-glass))] border border-[hsl(var(--border-subtle))] px-6 py-3 rounded-full mb-10 shadow-xl">
+        <div className="inline-flex items-center gap-3 backdrop-blur-xl bg-[hsl(var(--bg-glass))] border border-[hsl(var(--border-subtle))] px-6 py-3 rounded-full mb-10 shadow-xl card-shadow border-glow">
           <Building2 className="w-5 h-5 text-[hsl(var(--text-primary))]" />
           <span className="text-[hsl(var(--text-primary))] font-medium text-sm sm:text-base tracking-wide">
             4ª Coordenadoria Regional de Educação
@@ -37,7 +34,7 @@ export const HeroCover = () => {
 
         {/* Main Title - Larger and Centered */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 bg-[hsl(var(--bg-glass))] border border-[hsl(var(--border-subtle))] text-[hsl(var(--text-primary))] px-6 py-3 rounded-xl text-sm font-semibold mb-7 shadow-xl tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 bg-[hsl(var(--bg-glass))] border border-[hsl(var(--border-subtle))] text-[hsl(var(--text-primary))] px-6 py-3 rounded-xl text-sm font-semibold mb-7 shadow-xl tracking-wider uppercase card-shadow border-glow">
             <FileText className="w-4 h-4" />
             Procedimento Operacional Padrão
           </div>

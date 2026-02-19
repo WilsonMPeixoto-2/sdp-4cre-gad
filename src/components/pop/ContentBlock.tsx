@@ -60,7 +60,7 @@ export const ContentBlock = ({
   return (
     <div
       className={cn(
-        "rounded-xl border-l-4 bg-card p-4 md:p-5 shadow-sm border border-border/60",
+        "rounded-xl border-l-4 bg-card p-4 md:p-5 shadow-sm card-shadow border border-border/60",
         config.borderColor,
         className
       )}
