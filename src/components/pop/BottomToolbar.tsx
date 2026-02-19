@@ -83,30 +83,30 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
 
   return (
     <TooltipProvider>
-      <div className="fixed bottom-0 left-0 right-0 z-50 no-print">
+      <div className="bottom-bar no-print relative">
         {/* Gradient fade effect */}
-        <div className="h-8 bg-gradient-to-t from-background/90 to-transparent pointer-events-none" />
+        <div className="h-8 bg-gradient-to-t from-[hsl(var(--bg-deep))/90] to-transparent pointer-events-none absolute -top-8 left-0 right-0" />
 
         {/* Main toolbar */}
-        <div className="bg-background/90 backdrop-blur-xl border-t border-border/60 shadow-[0_-10px_35px_-18px_hsl(214_40%_20%/_0.45)]">
-          <div className="container mx-auto px-4 py-2 sm:py-3">
+        <div className="w-full">
+          <div className="container mx-auto px-2 sm:px-4 py-0 sm:py-1">
             <div className="flex items-center justify-between gap-2 sm:gap-4">
               {/* Document info */}
               <div className="hidden sm:flex items-center gap-3 min-w-0">
-                <div className="flex items-center gap-2 px-3 py-1.5 bg-primary/10 rounded-lg">
-                  <FileText className="w-4 h-4 text-primary shrink-0" />
-                  <span className="text-xs font-medium text-primary truncate">POP SDP 2026</span>
+                <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[hsl(var(--bg-elevated))] border border-[hsl(var(--border-subtle))]">
+                  <FileText className="w-4 h-4 text-[hsl(var(--accent-solid))] shrink-0" />
+                  <span className="text-xs font-medium text-[hsl(var(--text-primary))] truncate">POP SDP 2026</span>
                 </div>
-                <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-lg">
-                  <BookOpen className="w-4 h-4 text-muted-foreground shrink-0" />
-                  <span className="text-xs text-muted-foreground truncate">4ª CRE • GAD</span>
+                <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-[hsl(var(--bg-elevated))] border border-[hsl(var(--border-subtle))] rounded-lg">
+                  <BookOpen className="w-4 h-4 text-[hsl(var(--text-tertiary))] shrink-0" />
+                  <span className="text-xs text-[hsl(var(--text-secondary))] truncate">4ª CRE • GAD</span>
                 </div>
               </div>
 
               {/* Mobile label */}
               <div className="sm:hidden flex items-center gap-2">
-                <FileText className="w-4 h-4 text-primary" />
-                <span className="text-xs font-medium text-foreground">POP SDP</span>
+                <FileText className="w-4 h-4 text-[hsl(var(--accent-solid))]" />
+                <span className="text-xs font-medium text-[hsl(var(--text-primary))]">POP SDP</span>
               </div>
 
               {/* Actions */}
@@ -118,7 +118,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       size="sm"
                       onClick={cycleViewMode}
                       aria-label="Alternar visualização"
-                      className={`h-9 w-9 rounded-xl ${viewMode !== 'auto' ? 'bg-muted' : ''}`}
+                      className={`h-9 w-9 rounded-xl ${viewMode !== 'auto' ? 'bg-[hsl(var(--bg-elevated))]' : ''}`}
                     >
                       {getViewModeIcon()}
                     </Button>
@@ -135,7 +135,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       size="sm"
                       onClick={toggleDarkMode}
                       aria-label={isDark ? "Ativar modo claro" : "Ativar modo escuro"}
-                      className="h-9 w-9 rounded-xl"
+                      className="h-9 w-9 rounded-xl text-[hsl(var(--text-secondary))] hover:text-[hsl(var(--text-primary))] hover:bg-[hsl(var(--bg-elevated))]"
                     >
                       {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
                     </Button>
@@ -152,7 +152,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       size="sm"
                       onClick={handleShare}
                       aria-label="Compartilhar página"
-                      className="h-9 w-9 rounded-xl"
+                      className="h-9 w-9 rounded-xl text-[hsl(var(--text-secondary))] hover:text-[hsl(var(--text-primary))] hover:bg-[hsl(var(--bg-elevated))]"
                     >
                       <Share2 className="w-4 h-4" />
                     </Button>
@@ -171,7 +171,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       size="sm"
                       onClick={onPrint}
                       aria-label="Imprimir documento"
-                      className="h-9 w-9 sm:w-auto sm:px-3 rounded-xl"
+                      className="h-9 w-9 sm:w-auto sm:px-3 rounded-xl text-[hsl(var(--text-secondary))] hover:text-[hsl(var(--text-primary))] hover:bg-[hsl(var(--bg-elevated))]"
                     >
                       <Printer className="w-4 h-4 sm:mr-2" />
                       <span className="hidden sm:inline text-sm">Imprimir</span>
@@ -189,7 +189,7 @@ export const BottomToolbar = ({ onPrint }: BottomToolbarProps) => {
                       size="sm"
                       onClick={onPrint}
                       aria-label="Baixar PDF"
-                      className="h-9 px-3 sm:px-4 rounded-xl shadow-md btn-premium hover-glow"
+                      className="h-9 px-3 sm:px-4 rounded-xl btn-download"
                     >
                       <Download className="w-4 h-4 sm:mr-2" />
                       <span className="hidden sm:inline text-sm">Download PDF</span>
