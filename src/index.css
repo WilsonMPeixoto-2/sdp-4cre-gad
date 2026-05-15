@@ -235,7 +235,7 @@
   /* --space-2xl: 3rem (48px) */
 
   /* ===== TYPOGRAPHY SYSTEM ===== */
-  /* Headings: font-heading (Outfit) with consistent sizes */
+  /* Headings: font-heading (Plus Jakarta Sans) with consistent sizes */
   /* Body: font-body (Inter) with 1.6-1.75 line-height */
 
   .section-card {
@@ -393,7 +393,7 @@
 
   /* Data typography - Monospace for codes, numbers, values */
   .data-code {
-    font-family: 'Roboto Mono', 'Fira Code', 'SF Mono', 'Consolas', monospace;
+    font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', 'Consolas', monospace;
     @apply tracking-tight;
     font-variant-numeric: tabular-nums;
     letter-spacing: 0.02em;
