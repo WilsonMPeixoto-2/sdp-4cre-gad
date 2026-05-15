@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Clock, ExternalLink, Monitor, BookOpen, Printer, Calendar, Users, Headset } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getLastUpdatedLabel } from "@/lib/lastUpdated";
 import { CopyButton } from "./CopyButton";
 
 type SectionContactsProps = {
@@ -227,7 +228,7 @@ export const SectionContacts = ({ onPrint }: SectionContactsProps) => {
             <span className="text-sm">Gerência de Administração (GAD)</span><br />
             <span className="text-xs text-muted-foreground/70 mt-2 block flex items-center justify-center gap-2">
               <Calendar className="w-3 h-3" />
-              Última atualização: 19 de fevereiro de 2026
+              Última atualização: {getLastUpdatedLabel()}
             </span>
           </p>
         </div>
