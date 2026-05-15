@@ -769,12 +769,23 @@
   }
 
   .section-card {
+    --foreground: 215 30% 12%;
+    --card-foreground: 215 30% 12%;
+    --text-primary: 215 30% 12%;
+    --text-secondary: 215 22% 35%;
+    --text-tertiary: 215 15% 45%;
+    --text-muted: 215 12% 42%;
+    --muted-foreground: 215 12% 42%;
+    --secondary: 210 35% 95%;
+    --secondary-foreground: 215 30% 12%;
+    --card: 0 0% 100%;
     break-inside: avoid;
     page-break-inside: avoid;
     box-shadow: none !important;
     border: 1px solid hsl(215, 25%, 82%) !important;
     margin-bottom: 14pt !important;
     background: white !important;
+    color: hsl(215, 30%, 12%) !important;
     border-radius: 8pt !important;
   }
 
@@ -870,6 +881,14 @@
     color: hsl(var(--primary-foreground)) !important;
     -webkit-text-fill-color: currentColor !important;
     text-shadow: none !important;
+  }
+
+  #hero-cover h1,
+  #hero-cover h1 .hero-title-accent,
+  #hero-cover h1+p,
+  #hero-cover .mt-10 p {
+    color: white !important;
+    -webkit-text-fill-color: currentColor !important;
   }
 
   /* Hide decorative layers on print (avoid artifacts in the cover) */
@@ -991,12 +1010,6 @@
     page-break-inside: avoid;
   }
 
-  /* Gradient backgrounds for print */
-  .bg-gradient-to-r,
-  .bg-gradient-to-br {
-    background: hsl(210, 35%, 95%) !important;
-  }
-
   /* Code blocks */
   code {
     background: hsl(210, 25%, 94%) !important;
@@ -1006,105 +1019,6 @@
 
   /* Hide background pattern on print */
   body::before {
-    display: none !important;
-  }
-
-  /* High-contrast print normalization for light and dark themes */
-  html,
-  body,
-  #root {
-    background: #ffffff !important;
-    color: #111827 !important;
-  }
-
-  body::after {
-    display: none !important;
-  }
-
-  *,
-  *::before,
-  *::after {
-    background: transparent !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    color: #111827 !important;
-    -webkit-text-fill-color: currentColor !important;
-    -webkit-print-color-adjust: economy !important;
-    print-color-adjust: economy !important;
-  }
-
-  .section-card,
-  .highlight-box,
-  .sei-mockup,
-  .sei-icons-bar,
-  table,
-  tr,
-  td,
-  th {
-    background: #ffffff !important;
-    color: #111827 !important;
-    border-color: #cbd5e1 !important;
-  }
-
-  .section-card,
-  .highlight-box {
-    border: 1px solid #cbd5e1 !important;
-  }
-
-  .section-number,
-  .step-indicator,
-  .table-institutional th,
-  table thead th {
-    background: #e5e7eb !important;
-    color: #111827 !important;
-    border: 1px solid #9ca3af !important;
-  }
-
-  #hero-cover,
-  .section-divider-print,
-  .bg-primary,
-  [class*="bg-primary"],
-  [class*="from-primary"],
-  [class*="from-secondary"],
-  [class*="to-primary"],
-  [class*="to-secondary"] {
-    background: #ffffff !important;
-    background-image: none !important;
-    color: #111827 !important;
-    border-color: #cbd5e1 !important;
-    -webkit-print-color-adjust: economy !important;
-    print-color-adjust: economy !important;
-  }
-
-  #hero-cover *,
-  .section-divider-print *,
-  .bg-primary *,
-  [class*="bg-primary"] *,
-  [class*="from-primary"] *,
-  [class*="from-secondary"] *,
-  [class*="to-primary"] *,
-  [class*="to-secondary"] * {
-    color: #111827 !important;
-    -webkit-text-fill-color: #111827 !important;
-  }
-
-  a {
-    color: #0f3b73 !important;
-    text-decoration: underline !important;
-  }
-
-  svg,
-  svg * {
-    color: #111827 !important;
-    stroke: #111827 !important;
-  }
-
-  .no-print,
-  button,
-  .fixed,
-  nav,
-  aside {
     display: none !important;
   }
 }
