@@ -10,7 +10,6 @@ import { ReadingProgressBar } from "@/components/pop/ReadingProgressBar";
 import { AnimatedSection } from "@/components/pop/AnimatedSection";
 import { BottomToolbar } from "@/components/pop/BottomToolbar";
 import { CommandPalette } from "@/components/pop/CommandPalette";
-import { ServerChecklist } from "@/components/pop/ServerChecklist";
 
 // Lazy load sections below the fold to reduce initial bundle
 const SectionTwo = lazy(() => import("@/components/pop/SectionTwo").then(m => ({ default: m.SectionTwo })));
@@ -145,13 +144,6 @@ const Index = () => {
             <div className="space-y-8">
               <AnimatedSection>
                 <SectionIntro />
-              </AnimatedSection>
-
-              {/* Server Checklist Stepper - Central de Controle do Servidor */}
-              <AnimatedSection delay={50}>
-                <div id="checklist-servidor" className="scroll-mt-20 no-print">
-                  <ServerChecklist />
-                </div>
               </AnimatedSection>
 
               <AnimatedSection delay={100}>

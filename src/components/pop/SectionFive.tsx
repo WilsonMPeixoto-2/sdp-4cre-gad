@@ -4,6 +4,7 @@ import { CopyButton } from "./CopyButton";
 import { SideNote } from "./SideNote";
 import { Callout } from "./Callout";
 import { ContentBlock, ContentBlockGrid } from "./ContentBlock";
+import { ServerChecklist } from "./ServerChecklist";
 
 export const SectionFive = () => {
   const gadCodes = [
@@ -61,6 +62,12 @@ export const SectionFive = () => {
             </div>
           </div>
         </div>
+
+        {/* Server Checklist Stepper - Central de Controle do Servidor */}
+        <div id="checklist-servidor" className="scroll-mt-20 no-print">
+          <ServerChecklist />
+        </div>
+
 
         {/* Verification Steps */}
         <div className="section-card p-5 sm:p-6">
