@@ -25,9 +25,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: var(--text-primary);
 
-    --accent-start: 185 85% 35%;
-    --accent-end: 174 75% 32%;
-    --accent-solid: 185 85% 35%;
+    --accent-start: 196 82% 38%;
+    --accent-end: 205 75% 42%;
+    --accent-solid: 196 82% 38%;
     --accent: var(--accent-solid);
     --accent-foreground: 0 0% 100%;
     --primary: 220 35% 16%;
@@ -47,8 +47,8 @@
     --border: 30 10% 84%;
     --border-subtle: 30 8% 87%;
     --border-default: 30 10% 84%;
-    --border-accent: 185 85% 35% / 0.4;
-    --border-glow: 185 85% 35%;
+    --border-accent: 196 82% 38% / 0.4;
+    --border-glow: 196 82% 38%;
     --input: 30 10% 88%;
     --ring: var(--accent-solid);
     --radius: 0.875rem;
@@ -92,9 +92,9 @@
     --popover: 220 15% 12%;
     --popover-foreground: var(--text-primary);
 
-    --accent-start: 185 90% 50%;
-    --accent-end: 174 80% 45%;
-    --accent-solid: 185 90% 50%;
+    --accent-start: 196 88% 52%;
+    --accent-end: 205 80% 48%;
+    --accent-solid: 196 88% 52%;
     --accent: var(--accent-solid);
     --accent-foreground: 0 0% 100%;
     --primary: var(--accent-solid);
@@ -114,8 +114,8 @@
     --border: 220 12% 20%;
     --border-subtle: 220 12% 18%;
     --border-default: 220 12% 20%;
-    --border-accent: 185 90% 50% / 0.4;
-    --border-glow: 185 90% 50%;
+    --border-accent: 196 88% 52% / 0.4;
+    --border-glow: 196 88% 52%;
     --input: 220 15% 16%;
     --ring: var(--accent-solid);
 
@@ -978,14 +978,14 @@
     size: A4;
 
     @top-center {
-      content: "Documento produzido pela GAD da 4ª CRE";
+      content: "Documento produzido pela GAD da 4\ª CRE";
       font-size: 8pt;
       color: hsl(215, 30%, 50%);
       font-family: 'Inter', sans-serif;
     }
 
     @bottom-center {
-      content: "GAD 4ª CRE | Prestação de Contas SDP | Página " counter(page);
+      content: "GAD 4\ª CRE | Presta\ção de Contas SDP | P\ágina " counter(page);
       font-size: 8pt;
       color: hsl(215, 30%, 50%);
       font-family: 'Inter', sans-serif;
@@ -994,7 +994,7 @@
 
   /* Print watermark - subtle authorship mark */
   body::after {
-    content: "GAD 4ª CRE";
+    content: "GAD 4\ª CRE";
     position: fixed;
     bottom: 10mm;
     right: 10mm;
@@ -1146,15 +1146,15 @@
 /* Premium Color Tokens */
 @layer base {
   :root {
-    --accent-soft: 185 52% 92%;
-    --accent-medium: 185 62% 48%;
-    --accent-intense: 185 72% 33%;
+    --accent-soft: 196 52% 92%;
+    --accent-medium: 196 62% 48%;
+    --accent-intense: 196 72% 33%;
   }
 
   .dark {
-    --accent-soft: 189 36% 22%;
-    --accent-medium: 189 58% 52%;
-    --accent-intense: 189 76% 68%;
+    --accent-soft: 200 36% 22%;
+    --accent-medium: 200 58% 52%;
+    --accent-intense: 200 76% 68%;
   }
 }
 
@@ -1523,7 +1523,7 @@
 }
 
 .section-read-indicator::after {
-  content: '✓';
+  content: '\2713';
   position: absolute;
   top: -0.5rem;
   right: -0.5rem;
