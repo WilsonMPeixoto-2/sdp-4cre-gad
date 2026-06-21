@@ -1,4 +1,4 @@
-﻿import { ChevronRight, FileText, ClipboardList, Table2, Upload, CheckCircle, Phone, X, Scale } from "lucide-react";
+import { ChevronRight, FileText, ClipboardList, Table2, Upload, CheckCircle, Phone, X, Scale } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 interface Section {
@@ -12,6 +12,11 @@ const sections: Section[] = [{
   number: "0",
   title: "Apresentação",
   icon: <FileText className="w-4 h-4" />
+}, {
+  id: "checklist-servidor",
+  number: "✓",
+  title: "Checklist do Servidor",
+  icon: <CheckCircle className="w-4 h-4" />
 }, {
   id: "secao-1",
   number: "1",

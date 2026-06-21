@@ -1,4 +1,6 @@
-import { Menu, FileText, Search, ChevronDown, Check, User, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { Menu, FileText, Search, ChevronDown, Check, User, ChevronRight, Copy, Sparkles } from "lucide-react";
+import { toast } from "sonner";
 import { 
   SeiIncluirIcon, 
   SeiAssinarIcon, 
@@ -13,6 +15,7 @@ import {
   SeiLinkIcon,
   SeiSalvarIcon
 } from "./SeiIcons";
+import { Button } from "@/components/ui/button";
 
 interface SeiMockupProps {
   variant: "menu" | "process-tree" | "document-form" | "type-selection" | "type-selection-icon" | "icons" | "iniciar-processo-form" | "incluir-documento" | "despacho-selection" | "metadados-form" | "toolbar-assinar" | "link-externo" | "nup-gerado" | "salvar-btn" | "demonstrativo-despesas" | "toolbar-autenticar" | "enviar-processo" | "destinatarios-form";
@@ -483,28 +486,172 @@ export const SeiMockup = ({ variant, highlight }: SeiMockupProps) => {
   }
 
   if (variant === "document-form") {
+    const [tipo, setTipo] = useState("Nota Fiscal");
+    const [data, setData] = useState("2026-06-20");
+    const [numero, setNumero] = useState("001234");
+    const [fornecedor, setFornecedor] = useState("Empresa Alpha LTDA");
+    const [unidade, setUnidade] = useState("04.30.502");
+    
+    const [copiedDesc, setCopiedDesc] = useState(false);
+    const [copiedTree, setCopiedTree] = useState(false);
+
+    // Formatação conforme exigido
+    const descFormatada = `SDP – E/CRE (${unidade}) - ${fornecedor.toUpperCase()}`;
+    const treeFormatada = `${tipo === "Nota Fiscal" ? "NF" : tipo === "Recibo" ? "REC" : "DOC"} ${numero} - ${fornecedor.toUpperCase()}`;
+
+    const handleCopy = (text: string, type: "desc" | "tree") => {
+      navigator.clipboard.writeText(text);
+      if (type === "desc") {
+        setCopiedDesc(true);
+        setTimeout(() => setCopiedDesc(false), 2000);
+      } else {
+        setCopiedTree(true);
+        setTimeout(() => setCopiedTree(false), 2000);
+      }
+      toast.success("Metadado copiado! 📋", {
+        description: "Cole no campo correspondente no SEI.",
+        duration: 3000
+      });
+    };
+
     return (
-      <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg">
-        <SeiHeader title="Registrar Documento Externo" />
+      <div className="bg-card border border-border rounded-xl overflow-hidden shadow-lg w-full max-w-2xl mx-auto">
+        <SeiHeader title="Registrar Documento Externo (Com Assistente de Metadados)" />
         
-        <div className="p-4 space-y-3 text-sm">
-          {[
-            { label: "Tipo do Documento", value: "Nota Fiscal" },
-            { label: "Data do Documento", value: "15/12/2025" },
-            { label: "Número", value: "NF-001234" },
-            { label: "Nome na Árvore", value: "Empresa Alpha LTDA" },
-            { label: "Nível de Acesso", value: "Público", highlight: true },
-          ].map((field, i) => (
-            <SeiFormField key={i} label={field.label} value={field.value} highlight={field.highlight} />
-          ))}
+        <div className="p-4 sm:p-5 grid sm:grid-cols-2 gap-6 text-sm bg-gradient-to-b from-card to-secondary/15">
+          {/* Lado Esquerdo: Simulador do Formulário SEI */}
+          <div className="space-y-4">
+            <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-muted-foreground flex items-center gap-1.5 pb-2 border-b border-border">
+              <span>Campos no SEI!RIO</span>
+            </h4>
+            
+            <div className="space-y-3">
+              <div>
+                <label className="block text-[11px] font-semibold text-muted-foreground mb-1 uppercase">Tipo do Documento</label>
+                <select 
+                  value={tipo} 
+                  onChange={(e) => setTipo(e.target.value)}
+                  className="w-full bg-background border border-border rounded-lg px-2.5 py-1.5 text-xs text-foreground focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
+                >
+                  <option value="Nota Fiscal">Nota Fiscal</option>
+                  <option value="Recibo">Recibo</option>
+                  <option value="Fatura">Fatura / Outro</option>
+                </select>
+              </div>
+
+              <div className="grid grid-cols-2 gap-2">
+                <div>
+                  <label className="block text-[11px] font-semibold text-muted-foreground mb-1 uppercase">Código da Unidade</label>
+                  <input 
+                    type="text" 
+                    value={unidade} 
+                    onChange={(e) => setUnidade(e.target.value)}
+                    placeholder="04.30.502"
+                    className="w-full bg-background border border-border rounded-lg px-2.5 py-1.5 text-xs text-foreground focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none font-mono"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[11px] font-semibold text-muted-foreground mb-1 uppercase">Data do Documento</label>
+                  <input 
+                    type="date" 
+                    value={data} 
+                    onChange={(e) => setData(e.target.value)}
+                    className="w-full bg-background border border-border rounded-lg px-2.5 py-1.5 text-xs text-foreground focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-[11px] font-semibold text-muted-foreground mb-1 uppercase">Número do Documento</label>
+                <input 
+                  type="text" 
+                  value={numero} 
+                  onChange={(e) => setNumero(e.target.value)}
+                  placeholder="Ex: 001234"
+                  className="w-full bg-background border border-border rounded-lg px-2.5 py-1.5 text-xs text-foreground focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none font-mono"
+                />
+              </div>
+
+              <div>
+                <label className="block text-[11px] font-semibold text-muted-foreground mb-1 uppercase">Nome do Fornecedor / Favorecido</label>
+                <input 
+                  type="text" 
+                  value={fornecedor} 
+                  onChange={(e) => setFornecedor(e.target.value)}
+                  placeholder="Ex: Empresa Alpha LTDA"
+                  className="w-full bg-background border border-border rounded-lg px-2.5 py-1.5 text-xs text-foreground focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-[11px] font-semibold text-muted-foreground mb-1 uppercase">Nível de Acesso</label>
+                <div className="flex items-center gap-2 px-2.5 py-1.5 bg-success/10 border border-success/20 rounded-lg text-success font-semibold text-xs">
+                  <Check className="w-3.5 h-3.5" />
+                  Público (Obrigatório)
+                </div>
+              </div>
+            </div>
+          </div>
           
-          <div className="pt-4 flex items-center gap-3 border-t border-border">
-            <SeiButton variant="primary">
-              Confirmar
-            </SeiButton>
-            <SeiButton variant="secondary">
-              Cancelar
-            </SeiButton>
+          {/* Lado Direito: Assistente de Cópia de Metadados */}
+          <div className="space-y-4 p-4 rounded-xl bg-accent/5 border border-accent/20 flex flex-col justify-between">
+            <div>
+              <h4 className="font-heading font-bold text-xs uppercase tracking-wider text-accent flex items-center gap-1.5 pb-2 border-b border-accent/20">
+                <Sparkles className="w-4 h-4 animate-pulse" />
+                <span>Assistente GAD / 4ª CRE</span>
+              </h4>
+              <p className="text-[11px] text-muted-foreground mt-2 leading-relaxed">
+                Os metadados abaixo foram formatados conforme o padrão da GAD. Copie e cole no SEI.
+              </p>
+              
+              <div className="space-y-3 mt-4">
+                {/* Metadado 1: Descrição */}
+                <div className="space-y-1">
+                  <span className="block text-[10px] font-bold text-muted-foreground uppercase">Descrição no SEI</span>
+                  <div className="flex items-center gap-1.5">
+                    <div className="flex-1 bg-background border border-border rounded-lg px-2.5 py-1.5 text-xs font-mono select-all overflow-x-auto whitespace-nowrap text-foreground scrollbar-thin">
+                      {descFormatada}
+                    </div>
+                    <Button 
+                      size="sm"
+                      variant={copiedDesc ? "default" : "outline"}
+                      onClick={() => handleCopy(descFormatada, "desc")}
+                      className={`shrink-0 h-8 w-8 p-0 rounded-lg transition-all ${
+                        copiedDesc ? "bg-success hover:bg-success text-success-foreground" : ""
+                      }`}
+                      aria-label="Copiar Descrição"
+                    >
+                      {copiedDesc ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Metadado 2: Nome na Árvore */}
+                <div className="space-y-1">
+                  <span className="block text-[10px] font-bold text-muted-foreground uppercase">Nome na Árvore (Remetente)</span>
+                  <div className="flex items-center gap-1.5">
+                    <div className="flex-1 bg-background border border-border rounded-lg px-2.5 py-1.5 text-xs font-mono select-all overflow-x-auto whitespace-nowrap text-foreground scrollbar-thin">
+                      {treeFormatada}
+                    </div>
+                    <Button 
+                      size="sm"
+                      variant={copiedTree ? "default" : "outline"}
+                      onClick={() => handleCopy(treeFormatada, "tree")}
+                      className={`shrink-0 h-8 w-8 p-0 rounded-lg transition-all ${
+                        copiedTree ? "bg-success hover:bg-success text-success-foreground" : ""
+                      }`}
+                      aria-label="Copiar Nome na Árvore"
+                    >
+                      {copiedTree ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-[10px] text-muted-foreground leading-relaxed p-2.5 bg-background/50 rounded-lg border border-border/40 mt-3 sm:mt-0">
+              💡 **Dica de Fluxo**: Ao anexar, selecione o formato **Digitalizado nesta unidade**, confira a data da emissão e autentique após salvar.
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useCallback, useRef, lazy, Suspense } from "react";
+import { useState, useEffect, useCallback, useRef, lazy, Suspense } from "react";
 import { Menu, ClipboardList, FileText, Table2, Upload, CheckCircle, Phone, Scale, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PopSidebar } from "@/components/pop/PopSidebar";
@@ -10,6 +10,7 @@ import { ReadingProgressBar } from "@/components/pop/ReadingProgressBar";
 import { AnimatedSection } from "@/components/pop/AnimatedSection";
 import { BottomToolbar } from "@/components/pop/BottomToolbar";
 import { CommandPalette } from "@/components/pop/CommandPalette";
+import { ServerChecklist } from "@/components/pop/ServerChecklist";
 
 // Lazy load sections below the fold to reduce initial bundle
 const SectionTwo = lazy(() => import("@/components/pop/SectionTwo").then(m => ({ default: m.SectionTwo })));
@@ -83,7 +84,7 @@ const Index = () => {
   const visibleSectionsRef = useRef<Set<string>>(new Set());
 
   useEffect(() => {
-    const sectionIds = ["introducao", "secao-1", "secao-2", "secao-3", "secao-4", "secao-5", "contatos", "anexo"];
+    const sectionIds = ["introducao", "checklist-servidor", "secao-1", "secao-2", "secao-3", "secao-4", "secao-5", "contatos", "anexo"];
     const elements = sectionIds.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[];
 
     const observer = new IntersectionObserver(
@@ -144,6 +145,13 @@ const Index = () => {
             <div className="space-y-8">
               <AnimatedSection>
                 <SectionIntro />
+              </AnimatedSection>
+
+              {/* Server Checklist Stepper - Central de Controle do Servidor */}
+              <AnimatedSection delay={50}>
+                <div id="checklist-servidor" className="scroll-mt-20 no-print">
+                  <ServerChecklist />
+                </div>
               </AnimatedSection>
 
               <AnimatedSection delay={100}>

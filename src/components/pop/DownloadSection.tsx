@@ -24,9 +24,9 @@ const downloads: DownloadItem[] = [
   },
   {
     title: "Checklist de Documentos",
-    description: "Lista de verificação para conferência da prestação",
+    description: "Acompanhe seu progresso de montagem na Central do Servidor",
     icon: <FileCheck className="w-5 h-5" />,
-    url: "#checklist-section",
+    url: "#checklist-servidor",
   },
 ];
 
