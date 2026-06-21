@@ -25,9 +25,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: var(--text-primary);
 
-    --accent-start: 38 95% 45%;
-    --accent-end: 45 90% 50%;
-    --accent-solid: 38 95% 45%;
+    --accent-start: 185 85% 35%;
+    --accent-end: 174 75% 32%;
+    --accent-solid: 185 85% 35%;
     --accent: var(--accent-solid);
     --accent-foreground: 0 0% 100%;
     --primary: 220 35% 16%;
@@ -47,8 +47,8 @@
     --border: 30 10% 84%;
     --border-subtle: 30 8% 87%;
     --border-default: 30 10% 84%;
-    --border-accent: 38 95% 45% / 0.4;
-    --border-glow: 38 95% 45%;
+    --border-accent: 185 85% 35% / 0.4;
+    --border-glow: 185 85% 35%;
     --input: 30 10% 88%;
     --ring: var(--accent-solid);
     --radius: 0.875rem;
@@ -92,9 +92,9 @@
     --popover: 220 15% 12%;
     --popover-foreground: var(--text-primary);
 
-    --accent-start: 38 95% 55%;
-    --accent-end: 45 90% 60%;
-    --accent-solid: 38 95% 55%;
+    --accent-start: 185 90% 50%;
+    --accent-end: 174 80% 45%;
+    --accent-solid: 185 90% 50%;
     --accent: var(--accent-solid);
     --accent-foreground: 0 0% 100%;
     --primary: var(--accent-solid);
@@ -114,8 +114,8 @@
     --border: 220 12% 20%;
     --border-subtle: 220 12% 18%;
     --border-default: 220 12% 20%;
-    --border-accent: 38 95% 55% / 0.4;
-    --border-glow: 38 95% 55%;
+    --border-accent: 185 90% 50% / 0.4;
+    --border-glow: 185 90% 50%;
     --input: 220 15% 16%;
     --ring: var(--accent-solid);
 
